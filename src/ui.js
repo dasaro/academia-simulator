@@ -14,6 +14,13 @@ function toggleDrawer(name) {
   }
 }
 
+// Track how many feed entries the user has already seen, so that on each
+// render we can mark only the genuinely-new entries with an `entering`
+// class and animate them in (staggered) without re-animating the whole feed.
+// Reset to 0 when the feed shrinks (new game) or character changes.
+let _lastFeedLength = 0;
+let _lastCharacterId = null;
+
 function interpolate(s, state) {
   if (typeof s !== "string" || !state?.character) return s;
   const g = state.character.gender ?? "m";
@@ -190,10 +197,26 @@ export function renderGame(root, state, factions, items, handlers) {
   sidebar.appendChild(el("button", { className: "btn btn--ghost", onClick: handlers.onRestart },
     "Ricomincia"));
 
-  // Main feed
+  // Detect feed continuity. If the player just started a new run (character
+  // changed, or feed shrank), reset our "what's already been seen" pointer
+  // so we don't pretend the very first feed entry is animating in.
+  if (state.character?.id !== _lastCharacterId || state.feed.length < _lastFeedLength) {
+    _lastFeedLength = 0;
+  }
+  _lastCharacterId = state.character?.id ?? null;
+
+  // Main feed. Entries beyond `_lastFeedLength` are new since the last render
+  // (e.g. just produced by applyChoice / applyEventChoice / useItem) — mark
+  // them so the CSS staggers their fade-in animation.
   const main = el("main", { className: "feed" });
-  for (const entry of state.feed) {
-    main.appendChild(renderFeedEntry(entry));
+  for (let i = 0; i < state.feed.length; i++) {
+    const node = renderFeedEntry(state.feed[i]);
+    if (node && i >= _lastFeedLength) {
+      node.classList.add("entering");
+      // Stagger via CSS variable; the CSS multiplies by ~50ms.
+      node.style.setProperty("--enter-idx", String(i - _lastFeedLength));
+    }
+    if (node) main.appendChild(node);
   }
 
   // Choices: a pending interactive event takes precedence over the current
@@ -230,8 +253,24 @@ export function renderGame(root, state, factions, items, handlers) {
   wrap.appendChild(dossier);
   root.appendChild(wrap);
 
-  // Auto-scroll feed to bottom
-  main.scrollTop = main.scrollHeight;
+  // Smooth-scroll the feed to the most recent new content. We give the entry
+  // animations a moment to begin before the scroll kicks in so the user sees
+  // the transition rather than just a jump-to-bottom. requestAnimationFrame
+  // is used so the layout settles first.
+  const firstNew = main.querySelector(".feed-entry.entering");
+  requestAnimationFrame(() => {
+    if (firstNew) {
+      // If there's an interactive choice block, scroll the LAST new entry
+      // into view rather than the first — keeps the player's eyes on the
+      // freshest content. We scroll the feed container, not the page.
+      main.scrollTo({ top: main.scrollHeight, behavior: "smooth" });
+    } else {
+      main.scrollTop = main.scrollHeight;
+    }
+  });
+
+  // Mark these entries as "seen" — next render starts staggering from here.
+  _lastFeedLength = state.feed.length;
 }
 
 const MILESTONE_CATEGORY_LABEL = {

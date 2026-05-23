@@ -203,6 +203,48 @@ button { font-family: inherit; }
   text-decoration: line-through; text-decoration-color: #95c56388;
 }
 
+/* -----------------------------  Entry animations  -------------------------- */
+/* Feed entries beyond the last-rendered index get the `entering` class from
+ * the UI. Each one carries `style="--enter-idx: N"` so the animation delays
+ * stagger and the new content (choice → roll → delta → reaction → scenario)
+ * appears in narrative order, not all at once. `backwards` fill-mode keeps
+ * the entry invisible during its delay so there's no flash before it animates.
+ *
+ * `prefers-reduced-motion: reduce` disables the stagger entirely. */
+@keyframes feedEnter {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.feed-entry.entering {
+  animation: feedEnter 240ms ease-out backwards;
+  animation-delay: calc(var(--enter-idx, 0) * 70ms);
+}
+
+/* The choices block is re-rendered every turn (different choices). Fade it
+ * in just behind the feed entries so the player's eye lands on the new
+ * narrative before the buttons. */
+@keyframes choicesEnter {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.choices {
+  animation: choicesEnter 260ms ease-out 180ms backwards;
+}
+
+/* Stat & reputation bar fills get a quick width transition so changes feel
+ * smooth rather than snappy. Doesn't depend on entry animation. */
+.stat-bar__fill, .rep-bar__fill {
+  transition: width 360ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Drawer scrim + mobile bar shouldn't animate every render. */
+@media (prefers-reduced-motion: reduce) {
+  .feed-entry.entering, .choices {
+    animation: none;
+  }
+  .stat-bar__fill, .rep-bar__fill { transition: none; }
+}
+
 /* -----------------------------  Feed  --------------------------------------- */
 .feed { padding: 2rem 2.5rem 4rem; max-width: 760px; width: 100%; overflow-y: auto; max-height: 100vh; }
 .feed-entry { margin-bottom: 1.75rem; }
