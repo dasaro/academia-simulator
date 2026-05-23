@@ -44,18 +44,29 @@ const STAT_LABELS = {
 };
 
 const CONTRACT_LABELS = {
-  PON:  "RTD-A PON",
-  PNRR: "RTD-A PNRR",
-  MSCA: "MSCA / Seal",
-  FFO:  "FFO d'ateneo",
+  POSTDOC:      "Assegnista / Borsa",
+  PON:          "RTD-A PON",
+  PNRR:         "RTD-A PNRR",
+  MSCA:         "MSCA / Seal",
+  FFO:          "FFO d'ateneo",
+  CONTRATTISTA: "Contrattista",
 };
 const AGE_LABELS = {
   under33: "28–32",
   "33to40": "33–40",
   over40:  "41+",
 };
+const STANCE_LABELS = {
+  compliant: "allineat{o|a}",
+  resistant: "militante",
+  withdrawn: "disimpegnat{o|a}",
+};
 function contractLabel(id) { return CONTRACT_LABELS[id] || id || "RTD-A"; }
 function ageLabel(id) { return AGE_LABELS[id] || id || ""; }
+function stanceLabel(id, gender) {
+  const raw = STANCE_LABELS[id] || id || "";
+  return interpolate(raw, { character: { gender } });
+}
 
 function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);
@@ -123,20 +134,31 @@ export function renderCharacterSelect(root, characters, onSelect) {
   root.appendChild(wrap);
 }
 
-// Step 2: pick contract type + age band. Each choice sets starting flags
-// that the scenario pool gates on, so different state combinations surface
-// different content — the structural answer to scenarios feeling repetitive.
+// Step 2: pick contract type + age band + stance. Each choice sets starting
+// flags that the scenario pool gates on. Together they shape who you are:
+// "what you got hired as", "how old you are", "how you relate to power."
 const CONTRACT_TYPES = [
-  { id: "PON",  name: "RTD-A PON / DM 1062",         hint: "Il classico precariato R&I. Niente PI sul PRIN. Recupero maternità/malattia. Vincolo al progetto." },
-  { id: "PNRR", name: "RTD-A PNRR",                  hint: "Più recenti, regole peggiori sul piano contrattuale. Restituzione mensilità in caso di dimissioni." },
-  { id: "MSCA", name: "Marie Curie / Seal of Excellence", hint: "Sei rientrat{o|a} dall'estero. Chiamata diretta teoricamente possibile. Ateneo che cambia accordo all'ultimo." },
-  { id: "FFO",  name: "FFO d'ateneo",                hint: "Più rar{o|a}: contratto su fondi d'ateneo. Meno vincoli ministeriali, più dipendenza dal direttore." },
+  { id: "POSTDOC", name: "Assegnista / Borsa post-doc", hint: "Borsa di ricerca o assegno. Lordo uguale netto. Niente INPS, niente NASPI, niente maternità piena. Esiste sulla carta intestata di qualcun{o|a} altr{o|a}." },
+  { id: "PON",     name: "RTD-A PON / DM 1062",         hint: "Il classico precariato R&I. Tre anni più due, forse. Vincolo al progetto. La rendicontazione su SIRI ti consuma." },
+  { id: "PNRR",    name: "RTD-A PNRR",                  hint: "Contratto più recente, clausole peggiori. Restituzione mensilità se ti dimetti. Milestone scritte in tre giorni e vincolanti." },
+  { id: "MSCA",    name: "Marie Curie / Seal of Excellence", hint: "Sei rientrat{o|a} dall'estero. Chiamata diretta teorica. L'ateneo riscrive il pre-accordo all'ultimo." },
+  { id: "FFO",     name: "FFO d'ateneo",                hint: "Più rar{o|a}: fondi d'ateneo. Meno vincoli ministeriali, più dipendenza dal direttore di dipartimento." },
+  { id: "CONTRATTISTA", name: "Contrattista / Docente a contratto", hint: "TD non-RTD: didattica a contratto, spin-off, fondazione. Rinnovo a sei mesi. Carta intestata che cambia. Tornare a scuola è il paracadute." },
 ];
 
 const AGE_BANDS = [
   { id: "under33", name: "28–32 anni", hint: "La finestra under-40 è ancora lunga. Famiglia rimandata. Ancora pensi che il sistema sia riformabile." },
   { id: "33to40",  name: "33–40 anni", hint: "La finestra si stringe. Family-formation pressure. Il tuo ASN deve passare entro 2-3 anni." },
   { id: "over40",  name: "41+ anni",   hint: "Sei oltre il treno degli under-40. Telematica come opzione realistica. Ogni concorso pesa il doppio." },
+];
+
+// Stance / schieramento — how you relate to power. Each is a way of
+// surviving; each costs something different. Chat-grounded in the three
+// recurring voices: who plays the game, who fights, who disappears.
+const STANCES = [
+  { id: "compliant", name: "Allineat{o|a}",   hint: "Giochi le carte. Resti nella cordata del supervisor. Sicurezza in cambio dell'anima: a tre anni, se va bene, sarai parte del sistema. Te ne accorgi tardi." },
+  { id: "resistant", name: "Militante",        hint: "Firmi le lettere, chiami il sindacato, vai in consiglio. Hai ragione e paghi: ritorsioni, esclusioni, esaurimento. A volte, una vittoria." },
+  { id: "withdrawn", name: "Disimpegnat{o|a}", hint: "Fai la tua ricerca. Non vai ai consigli, non firmi niente. Diventi invisibile. Primo della lista quando tagliano." },
 ];
 
 function renderStatePicker(root, character, gender, onSelect) {
@@ -147,7 +169,8 @@ function renderStatePicker(root, character, gender, onSelect) {
     `${gender === "f" ? "Donna" : "Uomo"} · SSD ${character.ssd} · ${character.tagline}`));
 
   const state = { contractType: character.defaultContractType || "PON",
-                  ageBand: character.defaultAgeBand || "33to40" };
+                  ageBand: character.defaultAgeBand || "33to40",
+                  stance: character.defaultStance || "compliant" };
 
   const contractCard = el("div", { className: "state-card" });
   contractCard.appendChild(el("h3", {}, "Tipo di contratto"));
@@ -185,8 +208,29 @@ function renderStatePicker(root, character, gender, onSelect) {
   renderAges();
   ageCard.appendChild(ageGroup);
 
+  const stanceCard = el("div", { className: "state-card" });
+  stanceCard.appendChild(el("h3", {}, "Schieramento"));
+  stanceCard.appendChild(el("p", { className: "state-card__sub" },
+    "Non sceglierai sempre coerentemente — la vita ti spinge. Ma da qualche parte si parte."));
+  const stanceGroup = el("div", { className: "state-options" });
+  function renderStances() {
+    stanceGroup.innerHTML = "";
+    for (const s of STANCES) {
+      const opt = el("button", {
+        className: `state-option${state.stance === s.id ? " selected" : ""}`,
+        onClick: () => { state.stance = s.id; renderStances(); },
+      });
+      opt.appendChild(el("strong", {}, interpolate(s.name, { character: { gender } })));
+      opt.appendChild(el("span", { className: "state-hint" }, interpolate(s.hint, { character: { gender } })));
+      stanceGroup.appendChild(opt);
+    }
+  }
+  renderStances();
+  stanceCard.appendChild(stanceGroup);
+
   wrap.appendChild(contractCard);
   wrap.appendChild(ageCard);
+  wrap.appendChild(stanceCard);
 
   const actions = el("div", { className: "state-actions" });
   actions.appendChild(el("button", {
@@ -277,6 +321,7 @@ export function renderGame(root, state, factions, items, handlers) {
     el("h3", {}, state.character.name),
     el("div", { className: "ssd" }, state.character.ssd),
     el("div", { className: "char-state" }, contractLabel(state.character.contractType) + " · " + ageLabel(state.character.ageBand)),
+    el("div", { className: "char-stance" }, stanceLabel(state.character.stance, state.character.gender)),
     el("div", { className: "turn-counter" }, `Mese ${state.turn}  ·  Anno ${Math.ceil(state.turn / 12)}`),
   ));
   sidebar.appendChild(el("h4", {}, "Stats"));

@@ -11,19 +11,23 @@ import { explainEnding, summarizeReasons } from "./explain.js";
 
 export function createGameState(character, gender = "m", state = {}) {
   // Auto-add flags for the player's chosen "researcher state": gender,
-  // contract type, age band. These let scenarios gate via `requires.flags`
-  // without any condition-DSL changes — they're just starting flags.
+  // contract type, age band, stance. These let scenarios gate via
+  // `requires.flags` without any condition-DSL changes — they're just
+  // starting flags. The stance can drift mid-game by setting/removing
+  // stance_compliant/resistant/withdrawn from scenario effects.
   const genderFlag = `${gender}_gender`;
   const contractType = state.contractType || character.defaultContractType || "PON";
   const ageBand = state.ageBand || character.defaultAgeBand || "33to40";
+  const stance = state.stance || character.defaultStance || "compliant";
   const contractFlag = `contract_${contractType}`;
   const ageFlag = `age_${ageBand}`;
+  const stanceFlag = `stance_${stance}`;
   const startingFlags = [
     ...(character.startingFlags ?? []),
-    genderFlag, contractFlag, ageFlag,
+    genderFlag, contractFlag, ageFlag, stanceFlag,
   ];
   return {
-    character: { ...structuredClone(character), gender, contractType, ageBand },
+    character: { ...structuredClone(character), gender, contractType, ageBand, stance },
     turn: 1,
     stats: { ...character.stats },
     reputation: { ...character.startingReputation },

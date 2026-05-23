@@ -21132,6 +21132,795 @@
           }
         }
       ]
+    },
+    {
+      "id": "state_postdoc_lordo_uguale_netto",
+      "phase": "year-1",
+      "tags": ["contract_POSTDOC", "borsa", "money"],
+      "weight": 44,
+      "title": "Lordo uguale netto",
+      "text": "Apri la lettera di incarico per la tua borsa di ricerca. «Importo lordo: 18.000 €/anno. Si precisa che la borsa non è un contratto di lavoro né subordinato né autonomo né parasubordinato; non genera contribuzione INPS; non dà luogo a IRPEF in capo al percipiente.» Lordo uguale netto. Niente NASPI dopo, niente maternità piena, niente nulla. È quello che offre il convento.",
+      "requires": { "flags": { "has": ["contract_POSTDOC"] } },
+      "choices": [
+        {
+          "label": "Firmi. È quello che c'è. L'alternativa è andartene.",
+          "effects": { "stats": { "fondi": 1, "stamina": -1 }, "flags": ["accettato_borsa_senza_diritti"] }
+        },
+        {
+          "label": "Chiedi al direttore di trasformarla in contratto di ricerca.",
+          "effects": { "stats": { "burocrazia": 1, "persuasione": 1 }, "reputation": { "direttore_dipartimento": -1 }, "flags": ["richiesto_contratto_ricerca"] }
+        },
+        {
+          "label": "Firmi ma chiedi PEC sulla cumulabilità con NASPI residua.",
+          "effects": { "stats": { "burocrazia": 2 }, "reputation": { "ateneo_hr": -1 }, "flags": ["protetto_naspi_residua"] }
+        }
+      ]
+    },
+    {
+      "id": "state_postdoc_banca_dice_no",
+      "phase": "any",
+      "tags": ["contract_POSTDOC", "mutuo", "vita_privata"],
+      "weight": 40,
+      "title": "La banca dice di no",
+      "text": "Andate in banca per il mutuo. Il/la partner ha contratto indeterminato, tu sei assegnista. La consulente legge le buste paga e poi sorride: «Il suo introito non lo possiamo conteggiare, mi spiace. Non è un rapporto di lavoro. Tornate quando avete entrambi un indeterminato.» Fuori, il sole basso. Lui/lei ti tiene la mano in silenzio.",
+      "requires": { "flags": { "has": ["contract_POSTDOC"] } },
+      "choices": [
+        {
+          "label": "Chiedi a tuo padre/tua madre se può fare da garante. Ti pesa, ma lo fai.",
+          "effects": { "stats": { "stamina": -2, "fondi": 1, "burocrazia": 1 }, "flags": ["garante_genitoriale"] }
+        },
+        {
+          "label": "Rinunciate alla casa per ora. Affitto a oltranza. Lo dici col tono giusto.",
+          "effects": { "stats": { "stamina": -1, "fondi": -1 }, "flags": ["affitto_perpetuo", "rinuncia_casa"] }
+        },
+        {
+          "label": "Decidi che lasci l'università. Lavoro indeterminato fuori, poi il mutuo.",
+          "effects": { "stats": { "networking": 2, "stamina": 1 }, "reputation": { "supervisor": -1 }, "flags": ["pivot_per_mutuo"] }
+        }
+      ]
+    },
+    {
+      "id": "state_postdoc_inps_non_sa",
+      "phase": "year-1",
+      "tags": ["contract_POSTDOC", "burocrazia", "INPS"],
+      "weight": 35,
+      "title": "L'INPS non sa cosa sei",
+      "text": "Hai bisogno di sapere se la tua borsa è cumulabile con la NASPI residua. Telefoni al call center INPS. La funzionaria ti chiede di ripetere il tipo di contratto tre volte. Poi: «Borsa di ricerca? Non ce l'ho nel sistema. Provi a sentire il patronato.» Ne sai più tu di lei. Lo capisci e la cosa ti fa stare malissimo.",
+      "requires": { "flags": { "has": ["contract_POSTDOC"] } },
+      "choices": [
+        {
+          "label": "Insisti. Chiedi una PEC firmata dal funzionario di competenza.",
+          "effects": { "stats": { "burocrazia": 3, "stamina": -1, "persuasione": 1 }, "flags": ["inps_pec_richiesta"] }
+        },
+        {
+          "label": "Lasci stare. Percepisci entrambi. Speri che nessuno se ne accorga.",
+          "effects": { "stats": { "fondi": 2, "burocrazia": -1 }, "reputation": { "mur": -1 }, "flags": ["cumulo_grigio"] }
+        },
+        {
+          "label": "Vai dal sindacato. Ti danno il patronato della FLC. Gratis.",
+          "effects": { "stats": { "networking": 1, "burocrazia": 1 }, "reputation": { "sindacato": 2 }, "flags": ["sindacato_patronato"] }
+        }
+      ]
+    },
+    {
+      "id": "state_postdoc_assegnista_meglio",
+      "phase": "year-2",
+      "tags": ["contract_POSTDOC", "identita"],
+      "weight": 32,
+      "title": "Stavi meglio prima",
+      "text": "Una collega che adesso è RTD-A ti scrive in privato: «Sai che ti dico? Da assegnista stavo meglio. Al di là dello stipendio, ero tranquilla. Non avevo questo controllo asfissiante sopra la testa. Non mi sentivo in colpa nel fare le mie cose.» Tu sei ancora assegnista. La sua frase è un complimento e una condanna insieme.",
+      "requires": { "flags": { "has": ["contract_POSTDOC"] } },
+      "choices": [
+        {
+          "label": "Le rispondi: «Goditela finché dura. Davvero.»",
+          "effects": { "stats": { "stamina": 1, "intelligenza": 1 }, "reputation": { "peers": 1 }, "flags": ["lucidita_su_assegno"] }
+        },
+        {
+          "label": "Lo prendi come segnale: smetti di rincorrere l'RTD-A.",
+          "effects": { "stats": { "stamina": 2, "networking": -1 }, "flags": ["rinunciato_a_rtda"] }
+        },
+        {
+          "label": "Non rispondi. Apri il bando RTD-A che avevi salvato.",
+          "effects": { "stats": { "stamina": -1, "networking": 1 }, "flags": ["candidatura_rtda_caparbia"] }
+        }
+      ]
+    },
+    {
+      "id": "state_postdoc_research_fellow_estero",
+      "phase": "any",
+      "tags": ["contract_POSTDOC", "estero", "identita"],
+      "weight": 30,
+      "title": "«Ah, e in che università hai tenure?»",
+      "text": "Conferenza all'estero. Una collega di Heidelberg ti chiede cosa fai: «Research fellow? E in che università hai tenure?» Provi a spiegare cos'è un assegno di ricerca. Lei ti guarda con genuino interesse e genuina pietà. «Oh. In Italy is like that?» Sorridi. Sì. In Italy is like that.",
+      "requires": { "flags": { "has": ["contract_POSTDOC"] } },
+      "choices": [
+        {
+          "label": "Spieghi tutto. Lei prende appunti. Ti senti meglio per dieci minuti.",
+          "effects": { "stats": { "networking": 1, "stamina": -1 }, "flags": ["esposto_sistema_italiano"] }
+        },
+        {
+          "label": "«Postdoc.» Tagli corto. Cambi discorso sulla sua ricerca.",
+          "effects": { "stats": { "networking": 1, "stamina": 1 }, "flags": ["evitato_imbarazzo"] }
+        },
+        {
+          "label": "Quella notte mandi tre application per postdoc fuori dall'Italia.",
+          "effects": { "stats": { "networking": 2, "intelligenza": 1, "stamina": -2 }, "flags": ["caccia_postdoc_fuori"] }
+        }
+      ]
+    },
+    {
+      "id": "state_contrattista_manca_firma",
+      "phase": "year-2",
+      "tags": ["contract_CONTRATTISTA", "rinnovo"],
+      "weight": 44,
+      "title": "Manca solo la firma del direttore",
+      "text": "Il tuo contratto scade il 31 dicembre. Hai un nuovo bando — stessa università, stesso lavoro, partenza 1 gennaio. L'ufficio personale ti ripete da settimane la stessa frase: «Manca solo la firma del direttore.» Sei a metà novembre. Il direttore è in commissione concorso a Catania. La sua segretaria non risponde.",
+      "requires": { "flags": { "has": ["contract_CONTRATTISTA"] } },
+      "choices": [
+        {
+          "label": "Aspetti in silenzio. La firma arriverà. (Forse.)",
+          "effects": { "stats": { "stamina": -2 }, "flags": ["attesa_firma_passiva"] }
+        },
+        {
+          "label": "Fai domanda anticipata di DIS-COLL. Almeno copri il mese scoperto.",
+          "effects": { "stats": { "burocrazia": 2, "fondi": 1 }, "flags": ["disccoll_anticipata"] }
+        },
+        {
+          "label": "Vai personalmente nell'ufficio del direttore. Aspetti tre ore. Lo prendi all'uscita.",
+          "effects": { "stats": { "persuasione": 2, "stamina": -2 }, "reputation": { "direttore_dipartimento": -1 }, "flags": ["agguato_direttore"] }
+        }
+      ]
+    },
+    {
+      "id": "state_contrattista_carta_intestata",
+      "phase": "any",
+      "tags": ["contract_CONTRATTISTA", "spin_off", "burocrazia"],
+      "weight": 38,
+      "title": "Carta intestata sbagliata",
+      "text": "Devi mandare una lettera ufficiale per una richiesta di accesso ai dati. Il rettorato vuole «carta intestata dell'ente datore di lavoro e firma del legale rappresentante.» Il tuo contratto è con uno spin-off dell'ateneo. Il legale rappresentante è un professore associato che non risponde alle email da settembre.",
+      "requires": { "flags": { "has": ["contract_CONTRATTISTA"] } },
+      "choices": [
+        {
+          "label": "Chiedi al PI di intercedere col legale rappresentante.",
+          "effects": { "stats": { "stamina": -2, "networking": 1 }, "reputation": { "supervisor": -1 }, "flags": ["intercessione_pi"] }
+        },
+        {
+          "label": "Fai partire la richiesta dal sindacato. Costa 200€ all'anno di tessera.",
+          "effects": { "stats": { "fondi": -1, "burocrazia": 2 }, "reputation": { "sindacato": 2 }, "flags": ["tessera_sindacato"] }
+        },
+        {
+          "label": "Falsifichi: usi carta intestata dell'università e firmi tu come «referente».",
+          "effects": { "stats": { "burocrazia": 1, "stamina": -1, "intelligenza": -1 }, "reputation": { "ateneo_hr": -2 }, "flags": ["carta_intestata_falsa"] }
+        }
+      ]
+    },
+    {
+      "id": "state_contrattista_mese_scoperto",
+      "phase": "year-2",
+      "tags": ["contract_CONTRATTISTA", "fondi", "purgatorio"],
+      "weight": 40,
+      "title": "Il mese scoperto",
+      "text": "Tra il contratto vecchio e il nuovo c'è un mese. Niente stipendio, niente badge, niente email istituzionale. Devi consegnare la revisione di un articolo per una rivista. Dovresti anche registrare gli esami della sessione di settembre. Tecnicamente non sei dipendente dell'ateneo per 30 giorni.",
+      "requires": { "flags": { "has": ["contract_CONTRATTISTA"] } },
+      "choices": [
+        {
+          "label": "Lavori «a gratis». Usi l'email del PI come tramite per gli esami.",
+          "effects": { "stats": { "stamina": -3, "intelligenza": 1 }, "flags": ["lavoro_gratis_mese_scoperto"] }
+        },
+        {
+          "label": "Ti tieni attivo come «cultore della materia». Senza stipendio ma con email.",
+          "effects": { "stats": { "burocrazia": 1, "fondi": -1 }, "flags": ["cultore_materia_gratis"] }
+        },
+        {
+          "label": "Trenta giorni di DIS-COLL. Spengi tutto. Vai dal mare.",
+          "effects": { "stats": { "stamina": 3, "fondi": -1, "networking": -1 }, "flags": ["mese_scoperto_pausa"] }
+        }
+      ]
+    },
+    {
+      "id": "state_contrattista_tornare_a_scuola",
+      "phase": "year-3",
+      "tags": ["contract_CONTRATTISTA", "uscita", "paracadute"],
+      "weight": 38,
+      "title": "Tornare a scuola",
+      "text": "Hai il ruolo a scuola in aspettativa. Da tre anni rincorri il contratto di ricerca. Il rinnovo per il prossimo anno non c'è. La frase ti viene in mente involontaria: «Tornare a scuola.» Non è una sconfitta. È un paracadute che ti sei costruit{o|a}. È anche, però, la fine di un sogno.",
+      "requires": { "flags": { "has": ["contract_CONTRATTISTA"] } },
+      "choices": [
+        {
+          "label": "Torni a scuola. Settembre, prima campanella, tre classi sul registro.",
+          "effects": { "stats": { "stamina": 3, "fondi": 2, "networking": -2 }, "flags": ["ritorno_scuola", "uscita_dignitosa"] }
+        },
+        {
+          "label": "Un'altra borsa, in un altro ateneo. Vicino casa stavolta.",
+          "effects": { "stats": { "fondi": -1, "stamina": -1, "networking": 1 }, "flags": ["altra_borsa_un_altro_giro"] }
+        },
+        {
+          "label": "Concorso scuola + cattedra universitaria part-time. Sindacato per gestire l'incompatibilità.",
+          "effects": { "stats": { "burocrazia": 3, "stamina": -2, "networking": 1 }, "reputation": { "sindacato": 1 }, "flags": ["doppia_carriera"] }
+        }
+      ]
+    },
+    {
+      "id": "state_compliant_filiera_prin",
+      "phase": "year-2",
+      "tags": ["stance_compliant", "filiera"],
+      "weight": 38,
+      "title": "Il PRIN che hai scritto tu",
+      "text": "Hai vinto un PRIN. L'hai scritto tu. Idee tue, scrittura tua, bibliografia tua. Il tuo supervisor ti dice, sorridendo paterno: «Sai che ti dico? Riscriviamolo togliendoti come PI. Ti faccio una unità a 0,1 ore. Così ti rinnovo l'anno prossimo: il dipartimento avrà i fondi per giustificarmelo.» Il rinnovo dipende da questo.",
+      "requires": { "flags": { "has": ["stance_compliant"] } },
+      "choices": [
+        {
+          "label": "Accetti. Lui ha ragione: il rinnovo serve. La sostanza è la stessa.",
+          "effects": { "stats": { "fondi": 1, "intelligenza": -1, "burocrazia": 1 }, "reputation": { "supervisor": 3, "peers": -1 }, "flags": ["compliant_filiera_prin", "ghost_pi"] }
+        },
+        {
+          "label": "Negozi: vuoi essere coordinatore di unità, non a 0,1 ore. Almeno quello.",
+          "effects": { "stats": { "persuasione": 2 }, "reputation": { "supervisor": 1 }, "flags": ["filiera_negoziata"] }
+        },
+        {
+          "label": "Tieni il PI. Anche se rischi il rinnovo. Per una volta.",
+          "effects": { "stats": { "intelligenza": 2, "stamina": -2 }, "reputation": { "supervisor": -3, "peers": 2 }, "flags": ["sfidato_filiera", "stance_resistant"], "flagsRemove": ["stance_compliant"] }
+        }
+      ]
+    },
+    {
+      "id": "state_compliant_diventato_il_capo",
+      "phase": "year-4plus",
+      "tags": ["stance_compliant", "identita", "tarda_lucidita"],
+      "weight": 34,
+      "title": "«Sono diventato il mio capo»",
+      "text": "Tre anni e mezzo. Un{a|o} dottorand{o|a} ti consegna una bozza di articolo. Tu la apri, la leggi, e cominci a dare istruzioni con la stessa frase paterna che ti faceva impazzire da sotto. «Vedi, qui devi inquadrare il problema diversamente.» Quand{o|a} esce dalla stanza, ti guardi nello schermo. Mi rendo conto di come sono diventat{o|a} parte del sistema. E me ne spiace.",
+      "requires": { "flags": { "has": ["stance_compliant"], "hasNot": ["lucidita_compliant_diventato"] } },
+      "choices": [
+        {
+          "label": "Rincorri il/la dottorand{o|a}. «Aspetta. Lascia che ti aiuti diversamente.»",
+          "effects": { "stats": { "intelligenza": 1, "persuasione": 1 }, "reputation": { "peers": 2 }, "flags": ["lucidita_compliant_diventato", "stance_withdrawn"], "flagsRemove": ["stance_compliant"] }
+        },
+        {
+          "label": "Chiudi il file. Non era niente. Domani altre cose.",
+          "effects": { "stats": { "intelligenza": -1, "stamina": 1 }, "flags": ["lucidita_compliant_diventato", "sistema_acceptato"] }
+        },
+        {
+          "label": "Apri l'email. Scrivi al sindacato — «Voglio dare una mano alle/agli RTDA del dipartimento.»",
+          "effects": { "stats": { "persuasione": 2, "networking": 2 }, "reputation": { "sindacato": 3, "supervisor": -1 }, "flags": ["lucidita_compliant_diventato", "stance_resistant"], "flagsRemove": ["stance_compliant"] }
+        }
+      ]
+    },
+    {
+      "id": "state_resistant_firma_lettera",
+      "phase": "any",
+      "tags": ["stance_resistant", "collettivo"],
+      "weight": 42,
+      "title": "La lettera collettiva",
+      "text": "Circola in rete una lettera al MUR sulla circolare di recupero maternità per gli/le RTDA. È firmata in ordine alfabetico, 247 firme finora. Ti chiede solo nome, cognome, ateneo, ssd. L'inoltrano alla CRUI, ai capigruppo parlamentari, alla stampa. Una collega ti scrive in privato: «Tu non posso permettermi di firmare. Tu sì?»",
+      "requires": { "flags": { "has": ["stance_resistant"] } },
+      "choices": [
+        {
+          "label": "Firmi. Subito. Inoltri ad altri 30 colleghi.",
+          "effects": { "stats": { "persuasione": 1, "stamina": -1, "networking": 2 }, "reputation": { "peers": 3, "ateneo_hr": -2, "supervisor": -1, "sindacato": 2 }, "flags": ["firmato_lettera_collettiva"] }
+        },
+        {
+          "label": "Firmi. Ma rispondi a lei: «Tu firmi anche se non puoi. È così che si rompe.»",
+          "effects": { "stats": { "persuasione": 2, "stamina": -1 }, "reputation": { "peers": 2, "supervisor": -1 }, "flags": ["firmato_e_evangelizzato"] }
+        },
+        {
+          "label": "Aspetti due giorni. Vuoi vedere quante firme arrivano dal tuo ateneo.",
+          "effects": { "stats": { "stamina": 1, "intelligenza": 1 }, "reputation": { "peers": -1 }, "flags": ["esitazione_strategica"] }
+        }
+      ]
+    },
+    {
+      "id": "state_resistant_sciopero",
+      "phase": "year-2",
+      "tags": ["stance_resistant", "sciopero", "collettivo"],
+      "weight": 36,
+      "title": "Lo sciopero del 5 dicembre",
+      "text": "FLC-CGIL convoca uno sciopero nazionale della ricerca. La proposta interna alla rete: «Sciopero di tutti i PON per un mese, bloccando la didattica. Vediamo se state bene senza di noi.» Tre colleghi te lo girano. Il tuo supervisor ti ha appena scritto: «Spero non aderirai. Abbiamo la deadline del rendiconto.» È giovedì sera.",
+      "requires": { "flags": { "has": ["stance_resistant"] } },
+      "choices": [
+        {
+          "label": "Aderisci. Lo dici al supervisor in tono asciutto.",
+          "effects": { "stats": { "persuasione": 2, "fondi": -1 }, "reputation": { "supervisor": -3, "sindacato": 3, "peers": 2 }, "flags": ["scioperato_dicembre"] }
+        },
+        {
+          "label": "Aderisci, ma fai lo sciopero «in bianco»: vai in ufficio e non firmi rendiconti.",
+          "effects": { "stats": { "burocrazia": -2, "stamina": -1, "intelligenza": 1 }, "reputation": { "supervisor": -1, "sindacato": 1, "ateneo_hr": -2 }, "flags": ["sciopero_bianco"] }
+        },
+        {
+          "label": "Non aderisci. Mandi 50 euro alla cassa di solidarietà del sindacato.",
+          "effects": { "stats": { "fondi": -1, "stamina": 1 }, "reputation": { "supervisor": 1, "sindacato": 1, "peers": -1 }, "flags": ["solidarieta_economica"] }
+        }
+      ]
+    },
+    {
+      "id": "state_resistant_retaliation",
+      "phase": "year-3",
+      "tags": ["stance_resistant", "ritorsioni"],
+      "weight": 35,
+      "title": "Il prezzo della firma",
+      "text": "Il direttore di dipartimento ti convoca con calma. «Ho letto la lettera. Le hai dato visibilità. Bene. Volevo solo dirti che il punto organico riservato al tuo settore quest'anno andrà altrove. Niente di personale, intendiamoci. Solo una questione di equilibri interni.» Tutto pacato. Tutto sereno. Tutto già deciso.",
+      "requires": { "flags": { "has": ["stance_resistant", "firmato_lettera_collettiva"] } },
+      "choices": [
+        {
+          "label": "«Capisco. Grazie della trasparenza.» Esci e scrivi al sindacato.",
+          "effects": { "stats": { "stamina": -2, "burocrazia": 2, "persuasione": 1 }, "reputation": { "direttore_dipartimento": -3, "sindacato": 3 }, "flags": ["ritorsione_documentata"] }
+        },
+        {
+          "label": "«Non era personale per me firmare, e non lo è ora.» Lo guardi negli occhi.",
+          "effects": { "stats": { "persuasione": 3, "stamina": -1 }, "reputation": { "direttore_dipartimento": -2, "peers": 2 }, "flags": ["sfida_aperta_direttore"] }
+        },
+        {
+          "label": "Annuisci. Ringrazi. Esci. Mandi tre application all'estero in due giorni.",
+          "effects": { "stats": { "networking": 2, "stamina": -2 }, "reputation": { "direttore_dipartimento": 1 }, "flags": ["esce_di_scena", "stance_withdrawn"], "flagsRemove": ["stance_resistant"] }
+        }
+      ]
+    },
+    {
+      "id": "state_withdrawn_cazzi_miei",
+      "phase": "year-2",
+      "tags": ["stance_withdrawn", "ricerca"],
+      "weight": 38,
+      "title": "I cazzi tuoi accademici",
+      "text": "Bilancio personale dei tuoi primi due anni di contratto: hai incontrato l'azienda partner una volta. Sul progetto ufficiale hai prodotto due deliverable formali. Sulle tue cose vere — quelle che ti interessano davvero, fuori scope — quattro articoli, una review, una collaborazione internazionale. Stai facendo i cazzi tuoi accademici. È una strategia. È anche un modo di sparire.",
+      "requires": { "flags": { "has": ["stance_withdrawn"] } },
+      "choices": [
+        {
+          "label": "Continui. Pubblichi i tuoi articoli. Il progetto va come va.",
+          "effects": { "stats": { "intelligenza": 3, "burocrazia": -2 }, "reputation": { "supervisor": -1, "peers": 1 }, "flags": ["doppia_vita_ricerca"] }
+        },
+        {
+          "label": "Decidi di rientrare sul progetto. Hai 18 mesi per recuperare.",
+          "effects": { "stats": { "burocrazia": 2, "stamina": -2, "intelligenza": -1 }, "reputation": { "supervisor": 2 }, "flags": ["rientro_progetto", "stance_compliant"], "flagsRemove": ["stance_withdrawn"] }
+        },
+        {
+          "label": "Capisci che non te ne importa più. Cominci a guardare offerte fuori.",
+          "effects": { "stats": { "networking": 2, "stamina": 1 }, "flags": ["uscita_pianificata"] }
+        }
+      ]
+    },
+    {
+      "id": "state_withdrawn_consiglio_assente",
+      "phase": "year-2",
+      "tags": ["stance_withdrawn", "consiglio_dipartimento"],
+      "weight": 32,
+      "title": "Il consiglio in cui hanno deciso senza di te",
+      "text": "Apri la mail del lunedì mattina. Verbale del consiglio di dipartimento di venerdì. Tu non c'eri — non ci vai mai. Scorri. Al punto 7 leggi che hanno riassegnato un corso da 6 CFU del primo semestre. A te. Non eri presente per dirti contrari{o|a}. Hanno semplicemente fatto.",
+      "requires": { "flags": { "has": ["stance_withdrawn"] } },
+      "choices": [
+        {
+          "label": "Mandi una mail al direttore: «Non posso accettarlo a contratto in corso.»",
+          "effects": { "stats": { "burocrazia": 2, "persuasione": 1, "stamina": -1 }, "reputation": { "direttore_dipartimento": -2 }, "flags": ["contestato_post_factum", "stance_resistant"], "flagsRemove": ["stance_withdrawn"] }
+        },
+        {
+          "label": "Accetti. È tardi. Il corso parte tra tre settimane.",
+          "effects": { "stats": { "stamina": -3, "burocrazia": 1 }, "reputation": { "supervisor": 1, "peers": -1 }, "flags": ["corso_subito_in_silenzio"] }
+        },
+        {
+          "label": "Per la prima volta in tre anni, ti iscrivi al prossimo consiglio.",
+          "effects": { "stats": { "burocrazia": 1, "networking": 1 }, "flags": ["risveglio_politico"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_voce_persa",
+      "phase": "any",
+      "tags": ["body", "didattica"],
+      "weight": 35,
+      "title": "La voce, stamattina",
+      "text": "È mercoledì. Lezione 9-11 e 14-16. La voce è andata via stanotte — un raffreddore preso al ricevimento studenti. L'otorino pubblico è fra tre mesi. Il privato 80 euro la visita. La lezione è fra due ore.",
+      "choices": [
+        {
+          "label": "Fai lezione bisbigliando. Gli studenti dei posti dietro non sentono niente.",
+          "effects": { "stats": { "stamina": -3, "burocrazia": 1 }, "flags": ["lezione_senza_voce"] }
+        },
+        {
+          "label": "Annulli. Recupererai i due CFU «quando trovi un buco in agenda.»",
+          "effects": { "stats": { "stamina": 1, "intelligenza": -1 }, "reputation": { "peers": -1, "ateneo_hr": -1 }, "flags": ["lezione_saltata"] }
+        },
+        {
+          "label": "80 euro all'otorino privato. È un mese che rimandi.",
+          "effects": { "stats": { "fondi": -2, "stamina": 2 }, "flags": ["otorino_privato"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_emicrania_aura",
+      "phase": "any",
+      "tags": ["body", "emicrania"],
+      "weight": 32,
+      "title": "L'aura prima dell'emicrania",
+      "text": "Stamattina, in aula, hai visto lampi sull'occhio destro per quaranta minuti. Poi è arrivata l'emicrania. Sei riuscit{o|a} a finire la lezione tenendoti la fronte. Una collega che ti somiglia ti ha scritto: «Prova un neurologo qualunque. Triptani da banco non bastano se ti capita una volta al mese.»",
+      "choices": [
+        {
+          "label": "Neurologo privato: 180 euro la visita più la RM. Ma almeno sai.",
+          "effects": { "stats": { "fondi": -3, "stamina": 2, "burocrazia": 1 }, "flags": ["neurologo_privato"] }
+        },
+        {
+          "label": "Pubblico, lista d'attesa 4 mesi. Sopporti.",
+          "effects": { "stats": { "stamina": -2, "fondi": 1 }, "flags": ["aspetta_pubblico"] }
+        },
+        {
+          "label": "Solo triptani da banco. Sei convint{o|a} che sia stress.",
+          "effects": { "stats": { "stamina": -1, "intelligenza": -1 }, "flags": ["triptani_banco"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_bonus_psicologo",
+      "phase": "any",
+      "tags": ["body", "salute_mentale", "money"],
+      "weight": 33,
+      "title": "Bonus psicologo esaurito",
+      "text": "Hai cliccato sette volte sul sito INPS in tre giorni. Il «Bonus psicologo» è esaurito da mercoledì. Lo cerchi a metà luglio, quando arriva il senso di vuoto post-rendiconto. Una collega: «Pago io ottanta a seduta, una volta a settimana. È più della tassa universitaria di mio figlio.»",
+      "choices": [
+        {
+          "label": "Cerchi un terapista privato. 70 euro/seduta. Trovi il modo.",
+          "effects": { "stats": { "fondi": -3, "stamina": 3, "intelligenza": 1 }, "inventory": { "add": ["consulenza_psicoterapia"] }, "flags": ["pers_in_terapia"] }
+        },
+        {
+          "label": "Aspetti la prossima tornata di bonus. (Anno prossimo, dice.)",
+          "effects": { "stats": { "stamina": -1 }, "flags": ["bonus_aspettato"] }
+        },
+        {
+          "label": "«Va beh, mica sto così male.» Chiudi il browser.",
+          "effects": { "stats": { "stamina": -2, "intelligenza": -1 }, "flags": ["minimizzato_salute_mentale"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_cena_strutturati",
+      "phase": "any",
+      "tags": ["money", "identita", "vita_privata"],
+      "weight": 33,
+      "title": "Cena di dipartimento",
+      "text": "Cena di dipartimento. Tre PA, due RTDB, tu. Conto da dividere: 47 € a testa. Una PA fa la battuta: «Questo posto è carino. Ma cheap, eh.» Tu hai mangiato un primo e basta — non te ne sei accorta nessuno. Adesso devi tirare fuori i 47 euro. È il giovedì del rendiconto, sei in rosso fino al 27.",
+      "choices": [
+        {
+          "label": "Paghi. Ridi. Dici: «Sì, davvero economico.»",
+          "effects": { "stats": { "fondi": -2, "stamina": -1 }, "reputation": { "peers": 1 }, "flags": ["pagato_e_finto"] }
+        },
+        {
+          "label": "«Scusate, devo scappare prima del dolce.» Esci e cammini fino a casa.",
+          "effects": { "stats": { "stamina": -1, "fondi": 1 }, "reputation": { "peers": -1 }, "flags": ["fuga_a_meta_cena"] }
+        },
+        {
+          "label": "Chiedi conto separato per il primo solo. La cameriera ti guarda.",
+          "effects": { "stats": { "persuasione": 1, "stamina": -2, "fondi": 1 }, "reputation": { "peers": -2 }, "flags": ["conto_separato_chiesto"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_domenica_outlook",
+      "phase": "any",
+      "tags": ["time", "lavoro_serale"],
+      "weight": 36,
+      "title": "Domenica sera, 22:14",
+      "text": "Domenica. 22:14. Hai aperto Outlook «solo per controllare». 14 email non lette. Una richiesta urgente del direttore per le 9 di domani. Due studenti che chiedono tesi. Tre solleciti di rendicontazione. Il sale del primo che è ancora sul pentolino in cucina.",
+      "choices": [
+        {
+          "label": "Le leggi tutte adesso. Così domani sei in pari.",
+          "effects": { "stats": { "stamina": -2, "burocrazia": 2 }, "flags": ["domenica_outlook_aperto"] }
+        },
+        {
+          "label": "Chiudi senza leggere. Ti senti in colpa per due ore.",
+          "effects": { "stats": { "stamina": -1, "intelligenza": 1 }, "flags": ["domenica_chiusa_in_colpa"] }
+        },
+        {
+          "label": "Le 3 più urgenti. Le altre domani. Lo decidi mentre digiti.",
+          "effects": { "stats": { "burocrazia": 1, "stamina": -1 }, "flags": ["compromesso_domenica"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_natale_revisione",
+      "phase": "any",
+      "tags": ["time", "natale", "lavoro_eccessivo"],
+      "weight": 32,
+      "title": "Major revisions, 26 dicembre",
+      "text": "Il 26 dicembre alle 14:32 arriva la mail dell'editor. «Major revisions. Deadline: 5 gennaio.» Apri il PDF. Tre referee — uno benevolo, uno tecnico, uno acido. Sotto l'albero, tuo nipote di tre anni gioca con il pacco vuoto del suo regalo. Lui ride.",
+      "choices": [
+        {
+          "label": "Apri il file la sera del 26 stesso. Tre ore. Le altre dopo Capodanno.",
+          "effects": { "stats": { "stamina": -3, "intelligenza": 2 }, "flags": ["natale_revisione_subito"] }
+        },
+        {
+          "label": "Chiudi tutto fino al 2 gennaio. Hai diritto a tre giorni di famiglia.",
+          "effects": { "stats": { "stamina": 2, "burocrazia": -1 }, "flags": ["natale_protetto"] }
+        },
+        {
+          "label": "Scrivi al co-autore: «La facciamo insieme?» Lui risponde alle 02:14.",
+          "effects": { "stats": { "networking": 2, "stamina": -1 }, "reputation": { "peers": 1 }, "flags": ["natale_coautore_complice"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_genitori_smettono_chiedere",
+      "phase": "year-3",
+      "tags": ["family", "identita", "erosione"],
+      "weight": 30,
+      "title": "I tuoi genitori hanno smesso di chiedere",
+      "text": "Cena di compleanno di tua madre. Tuo fratello ingegnere parla del suo progetto a Singapore. Tua sorella commerciale ride del suo team in Polonia. Tua madre serve il dolce. A te chiede: «E tu? Bene?» Annuisci. È la prima cena da anni in cui non ti chiede del concorso, dell'ASN, di quando finirai. Si è arres{o|a}.",
+      "choices": [
+        {
+          "label": "Le racconti tutto comunque. Lei ascolta. Sa.",
+          "effects": { "stats": { "stamina": 1, "intelligenza": 1 }, "flags": ["confessione_familiare"] }
+        },
+        {
+          "label": "«Tutto bene, ma'.» Annuisci. È più facile per tutti.",
+          "effects": { "stats": { "stamina": -2, "intelligenza": -1 }, "flags": ["genitori_smesso_chiedere", "rinuncia_familiare"] }
+        },
+        {
+          "label": "Ti scappa un commento amaro. Lei ti guarda. Cambia discorso.",
+          "effects": { "stats": { "stamina": -1, "persuasione": -1 }, "reputation": { "peers": 0 }, "flags": ["famiglia_rotta_silenziosa"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_partner_carriera_avanti",
+      "phase": "any",
+      "tags": ["partner", "money", "vita_privata"],
+      "weight": 35,
+      "title": "La sua promozione",
+      "text": "Il/la tu{o|a} partner ha ricevuto una promozione. 12% in più, posizione senior. Lo dice mentre apparecchia. È contentissim{o|a} ma cerca di non mostrarlo troppo per non ferirti. Tu sorridi. Ti senti in colpa per quel sentimento sotto al sorriso. La differenza tra i vostri stipendi diventa imbarazzante.",
+      "choices": [
+        {
+          "label": "Festeggiate. Vino buono. Ti piace davvero, sotto tutto il resto.",
+          "effects": { "stats": { "fondi": -1, "stamina": 2 }, "reputation": { "peers": 1 }, "flags": ["partner_promosso_celebrato"] }
+        },
+        {
+          "label": "Dopo cena, da sol{o|a} sul balcone, fai il punto: «Non posso aspettare oltre.»",
+          "effects": { "stats": { "stamina": -1, "networking": 1 }, "flags": ["soglia_attesa_raggiunta"] }
+        },
+        {
+          "label": "Apri Linkedin. Per la prima volta in tre anni accetti l'inviti dei recruiter.",
+          "effects": { "stats": { "networking": 2, "stamina": 1 }, "flags": ["linkedin_attivo"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_amico_padre",
+      "phase": "year-2",
+      "tags": ["friends", "family", "erosione"],
+      "weight": 28,
+      "title": "Il tuo amico è diventato padre",
+      "text": "Il tuo migliore amico — dal liceo, poi università — è diventato padre stamattina. Te lo scrive su WhatsApp con la foto del bambino. Tu rispondi col cuore, le congratulazioni, l'augurio. Poi posi il telefono e capisci che non lo vedevi da otto mesi. Sette messaggi non risposti nelle ultime quattro settimane. La vita ti sta passando davanti senza che tu sia presente.",
+      "choices": [
+        {
+          "label": "Prendi il treno domani. Vai a trovarlo. Anche solo per un'ora.",
+          "effects": { "stats": { "fondi": -2, "stamina": 2, "networking": 1 }, "flags": ["visita_amico_padre"] }
+        },
+        {
+          "label": "Gli mandi un regalo. Concreto. Costoso. «Quando ce la faccio passo.»",
+          "effects": { "stats": { "fondi": -1, "stamina": -1 }, "flags": ["regalo_in_luogo_di_presenza"] }
+        },
+        {
+          "label": "«Bellissimo. Appena finita la rendicontazione vengo.» Sai che è una bugia.",
+          "effects": { "stats": { "stamina": -2, "persuasione": -1 }, "flags": ["amicizia_persa_silenzio"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_corso_lingua_abbandonato",
+      "phase": "year-2",
+      "tags": ["hobbies", "rinuncia"],
+      "weight": 25,
+      "title": "Il corso di tedesco",
+      "text": "Apri il telefono. Notifica di Duolingo: «60 giorni che non ti vediamo!» Lo avevi cominciato a marzo con l'idea di andare a Berlino in postdoc. Era luglio. Adesso è ottobre. Apri l'app. Saluti il gufo. Lo chiudi di nuovo. Non sai più dire come si chiamano i giorni della settimana.",
+      "choices": [
+        {
+          "label": "Ricominci stasera. 15 minuti. Devono diventare un'abitudine.",
+          "effects": { "stats": { "intelligenza": 1, "stamina": -1 }, "flags": ["tedesco_ripreso"] }
+        },
+        {
+          "label": "Disinstalli l'app. Non è più realistico. È onesto ammetterlo.",
+          "effects": { "stats": { "stamina": 1, "intelligenza": -2 }, "flags": ["tedesco_disinstallato", "hobby_morto"] }
+        },
+        {
+          "label": "La tieni installata. Un giorno. Forse. (Non sarà.)",
+          "effects": { "stats": { "stamina": -1 }, "flags": ["tedesco_in_limbo"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_palestra_cancellata",
+      "phase": "any",
+      "tags": ["body", "hobbies", "rinuncia"],
+      "weight": 27,
+      "title": "Disdici l'abbonamento alla palestra",
+      "text": "Apri l'estratto conto. RID palestra: 49,90 € al mese da 14 mesi. L'ultima volta che sei andat{o|a} è stato a marzo, due volte in una settimana. Poi mai più. Cliccki «disdici». Devi scrivere il motivo. Il menù propone: «Ho trovato altra struttura.» «Costi.» «Mancanza di tempo.» Selezioni l'ultima.",
+      "choices": [
+        {
+          "label": "Disdici. Cammineresti. Andresti a correre la mattina. (Non lo farai.)",
+          "effects": { "stats": { "fondi": 1, "stamina": -1 }, "flags": ["palestra_disdetta"] }
+        },
+        {
+          "label": "Mantieni l'abbonamento. Almeno ti vergognerai a non andare.",
+          "effects": { "stats": { "fondi": -1, "stamina": 1 }, "flags": ["palestra_in_colpa"] }
+        },
+        {
+          "label": "Disdici e iscrivi al corso di yoga gratuito del CUS dipendenti.",
+          "effects": { "stats": { "fondi": 1, "stamina": 2, "networking": 1 }, "flags": ["cus_yoga"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_dentista_rimandato",
+      "phase": "any",
+      "tags": ["body", "money"],
+      "weight": 28,
+      "title": "Il dentista, ancora",
+      "text": "Quel molare. Quello in basso a sinistra. Già da maggio. Dovevi fare la devitalizzazione. La dentista ha detto: «Quando vuoi. Ma non più di sei mesi.» Sono passati sette. Ora ha cominciato a darti fastidio mentre mangi. Preventivo: 680 euro. Senza convenzione. L'ultima banca a febbraio ti aveva detto no per la rateizzazione.",
+      "choices": [
+        {
+          "label": "Prendi l'appuntamento per la prossima settimana. Si trova il modo.",
+          "effects": { "stats": { "fondi": -4, "stamina": 2 }, "flags": ["devitalizzazione_fatta"] }
+        },
+        {
+          "label": "Lo rimandi a gennaio. Quando arriva il 13° pagano almeno una rata.",
+          "effects": { "stats": { "stamina": -2 }, "flags": ["dentista_rimandato_ancora"] }
+        },
+        {
+          "label": "Chiedi i soldi a tua madre. Lei li ha. Lei dirà di sì. Lei non chiederà.",
+          "effects": { "stats": { "fondi": -1, "stamina": 1, "intelligenza": -1 }, "flags": ["dentista_madre_paga", "dipendenza_familiare"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_31_euro_ora",
+      "phase": "any",
+      "tags": ["money", "fondi", "burocrazia"],
+      "weight": 30,
+      "title": "31 euro l'ora",
+      "text": "Sei PI di un piccolo bando. Devi assumere un dottorando per 6 mesi. Le regole del MUR dicono: «31 euro/ora.» Sai che a quella cifra non si trova nessuno seri{o|a}. Sai anche che è una cifra di lordo, non di netto. È il modo in cui il sistema fa finta di pagare la gente.",
+      "choices": [
+        {
+          "label": "Tieni la cifra a bando. Speri che si candidi qualcun{o|a}.",
+          "effects": { "stats": { "burocrazia": 1 }, "reputation": { "peers": 1 }, "flags": ["bando_cifra_minima"] }
+        },
+        {
+          "label": "Aggiungi una borsa di ricerca «integrativa» da 200 €/mese.",
+          "effects": { "stats": { "fondi": -2, "burocrazia": 2, "persuasione": 1 }, "flags": ["bando_integrato"] }
+        },
+        {
+          "label": "Tutto tramite la fondazione satellite dell'ateneo. Paga 45/ora.",
+          "effects": { "stats": { "burocrazia": -1, "fondi": -1, "networking": 1 }, "reputation": { "ateneo_hr": -1 }, "flags": ["bando_fondazione"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_brodo_bambino",
+      "phase": "any",
+      "tags": ["family", "time", "lavoro_serale"],
+      "weight": 33,
+      "title": "Il brodo per il bambino",
+      "text": "22:30. Suo figlio dorme. Tuo figlio bolle sulla stufa — brodo vegetale per le pappe della settimana. Wave di messaggi sul gruppo di lavoro: il direttore ha bisogno della risposta al ricorso del prof. Tizio entro le 8 di domani. Una collega scrive: «Rispondo dopo, sto preparando le aliquote di brodo per il bambino (per restare in tema).» Sospiro collettivo.",
+      "requires": { "flags": { "has": ["genitore"] } },
+      "choices": [
+        {
+          "label": "Rispondi subito. Il brodo si abbrucchia un po' — pace.",
+          "effects": { "stats": { "stamina": -2, "burocrazia": 1 }, "reputation": { "supervisor": 1, "direttore_dipartimento": 1 }, "flags": ["brodo_sacrificato"] }
+        },
+        {
+          "label": "Spegni il fuoco. Rispondi domani all'alba.",
+          "effects": { "stats": { "stamina": 1 }, "reputation": { "supervisor": -1 }, "flags": ["prioritizzato_brodo"] }
+        },
+        {
+          "label": "Spegni WhatsApp. Spegni anche Outlook. Ti versi un bicchiere di vino.",
+          "effects": { "stats": { "stamina": 2, "intelligenza": -1 }, "reputation": { "supervisor": -2 }, "flags": ["serata_protetta"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_seconda_gravidanza_rimandata",
+      "phase": "year-2",
+      "tags": ["family", "vita_privata", "f_gender"],
+      "weight": 30,
+      "title": "Il secondo figlio rimandato",
+      "text": "Avevate detto: «il secondo a fine 2025.» Adesso è inizio 2025. Tuo figlio ha 18 mesi. La rendicontazione PON ti dice che non puoi più permetterti un congedo. Tu hai 38 anni. La ginecologa, gentilmente, in visita di controllo: «Sa, dopo i 40 le cose si complicano.»",
+      "requires": { "flags": { "has": ["f_gender", "genitore"] } },
+      "choices": [
+        {
+          "label": "Provate adesso. Accetti di lavorare il doppio dopo.",
+          "effects": { "stats": { "stamina": -2, "intelligenza": 1 }, "flags": ["seconda_gravidanza_in_progetto"] }
+        },
+        {
+          "label": "Rimandi al 2027. (Dopo l'RTD-B. Forse.)",
+          "effects": { "stats": { "stamina": -1, "fondi": 1 }, "flags": ["seconda_gravidanza_rimandata", "rinuncia_familiare"] }
+        },
+        {
+          "label": "Decidete di fermarvi a uno. Stasera. È la prima volta che lo dite a voce.",
+          "effects": { "stats": { "stamina": 1, "intelligenza": -1 }, "flags": ["famiglia_fermata_a_uno", "rinuncia_familiare"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_tre_lauree_ostinato",
+      "phase": "year-4plus",
+      "tags": ["identita", "uscita", "age_over40"],
+      "weight": 28,
+      "title": "Tre lauree, ostinato",
+      "text": "Quarantun anni. Tre lauree, un dottorato, ventiquattro articoli pubblicati. Ti chiama un recruiter: 65k netti, biotech, sede a Milano. «Cerchiamo qualcuno con la sua esperienza per coordinare un team di tre R&D.» Riagganci. Apri lo specchio del bagno. Dici, a voce: «Il problema sono io che mi sono ostinato.» Una collega della rete lo aveva scritto in chat l'altra sera.",
+      "requires": { "flags": { "has": ["age_over40"] } },
+      "choices": [
+        {
+          "label": "Lo richiami due ore dopo. Acceti il colloquio. Per la prima volta.",
+          "effects": { "stats": { "networking": 3, "stamina": 2 }, "reputation": { "supervisor": -2 }, "flags": ["richiamato_recruiter", "uscita_avviata"] }
+        },
+        {
+          "label": "Rifiuti. Manca un anno alla fine del contratto. «Poi vedremo.»",
+          "effects": { "stats": { "stamina": -2 }, "flags": ["altro_anno_per_il_sistema"] }
+        },
+        {
+          "label": "Lo metti tra i preferiti. Lo chiamerai a luglio. (Forse.)",
+          "effects": { "stats": { "stamina": 1, "networking": 1 }, "flags": ["recruiter_in_riserva"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_perdere_neuroni",
+      "phase": "year-3",
+      "tags": ["identita", "erosione"],
+      "weight": 27,
+      "title": "«Sto perdendo i neuroni»",
+      "text": "È venerdì sera. Hai passato la giornata su una griglia Excel di rendicontazione. Apri il browser e leggi un articolo del tuo settore — uno che cinque anni fa avresti letto in mezz'ora. Lo rileggi tre volte e non capisci la sezione metodologica. «Penso di stare perdendo inesorabilmente tutti i miei neuroni», scrive una collega in chat la sera stessa. Tu metti un cuore.",
+      "choices": [
+        {
+          "label": "Stampi l'articolo. Lo lasci sul comodino. Te lo rileggi domani con caffè.",
+          "effects": { "stats": { "intelligenza": 1, "stamina": -1 }, "flags": ["resistenza_intellettuale"] }
+        },
+        {
+          "label": "Chiudi il PDF. Apri Netflix. È venerdì, dopotutto.",
+          "effects": { "stats": { "stamina": 2, "intelligenza": -2 }, "flags": ["resa_intellettuale"] }
+        },
+        {
+          "label": "Decidi di iscriverti a un dottorato di ricerca «di seconda volta», all'estero.",
+          "effects": { "stats": { "networking": 1, "intelligenza": 2, "stamina": -2 }, "flags": ["secondo_dottorato"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_compromesso_principi",
+      "phase": "year-3",
+      "tags": ["identita", "etica", "tarda_lucidita"],
+      "weight": 28,
+      "title": "«Ho rinunciato ai principi»",
+      "text": "Una collega in chat scrive: «Io ho rinunciato ai principi 😓». Tu rileggi quella frase tre volte. Pensi a quante volte negli ultimi due anni hai detto sì a cose che cinque anni fa ti avrebbero fatto schifo. Il numero ti spaventa.",
+      "choices": [
+        {
+          "label": "Le rispondi: «Io anche. È così che funziona.»",
+          "effects": { "stats": { "stamina": 1, "intelligenza": -2 }, "reputation": { "peers": 1 }, "flags": ["principi_persi_riconosciuti"] }
+        },
+        {
+          "label": "Le rispondi: «Non è troppo tardi. Domani diciamo un no.»",
+          "effects": { "stats": { "persuasione": 2 }, "reputation": { "peers": 2 }, "flags": ["resistenza_etica"] }
+        },
+        {
+          "label": "Non rispondi. Chiudi il telefono. È un peso troppo.",
+          "effects": { "stats": { "stamina": -1, "intelligenza": -1 }, "flags": ["evitato_riconoscimento"] }
+        }
+      ]
+    },
+    {
+      "id": "subtle_supervisore_compassione",
+      "phase": "year-2",
+      "tags": ["supervisor", "micro_betrayal"],
+      "weight": 32,
+      "title": "«Dai, non perdere tempo»",
+      "text": "Hai una review sotto mano. Il tuo supervisor entra in ufficio, ti vede sullo schermo. «Cosa stai facendo?» «Una review.» Lui ti guarda con aria compassionevole. «Dai, non perdere tempo. Non servono a nulla per l'ASN.» Esce. Lui ne fa due al mese — per le riviste in cui è editor associato.",
+      "choices": [
+        {
+          "label": "Finisci la review. Te la metti sul CV come «outreach».",
+          "effects": { "stats": { "intelligenza": 1, "stamina": -1 }, "flags": ["review_finita_in_silenzio"] }
+        },
+        {
+          "label": "La declini. Ha ragione lui: ai concorsi non contano.",
+          "effects": { "stats": { "burocrazia": 1, "stamina": 1, "intelligenza": -1 }, "reputation": { "supervisor": 1 }, "flags": ["abbandonato_review"] }
+        },
+        {
+          "label": "Glielo dici: «Cinque anni fa ne facevi due al mese.» Lui sorride.",
+          "effects": { "stats": { "persuasione": 1 }, "reputation": { "supervisor": -2 }, "flags": ["sfida_diretta_supervisor"] }
+        }
+      ]
     }
   ]
 }

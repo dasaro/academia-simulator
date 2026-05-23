@@ -39,15 +39,19 @@ def load(name: str) -> dict:
 def collect_flag_setters(scenarios, events, characters):
     """flag → list of (origin, location) tuples"""
     out: dict[str, list[tuple[str, str]]] = defaultdict(list)
-    # Engine-injected flags: gender, contract type, and age band are added by
-    # createGameState based on the player's selection on the character select +
-    # state picker screens, not by any scenario / event / character data.
+    # Engine-injected flags: gender, contract type, age band, and stance are
+    # added by createGameState based on the player's selection on the
+    # character select + state picker screens, not by any scenario / event /
+    # character data.
     for f in ("m_gender", "f_gender", "nb_gender"):
         out[f].append(("engine", "createGameState (gender)"))
-    for f in ("contract_PON", "contract_PNRR", "contract_MSCA", "contract_FFO"):
+    for f in ("contract_POSTDOC", "contract_PON", "contract_PNRR",
+              "contract_MSCA", "contract_FFO", "contract_CONTRATTISTA"):
         out[f].append(("engine", "createGameState (contractType)"))
     for f in ("age_under33", "age_33to40", "age_over40"):
         out[f].append(("engine", "createGameState (ageBand)"))
+    for f in ("stance_compliant", "stance_resistant", "stance_withdrawn"):
+        out[f].append(("engine", "createGameState (stance)"))
     for c in characters["characters"]:
         for f in c.get("startingFlags", []):
             out[f].append(("character", c["id"]))

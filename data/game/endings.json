@@ -1271,6 +1271,102 @@
           "note": "whistleblowing su corruzione e abusi accademici"
         }
       ]
+    },
+    {
+      "id": "persa_di_vista",
+      "title": "Persa di vista",
+      "perishCause": "Sopravvivenza, senza vita intorno",
+      "priority": 105,
+      "condition": {
+        "all": [
+          { "minTurn": 30 },
+          {
+            "flags": {
+              "hasAny": [
+                "amicizia_persa_silenzio",
+                "rinuncia_familiare",
+                "genitori_smesso_chiedere",
+                "regalo_in_luogo_di_presenza"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "has": ["rinuncia_familiare"],
+              "hasNot": ["career_strutturato_ottenuto"]
+            }
+          }
+        ]
+      },
+      "epilogue": "Hai resistito. Trenta mesi di rendiconti, due rinnovi, una proroga miracolosa. Sei ancora dentro. Te ne accorgi una sera di novembre, quando ti accorgi che è già novembre.\n\nApri WhatsApp e scorri. Il gruppo di amici dell'università: ultimo messaggio tuo, dieci mesi fa. Il gruppo del liceo: dodici. Tua sorella, due settimane fa, ti aveva scritto «come stai?» e tu avevi risposto «bene, tu?» — sono tre righe in tutto. Tuo padre non scrive in chat, ma c'è una foto sua dal compleanno di gennaio che non hai mai aperto.\n\nIl tuo migliore amico è diventato padre quindici mesi fa. Non hai visto il bambino. Lui non ti chiede più — la prima volta che hai detto «la prossima settimana» era subito dopo la nascita, l'ultima a Pasqua.\n\nIl/la partner che eri quando hai cominciato non c'è più. Non perché vi siete lasciati — quello è successo l'anno scorso, in modo civile, senza grandi scene. Lui/lei adesso vive in un'altra città. Vi scrivete per i compleanni dei genitori comuni.\n\nDa quanto non leggi un romanzo? Dalla recensione che hai scritto a un libro che non hai letto, due anni fa. Da quanto non vai al cinema? L'ultimo l'hai visto in aereo.\n\nGuardi lo schermo. Cinquanta articoli pubblicati. L'ASN passata. Una buona reputazione internazionale. Ed è venerdì sera. Sei in ufficio. Non c'è nessuno con cui andare a bere una birra. Non c'è nessuno che ti aspetta a casa. Hai vinto qualcosa che non ti serve più — perché non sei rimasta/o nessun{o|a} per cui valesse la pena vincerlo.\n\nQuesto finale non è una tragedia. È la cosa più comune che capita ai ricercatori italiani sopravvissuti al sistema. Non muore nessuno. Solo, una persona dopo l'altra smette di chiamare. E quando alzi la testa, la stanza è vuota da anni.",
+      "resources": [
+        { "name": "Telefono Amico Italia", "contact": "02 2327 2327", "note": "ascolto, 10-24" },
+        { "name": "Samaritans Onlus",      "contact": "06 77208977", "note": "ascolto, 13-22" }
+      ]
+    },
+    {
+      "id": "corpo_cede",
+      "title": "Il corpo cede prima della carriera",
+      "perishCause": "Diagnosi prima dell'associatura",
+      "priority": 110,
+      "condition": {
+        "all": [
+          { "minTurn": 26 },
+          {
+            "flags": {
+              "hasAny": [
+                "lezione_senza_voce",
+                "triptani_banco",
+                "minimizzato_salute_mentale",
+                "dentista_rimandato_ancora"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasAny": ["pec_inviata_cofin", "overwork_pnrr", "lavoro_gratis_mese_scoperto", "natale_revisione_subito"],
+              "hasNot": ["career_strutturato_ottenuto"]
+            }
+          }
+        ]
+      },
+      "epilogue": "Il neurologo del pubblico, finalmente. Ti ha visitato in trentadue minuti. RMN urgente. Tu non sapevi che esistesse un urgente, sul pubblico. La parola «displasia», la parola «monitoraggio semestrale», la parola «periodo di riposo assoluto.»\n\nTu pensi: ma il corso comincia tra tre settimane.\n\nIl medico ti guarda con la pazienza di chi ha visto centinaia di te. «Si fermi adesso, o si fermerà più avanti.»\n\nPrendi il certificato. Vai in ufficio. Apri il portale SIRI per chiudere il rendiconto del bimestre — quello che dovevi mandare entro venerdì. Mentre digiti, ti rendi conto che è la prima volta che non senti l'ansia. Non perché stai bene. Perché stai peggio del rendiconto. Il corpo ha smesso di reggere. Adesso decidi tu di smettere, o decide lui.\n\nQuando passi la cartella clinica al direttore di dipartimento, lui legge in silenzio. Poi: «Mi spiace molto. Davvero. Ma vede, il PON deve essere rendicontato comunque. Vediamo se troviamo qualcun{o|a} che la sostituisca per la didattica.»\n\nEsci. Cammini fino a casa per la prima volta da due anni. Quaranta minuti. Non sapevi che la tua città fosse così grande.\n\nIl certificato copre 90 giorni. Dopo, dovrai decidere. Tornare con un corpo che ha appena scritto un cartello. Andare via, con un curriculum che dice «sopravvissuto/a all'accademia italiana, settore X.» L'industria privata ti vuole — la tua collega te lo aveva detto a Natale. L'accademia, paradossalmente, anche, perché adesso sei un «caso da valutare» e i casi sono interessanti per i CUG.\n\nMa stasera no. Stasera dormi. Per la prima volta da settimane senza alzarti alle tre.\n\nIl sistema non ti ha ucciso. Ti ha solo costretto a scegliere tra te e lui. Hai scelto te, per una notte. Domani ricominciamo a contare i giorni.",
+      "resources": [
+        { "name": "Bonus psicologo INPS", "contact": "inps.it",        "note": "se attivo nell'anno fiscale" },
+        { "name": "CUG d'ateneo",         "contact": "interno ateneo", "note": "patologie da overlavoro" },
+        { "name": "Centro Antiviolenza Donna", "contact": "1522",     "note": "se la pressione si trasforma in altro" }
+      ]
+    },
+    {
+      "id": "mai_stato_qui",
+      "title": "Mai stat{o|a} qui",
+      "perishCause": "Erosione dell'identità di ricerca",
+      "priority": 100,
+      "condition": {
+        "all": [
+          { "minTurn": 34 },
+          {
+            "flags": {
+              "hasAny": [
+                "principi_persi_riconosciuti",
+                "lucidita_compliant_diventato",
+                "resa_intellettuale",
+                "review_finita_in_silenzio"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasNot": ["career_strutturato_ottenuto", "lucidita_su_assegno"]
+            }
+          }
+        ]
+      },
+      "epilogue": "Hai un'ora di buco prima del consiglio di dipartimento. Apri Google Scholar. Cerchi il tuo nome. Sessantadue articoli. Scendi alla pagina due, alla tre. Provi a ricordare di cosa parlava il numero quarantaquattro.\n\nNon te lo ricordi. Apri il PDF. Lo leggi. Riconosci il tuo stile, ma non la voce di chi l'ha scritto.\n\nVai indietro al primo. Quello del dottorato. C'era una domanda dentro che ti interessava davvero — qualcosa su come [il tuo SSD] poteva cambiare il modo in cui pensavamo a una certa cosa. Era una domanda piccola, ambiziosa, sincera. Lo rileggi e ti emozioni un po'.\n\nPoi guardi gli ultimi cinque articoli. Sono tutti su quello che il settore vuole sentire. Tutti sull'output che serviva al PRIN di turno. Tutti, in qualche modo, scritti per qualcun altr{o|a}. La domanda piccola, ambiziosa, sincera, è morta tra il numero 18 e il numero 23.\n\nIl consiglio di dipartimento è tra venti minuti. Decideranno il piano triennale di ricerca. Tu voterai a favore. Lo hai sempre fatto. Voterai a favore di una linea che è una continuazione di quello che già fa il dipartimento, perché contestarlo significa diventare invisibile. La domanda piccola non c'è dentro. Sarebbe troppo lavoro inserirla.\n\nVai al consiglio. Voti a favore. Quella sera, tornando a casa in metro, guardi il riflesso del tuo viso nel finestrino. È identico a quello dei tre PA che siedono accanto a te. Identico, davvero. Stesso sguardo. Stesso silenzio. Stessa cosa che hai imparato a chiamare prudenza.\n\nLa scienza che fai non è cattiva. È solo che potrebbe farla chiunque al posto tuo. È fungibile. Tu sei fungibile.\n\nSull'autobus pensi: «Non sono mai stat{o|a} qui.» Vuoi dire: la persona che ha cominciato il dottorato non è mai entrata in questa stanza. È rimasta nel 2012, sul treno per [città del dottorato], con i tre libri in valigia e l'idea che le idee contassero.\n\nQuella persona, in qualche modo, è morta senza che tu te ne accorgessi. È un finale silenzioso. È il più comune. È il più difficile da raccontare.",
+      "resources": [
+        { "name": "Pratica meditativa o psicoterapia", "contact": "vedi rete locale", "note": "per il dolore non clinico" },
+        { "name": "ADI / ARTeD",                       "contact": "siti delle associazioni",   "note": "se vuoi riannodare il filo con la prima domanda" }
+      ]
     }
   ]
 }
