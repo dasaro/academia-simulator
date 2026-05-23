@@ -4,3 +4,16 @@ __pycache__/
 *.pyc
 .idea/
 .vscode/
+
+# ─── DO NOT COMMIT ────────────────────────────────────────────────────────────
+# Local-only narrative reference. Anonymized but never to be published — even
+# anonymized exchanges could be reverse-correlated by people who were in the
+# original group. Keep ignored. If you ever need to share this repo as a
+# tarball / zip, make sure these files aren't in the bundle either.
+data/chat_anonymized.txt
+data/chat_raw.txt
+data/themes.md
+data/participants.json
+data/keywords.json
+data/topics.json
+/tmp_chat/

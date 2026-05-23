@@ -1223,6 +1223,54 @@
           "note": "anche dopo l'uscita dall'ateneo è ancora competente"
         }
       ]
+    },
+    {
+      "id": "strutturato_disumanizzato",
+      "title": "Hai vinto. Hai vinto.",
+      "perishCause": "Diventato/a dei loro",
+      "priority": 117,
+      "condition": {
+        "all": [
+          {
+            "flags": {
+              "has": [
+                "career_strutturato_ottenuto"
+              ]
+            }
+          },
+          {
+            "minTurn": 26
+          }
+        ]
+      },
+      "epilogue": "Hai vinto il concorso. Quaranta giorni dopo prendi servizio come RTT. Il barone, in conferenza di dipartimento, ti presenta come «un{o|a} dei nostri». Tu sorridi. Quella frase ti tornerà in testa per anni: «dei nostri».\n\nAnno uno. Ti senti ancora come gli altri RTDA — quelli che hanno scadenze annuali, ferie da recuperare, mutui rifiutati. Quando incontri un{o|a} di loro in mensa, ti senti in colpa per i 1.000 euro netti in più. Ti dici che farai la differenza. Promesso.\n\nAnno due. Sei nella prima commissione concorsi. Il barone ti spiega come funziona: la valutazione «qualitativa», i criteri che si possono modulare, i candidati «da privilegiare». Tu protesti debolmente. Lui sorride: «Te lo dico per il tuo bene. Sono cose che si imparano.» Voti come dice lui. Voti contro un'RTDA che ti ricordava te di tre anni prima.\n\nAnno tre. Hai pubblicato due paper. Nessuno te lo fa pesare. Hai capito che non ne devi pubblicare di più. Conta sederti in commissione, presentarti alle riunioni di dipartimento, votare il direttore giusto, scrivere lettere di presentazione a chi conta. La scienza è diventata un hobby della domenica. Te ne accorgi e ti dici: «È solo una fase.» Lo dirai per gli anni successivi.\n\nAnno quattro. Un convegno. Una dottoranda. Tieni la sua mano per tre secondi di troppo. Lei ride imbarazzata. Tu menti a te stess{o|a}: «non è successo niente.» Sai che è successo. Sai cosa hai fatto. Sei dall'altra parte, adesso. Quattro anni fa avresti scritto a una rete di colleghi precari per denunciarlo. Adesso quella rete non ti sopporta più. Tu non sopporti più te stess{o|a}, ma è una scoperta che ti permetti solo prima di addormentarti.\n\nAnno cinque. Vinci l'associatura. Mai più rendiconti. Mai più ASN. Una RTDA, in corridoio, ti dice: «Lei era divers{o|a}, una volta.» Tu rispondi educatamente. Lei se ne va. Quella sera ricordi una collega di sette anni fa che aveva scritto: «Esistono solo tre categorie: padroni, schiavi, raccomandati.» Tu sei nella prima. «Senza offesa», dirai più tardi a te stess{o|a}, «per chi è arrivato al posto giusto al momento giusto.»\n\nQuesto finale non è una caduta. È la regola del sistema. Ogni barone è stato precario. Ogni cordata è cominciata con qualcun{o|a} che ha detto sì alla prima offerta. L'accademia italiana non si autoreplica nonostante questi finali. Si autoreplica grazie a questi finali. Sei combustibile.",
+      "resources": [
+        {
+          "name": "1522 — antiviolenza nazionale",
+          "contact": "1522",
+          "note": "se ti riconosci in chi ha subito"
+        },
+        {
+          "name": "Differenza Donna",
+          "contact": "06 5500 5300",
+          "note": "centri antiviolenza"
+        },
+        {
+          "name": "CUG d'ateneo",
+          "contact": "Comitato Unico di Garanzia di ciascuna università",
+          "note": "anche per segnalazioni interne"
+        },
+        {
+          "name": "ADI / ARTeD",
+          "contact": "associazioni dottorandi e ricercatori a tempo determinato",
+          "note": "se vuoi che questa storia non si ripeta"
+        },
+        {
+          "name": "ANAC",
+          "contact": "anticorruzione.it",
+          "note": "whistleblowing su corruzione e abusi accademici"
+        }
+      ]
     }
   ]
 }

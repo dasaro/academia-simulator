@@ -57,6 +57,7 @@ const MILESTONE_FLAGS = {
   career_bocciato_asn:     { title: "ASN bocciata",                               category: "carriera" },
   career_vinto_concorso_altrove: { title: "Hai vinto un concorso fuori",          category: "carriera" },
   career_silent_exit:      { title: "Hai scelto l'uscita silenziosa",             category: "uscita" },
+  career_strutturato_ottenuto: { title: "Sei diventato/a strutturato/a (RTT)",     category: "carriera" },
   burocr_diffida_tar:      { title: "Hai diffidato l'ateneo / TAR",               category: "politica" },
   burocr_sindacato_attivato: { title: "Hai attivato il sindacato",                category: "politica" },
   burocr_lettera_collettiva: { title: "Hai firmato la lettera collettiva",        category: "politica" },

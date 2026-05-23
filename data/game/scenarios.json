@@ -20409,6 +20409,113 @@
           }
         }
       ]
+    },
+    {
+      "id": "rtt_chiamata_diretta",
+      "phase": "year-3",
+      "tags": [
+        "career",
+        "concorso",
+        "high_stakes",
+        "transformation"
+      ],
+      "weight": 70,
+      "requires": {
+        "minTurn": 24
+      },
+      "title": "Il barone ti offre un RTT (su misura)",
+      "text": "Ti convoca lui stesso. Niente segretaria, niente formalità. Si siede, ti fa cenno di accomodarti. «Senti, ne abbiamo parlato in consiglio. Stiamo pensando di bandire un RTT sul tuo profilo. Bando scritto con te in mente. Tu sai come finiscono. Vuoi?» La sua mano destra è posata su un fascicolo che non ti mostra.",
+      "choices": [
+        {
+          "label": "«Sì. Grazie. È quello che ho aspettato.»",
+          "effects": {
+            "stats": {
+              "stamina": 3,
+              "persuasione": 1
+            },
+            "reputation": {
+              "barone": 3,
+              "peers": -2,
+              "supervisor": 1
+            },
+            "flags": [
+              "career_strutturato_ottenuto",
+              "cordata_barone"
+            ]
+          },
+          "reaction": {
+            "from": "barone",
+            "text": "«Bene. Ne riparliamo a settembre. Nel frattempo, mi scrivi quelle quattro righe per il direttore? Si parla del piano straordinario.»"
+          }
+        },
+        {
+          "label": "«Solo se è un concorso vero. Aperto, non cucito.»",
+          "check": {
+            "stat": "persuasione",
+            "dc": 16,
+            "success": {
+              "effects": {
+                "stats": {
+                  "persuasione": 2,
+                  "intelligenza": 1
+                },
+                "reputation": {
+                  "barone": -1,
+                  "peers": 2
+                },
+                "flags": [
+                  "career_strutturato_ottenuto"
+                ]
+              },
+              "reaction": {
+                "from": "barone",
+                "text": "Lui ti guarda per dieci secondi. «Va bene. Sarà un concorso vero. Lo vincerai uguale, ma adesso non puoi dire che è stato un favore.» Sorride senza guardarti."
+              }
+            },
+            "failure": {
+              "effects": {
+                "stats": {
+                  "stamina": -2
+                },
+                "reputation": {
+                  "barone": -3,
+                  "peers": 1
+                },
+                "flags": [
+                  "career_nemico_locale",
+                  "sfida_barone"
+                ]
+              },
+              "reaction": {
+                "from": "barone",
+                "text": "«Ah. Va bene. Allora niente, eh. Magari ne riparliamo tra un paio d'anni, se ci sarà ancora budget.» Non ci sarà budget."
+              }
+            }
+          }
+        },
+        {
+          "label": "«No grazie. Voglio vincere altrove, con le mie forze.»",
+          "effects": {
+            "stats": {
+              "persuasione": 1,
+              "stamina": 1
+            },
+            "reputation": {
+              "barone": -3,
+              "peers": 3,
+              "supervisor": -1
+            },
+            "flags": [
+              "career_nemico_locale",
+              "career_silent_exit"
+            ]
+          },
+          "reaction": {
+            "from": "barone",
+            "text": "Lui annuisce piano. «Capisco. Ti rispetto per questo.» Esce. Sai che non ti rispetta. Sai che sei uscit{o|a} da una porta che difficilmente si riaprirà."
+          }
+        }
+      ]
     }
   ]
 }
