@@ -1,0 +1,107 @@
+{
+  "$schema": "../schemas/characters.schema.json",
+  "characters": [
+    {
+      "id": "matematico",
+      "name": "Il Matematico / La Matematica",
+      "ssd": "MAT/03",
+      "tagline": "Vive di teoremi e caffè. Pensa che 'rendicontazione' sia un teorema di topologia.",
+      "stats": {
+        "intelligenza": 9,
+        "networking": 2,
+        "stamina": 4,
+        "burocrazia": 1,
+        "fondi": 3,
+        "persuasione": 3
+      },
+      "startingFlags": ["burnout_prone", "lone_wolf"],
+      "startingInventory": ["preprint_in_arxiv"],
+      "startingReputation": { "supervisor": 0, "peers": 1, "barone": -1, "mur": 0, "ateneo_hr": 0 }
+    },
+    {
+      "id": "politologo",
+      "name": "Il Politologo / La Politologa",
+      "ssd": "SPS/04",
+      "tagline": "Conosce tutti, ha letto tutto, ma il suo h-index è una promessa.",
+      "stats": {
+        "intelligenza": 6,
+        "networking": 9,
+        "stamina": 5,
+        "burocrazia": 6,
+        "fondi": 6,
+        "persuasione": 8
+      },
+      "startingFlags": ["cordata_friendly"],
+      "startingInventory": ["contatto_ministeriale"],
+      "startingReputation": { "supervisor": 2, "peers": 2, "barone": 1, "mur": 0, "ateneo_hr": 1 }
+    },
+    {
+      "id": "biologo",
+      "name": "Il Biologo / La Biologa",
+      "ssd": "BIO/14",
+      "tagline": "Pipette di giorno, PRIN di notte. Sopravvive con cinque ore di sonno.",
+      "stats": {
+        "intelligenza": 7,
+        "networking": 5,
+        "stamina": 7,
+        "burocrazia": 3,
+        "fondi": 5,
+        "persuasione": 4
+      },
+      "startingFlags": ["wetlab_chained"],
+      "startingInventory": ["campioni_in_freezer"],
+      "startingReputation": { "supervisor": 1, "peers": 2, "barone": 0, "mur": 0, "ateneo_hr": 0 }
+    },
+    {
+      "id": "umanista",
+      "name": "L'Umanista",
+      "ssd": "L-FIL-LET/10",
+      "tagline": "Pubblica monografie nessuno cita. L'ANVUR dice che 'non conta'.",
+      "stats": {
+        "intelligenza": 8,
+        "networking": 4,
+        "stamina": 5,
+        "burocrazia": 4,
+        "fondi": 2,
+        "persuasione": 6
+      },
+      "startingFlags": ["mediane_in_pericolo"],
+      "startingInventory": ["monografia_in_corso"],
+      "startingReputation": { "supervisor": 0, "peers": 3, "barone": -2, "mur": -1, "ateneo_hr": 0 }
+    },
+    {
+      "id": "ingegnere",
+      "name": "L'Ingegnere",
+      "ssd": "ING-INF/05",
+      "tagline": "Ha rifiutato due offerte dall'industria. Si pente ogni 14 giorni (giorno paga).",
+      "stats": {
+        "intelligenza": 7,
+        "networking": 5,
+        "stamina": 6,
+        "burocrazia": 5,
+        "fondi": 7,
+        "persuasione": 5
+      },
+      "startingFlags": ["industria_offre_sempre"],
+      "startingInventory": ["linkedin_inbox_attivo"],
+      "startingReputation": { "supervisor": 1, "peers": 1, "barone": 0, "mur": 0, "ateneo_hr": 0 }
+    },
+    {
+      "id": "genitore",
+      "name": "Il Ricercatore-Padre / La Ricercatrice-Madre",
+      "ssd": "MED/09",
+      "tagline": "Ha un figlio piccolo. Sa di esistenza di un «nido universitario» che non esiste. Vive due lavori sovrapposti.",
+      "stats": {
+        "intelligenza": 7,
+        "networking": 4,
+        "stamina": 3,
+        "burocrazia": 6,
+        "fondi": 3,
+        "persuasione": 6
+      },
+      "startingFlags": ["genitore", "burnout_prone", "nido_in_lista_attesa"],
+      "startingInventory": ["babysitter_800_euro_mese"],
+      "startingReputation": { "supervisor": -1, "peers": 3, "barone": -2, "mur": -1, "ateneo_hr": -1, "direttore_dipartimento": -1, "sindacato": 1 }
+    }
+  ]
+}

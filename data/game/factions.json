@@ -1,0 +1,46 @@
+{
+  "factions": [
+    {
+      "id": "supervisor",
+      "name": "Il/La Tuo/a Responsabile Scientifico",
+      "description": "Firma le tue presenze, sceglie a quali bandi puoi partecipare. Può proteggerti o sacrificarti.",
+      "range": [-10, 10]
+    },
+    {
+      "id": "peers",
+      "name": "Gli Altri Precari",
+      "description": "La rete dei precari. La tua unica fonte di informazione affidabile sui regolamenti.",
+      "range": [-10, 10]
+    },
+    {
+      "id": "barone",
+      "name": "Il Barone della SSD",
+      "description": "Decide chi vince il concorso prima che il concorso esista. Non si offende mai due volte: la prima è già fatale.",
+      "range": [-10, 10]
+    },
+    {
+      "id": "mur",
+      "name": "Il MUR",
+      "description": "Risponde alle PEC con anni di ritardo, se risponde. Le sue FAQ contraddicono i suoi decreti.",
+      "range": [-10, 10]
+    },
+    {
+      "id": "ateneo_hr",
+      "name": "Ufficio Risorse Umane d'Ateneo",
+      "description": "Reinterpreta ogni norma nazionale a modo proprio. La sua circolare prevale sulla legge.",
+      "range": [-10, 10]
+    },
+    {
+      "id": "direttore_dipartimento",
+      "name": "Il Direttore di Dipartimento",
+      "description": "Firma le delibere CdD, presiede le riunioni con il microfono spento, decide chi 'rappresenta il dipartimento' nei concorsi. Ha il rettore nei contatti diretti. Distinto dal tuo responsabile scientifico.",
+      "range": [-10, 10]
+    },
+    {
+      "id": "sindacato",
+      "name": "ADI / ARTeD / FLC-CGIL",
+      "description": "Scrivono lettere nazionali. Il referente lo trovi solo dopo 3 inoltri. Quando si muovono spostano qualcosa. Trade-off: più ti avvicini a loro, più il barone e il responsabile ti percepiscono come problema.",
+      "range": [-10, 10]
+    }
+  ]
+}

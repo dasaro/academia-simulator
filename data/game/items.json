@@ -1,0 +1,455 @@
+{
+  "items": [
+    {
+      "id": "babysitter_800_euro_mese",
+      "name": "Babysitter (800€/mese)",
+      "description": "L'unica soluzione che hai trovato per coprire l'orario fra la fine del nido e la fine della tua giornata. Una collega aveva scritto, qualche mese fa: «Ho chiamato una babysitter 800 euro al mese per rientrare a lavoro.» Stessi numeri.",
+      "usable": false
+    },
+    {
+      "id": "preprint_in_arxiv",
+      "name": "Preprint su arXiv",
+      "description": "Il tuo paper migliore, ancora in revisione. Difenderlo richiede tempo; abbandonarlo è veloce. Si spende in uno scenario specifico.",
+      "usable": false
+    },
+    {
+      "id": "contatto_ministeriale",
+      "name": "Contatto al MUR",
+      "description": "Una conoscenza al Ministero. Un colpo, una volta sola.",
+      "usable": false
+    },
+    {
+      "id": "campioni_in_freezer",
+      "name": "Campioni nel freezer −80°C",
+      "description": "Quattro anni di lavoro biologico. Etichettali, donali o lasciali sciogliere.",
+      "usable": false
+    },
+    {
+      "id": "monografia_in_corso",
+      "name": "Monografia in stesura",
+      "description": "Centonovanta pagine di lavoro. Un editore serio o uno che vende ISBN, decidi tu.",
+      "usable": false
+    },
+    {
+      "id": "linkedin_inbox_attivo",
+      "name": "Inbox LinkedIn attiva",
+      "description": "I reclutatori ti scrivono ogni 2-3 settimane. Tienilo aperto e arriverà un'offerta concreta. (Permanente)",
+      "usable": false
+    },
+    {
+      "id": "lettera_referenza",
+      "name": "Lettera di referenza",
+      "description": "Una raccomandazione firmata da un ordinario in pensione. Si spende in un concorso per un bonus alla prova.",
+      "usable": false
+    },
+    {
+      "id": "contatto_estero",
+      "name": "Contatto a Eindhoven",
+      "description": "Un postdoc senza concorso. Spendilo quando vuoi davvero andare via.",
+      "usable": false
+    },
+    {
+      "id": "debito_di_favori",
+      "name": "Debito di favori",
+      "description": "Devi qualcosa a un collega. Prima o poi te lo chiederà.",
+      "usable": false
+    },
+    {
+      "id": "offerta_industria_concreta",
+      "name": "Offerta industria firmata",
+      "description": "75k RAL, valida 30 giorni. Si spende per uscire o lasciarla scadere.",
+      "usable": false
+    },
+    {
+      "id": "verbali_concorso",
+      "name": "Verbali del concorso perso",
+      "description": "84 pagine con i punteggi dettagliati. Materiale prezioso per un TAR.",
+      "usable": false
+    },
+    {
+      "id": "avvocato_amministrativista",
+      "name": "Avvocato amministrativista",
+      "description": "Un avvocato di fiducia. Costa, ma sa scrivere PEC che fanno paura.",
+      "usable": false
+    },
+    {
+      "id": "rendiconto_primo",
+      "name": "Primo rendiconto SIRI",
+      "description": "Hai chiuso il primo rendiconto. Carta in più nella manica per i prossimi.",
+      "usable": false
+    },
+    {
+      "id": "pubblicazione_extra",
+      "name": "Pubblicazione",
+      "description": "Un paper pubblicato. Conta per i tuoi prodotti.",
+      "usable": false
+    },
+    {
+      "id": "pubblicazione_primo_autore",
+      "name": "Pubblicazione (primo autore)",
+      "description": "Un paper di cui sei primo autore. Pesa il doppio per l'ASN.",
+      "usable": false
+    },
+    {
+      "id": "pubblicazione_classe_a",
+      "name": "Pubblicazione in classe A",
+      "description": "Una rivista di fascia A. Il sogno bagnato di ogni ASN.",
+      "usable": false
+    },
+    {
+      "id": "pubblicazione_corresponsabile",
+      "name": "Pubblicazione (corresponding author)",
+      "description": "Sei il/la responsabile della corrispondenza. Conta per certe commissioni.",
+      "usable": false
+    },
+    {
+      "id": "monografia_seria",
+      "name": "Monografia (editore accademico riconosciuto)",
+      "description": "Una monografia su una casa editrice riconosciuta dall'ANVUR. Pesa per l'ASN. Non l'hai pagata tu.",
+      "usable": false
+    },
+    {
+      "id": "monografia_ombra",
+      "name": "Monografia (editore predatorio)",
+      "description": "Una monografia su una casa editrice che vende ISBN. Conta finché non viene smascherata.",
+      "usable": false
+    },
+    {
+      "id": "campioni_etichettati",
+      "name": "Campioni etichettati",
+      "description": "I tuoi campioni messi in ordine. Possono ancora servire.",
+      "usable": false
+    },
+    {
+      "id": "chiarimento_mur",
+      "name": "Chiarimento informale del MUR",
+      "description": "Una mail che vale quanto un decreto, quasi.",
+      "usable": false
+    },
+    {
+      "id": "vacanza_residua",
+      "name": "Giorni di ferie residui",
+      "description": "Cinque giorni di ferie accumulati e mai presi. Spendili per ricaricarti davvero.",
+      "usable": true,
+      "use": {
+        "effects": {
+          "stats": {
+            "stamina": 3
+          }
+        },
+        "reaction": {
+          "from": null,
+          "text": "Cinque giorni di silenzio. Non leggi una mail. Quando torni, qualcosa è cambiato in te — e niente è cambiato nel sistema."
+        }
+      }
+    },
+    {
+      "id": "caffe_extra",
+      "name": "Terzo caffè della mattinata",
+      "description": "Tre caffè in due ore. Ti carica davvero o ti fa venire l'ansia? D&D, DC 10 su stamina.",
+      "usable": true,
+      "use": {
+        "roll": {
+          "stat": "stamina",
+          "dc": 10,
+          "success": {
+            "effects": {
+              "stats": {
+                "stamina": 1,
+                "intelligenza": 1
+              }
+            },
+            "reaction": {
+              "from": null,
+              "text": "Voli. Scrivi tre paragrafi che ti piacciono davvero. Per due ore sei in flusso."
+            }
+          },
+          "failure": {
+            "effects": {
+              "stats": {
+                "stamina": -2
+              },
+              "flags": [
+                "complesso_inferiorita"
+              ]
+            },
+            "reaction": {
+              "from": null,
+              "text": "Tremi. Vibrazione fine. Non riesci più a fissare lo schermo per più di trenta secondi."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "amitriptilina_serale",
+      "name": "Amitriptilina (basso dosaggio)",
+      "description": "Te l'ha prescritta una psichiatra del pubblico dopo le emicranie di ottobre. Stabilizza, ti lascia un alone. Lo prendi alla sera.",
+      "usable": true,
+      "use": {
+        "effects": {
+          "stats": {
+            "stamina": 2
+          },
+          "flags": [
+            "pers_silenzio_dolore"
+          ]
+        },
+        "reaction": {
+          "from": null,
+          "text": "L'alone della mattina dopo non passa fino alle 11. Risolvi due email. Ti senti più funzionale di te stesso/a, in un modo che non ti piace del tutto."
+        }
+      }
+    },
+    {
+      "id": "panino_mensa_jolly",
+      "name": "Panino convenzionato in mensa",
+      "description": "Il panino al tonno della mensa. Sicuro come la morte. +1 stamina, +1 fondi (risparmio).",
+      "usable": true,
+      "use": {
+        "effects": {
+          "stats": {
+            "stamina": 1,
+            "fondi": 1
+          }
+        },
+        "reaction": {
+          "from": null,
+          "text": "Hai mangiato a 4,30€. Non è una conquista, ma per oggi va bene."
+        }
+      }
+    },
+    {
+      "id": "mail_dimissioni_bozza",
+      "name": "Bozza di mail di dimissioni",
+      "description": "La lettera che hai scritto in un momento difficile e non hai mandato. Cancellarla è un atto. Tirarla fuori è uno shock.",
+      "usable": true,
+      "use": {
+        "roll": {
+          "stat": "persuasione",
+          "dc": 12,
+          "success": {
+            "effects": {
+              "stats": {
+                "stamina": 2,
+                "intelligenza": 1
+              },
+              "flagsRemove": [
+                "pers_silenzio_dolore",
+                "career_rassegnato_sistema"
+              ]
+            },
+            "reaction": {
+              "from": null,
+              "text": "La cancelli. Sorridi. Ti rendi conto che la stavi tenendo solo per dirti «c'è un'uscita». Adesso lo sai senza dover guardare la bozza."
+            }
+          },
+          "failure": {
+            "effects": {
+              "stats": {
+                "stamina": -1
+              },
+              "flags": [
+                "pers_silenzio_dolore"
+              ]
+            },
+            "reaction": {
+              "from": null,
+              "text": "La rileggi. Stavi meglio quando non sapevi che era così realistica. Non la cancelli ma chiudi tutto."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "weekend_disconnesso",
+      "name": "Weekend disconnesso",
+      "description": "Hai chiuso il portatile venerdì alle 17. Lunedì lo riapri. Vediamo cosa è successo.",
+      "usable": true,
+      "use": {
+        "roll": {
+          "stat": "stamina",
+          "dc": 13,
+          "success": {
+            "effects": {
+              "stats": {
+                "stamina": 2,
+                "intelligenza": 1
+              },
+              "flagsRemove": [
+                "complesso_inferiorita",
+                "passivo"
+              ]
+            },
+            "reaction": {
+              "from": null,
+              "text": "48 ore. Hai fatto la spesa, visto degli amici, dormito otto ore. Il lunedì tre mail urgenti si sono risolte da sole."
+            }
+          },
+          "failure": {
+            "effects": {
+              "stats": {
+                "stamina": -1,
+                "burocrazia": -1
+              }
+            },
+            "reaction": {
+              "from": null,
+              "text": "Si è scatenata una catena di mail urgenti. Tre persone ti hanno scritto «se non rispondi entro lunedì…». Stavi peggio dopo del weekend di prima."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "consulenza_psicoterapia",
+      "name": "Pacchetto di sedute prepagato",
+      "description": "Quattro sedute prepagate. Privatamente, una psicoterapeuta costa circa 65€ a settimana, come dice una collega che paga di tasca propria. Spezza un loop.",
+      "usable": true,
+      "use": {
+        "effects": {
+          "stats": {
+            "stamina": 2,
+            "intelligenza": 1
+          },
+          "flagsRemove": [
+            "pers_silenzio_dolore",
+            "pers_terapia_interrotta",
+            "complesso_inferiorita"
+          ],
+          "flags": [
+            "pers_in_terapia"
+          ]
+        },
+        "reaction": {
+          "from": null,
+          "text": "Quattro sedute. La quarta cambia qualcosa. Non guarisci, ma capisci la differenza tra te e il sistema."
+        }
+      }
+    },
+    {
+      "id": "screenshot_compromettente",
+      "name": "Screenshot compromettente",
+      "description": "Una conversazione interna che documenta una decisione opaca dell'ateneo. Pubblicarla è veleno per il rettore e per te.",
+      "usable": true,
+      "use": {
+        "roll": {
+          "stat": "persuasione",
+          "dc": 15,
+          "success": {
+            "effects": {
+              "stats": {
+                "persuasione": 2,
+                "networking": 1
+              },
+              "reputation": {
+                "ateneo_hr": -3,
+                "peers": 3
+              },
+              "flags": [
+                "attivista_visibile",
+                "grp_visibilita_stampa"
+              ]
+            },
+            "reaction": {
+              "from": "peers",
+              "text": "Lo screenshot fa il giro del gruppo, poi di Twitter accademico. Il rettore ti diffida via PEC. Sei nei guai, ma non sei più solo/a."
+            }
+          },
+          "failure": {
+            "effects": {
+              "stats": {
+                "stamina": -2
+              },
+              "reputation": {
+                "ateneo_hr": -3,
+                "peers": -1
+              },
+              "flags": [
+                "career_nemico_locale"
+              ]
+            },
+            "reaction": {
+              "from": "peers",
+              "text": "Lo screenshot non era abbastanza chiaro. Qualcuno ti accusa di averlo fabbricato. La storia si ritorce contro."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "bonus_inps_residuo",
+      "name": "Bonus INPS arretrato",
+      "description": "Una cifra di 600-1800€ che ti devono da 18 mesi e che potrebbe arrivare adesso (o mai). D&D su burocrazia.",
+      "usable": true,
+      "use": {
+        "roll": {
+          "stat": "burocrazia",
+          "dc": 14,
+          "success": {
+            "effects": {
+              "stats": {
+                "fondi": 3
+              }
+            },
+            "reaction": {
+              "from": "ateneo_hr",
+              "text": "1.480€ in busta paga. Decisamente meglio di niente."
+            }
+          },
+          "failure": {
+            "effects": {
+              "stats": {
+                "stamina": -1,
+                "burocrazia": 1
+              }
+            },
+            "reaction": {
+              "from": "ateneo_hr",
+              "text": "«La sua pratica risulta sospesa per controlli formali.» Otto mesi, forse."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "amico_consulta",
+      "name": "Una vecchia compagna di dottorato che si è messa in proprio",
+      "description": "Una con cui hai fatto il PhD, ora in consulenza, fuori dall'accademia. Le scrivi quando devi sentirti dire che vali. Uno-shot, 50/50.",
+      "usable": true,
+      "use": {
+        "roll": {
+          "stat": "networking",
+          "dc": 12,
+          "success": {
+            "effects": {
+              "stats": {
+                "stamina": 2,
+                "networking": 1
+              },
+              "flagsRemove": [
+                "complesso_inferiorita",
+                "pers_silenzio_dolore"
+              ]
+            },
+            "reaction": {
+              "from": null,
+              "text": "Una telefonata di 40 minuti. Lei ti dice cose vere. Tu pianifichi un piano B reale, non sentimentale. Stai meglio."
+            }
+          },
+          "failure": {
+            "effects": {
+              "stats": {
+                "stamina": -1
+              }
+            },
+            "reaction": {
+              "from": null,
+              "text": "Non risponde. Risponderà tra due giorni con un emoji e niente più. Capisci che le sue priorità sono altre."
+            }
+          }
+        }
+      }
+    }
+  ]
+}

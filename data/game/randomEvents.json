@@ -1,0 +1,966 @@
+{
+  "events": [
+    {
+      "id": "evt_pec_mur_arrivata",
+      "title": "Risposta del MUR (4 anni dopo)",
+      "text": "Arriva la PEC che hai inviato al MUR nel primo anno. La risposta: «La domanda risulta improponibile.» Nessuna motivazione.",
+      "triggerChance": 0.05,
+      "requires": {
+        "flags": {
+          "has": [
+            "pec_aperta"
+          ]
+        },
+        "minTurn": 18
+      },
+      "effects": {
+        "stats": {
+          "stamina": -2
+        },
+        "reputation": {
+          "mur": -2
+        }
+      }
+    },
+    {
+      "id": "evt_studente_geniale",
+      "title": "Uno studente sorprendente",
+      "text": "Una tesista ti porta una bozza così buona che ti commuovi. Per un attimo ti ricordi perché hai scelto questo mestiere.",
+      "triggerChance": 0.04,
+      "effects": {
+        "stats": {
+          "stamina": 2
+        },
+        "reputation": {
+          "peers": 1
+        }
+      }
+    },
+    {
+      "id": "evt_riforma_ministeriale",
+      "title": "Nuova riforma del reclutamento",
+      "text": "Il governo annuncia un decreto che «razionalizza» i contratti di ricerca. Le bozze sono in giro da mesi. Nessuno capisce se l'art. 24 esista ancora.",
+      "triggerChance": 0.06,
+      "effects": {
+        "stats": {
+          "burocrazia": -1,
+          "stamina": -1
+        },
+        "reputation": {
+          "mur": -1,
+          "peers": 1
+        },
+        "flags": [
+          "riforma_in_arrivo"
+        ]
+      }
+    },
+    {
+      "id": "evt_paper_accettato",
+      "title": "Paper accettato",
+      "text": "Le revisioni minori sono state risolte dopo nove mesi. Il paper è IN PRESS.",
+      "triggerChance": 0.05,
+      "requires": {
+        "minTurn": 4
+      },
+      "effects": {
+        "stats": {
+          "intelligenza": 1,
+          "stamina": 1
+        },
+        "inventory": {
+          "add": [
+            "pubblicazione_extra"
+          ]
+        }
+      }
+    },
+    {
+      "id": "evt_paper_rejected",
+      "title": "Major revisions per la quarta volta",
+      "text": "Reviewer 2 ha scritto due righe in tre mesi: «Non sono convinto.»",
+      "triggerChance": 0.06,
+      "effects": {
+        "stats": {
+          "stamina": -2
+        }
+      }
+    },
+    {
+      "id": "evt_collega_vince",
+      "title": "Un collega vince un concorso",
+      "text": "Un collega della rete dei precari ha vinto un RTT. Festeggiate. Tu sorridi a denti stretti e ordini un altro spritz.",
+      "triggerChance": 0.05,
+      "effects": {
+        "stats": {
+          "stamina": -1
+        },
+        "reputation": {
+          "peers": 1
+        },
+        "flags": [
+          "complesso_inferiorita"
+        ]
+      }
+    },
+    {
+      "id": "evt_help_desk_siri",
+      "title": "Il portale SIRI è giù",
+      "text": "Il portale di rendicontazione non funziona da 9 giorni. La scadenza non è stata spostata.",
+      "triggerChance": 0.06,
+      "effects": {
+        "stats": {
+          "stamina": -2,
+          "burocrazia": -1
+        },
+        "reputation": {
+          "mur": -1
+        }
+      }
+    },
+    {
+      "id": "evt_industria_chiama",
+      "title": "LinkedIn ti contatta",
+      "text": "Un'azienda di consulenza ti scrive: 60k netti, smart working pieno, niente concorsi. L'offerta è seria. È fra le tue mani.",
+      "triggerChance": 0.05,
+      "requires": {
+        "minTurn": 6
+      },
+      "choices": [
+        {
+          "label": "Rispondi e firmi. Domani non sei più ricercatore/ricercatrice.",
+          "effects": {
+            "stats": {
+              "fondi": 3,
+              "stamina": 2
+            },
+            "flags": [
+              "pers_uscito_industria"
+            ]
+          },
+          "reaction": {
+            "from": null,
+            "text": "Il contratto è in PDF. Firmi col touchpad. Tre giorni dopo non rispondi più alle mail dell'ateneo. La vita, scopri, costa molto meno di quanto pensavi."
+          }
+        },
+        {
+          "label": "Lasci in inbox. «Ci penso.»",
+          "effects": {
+            "stats": {
+              "stamina": 1
+            },
+            "flags": [
+              "pers_piano_b_attivo"
+            ]
+          },
+          "reaction": {
+            "from": null,
+            "text": "Il messaggio resta nel cellulare. Lo apri due volte al giorno. Per ora non rispondi. Sai che c'è."
+          }
+        },
+        {
+          "label": "Blocchi e cancelli LinkedIn.",
+          "effects": {
+            "stats": {
+              "persuasione": 1,
+              "stamina": 0
+            },
+            "flags": [
+              "career_attesa_obbediente"
+            ]
+          },
+          "reaction": {
+            "from": null,
+            "text": "App eliminata. Profilo disattivato. Te lo dici come fosse un dimagrimento: «Adesso sono libero/libera.» Domani torni a rendicontare."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_paper_in_press_limbo",
+      "title": "Un vecchio paper esce dal limbo",
+      "text": "Un paper sottomesso nel 2021 viene accettato. Tre coautori se ne sono nel frattempo andati altrove. Te lo dicono via mail.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 12
+      },
+      "effects": {
+        "stats": {
+          "intelligenza": 1,
+          "stamina": 1
+        },
+        "inventory": {
+          "add": [
+            "pubblicazione_extra"
+          ]
+        }
+      }
+    },
+    {
+      "id": "evt_scholar_apre_alle_23",
+      "title": "Apri Google Scholar alle 23",
+      "text": "Sono due giorni che non apri Scholar. Lo apri. Una citazione nuova, da un gruppo che non conoscevi. Per un attimo non sai cosa farne. La nuova citazione resta lì come un'icona luminosa.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 12
+      },
+      "effects": {
+        "stats": {
+          "intelligenza": 1,
+          "stamina": 1
+        }
+      }
+    },
+    {
+      "id": "evt_tesista_voca_domenica",
+      "title": "Vocale di un tesista, domenica sera",
+      "text": "Un tesista ti manda un audio di 4:38 minuti alle 23 di domenica. Tre cambi di indirizzo della tesi nello stesso messaggio. Sentirlo o no è la domanda della tua serata.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 8
+      },
+      "choices": [
+        {
+          "label": "Lo apri. Lo ascolti per intero. Rispondi punto per punto.",
+          "effects": {
+            "stats": {
+              "stamina": -2,
+              "intelligenza": 1
+            },
+            "reputation": {
+              "peers": 1
+            }
+          },
+          "reaction": {
+            "from": null,
+            "text": "Quaranta minuti. Lui risponde con un cuore. Domani sarà un altro giorno e un altro audio."
+          }
+        },
+        {
+          "label": "«Ne parliamo lunedì in ufficio.»",
+          "effects": {
+            "stats": {
+              "stamina": 1,
+              "persuasione": 1
+            }
+          },
+          "reaction": {
+            "from": null,
+            "text": "Lui ti scrive: «Ok prof, ma stanotte rifletto a vuoto.» Tu rispondi: «Va bene.» E spegni."
+          }
+        },
+        {
+          "label": "Lo apri lunedì, fingendo di non averlo visto.",
+          "effects": {
+            "stats": {
+              "stamina": 0
+            },
+            "reputation": {
+              "peers": -1
+            },
+            "flags": [
+              "pers_silenzio_dolore"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_anvur_survey",
+      "title": "Compila il questionario ANVUR",
+      "text": "Sono 47 domande. La 14 chiede di rendicontare l'impatto sociale del tuo lavoro. Scrivi: «Indeterminato.» Lo cancelli. Riscrivi qualcosa di più diplomatico.",
+      "triggerChance": 0.05,
+      "requires": {
+        "minTurn": 6
+      },
+      "effects": {
+        "stats": {
+          "stamina": -1,
+          "burocrazia": 1
+        },
+        "reputation": {
+          "mur": -1
+        }
+      }
+    },
+    {
+      "id": "evt_cineca_giu",
+      "title": "Cineca: autenticazione SPID non riconosciuta",
+      "text": "Il sistema Cineca non riconosce lo SPID. Devi rifare l'accreditamento. Il sito dice di scrivere a una mail. La mail rimbalza. Sono le 22:00 di un giovedì.",
+      "triggerChance": 0.05,
+      "effects": {
+        "stats": {
+          "stamina": -2,
+          "burocrazia": -1
+        }
+      }
+    },
+    {
+      "id": "evt_dipartimento_taglio",
+      "title": "Tagli al dipartimento",
+      "text": "Una nota del rettore annuncia il «ridimensionamento del personale tecnico-amministrativo». La segretaria amministrativa, che era stata l'unica a capire il tuo rendiconto, va in pensione anticipata.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 12
+      },
+      "effects": {
+        "stats": {
+          "stamina": -1,
+          "burocrazia": -2
+        },
+        "reputation": {
+          "ateneo_hr": -1
+        }
+      }
+    },
+    {
+      "id": "evt_collega_se_ne_va",
+      "title": "Una collega molla",
+      "text": "Una collega della rete dei precari annuncia che ha accettato un'offerta in Olanda. C'è un gruppo che organizza la cena di addio venerdì sera. Vuoi venire?",
+      "triggerChance": 0.05,
+      "requires": {
+        "minTurn": 10
+      },
+      "choices": [
+        {
+          "label": "Vai alla cena. Brindi, piangi un po', prometti di scrivervi.",
+          "effects": {
+            "stats": {
+              "stamina": 1,
+              "fondi": -1
+            },
+            "reputation": {
+              "peers": 3
+            },
+            "flags": [
+              "work_collega_emigrato"
+            ]
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Vi promettete di scrivervi. Ne scrivete davvero per due mesi. Poi non più."
+          }
+        },
+        {
+          "label": "«Mi dispiace, non ce la faccio.» Mandi un audio di scuse.",
+          "effects": {
+            "stats": {
+              "stamina": 1
+            },
+            "reputation": {
+              "peers": -1
+            },
+            "flags": [
+              "pers_silenzio_dolore"
+            ]
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Lei risponde con un emoji 💜. Tu lo guardi un minuto poi metti via il telefono."
+          }
+        },
+        {
+          "label": "Le scrivi in privato una mail di tre paragrafi, sincera.",
+          "effects": {
+            "stats": {
+              "stamina": 2,
+              "intelligenza": 1
+            },
+            "reputation": {
+              "peers": 2
+            }
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Lei risponde dalla sala d'aspetto di Fiumicino: «La metterò in cornice. Davvero.»"
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_bonus_misterioso",
+      "title": "Bonus sul cedolino (in negativo)",
+      "text": "Apri lo stipendio. C'è una trattenuta di 312€ con voce «conguaglio competenze accessorie». Nessuno sa cosa sia. Hai 30 giorni per contestare.",
+      "triggerChance": 0.04,
+      "choices": [
+        {
+          "label": "Mandi PEC formale all'ufficio personale. È un casino, ma è il tuo casino.",
+          "check": {
+            "stat": "burocrazia",
+            "dc": 13,
+            "success": {
+              "effects": {
+                "stats": {
+                  "fondi": 1,
+                  "burocrazia": 1
+                }
+              },
+              "reaction": {
+                "from": "ateneo_hr",
+                "text": "Otto settimane dopo ti restituiscono i 312€. Nessuna spiegazione."
+              }
+            },
+            "failure": {
+              "effects": {
+                "stats": {
+                  "stamina": -2
+                },
+                "reputation": {
+                  "ateneo_hr": -1
+                },
+                "flags": [
+                  "pec_aperta"
+                ]
+              },
+              "reaction": {
+                "from": "ateneo_hr",
+                "text": "«La sua istanza è in valutazione presso l'ufficio competente.» Sei mesi più tardi nessuno ha valutato niente."
+              }
+            }
+          }
+        },
+        {
+          "label": "Lasci perdere. Non hai energie per una guerra da 312€.",
+          "effects": {
+            "stats": {
+              "stamina": 0,
+              "fondi": -1
+            },
+            "flags": [
+              "passivo"
+            ]
+          },
+          "reaction": {
+            "from": null,
+            "text": "Te ne penti per tre giorni. Poi ti abitui."
+          }
+        },
+        {
+          "label": "Scrivi alla rete dei precari. Otto altri hanno lo stesso problema.",
+          "effects": {
+            "stats": {
+              "networking": 2
+            },
+            "reputation": {
+              "peers": 2
+            },
+            "flags": [
+              "vertenza_potenziale",
+              "burocr_sindacato_attivato"
+            ]
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Un sindacalista del gruppo prende in mano la cosa. Lettera collettiva, 31 firme. Sapore di vittoria che non arriva."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_workshop_invito",
+      "title": "Invitato/a a un workshop a Bologna",
+      "text": "Un gruppo serio ti invita a un workshop di una giornata. Trasferta rimborsata, una giornata di confronto vero.",
+      "triggerChance": 0.03,
+      "requires": {
+        "minTurn": 8
+      },
+      "choices": [
+        {
+          "label": "Accetti. Per la prima volta in mesi pensi al tuo lavoro con interesse.",
+          "effects": {
+            "stats": {
+              "networking": 2,
+              "stamina": 2,
+              "intelligenza": 1
+            },
+            "reputation": {
+              "peers": 1
+            }
+          },
+          "reaction": {
+            "from": null,
+            "text": "Bologna ti accoglie con la nebbia. Esci dalla giornata con tre idee nuove e un contatto solido."
+          }
+        },
+        {
+          "label": "Declini. Hai troppo da rendicontare.",
+          "effects": {
+            "stats": {
+              "burocrazia": 1,
+              "networking": -1
+            },
+            "flags": [
+              "career_sfruttamento_cronico"
+            ]
+          },
+          "reaction": {
+            "from": null,
+            "text": "Tre settimane dopo, vedi gli atti del workshop. C'è un paper che avresti scritto tu."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_premio_giovane",
+      "title": "Premio «Giovane Ricercatore» della Società Italiana",
+      "text": "La Società Italiana di {ssd} ti assegna il premio «Giovane Ricercatore 2025». Targa di plexiglass, cerimonia a Pisa, 30 minuti di applausi e champagne a 4€.",
+      "triggerChance": 0.02,
+      "requires": {
+        "minTurn": 16
+      },
+      "choices": [
+        {
+          "label": "Accetti. Fai il discorso. Ti commuovi un po'.",
+          "effects": {
+            "stats": {
+              "intelligenza": 1,
+              "stamina": 2,
+              "persuasione": 1
+            },
+            "reputation": {
+              "peers": 2
+            }
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Tre persone della rete dei precari ti scrivono: «Te lo meriti tutto.» Per una settimana ti senti meno solo/a."
+          }
+        },
+        {
+          "label": "Accetti via mail, salti la cerimonia. Hai un deliverable.",
+          "effects": {
+            "stats": {
+              "burocrazia": 1,
+              "stamina": -1
+            },
+            "reputation": {
+              "peers": 0
+            },
+            "flags": [
+              "career_sfruttamento_cronico"
+            ]
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Ti mandano la targa per posta. La metti in cucina, dietro il caffè. La ritrovi sei mesi dopo."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_assegnista_chiede_aiuto",
+      "title": "Un assegnista ti chiede consigli",
+      "text": "Un giovane assegnista del dipartimento ti chiede mezz'ora per parlare della sua carriera. Lo guardi e pensi: io tre anni fa, stessi occhi.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 12
+      },
+      "choices": [
+        {
+          "label": "Gli dai un'ora vera. Onesta, comprese le brutte notizie.",
+          "effects": {
+            "stats": {
+              "stamina": -1,
+              "intelligenza": 1,
+              "networking": 1
+            },
+            "reputation": {
+              "peers": 2
+            }
+          },
+          "reaction": {
+            "from": null,
+            "text": "Lui ti ringrazia in modo che capisci. Tu pensi: «Non so se mi ringrazierà tra cinque anni.»"
+          }
+        },
+        {
+          "label": "«Senti, fai come ti sembra. Io sto solo cercando di tirare avanti.»",
+          "effects": {
+            "stats": {
+              "stamina": 1
+            },
+            "reputation": {
+              "peers": -1
+            },
+            "flags": [
+              "career_rassegnato_sistema"
+            ]
+          },
+          "reaction": {
+            "from": null,
+            "text": "Lui annuisce. Capisce più di quanto vorresti. Esce senza dire altro."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_concorso_esterno",
+      "title": "Ti chiedono di essere membro esterno",
+      "text": "Una commissione di un altro ateneo ti chiede di essere membro esterno di un concorso RTT. È un onore, dicono. Sono 4 giorni di lavoro non retribuito + 2 di trasferta.",
+      "triggerChance": 0.03,
+      "requires": {
+        "minTurn": 20
+      },
+      "choices": [
+        {
+          "label": "Accetti. È un investimento sulla rete (sull'ASN futura).",
+          "check": {
+            "stat": "burocrazia",
+            "dc": 12,
+            "success": {
+              "effects": {
+                "stats": {
+                  "networking": 2,
+                  "stamina": -2
+                },
+                "reputation": {
+                  "peers": 1,
+                  "barone": 1
+                }
+              },
+              "reaction": {
+                "from": "barone",
+                "text": "Il barone della tua SSD te lo riconosce con una mail di ringraziamento. (Te la stampi.)"
+              }
+            },
+            "failure": {
+              "effects": {
+                "stats": {
+                  "stamina": -3
+                },
+                "reputation": {
+                  "peers": 0
+                }
+              },
+              "reaction": {
+                "from": null,
+                "text": "La commissione si trascina. Due settimane di lavoro non rendicontato. Quando torni, hai 217 mail."
+              }
+            }
+          }
+        },
+        {
+          "label": "Declini educatamente.",
+          "effects": {
+            "stats": {
+              "stamina": 1
+            },
+            "reputation": {
+              "barone": -1
+            }
+          },
+          "reaction": {
+            "from": "barone",
+            "text": "Lui ti risponde una riga: «Va bene.» La prossima volta non te lo chiede. Mai più."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_attrezzatura_rotta",
+      "title": "Si è rotto lo spettrofotometro",
+      "text": "Uno strumento centrale del laboratorio si è rotto. La sostituzione costa più di quello che hai in capitolo. Il responsabile dice: «Vediamo come fare.» Non fate niente.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 6
+      },
+      "effects": {
+        "stats": {
+          "stamina": -1,
+          "fondi": -1
+        },
+        "reputation": {
+          "supervisor": -1
+        }
+      }
+    },
+    {
+      "id": "evt_valutazione_studenti",
+      "title": "Le valutazioni degli studenti sono uscite",
+      "text": "OPIS. Trentacinque studenti hanno compilato il questionario. Trentaquattro dicono «ottimo docente, materia complessa.» Uno scrive: «Sembrava stanco/a.» Tu apri il PDF tre volte per rileggere quella riga.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 8
+      },
+      "effects": {
+        "stats": {
+          "stamina": -1
+        },
+        "reputation": {
+          "peers": 1
+        }
+      }
+    },
+    {
+      "id": "evt_pec_accesso_atti_silenzio",
+      "title": "Accesso agli atti: nessuna risposta",
+      "text": "La PEC di accesso agli atti che hai mandato 45 giorni fa scade oggi senza risposta. Per la legge è silenzio-rifiuto. L'avvocato dice: «O TAR, o si lascia perdere.»",
+      "triggerChance": 0.04,
+      "requires": {
+        "flags": {
+          "has": [
+            "burocr_pec_accesso_atti"
+          ]
+        },
+        "minTurn": 6
+      },
+      "choices": [
+        {
+          "label": "Vai al TAR. Spendi i risparmi.",
+          "effects": {
+            "stats": {
+              "fondi": -2,
+              "burocrazia": 1
+            },
+            "flags": [
+              "burocr_diffida_tar",
+              "burocr_avvocato_privato"
+            ]
+          },
+          "reaction": {
+            "from": "ateneo_hr",
+            "text": "L'ateneo riceve la diffida. Cambiano tono. La risposta arriva entro 21 giorni, formale. Quello che era nascosto adesso è in PDF nel tuo desktop."
+          }
+        },
+        {
+          "label": "Lasci perdere. Non vuoi rovinarti la salute per dei verbali.",
+          "effects": {
+            "stats": {
+              "stamina": 1
+            },
+            "flags": [
+              "passivo",
+              "career_rassegnato_sistema"
+            ]
+          },
+          "reaction": {
+            "from": null,
+            "text": "Te ne penti per due giorni. Poi non ci pensi più. Quasi mai."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_collega_rtdb_olanda",
+      "title": "Un collega ha vinto un RTDB e si dimette",
+      "text": "Un compagno di precariato della rete dei precari scrive: «Ho vinto un RTDB altrove, mi dimetto. Vi devo una birra a tutti.» Ti chiede se anche tu vuoi guardare il bando.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 18
+      },
+      "choices": [
+        {
+          "label": "Brindi sinceramente. Gli scrivi in privato: «Sono fiero/a di te.»",
+          "effects": {
+            "stats": {
+              "stamina": 1,
+              "networking": 1
+            },
+            "reputation": {
+              "peers": 2
+            }
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Lui ti risponde con un'audio di trenta secondi. Ti dice cose vere. Tu sorridi un po' e bevi un bicchiere di rosso da solo/a."
+          }
+        },
+        {
+          "label": "Reagisci con un emoji. Non hai voglia di celebrare oggi.",
+          "effects": {
+            "stats": {
+              "stamina": -1
+            },
+            "reputation": {
+              "peers": -1
+            },
+            "flags": [
+              "complesso_inferiorita"
+            ]
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Lui capisce. Smetterete di scrivervi per qualche mese."
+          }
+        },
+        {
+          "label": "«Mandami il bando.» Guardi tutto quella sera.",
+          "effects": {
+            "stats": {
+              "networking": 2,
+              "intelligenza": 1
+            },
+            "inventory": {
+              "add": [
+                "contatto_estero"
+              ]
+            }
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Ti dice: «Scadenza fra 22 giorni. Apri la procedura, ne parliamo.» Dormi quattro ore."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_sciopero",
+      "title": "Sciopero del comparto università",
+      "text": "I sindacati indicono uno sciopero per gli aumenti contrattuali. Aderisci?",
+      "triggerChance": 0.03,
+      "requires": {
+        "minTurn": 14
+      },
+      "choices": [
+        {
+          "label": "Aderisci. Perdi 87€ sullo stipendio. Stai al picchetto.",
+          "effects": {
+            "stats": {
+              "fondi": -1,
+              "stamina": 1,
+              "persuasione": 1
+            },
+            "reputation": {
+              "peers": 3,
+              "ateneo_hr": -1
+            },
+            "flags": [
+              "burocr_sindacato_attivato",
+              "attivista_visibile"
+            ]
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Siete in 12 davanti al rettorato. Una giornalista di un quotidiano locale vi intervista."
+          }
+        },
+        {
+          "label": "Lavori comunque. Non ti puoi permettere gli 87€.",
+          "effects": {
+            "stats": {
+              "fondi": 0,
+              "stamina": -1
+            },
+            "reputation": {
+              "peers": -2
+            },
+            "flags": [
+              "career_sfruttamento_cronico"
+            ]
+          },
+          "reaction": {
+            "from": "peers",
+            "text": "Una collega ti scrive in privato: «Capisco. Ma se non lo facciamo noi.» Tu rispondi con un emoji. Poi non rispondi più."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_carta_credito_rifiutata",
+      "title": "La carta di credito ti rifiuta il rinnovo",
+      "text": "La banca ti scrive: «Reddito non sufficientemente continuativo.» Sostituiscono la carta con un debito prepagato. Lo dici al partner solo dopo due settimane.",
+      "triggerChance": 0.03,
+      "requires": {
+        "minTurn": 10
+      },
+      "effects": {
+        "stats": {
+          "stamina": -2,
+          "fondi": -1
+        }
+      }
+    },
+    {
+      "id": "evt_dottorato_collega_inizio",
+      "title": "Un nuovo dottorato è arrivato in laboratorio",
+      "text": "Un nuovo dottorato comincia. Ha 25 anni, è entusiasta, fa scripting in Python che voi non sapete fare. Lo aiuti con l'accesso al cluster. Lui ti chiama «professore». Tu non lo correggi.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 6
+      },
+      "effects": {
+        "stats": {
+          "stamina": 1,
+          "networking": 1
+        },
+        "reputation": {
+          "peers": 1
+        }
+      }
+    },
+    {
+      "id": "evt_h_index_aumenta",
+      "title": "Lo h-index è salito di uno",
+      "text": "Apri Scholar per la centesima volta. Lo h-index è 9. Era 8 ieri.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 12
+      },
+      "choices": [
+        {
+          "label": "Ti rallegri per due ore. È poco e tanto allo stesso tempo.",
+          "effects": {
+            "stats": {
+              "intelligenza": 1,
+              "stamina": 1
+            }
+          },
+          "reaction": {
+            "from": null,
+            "text": "Ti scrivi una nota: «h=9, ricordatelo nei momenti scuri.» Lo dimentichi entro venerdì."
+          }
+        },
+        {
+          "label": "Controlli Scopus. Lì dice 7. Chiudi tutto.",
+          "effects": {
+            "stats": {
+              "stamina": -1
+            },
+            "flags": [
+              "complesso_inferiorita"
+            ]
+          },
+          "reaction": {
+            "from": null,
+            "text": "Per il resto della giornata ti pesa una cosa che non sai nominare. Sì che la sai nominare. Solo non vuoi."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evt_rumore_concorso",
+      "title": "Voci su un concorso in arrivo",
+      "text": "Si dice che il dipartimento bandisca un posto di RTT in autunno. Si dice che lo stiano scrivendo «su misura». Si dice che — comunque — si veda con favore la partecipazione. Si dicono tante cose.",
+      "triggerChance": 0.05,
+      "requires": {
+        "minTurn": 18
+      },
+      "effects": {
+        "stats": {
+          "stamina": -1
+        },
+        "reputation": {
+          "peers": 1
+        }
+      }
+    },
+    {
+      "id": "evt_proroga_pnrr",
+      "title": "PNRR: proroga di tre mesi",
+      "text": "Una delibera CIPE proroga di tre mesi alcuni progetti PNRR. Il tuo è incluso. La proroga riguarda però solo le attività, non i contratti del personale. È un mistero, come il PRIN.",
+      "triggerChance": 0.04,
+      "requires": {
+        "minTurn": 18
+      },
+      "effects": {
+        "stats": {
+          "stamina": 1,
+          "burocrazia": -1
+        },
+        "reputation": {
+          "mur": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="192" height="192">
+  <rect width="512" height="512" fill="#14171a"/>
+  <g fill="#d4a657">
+    <polygon points="256,120 416,180 256,240 96,180"/>
+    <rect x="146" y="200" width="220" height="70" rx="6"/>
+    <circle cx="380" cy="190" r="10"/>
+    <rect x="376" y="190" width="8" height="80"/>
+    <circle cx="380" cy="280" r="14"/>
+  </g>
+  <text x="256" y="380" font-family="Georgia, serif" font-size="64" font-weight="400"
+        fill="#e6e6e6" text-anchor="middle">academia</text>
+  <text x="256" y="440" font-family="Georgia, serif" font-style="italic" font-size="36"
+        fill="#c25450" text-anchor="middle">simulator</text>
+</svg>

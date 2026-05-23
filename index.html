@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Una simulazione satirica della carriera accademica italiana. Termina sempre con 'perish'." />
+  <meta name="theme-color" content="#14171a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="AcademiaSim" />
+
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icons/icon-192.svg" />
+  <link rel="apple-touch-icon" href="icons/icon-192.svg" />
+
+  <title>Academia Simulator</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="screen screen--loading">
+      <p>Caricamento del bando…</p>
+    </div>
+  </div>
+  <script type="module" src="src/main.js?v=20260522-v11harass"></script>
+  <script>
+    // Service-worker registration — feature-detected, fails silently on
+    // browsers that don't support it (which is fine: the app degrades to
+    // online-only with no other changes).
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js").catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

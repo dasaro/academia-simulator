@@ -1,0 +1,1228 @@
+{
+  "endings": [
+    {
+      "id": "burnout_email",
+      "title": "Hai smesso di rispondere alle email",
+      "perishCause": "Burnout",
+      "priority": 100,
+      "condition": {
+        "all": [
+          {
+            "stats": {
+              "stamina": {
+                "lte": 0
+              }
+            }
+          },
+          {
+            "flags": {
+              "hasAny": [
+                "pers_silenzio_dolore",
+                "pers_silenzio_famiglia",
+                "pers_terapia_interrotta",
+                "pers_malattia_finta",
+                "non_ho_capito_niente",
+                "passivo",
+                "career_resistenza_passiva",
+                "career_rassegnato_sistema",
+                "career_sfruttamento_cronico",
+                "lavoro_in_maternita",
+                "rendiconto_in_ritardo",
+                "complesso_inferiorita"
+              ]
+            }
+          },
+          {
+            "minTurn": 12
+          }
+        ]
+      },
+      "epilogue": "Un mercoledì mattina apri Gmail. La chiudi. La riapri. La chiudi. Lo fai per tre settimane. Quando il responsabile ti chiama, non rispondi. Quando arriva la PEC di contestazione, la apri e non la leggi. Il contratto si risolve per inadempimento. Ti iscrivi alla NASpI. Per la prima volta in quattro anni, dormi otto ore."
+    },
+    {
+      "id": "fuga_estero",
+      "title": "Sei scappato/a all'estero",
+      "perishCause": "Espatrio",
+      "priority": 95,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "fuggito_estero"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "pers_estero_da_solo"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "pers_estero_famiglia"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "minTurn": 14
+          }
+        ]
+      },
+      "epilogue": "L'aereo decolla da Fiumicino. Hai un contratto in mano, l'università italiana alle spalle, un debito morale con la rete dei precari. Tra cinque anni rifiuterai di tornare anche per un visiting. Tra dieci, dirai: 'Sì, lo rifarei.' Tra venti, scriverai un libro: 'Perché ho lasciato l'accademia italiana.' Lo leggeranno solo italiani che vogliono lasciare l'accademia italiana."
+    },
+    {
+      "id": "barone_vendetta",
+      "title": "Il Barone ha lunga memoria",
+      "perishCause": "Vendetta di SSD",
+      "priority": 90,
+      "condition": {
+        "all": [
+          {
+            "reputation": {
+              "barone": {
+                "lte": -5
+              }
+            }
+          },
+          {
+            "flags": {
+              "hasAny": [
+                "sfida_barone",
+                "career_sfida_concorso_cucito",
+                "career_attivismo_pubblico",
+                "career_impugna_criteri",
+                "career_meditazione_vendetta",
+                "career_nemico_locale",
+                "career_responsabile_offeso",
+                "burocr_diffida_tar",
+                "burocr_diffida_proroga",
+                "attivista_visibile",
+                "grp_lettera_firmata",
+                "grp_visibilita_stampa"
+              ]
+            }
+          },
+          {
+            "minTurn": 14
+          }
+        ]
+      },
+      "epilogue": "Il prossimo concorso del tuo SSD include, tra i criteri di valutazione, una formulazione che nessuno aveva mai visto prima ma che esclude esattamente il tuo profilo. Quello dopo anche. Quello dopo ancora pure. In tre anni capisci che esiste una lista, e tu sei sopra. Cambi SSD. La cosa non funziona: anche lì lo sanno."
+    },
+    {
+      "id": "pi_catch22",
+      "title": "Catch-22: niente PI, niente proroga",
+      "perishCause": "Trappola burocratica",
+      "priority": 85,
+      "condition": {
+        "all": [
+          {
+            "flags": {
+              "hasNot": [
+                "candidato_pi_prin",
+                "prin_associato",
+                "fund_msca_candidato",
+                "fund_erc_candidato"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasAny": [
+                "passivo",
+                "career_attesa_obbediente",
+                "career_attesa_promessa",
+                "career_rassegnato_sistema",
+                "fund_accattonaggio",
+                "progetto_fantasma",
+                "rendiconto_in_ritardo",
+                "burocr_silenzio_assenso",
+                "pec_aperta"
+              ]
+            }
+          },
+          {
+            "stats": {
+              "fondi": {
+                "lte": 3
+              }
+            }
+          },
+          {
+            "minTurn": 24
+          }
+        ]
+      },
+      "epilogue": "Il MUR risponde con due anni di ritardo: avresti potuto essere PI. Nel frattempo il bando è chiuso, il progetto è scaduto, l'ateneo non rinnova. La proroga richiede fondi, i fondi richiedono il PRIN, il PRIN richiede una scadenza compatibile, la scadenza richiede la proroga. È un teorema. Il PRIN era un mistero."
+    },
+    {
+      "id": "asn_perpetuo_fallimento",
+      "title": "Abilitazione: cinque volte no",
+      "perishCause": "Limbo ASN",
+      "priority": 80,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "asn_bocciato"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "career_bocciato_asn"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "career_rassegnato_asn"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "minTurn": 22
+          }
+        ]
+      },
+      "epilogue": "La quinta bocciatura arriva con una motivazione che cita una pubblicazione tua che non hai mai scritto. Fai ricorso al TAR. Il TAR ti dà ragione. La commissione ti riboccia, con motivazioni leggermente diverse. Hai 45 anni. Non c'è più la finestra. Apri uno studio professionale. Continui a leggere i bandi PRIN su Twitter, ma solo per indignarti."
+    },
+    {
+      "id": "concorso_perso",
+      "title": "Tre concorsi, zero vittorie",
+      "perishCause": "Concorso destinato (a un altro)",
+      "priority": 75,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "sfida_barone"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "career_sfida_concorso_cucito"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "minTurn": 24
+          }
+        ]
+      },
+      "epilogue": "Il terzo concorso lo perdi per 0.3 punti su 100. Un punteggio sulla 'produzione scientifica recente' che la commissione non spiega. Hai 38 anni e tre lettere di referenza. Accetti il colloquio con quella società di consulenza che ti scrive da due anni. La paga è il triplo. Il giorno dopo la firma, ricevi una mail da un giovane RTD-A: 'Mi puoi dare un consiglio?'"
+    },
+    {
+      "id": "maternita_spirale",
+      "title": "La spirale del recupero",
+      "perishCause": "Maternità penalizzata",
+      "priority": 88,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "lavoro_in_maternita"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "pers_recupero_maternita"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "pers_gravidanza_rischio"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "stats": {
+              "stamina": {
+                "lte": 3
+              }
+            }
+          },
+          {
+            "minTurn": 14
+          }
+        ]
+      },
+      "epilogue": "Hai lavorato in maternità. Hai recuperato. Hai recuperato il recupero. Hai recuperato il recupero del recupero. Il MUR chiede comunque la restituzione del 30% dei fondi: il deliverable D3.2 è in ritardo di sei mesi. Tu li hai prodotti nel mese 4 dopo il parto. Nessuno se ne ricorda. Apri un blog. Si chiama 'L'accademia che ho lasciato'. Va virale per una settimana."
+    },
+    {
+      "id": "scadenza_silenziosa",
+      "title": "Il contratto è scaduto",
+      "perishCause": "Scadenza naturale, niente rinnovo",
+      "priority": 55,
+      "condition": {
+        "minTurn": 30
+      },
+      "epilogue": "Fine del contratto. Hai pubblicato. Hai rendicontato. Hai presentato un PRIN, perso un concorso, sentito mille voci di corridoio. L'ateneo non bandisce il tuo profilo. Il responsabile ti dice: «È stato un piacere lavorare con te.» Il giorno dopo, non hai più accesso alle stampanti. La password della VPN scade. Il tuo nome resta sul sito del dipartimento per altri tre anni, sotto «ex collaboratori»."
+    },
+    {
+      "id": "dimissioni_volontarie",
+      "title": "Hai firmato le dimissioni",
+      "perishCause": "Dimissioni volontarie",
+      "priority": 93,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "pers_dimissionato"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "dimissionato"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "fund_dimissione_pon"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "minTurn": 6
+          }
+        ]
+      },
+      "epilogue": "La lettera l'avevi nel cassetto da tredici mesi. L'hai firmata un martedì. La segretaria di dipartimento ti ha detto: «Mi dispiace, ma capisco.» Il responsabile non ha detto niente. Il direttore ti ha mandato una mail formale di cinque righe. La rete dei precari si è acceso per due ore. Poi è tornato a parlare del prossimo bando. Camminando verso casa, hai pensato che non avresti più dovuto compilare un rendiconto. Per un attimo hai sorriso."
+    },
+    {
+      "id": "uscita_industria",
+      "title": "Hai accettato l'offerta dell'azienda",
+      "perishCause": "Uscita verso il privato",
+      "priority": 92,
+      "condition": {
+        "any": [
+          {
+            "flags": {
+              "has": [
+                "pers_uscito_industria"
+              ]
+            }
+          },
+          {
+            "all": [
+              {
+                "flags": {
+                  "has": [
+                    "work_smart_aziendale"
+                  ]
+                }
+              },
+              {
+                "minTurn": 14
+              }
+            ]
+          }
+        ]
+      },
+      "epilogue": "60k netti, smart working pieno, niente concorsi. Il primo giorno in azienda ti chiedono di scrivere uno script Python. Lo scrivi in venti minuti. Il manager dice: «Wow.» Ti rendi conto che per tre anni hai svalutato quello che sai fare. Continui a leggere le bozze dei decreti su Twitter, ma con il distacco di chi guarda un incidente sul lato opposto dell'autostrada. Una sera, un ex collega ti chiede consiglio per uscire. Gli rispondi onestamente. Ti ringrazia. Non senti più rimpianti."
+    },
+    {
+      "id": "mutuo_negato",
+      "title": "La banca ha detto no, di nuovo",
+      "perishCause": "Vincoli economici, contratto a termine",
+      "priority": 87,
+      "condition": {
+        "all": [
+          {
+            "flags": {
+              "has": [
+                "pers_mutuo_negato"
+              ]
+            }
+          },
+          {
+            "minTurn": 20
+          }
+        ]
+      },
+      "epilogue": "La terza banca te lo dice in faccia: «Con un contratto a termine non possiamo. Anche se i suoi genitori firmano da garanti, l'esposizione è troppa.» Tuo padre dice: «Ma allora che lavoro è?» Tu non sai cosa rispondere. Trovi un annuncio di un'azienda farmaceutica a Milano. Stipendio 2,4x. Mandi il CV venerdì sera. Lunedì hai il primo colloquio. Mercoledì firmi. Il mutuo lo ottieni quattro mesi dopo. La casa è bellissima. Non ricordi più cosa significa SSD."
+    },
+    {
+      "id": "partner_distanza",
+      "title": "Eri rimasto/a per la carriera",
+      "perishCause": "Costo affettivo insostenibile",
+      "priority": 86,
+      "condition": {
+        "all": [
+          {
+            "flags": {
+              "has": [
+                "pers_partner_lontano"
+              ]
+            }
+          },
+          {
+            "minTurn": 24
+          },
+          {
+            "flags": {
+              "hasNot": [
+                "pers_pronto_a_seguire",
+                "pers_estero_famiglia"
+              ]
+            }
+          }
+        ]
+      },
+      "epilogue": "Tre anni di treni Frecciarossa. Tre anni di Skype alle 22:30. Tre anni di «ancora un po', il concorso sta per uscire». Poi non c'è più. Lui/lei ha trovato qualcuno nel posto dove vive. Te lo dice una domenica, al telefono, con la voce che gli/le trema. Tu non piangi al telefono. Piangi dopo. Mandi le dimissioni in un mercoledì di settembre. Vai a Berlino a trovare un'amica. Ti fermi tre mesi. Trovi un postdoc. Resti."
+    },
+    {
+      "id": "caregiver_assorbito",
+      "title": "Tuo padre / tua madre prima di tutto",
+      "perishCause": "Cura familiare prevalente",
+      "priority": 84,
+      "condition": {
+        "all": [
+          {
+            "flags": {
+              "has": [
+                "pers_caregiver"
+              ]
+            }
+          },
+          {
+            "stats": {
+              "stamina": {
+                "lte": 3
+              }
+            }
+          },
+          {
+            "minTurn": 18
+          }
+        ]
+      },
+      "epilogue": "Ottimo. L'università non prevede il caregiver. Ottimo. La 104 ti dà tre giorni al mese. Ottimo. Il responsabile è comprensivo per tre mesi, poi meno. Il deliverable D2.4 slitta. La rendicontazione anche. Tu sei in ospedale due sere a settimana. Una mattina, in ascensore, capisci che non puoi fare entrambe le cose. Mandi le dimissioni il giorno dopo. Tuo padre / tua madre ti dice: «Ma poi cosa farai?» Tu rispondi: «Quello che farò.» Lo trovi, dopo qualche mese."
+    },
+    {
+      "id": "burnout_clinico_uscita",
+      "title": "Diagnosi: disturbo dell'adattamento",
+      "perishCause": "Burnout clinico",
+      "priority": 98,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "pers_burnout_clinico"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "pers_terapia_interrotta"
+                  ]
+                }
+              },
+              {
+                "all": [
+                  {
+                    "flags": {
+                      "has": [
+                        "pers_emicrania_cronica"
+                      ]
+                    }
+                  },
+                  {
+                    "stats": {
+                      "stamina": {
+                        "lte": 2
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "minTurn": 14
+          }
+        ]
+      },
+      "epilogue": "Il medico del lavoro firma il modulo. La psicoterapeuta scrive «disturbo dell'adattamento, episodio depressivo medio.» Tre mesi di malattia. Poi altri tre. Al rientro, il responsabile ti chiede se «hai recuperato.» Tu rispondi: «No.» Lui ti guarda. Tu lo guardi. Mandi le dimissioni quel pomeriggio. Per sei mesi non rispondi a nessuna mail. Quando torni a lavorare — fuori dall'università — hai imparato a dire «no.» È stata la cosa più difficile e più utile della tua vita adulta."
+    },
+    {
+      "id": "vertenza_persa_uscita",
+      "title": "Hai perso al TAR",
+      "perishCause": "Battaglia legale persa",
+      "priority": 78,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "burocr_diffida_tar"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "burocr_avvocato_privato"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "career_ricorso_tar_titoli"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "minTurn": 20
+          }
+        ]
+      },
+      "epilogue": "Il TAR dice di no. L'avvocato dice di andare al Consiglio di Stato. Tu hai speso 4.800€ tra primo grado e perizia. Hai un nuovo amico avvocato. Hai una nuova competenza sul Codice del Processo Amministrativo. Hai 39 anni. La finestra è finita comunque, vinto o perso. Il ricorso lo abbandoni. Un anno dopo, lo stesso avvocato ti rappresenta per una causa contro l'ateneo sugli arretrati. Anche quella la perdi."
+    },
+    {
+      "id": "vertenza_vinta_uscita",
+      "title": "Hai vinto al TAR. Hai perso lo stesso.",
+      "perishCause": "Vittoria pirrica",
+      "priority": 82,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "career_ricorso_seriale"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "career_ricorso_tar_titoli"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "career_impugna_criteri"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "career_bocciato_asn"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "asn_bocciato"
+                  ]
+                }
+              },
+              {
+                "reputation": {
+                  "barone": {
+                    "lte": -3
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "minTurn": 20
+          }
+        ]
+      },
+      "epilogue": "Il TAR ti dà ragione. La commissione si riunisce in nuova composizione. Ti riboccia, con motivazioni che — questa volta — sono compatibili con la sentenza. Sei la persona giuridicamente più qualificata del tuo SSD a non aver mai vinto un concorso. Un giornalista di un quotidiano nazionale ti contatta per un articolo. Tu accetti. L'articolo esce. Nessuno del tuo dipartimento te lo cita. Il barone della tua SSD ti incrocia in conferenza e ti saluta — per la prima volta in cinque anni — con un cenno della testa."
+    },
+    {
+      "id": "causa_ateneo_uscita",
+      "title": "Hai fatto causa all'ateneo",
+      "perishCause": "Rottura definitiva con l'ateneo",
+      "priority": 81,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "fund_causa_ateneo"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "burocr_vertenza_addizionali"
+                  ]
+                }
+              },
+              {
+                "all": [
+                  {
+                    "flags": {
+                      "has": [
+                        "burocr_sindacato_attivato"
+                      ]
+                    }
+                  },
+                  {
+                    "flags": {
+                      "has": [
+                        "burocr_lettera_collettiva"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "minTurn": 18
+          }
+        ]
+      },
+      "epilogue": "La sentenza ti dà ragione sui 380€ trattenuti. L'ateneo ti deve 11 mesi di addizionali, più interessi. L'ateneo paga, con due anni di ritardo. Nel frattempo il tuo contratto è scaduto. Nel frattempo, nessuno nel tuo dipartimento ti parla più del necessario. Il rettore, in una intervista, ti definisce «un singolo caso, frutto di malintesi.» Tu hai un PDF della sentenza salvato sul desktop. Lo apri ogni tanto, quando hai bisogno di ricordarti che eri tu ad avere ragione."
+    },
+    {
+      "id": "cordata_assorbito",
+      "title": "Sei entrato/a nel sistema feudale, dalla porta giusta",
+      "perishCause": "Promosso/a dentro il sistema",
+      "priority": 70,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "cordata_barone"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "career_favore_politico"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "reputation": {
+              "barone": {
+                "gte": 3
+              }
+            }
+          },
+          {
+            "minTurn": 24
+          }
+        ]
+      },
+      "epilogue": "Hai detto sì al barone. Hai detto sì al collega del barone. Hai detto sì al concorso «coerente con il tuo profilo» — che però è uscito a 800 km. L'hai vinto. Sei associato/a, finalmente. Ora insegni in un ateneo che non hai mai scelto. Ora sei nella commissione di un ASN che — guarda caso — boccia un giovane RTD-A che ti ricorda molto te di dieci anni fa. Tu firmi la motivazione. La motivazione è scritta in modo che non si possa impugnare. Il barone, da Roma, ti manda una mail di una riga: «Bravo/a.»"
+    },
+    {
+      "id": "monografia_smascherata",
+      "title": "La casa editrice non era una casa editrice",
+      "perishCause": "Editoria predatoria scoperta",
+      "priority": 75,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "career_monografia_ombra"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "career_pubblicazione_mdpi"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "minTurn": 22
+          }
+        ]
+      },
+      "epilogue": "Un'inchiesta giornalistica nazionale rivela che la casa editrice X — quella che ti aveva pubblicato la monografia per 1.800€ + IVA — è nella lista nera di Beall. L'ANVUR esclude retroattivamente le monografie pubblicate da quell'editore dal computo dei prodotti. Anche le tue. Il tuo prossimo ASN parte con due titoli in meno. Non riapri quel PDF da allora. Nel curriculum hai cancellato la voce. Sul tuo profilo Scopus c'è ancora. Hai scritto cinque mail per chiederne la cancellazione. Nessuna risposta."
+    },
+    {
+      "id": "telematica_finale",
+      "title": "Sei finito/a alla telematica",
+      "perishCause": "Università telematica privata",
+      "priority": 65,
+      "condition": {
+        "all": [
+          {
+            "flags": {
+              "has": [
+                "work_telematica_si"
+              ]
+            }
+          },
+          {
+            "minTurn": 18
+          }
+        ]
+      },
+      "epilogue": "Hai accettato l'offerta di un'università telematica. Il contratto è pieno, lo stipendio del 30% superiore, la sede è vicino casa, le lezioni sono in remoto. La prima volta che incontri un tuo studente è in una piazza, durante un esame di profitto in presenza obbligatoria una volta l'anno. Lo studente ti riconosce dalla foto. Tu non lo riconosci. Lui ti dice: «Professore, ma lei ci crede ancora?» Tu rispondi di sì. Lui annuisce. Vai a casa. Apri Zoom. Inizi la prossima lezione, in playback, di un corso che hai registrato l'anno scorso."
+    },
+    {
+      "id": "silent_exit",
+      "title": "Te ne sei andato/a in silenzio",
+      "perishCause": "Uscita silenziosa",
+      "priority": 72,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "career_silent_exit"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "career_rassegnato_sistema"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "career_resistenza_passiva"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "minTurn": 18
+          }
+        ]
+      },
+      "epilogue": "Non hai scritto un post di addio. Non hai mandato la lettera al direttore. Hai semplicemente smesso di rinnovare la membership della società scientifica. Hai cancellato l'app SIRI dal cellulare. Hai disattivato Scholar. Hai chiuso il LinkedIn. Sei diventato/a un'altra persona, con un'altra mail. I tuoi paper continuano ad essere citati. Tu non lo sai e non te ne interessa. Quattro anni dopo, una ricercatrice ti scrive su LinkedIn: «Era lei l'autore di X?» Tu apri il messaggio. Lo chiudi. Non rispondi."
+    },
+    {
+      "id": "ricovero_psichiatrico",
+      "title": "Reparto di psichiatria, ricovero volontario",
+      "perishCause": "Crisi psichiatrica acuta",
+      "priority": 110,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "pers_burnout_clinico"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "pers_terapia_interrotta"
+                  ]
+                }
+              },
+              {
+                "all": [
+                  {
+                    "flags": {
+                      "hasAny": [
+                        "pers_silenzio_dolore",
+                        "pers_silenzio_famiglia"
+                      ]
+                    }
+                  },
+                  {
+                    "stats": {
+                      "stamina": {
+                        "lte": 1
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "stats": {
+              "stamina": {
+                "lte": 2
+              }
+            }
+          },
+          {
+            "minTurn": 16
+          }
+        ]
+      },
+      "epilogue": "L'episodio acuto è arrivato di sera, dopo l'ennesimo rifiuto dell'autorizzazione MUR. Il pronto soccorso ti ha tenuto sedici ore in osservazione. Lo psichiatra ha detto: «Servirebbe un ricovero volontario.» Tu hai firmato. Tre settimane in reparto. Tre settimane in cui per la prima volta in anni nessuno ti ha chiesto un rendiconto. Quando esci, scarichi la lettera di dimissioni dal portale dell'ateneo. La porti al direttore in persona. Il direttore ti chiede: «Stai bene?» Tu rispondi: «Adesso sì.» Non è del tutto vero. È vero abbastanza.\n\nQuesto finale rappresenta un fallimento dell'istituzione, non tuo. Le condizioni materiali dei precari della ricerca italiana — contratti a termine, ricatti sulla maternità, ricatti sull'ASN, ricatti sulle proroghe — producono questi esiti. Non è una statistica isolata.",
+      "resources": [
+        {
+          "name": "Telefono Amico Italia",
+          "contact": "02 2327 2327",
+          "note": "ascolto, supporto emotivo, 10-24"
+        },
+        {
+          "name": "Samaritans Onlus",
+          "contact": "06 77208977",
+          "note": "supporto in crisi"
+        },
+        {
+          "name": "Servizi di salute mentale ASL",
+          "contact": "rivolgersi al CSM territoriale",
+          "note": "psichiatria pubblica"
+        },
+        {
+          "name": "Sportello psicologico d'ateneo",
+          "contact": "verificare presso il proprio ateneo",
+          "note": "spesso gratuito per il personale"
+        }
+      ]
+    },
+    {
+      "id": "tso",
+      "title": "Trattamento Sanitario Obbligatorio",
+      "perishCause": "TSO",
+      "priority": 115,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "all": [
+                  {
+                    "flags": {
+                      "has": [
+                        "pers_burnout_clinico"
+                      ]
+                    }
+                  },
+                  {
+                    "flags": {
+                      "has": [
+                        "pers_terapia_interrotta"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "flags": {
+                      "has": [
+                        "pers_burnout_clinico"
+                      ]
+                    }
+                  },
+                  {
+                    "flags": {
+                      "hasAny": [
+                        "pers_silenzio_dolore",
+                        "pers_silenzio_famiglia"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "stats": {
+              "stamina": {
+                "lte": 1
+              }
+            }
+          },
+          {
+            "minTurn": 18
+          }
+        ]
+      },
+      "epilogue": "La psichiatra firma la proposta. Per legge servono altre firme: arrivano. Sette giorni di TSO. Quando esci, il dipartimento — formalmente — non sa nulla. Informalmente, sanno tutti. Il responsabile non ti scrive per due settimane. Poi ti scrive: «Quando hai un momento, dovremmo parlare del rendiconto del Q2.» Tu non rispondi. Tu non risponderai mai più, in tutta la tua vita, a nessun rendiconto.\n\nLa rete dei precari aveva scritto, qualche mese fa, in una battuta nera: «Prima o poi mi rinchiuderanno al reparto sanità mentale dopo un crollo nervoso.» Si rideva, allora. Adesso no.\n\nQuesto finale rappresenta una violenza che il sistema produce su corpi precari. Non è la tua debolezza: è la loro inefficienza, mascherata da regolamento.",
+      "resources": [
+        {
+          "name": "Telefono Amico Italia",
+          "contact": "02 2327 2327",
+          "note": "ascolto, supporto emotivo, 10-24"
+        },
+        {
+          "name": "Samaritans Onlus",
+          "contact": "06 77208977",
+          "note": "supporto in crisi"
+        },
+        {
+          "name": "Numero verde nazionale antiviolenza",
+          "contact": "1522",
+          "note": "violenza istituzionale anche"
+        },
+        {
+          "name": "Servizi di salute mentale ASL",
+          "contact": "rivolgersi al CSM territoriale",
+          "note": "psichiatria pubblica"
+        }
+      ]
+    },
+    {
+      "id": "infarto_giovane",
+      "title": "Infarto, 38 anni",
+      "perishCause": "Evento cardiaco da sovraccarico",
+      "priority": 105,
+      "condition": {
+        "all": [
+          {
+            "any": [
+              {
+                "flags": {
+                  "has": [
+                    "lavoro_in_maternita"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "pers_recupero_maternita"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "fund_recupero_intensivo"
+                  ]
+                }
+              },
+              {
+                "flags": {
+                  "has": [
+                    "burocr_recupero_subito"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "stats": {
+              "stamina": {
+                "lte": 2
+              }
+            }
+          },
+          {
+            "minTurn": 20
+          }
+        ]
+      },
+      "epilogue": "Eri al computer, tardi. Stavi controllando un rendiconto. Il dolore è arrivato senza preavviso. Pronto soccorso. Rianimazione. Una cardiologa ti ha chiesto: «Cosa fa, esattamente, di lavoro?» Tu hai risposto: «Ricerca.» Lei ha annuito senza capire.\n\nLa proroga per malattia è stata negata. Hai firmato le dimissioni dal letto. Nessuno, in dipartimento, ha più parlato del progetto. Una collega, mesi prima, aveva scritto: «Il primo anno di PON ho fatto 170 ore. È stato un suicidio.» Lei intendeva la metafora.\n\nLa letteratura epidemiologica documenta da anni l'eccesso di rischio cardiovascolare nei lavoratori precari della conoscenza. Il MUR pubblicherà un comunicato di cordoglio quando un caso simile arriverà ai giornali nazionali. Non è il tuo.",
+      "resources": [
+        {
+          "name": "Servizio sanitario regionale",
+          "contact": "numero unico 116 117",
+          "note": "guardia medica"
+        },
+        {
+          "name": "Telefono Amico Italia",
+          "contact": "02 2327 2327",
+          "note": "se la lettura ha aperto una ferita"
+        }
+      ]
+    },
+    {
+      "id": "suicidio_silenzioso",
+      "title": "Hai smesso di rispondere",
+      "perishCause": "Esito tragico",
+      "priority": 120,
+      "condition": {
+        "all": [
+          {
+            "flags": {
+              "has": [
+                "pers_burnout_clinico"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "has": [
+                "pers_terapia_interrotta"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasAny": [
+                "pers_silenzio_dolore",
+                "pers_silenzio_famiglia",
+                "career_silent_exit"
+              ]
+            }
+          },
+          {
+            "stats": {
+              "stamina": {
+                "lte": 0
+              }
+            }
+          },
+          {
+            "reputation": {
+              "peers": {
+                "lte": -1
+              }
+            }
+          },
+          {
+            "minTurn": 22
+          }
+        ]
+      },
+      "epilogue": "Hai smesso di rispondere alla rete dei precari un mese fa. Hai smesso di rispondere al responsabile due settimane fa. Hai smesso di rispondere ai tuoi.\n\nQuesto finale non è una sorpresa nei racconti di chi ha lasciato l'accademia italiana. Non è una statistica isolata. Non è il tuo peso da portare: è il fallimento di un sistema che non si è preso cura.\n\nNel gruppo, mesi fa, qualcuno aveva scritto «mi sto per suicidare» come una battuta. Nessuno aveva risposto sul serio. La cronaca italiana ha registrato negli ultimi anni casi di suicidio tra ricercatori e dottorandi precari. Le associazioni hanno chiesto interventi. Il MUR ha pubblicato dichiarazioni. Le condizioni non sono cambiate.\n\nSe stai leggendo questo testo e qualcosa ti sembra familiare, ti preghiamo di rivolgerti subito a uno dei contatti qui sotto. Non sei solo/a.",
+      "resources": [
+        {
+          "name": "Telefono Amico Italia",
+          "contact": "02 2327 2327",
+          "note": "10:00-24:00, ogni giorno"
+        },
+        {
+          "name": "Samaritans Onlus",
+          "contact": "06 77208977",
+          "note": "supporto in crisi, anonimo"
+        },
+        {
+          "name": "Telefono Azzurro (minorenni)",
+          "contact": "19696",
+          "note": "se sei minorenne o ti rivolgi a uno"
+        },
+        {
+          "name": "Pronto Soccorso",
+          "contact": "118",
+          "note": "in emergenza"
+        },
+        {
+          "name": "Centro di Salute Mentale ASL",
+          "contact": "il CSM del proprio territorio",
+          "note": "servizio pubblico gratuito"
+        }
+      ]
+    },
+    {
+      "id": "naspi_scaduta",
+      "title": "La NASpI è finita",
+      "perishCause": "18 mesi senza prospettive",
+      "priority": 68,
+      "condition": {
+        "all": [
+          {
+            "flags": {
+              "has": [
+                "pers_naspi"
+              ]
+            }
+          },
+          {
+            "minTurn": 22
+          }
+        ]
+      },
+      "epilogue": "Diciotto mesi di NASpI. Hai vissuto con l'80% di uno stipendio che già era basso. Hai mandato 47 CV. Hai fatto 8 colloqui. Hai vinto due concorsi: uno l'hai rifiutato perché era a Cuneo, l'altro è stato annullato per «vizi di forma». Quando arriva l'ultima rata, ti accorgi che la banca ha cancellato l'opzione di scoperto. Ti iscrivi a un master in Data Science. Tre mesi dopo lavori in una società di consulenza. Il tuo profilo LinkedIn dice ancora «PhD in [tuo SSD]». Lo aggiornerai. Forse."
+    },
+    {
+      "id": "denuncia_ritorsiva",
+      "title": "Hai denunciato. Hanno ritorsato.",
+      "perishCause": "Ritorsione post-denuncia",
+      "priority": 86,
+      "condition": {
+        "all": [
+          {
+            "flags": {
+              "hasAny": [
+                "harass_denuncia_penale",
+                "harass_alleato_denuncia"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "has": [
+                "harass_ritorsione_documentata"
+              ]
+            }
+          },
+          {
+            "minTurn": 22
+          }
+        ]
+      },
+      "epilogue": "La tua denuncia è regolarmente protocollata. L'ispettorato ha aperto un fascicolo. Il CUG ha avviato l'istruttoria. Il/La segnalat{o|a} è ancora al suo posto, con la sua targhetta sulla porta, con il suo h-index in crescita. Tu sei stata «non rinnovata per ragioni di programmazione del personale.»\n\nUn anno dopo, una giornalista di un quotidiano nazionale ti chiama. Non ti senti pronta a dare il nome. Dai il caso. Esce un articolo, senza nomi. Il rettore pubblica una dichiarazione: «L'ateneo applica la tolleranza zero verso ogni forma di molestia, secondo procedure previste dal proprio Codice Etico.» Procedure che, nel tuo caso specifico, non si sono mai concluse.\n\nTre anni dopo, ti arriva una sentenza di primo grado. Ti dà ragione. Il/La segnalat{o|a} si difende «con grande rammarico» tramite un comunicato. Tu adesso lavori da un'altra parte. Hai ricostruito qualcosa. Non parli mai dell'ateneo precedente, se non con altre persone che hanno passato lo stesso.\n\nNon è giustizia. È un riconoscimento postumo. È quello che il sistema italiano riesce a darti.",
+      "resources": [
+        {
+          "name": "Numero antiviolenza nazionale",
+          "contact": "1522",
+          "note": "gratuito, 24h, anonimo, multilingua"
+        },
+        {
+          "name": "Differenza Donna",
+          "contact": "06 5500 5300",
+          "note": "rete nazionale di centri antiviolenza"
+        },
+        {
+          "name": "Telefono Rosa",
+          "contact": "06 37518282",
+          "note": "supporto a donne in situazioni di violenza"
+        },
+        {
+          "name": "CUG d'ateneo",
+          "contact": "ogni università ha il proprio referente — cercalo nel sito d'ateneo",
+          "note": "Comitato Unico di Garanzia"
+        },
+        {
+          "name": "Consigliera di Parità regionale",
+          "contact": "sito della Consigliera Nazionale di Parità",
+          "note": "tutela discriminazioni sul lavoro"
+        },
+        {
+          "name": "Ispettorato del Lavoro",
+          "contact": "sportello territoriale",
+          "note": "per violenze e molestie sul lavoro"
+        }
+      ]
+    },
+    {
+      "id": "silenzio_aggravato",
+      "title": "Hai taciuto. Il prezzo è stato altro.",
+      "perishCause": "Silenzio prolungato",
+      "priority": 84,
+      "condition": {
+        "all": [
+          {
+            "flags": {
+              "has": [
+                "harass_normalizzato"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "has": [
+                "pers_silenzio_dolore"
+              ]
+            }
+          },
+          {
+            "stats": {
+              "stamina": {
+                "lte": 2
+              }
+            }
+          },
+          {
+            "minTurn": 18
+          }
+        ]
+      },
+      "epilogue": "Non hai parlato. Hai cambiato corridoio, orario di caffè, sede della biblioteca. Hai detto «sto bene» a tua sorella, a tua madre, alla psicoterapeuta che hai pagato di tasca tua. Hai pensato che il prezzo del silenzio fosse stancarsi un po' di più ogni giorno. È stato di più.\n\nUn giorno, in palestra, mentre fai gli addominali, parte un pianto che non riesci a fermare. La trainer ti chiede se stai bene. Tu menti, scappi a casa, ti chiudi in bagno per due ore. Quella sera, prima di addormentarti, ti accorgi che non ricordi più cosa hai fatto venerdì scorso. Hai 32 anni.\n\nIl giorno dopo prendi un appuntamento con la psichiatra del SSR. Tre mesi di lista d'attesa. Vai privatamente. 70€ a seduta. La diagnosi: PTSD complesso correlato a stress lavorativo. La psichiatra ti chiede se vuoi parlare di un incidente specifico. Tu pensi a tre, quattro episodi degli ultimi due anni. Non sai quale dirle per primo.\n\nLa tua carriera accademica continua per altri sei mesi. Poi le tue dimissioni arrivano in un pomeriggio di marzo, senza preavviso, senza spiegazioni. La cosa che ti faceva continuare era il silenzio. Quando il silenzio diventa insostenibile, anche la carriera lo diventa.",
+      "resources": [
+        {
+          "name": "Numero antiviolenza nazionale",
+          "contact": "1522",
+          "note": "gratuito, 24h, anonimo, multilingua"
+        },
+        {
+          "name": "Differenza Donna",
+          "contact": "06 5500 5300",
+          "note": "rete nazionale di centri antiviolenza"
+        },
+        {
+          "name": "Telefono Amico Italia",
+          "contact": "02 2327 2327",
+          "note": "ascolto, 10-24"
+        },
+        {
+          "name": "Servizi di salute mentale ASL",
+          "contact": "rivolgersi al CSM territoriale",
+          "note": "psichiatria pubblica"
+        },
+        {
+          "name": "CUG d'ateneo",
+          "contact": "ogni università ha il proprio referente",
+          "note": "anche dopo l'uscita dall'ateneo è ancora competente"
+        }
+      ]
+    }
+  ]
+}
