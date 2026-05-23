@@ -21921,6 +21921,581 @@
           "effects": { "stats": { "persuasione": 1 }, "reputation": { "supervisor": -2 }, "flags": ["sfida_diretta_supervisor"] }
         }
       ]
+    },
+    {
+      "id": "char_mat_peer_review_18_mesi",
+      "phase": "year-2",
+      "tags": ["matematico", "publications", "character_specific"],
+      "weight": 38,
+      "title": "Diciotto mesi sotto silenzio",
+      "text": "Hai sottomesso un articolo a una rivista Q1 di MAT/03 a febbraio dell'anno scorso. Oggi è ottobre dell'anno successivo. Diciotto mesi. Nessun referee, nessun update. Un'amica di Edimburgo ti scrive: «I matematici scrivono lentamente perché leggono lentamente.» Ride. Ride per non piangere. Le riviste di topologia possono prendersi tre anni — è la disciplina.",
+      "requires": { "flags": { "has": ["lone_wolf"] } },
+      "choices": [
+        {
+          "label": "Scrivi all'editor un sollecito formale. Tono asciutto.",
+          "effects": { "stats": { "burocrazia": 1, "persuasione": 1 }, "flags": ["sollecito_editor"] }
+        },
+        {
+          "label": "Lo metti su arXiv intanto. Almeno la priorità è tua.",
+          "effects": { "stats": { "intelligenza": 1, "networking": 1 }, "flags": ["arxiv_priority"] }
+        },
+        {
+          "label": "Niente. La matematica è lenta. Continui col paper successivo.",
+          "effects": { "stats": { "stamina": 1, "intelligenza": 1 }, "flags": ["pazienza_matematica"] }
+        }
+      ]
+    },
+    {
+      "id": "char_mat_caffe_seminario",
+      "phase": "any",
+      "tags": ["matematico", "daily_life", "character_specific"],
+      "weight": 36,
+      "title": "Il seminario delle 16",
+      "text": "Seminario del giovedì. Un visitor di Pisa parla di varietà algebriche caratteristiche positive. Sei alla terza tazza di caffè. Nove persone in aula, tutte con un quaderno aperto. Nessuno prende appunti sul portatile — non si usa, in questo settore. Dopo, al bar del dipartimento, il visitor ti chiede del tuo lavoro. Per la prima volta da settimane qualcuno ti chiede del tuo lavoro.",
+      "requires": { "flags": { "has": ["lone_wolf"] } },
+      "choices": [
+        {
+          "label": "Gli racconti tutto. Lui prende appunti — sul quaderno.",
+          "effects": { "stats": { "networking": 2, "intelligenza": 1 }, "reputation": { "peers": 1 }, "flags": ["incontro_visitor_pisa"] }
+        },
+        {
+          "label": "Una panoramica veloce. Senza entusiasmo. Lui annuisce educato.",
+          "effects": { "stats": { "stamina": 1 }, "flags": ["incontro_freddo"] }
+        },
+        {
+          "label": "Cambi discorso. Parli del concorso che sta arrivando.",
+          "effects": { "stats": { "networking": -1, "stamina": 1 }, "flags": ["evitato_lavoro_proprio"] }
+        }
+      ]
+    },
+    {
+      "id": "char_mat_didattica_200_studenti",
+      "phase": "year-1",
+      "tags": ["matematico", "teaching", "character_specific"],
+      "weight": 40,
+      "title": "200 studenti di Ingegneria",
+      "text": "Ti hanno assegnato Analisi I per Ingegneria. Duecentodieci iscritti. Aula da 180 posti. Cinque ore a settimana per dodici settimane. Programma fissato dal dipartimento di Ingegneria che non sa cos'è una rete neurale ma vuole il «calcolo delle variazioni» nella seconda metà. Niente esercitatori — il dipartimento di Matematica non ha PhD da assegnare. Sei tu, da sol{o|a}, contro 210.",
+      "requires": { "flags": { "has": ["lone_wolf"] } },
+      "choices": [
+        {
+          "label": "Spezzi in due turni. Lavoro doppio ma le aule reggono.",
+          "effects": { "stats": { "stamina": -3, "burocrazia": 2 }, "reputation": { "ateneo_hr": 1, "peers": -1 }, "flags": ["due_turni"] }
+        },
+        {
+          "label": "Tieni un turno solo. Studenti per terra. Lezioni registrate per i restanti.",
+          "effects": { "stats": { "stamina": -1, "intelligenza": -1 }, "reputation": { "peers": -2 }, "flags": ["aule_strapiene"] }
+        },
+        {
+          "label": "Chiedi formalmente al direttore due dottorandi come esercitatori.",
+          "effects": { "stats": { "burocrazia": 2, "persuasione": 2 }, "reputation": { "direttore_dipartimento": -1 }, "flags": ["richiesto_esercitatori"] }
+        }
+      ]
+    },
+    {
+      "id": "char_mat_convegno_chiuso",
+      "phase": "year-2",
+      "tags": ["matematico", "networking", "character_specific"],
+      "weight": 32,
+      "title": "Il convegno «su invito»",
+      "text": "Esce il programma del convegno di Algebra Commutativa a Cetraro — quello che conta nel settore. Tre sessioni plenarie, dodici inviti, due posti per giovani. Non sei stato/a invitato/a. Né tu né nessuno del tuo gruppo. Gli stessi nomi degli ultimi sei anni. Una giovane RTDB di Trieste ti scrive: «Iscriviti come osservatore. Almeno si vede che esisti.»",
+      "requires": { "flags": { "has": ["lone_wolf"] } },
+      "choices": [
+        {
+          "label": "Ti iscrivi come osservatore. Paghi 240 € la quota. Senza talk.",
+          "effects": { "stats": { "fondi": -1, "networking": 1, "stamina": -1 }, "flags": ["cetraro_osservatore"] }
+        },
+        {
+          "label": "Salti. Mandi un preprint allo Sloan Workshop — più meritocratico.",
+          "effects": { "stats": { "networking": 1, "intelligenza": 1 }, "reputation": { "peers": 1 }, "flags": ["sloan_invio"] }
+        },
+        {
+          "label": "Scrivi all'organizzatore: «Vorrei dare un lampo da 15 minuti.» Lui non risponde.",
+          "effects": { "stats": { "persuasione": -1, "stamina": -1 }, "reputation": { "barone": -1 }, "flags": ["snobbato_organizzatori"] }
+        }
+      ]
+    },
+    {
+      "id": "char_mat_arxiv_solitario",
+      "phase": "year-2",
+      "tags": ["matematico", "publications", "identita", "character_specific"],
+      "weight": 30,
+      "title": "Articolo da sol{o|a} su arXiv",
+      "text": "Hai messo su arXiv il tuo terzo articolo da single author. Il quarto consecutivo. Il tuo supervisor te lo aveva detto: «In matematica gli articoli da soli non aiutano per l'ASN. Il MIUR pensa che il lavoro debba essere collettivo.» Ha ragione lui. È anche vero che in matematica i lavori sono effettivamente individuali. La disciplina e il sistema non parlano la stessa lingua.",
+      "requires": { "flags": { "has": ["lone_wolf"] } },
+      "choices": [
+        {
+          "label": "Continui a scrivere da sol{o|a}. È la tua firma. Pace col MIUR.",
+          "effects": { "stats": { "intelligenza": 2, "networking": -1 }, "reputation": { "peers": 1 }, "flags": ["singleauthor_orgoglio"] }
+        },
+        {
+          "label": "Chiami un collega tedesco per un lavoro a due. Per le metriche.",
+          "effects": { "stats": { "networking": 2, "intelligenza": -1 }, "flags": ["coautore_strategico"] }
+        },
+        {
+          "label": "Aggiungi un dottorando di un altro gruppo. Lui ti deve un favore.",
+          "effects": { "stats": { "networking": 1, "burocrazia": 1 }, "reputation": { "peers": -1 }, "flags": ["coautore_dottorando_favore"] }
+        }
+      ]
+    },
+    {
+      "id": "char_pol_fieldwork_negato",
+      "phase": "year-2",
+      "tags": ["politologo", "fieldwork", "character_specific"],
+      "weight": 38,
+      "title": "Il comune non collabora",
+      "text": "Il tuo progetto richiede interviste a 40 dipendenti pubblici di un comune del centro Italia. Il sindaco aveva detto sì, in via informale, in un pranzo con il tuo PI. Adesso il segretario comunale ti scrive: «Servono autorizzazione del consiglio + protocollo d'intesa firmato dal rettore + carta intestata dell'ateneo + assicurazione professionale. Tempi: 4 mesi.» Il PRIN scade tra 8.",
+      "requires": { "flags": { "has": ["cordata_friendly"] } },
+      "choices": [
+        {
+          "label": "Inizi le firme. Quattro mesi di delay. Si farà comunque.",
+          "effects": { "stats": { "burocrazia": 3, "stamina": -2 }, "flags": ["burocrazia_fieldwork"] }
+        },
+        {
+          "label": "Cambi comune. Quello dove il PI ha un cugino consigliere.",
+          "effects": { "stats": { "networking": 2, "burocrazia": 1 }, "reputation": { "supervisor": 1 }, "flags": ["cordata_cugino_consigliere"] }
+        },
+        {
+          "label": "Riduci il fieldwork a 12 interviste online. Il PRIN va in deroga.",
+          "effects": { "stats": { "intelligenza": -1, "burocrazia": 1 }, "reputation": { "mur": -1 }, "flags": ["fieldwork_diluito"] }
+        }
+      ]
+    },
+    {
+      "id": "char_pol_cugino_ministero",
+      "phase": "any",
+      "tags": ["politologo", "networking", "cordata", "character_specific"],
+      "weight": 34,
+      "title": "Mio cugino è funzionario al MUR",
+      "text": "Cena di famiglia. Tua cugina di secondo grado lavora come funzionaria all'ufficio bandi del MUR. Tra il primo e il secondo, casualmente, ti dice: «Sai che a marzo esce un PRIN piccolo, da 80k, su valutazione delle policy migratorie? Il bando è già scritto. Esce il 18.» Tu sei un'esperta di valutazione delle policy migratorie. Coincidenze.",
+      "requires": { "flags": { "has": ["cordata_friendly"] } },
+      "choices": [
+        {
+          "label": "Cominci a scrivere la proposta stasera. Il bando lo conosci già.",
+          "effects": { "stats": { "intelligenza": 2, "burocrazia": 2, "stamina": -2 }, "reputation": { "mur": -1 }, "flags": ["bando_anticipato_scritto"] }
+        },
+        {
+          "label": "La ringrazi. Aspetti che il bando esca pubblicamente.",
+          "effects": { "stats": { "stamina": 1 }, "reputation": { "peers": 1 }, "flags": ["bando_giocato_pari"] }
+        },
+        {
+          "label": "Le chiedi pubblicamente in chat se può girarti il bando in anteprima.",
+          "effects": { "stats": { "persuasione": -1, "intelligenza": -1 }, "reputation": { "mur": -3, "peers": -2 }, "flags": ["bando_anteprima_pubblica"] }
+        }
+      ]
+    },
+    {
+      "id": "char_pol_monografia_italiano",
+      "phase": "year-2",
+      "tags": ["politologo", "publications", "asn", "character_specific"],
+      "weight": 36,
+      "title": "Monografia in italiano per l'ASN",
+      "text": "L'ANVUR pesa le monografie più di tre articoli Q1. Per la tua ASN seconda fascia ti manca esattamente una monografia. Hai un manoscritto pronto in inglese — perfetto per il mercato internazionale, inutile per la commissione italiana. L'editore italiano «riconosciuto» vuole 1500 € di contributo alla stampa. L'editore Routledge non vuole soldi ma scrive in inglese.",
+      "requires": { "flags": { "has": ["cordata_friendly"] } },
+      "choices": [
+        {
+          "label": "Italiano + 1500 €. È l'investimento sull'ASN.",
+          "effects": { "stats": { "fondi": -3, "intelligenza": 1, "stamina": -1 }, "reputation": { "peers": 1 }, "flags": ["monografia_italiana_pagata"] }
+        },
+        {
+          "label": "Routledge in inglese. Salti l'ASN di questo giro.",
+          "effects": { "stats": { "intelligenza": 2, "networking": 2 }, "reputation": { "peers": 2, "barone": -1 }, "flags": ["monografia_routledge"] }
+        },
+        {
+          "label": "Doppia versione: italiano breve da un editore minore, inglese su Routledge.",
+          "effects": { "stats": { "stamina": -3, "burocrazia": 1, "intelligenza": 1 }, "reputation": { "peers": 1 }, "flags": ["monografia_doppia"] }
+        }
+      ]
+    },
+    {
+      "id": "char_pol_tavolo_unpaid",
+      "phase": "year-2",
+      "tags": ["politologo", "networking", "money", "character_specific"],
+      "weight": 30,
+      "title": "Il tavolo del Think Tank",
+      "text": "Ti invitano a un tavolo di esperti di un think tank con sede a Bruxelles. Riunione mensile, sei mesi. Il tuo nome andrà sui report finali — visibili al Parlamento Europeo. Compenso: zero. «È un'opportunità di network, capisci.» Però devi prendere il treno per Roma due volte al mese, a spese tue.",
+      "requires": { "flags": { "has": ["cordata_friendly"] } },
+      "choices": [
+        {
+          "label": "Accetti. È un investimento. Treni e pranzi a spese tue.",
+          "effects": { "stats": { "fondi": -3, "networking": 3, "stamina": -1 }, "flags": ["tavolo_think_tank_gratis"] }
+        },
+        {
+          "label": "Chiedi rimborso treno. Se rifiutano, decadi.",
+          "effects": { "stats": { "persuasione": 1, "burocrazia": 1 }, "reputation": { "ateneo_hr": 1 }, "flags": ["rimborso_chiesto"] }
+        },
+        {
+          "label": "Declini. È sfruttamento mascherato da onore.",
+          "effects": { "stats": { "stamina": 2, "fondi": 1, "networking": -2 }, "reputation": { "peers": 1 }, "flags": ["rifiutato_tavolo_gratis"] }
+        }
+      ]
+    },
+    {
+      "id": "char_pol_pa_dirige_prin",
+      "phase": "year-2",
+      "tags": ["politologo", "supervisor", "cordata", "character_specific"],
+      "weight": 35,
+      "title": "Il PA che dirige tutto",
+      "text": "Sei nell'unità di un PRIN diretto da un Professore Associato del tuo dipartimento. Lui si è candidato lo scorso anno a Ordinario e non è passato — la frustrazione è ancora viva. In una riunione di gruppo, davanti a tutti, ti dice: «Tu firmerai l'introduzione e le conclusioni del rapporto. Io firmo il resto. Capisci che è giusto per chi ha investito di più.»",
+      "requires": { "flags": { "has": ["cordata_friendly"] } },
+      "choices": [
+        {
+          "label": "Annuisci. Lui te lo deve. Il rinnovo dipende da lui.",
+          "effects": { "stats": { "burocrazia": 1, "intelligenza": -1 }, "reputation": { "peers": -1, "barone": 1 }, "flags": ["sottomesso_PA"] }
+        },
+        {
+          "label": "Negozi davanti agli altri: «Firmo anche le sezioni 2 e 4.»",
+          "effects": { "stats": { "persuasione": 2 }, "reputation": { "barone": -1, "peers": 1 }, "flags": ["negoziato_co_firma"] }
+        },
+        {
+          "label": "«Ne riparliamo dopo la riunione», dici. Sorridi. Cambi tutto.",
+          "effects": { "stats": { "intelligenza": 1, "persuasione": 2 }, "reputation": { "peers": 2 }, "flags": ["differito_confronto"] }
+        }
+      ]
+    },
+    {
+      "id": "char_bio_freezer_capodanno",
+      "phase": "any",
+      "tags": ["biologo", "lab", "character_specific"],
+      "weight": 40,
+      "title": "Il freezer si guasta a Capodanno",
+      "text": "31 dicembre, ore 14:32. Il custode ti chiama: il freezer −80 °C del laboratorio sta lampeggiando alarm. Sale di temperatura da 30 minuti. Dentro: tre anni di campioni di pazienti, le linee cellulari del PRIN, i blot pre-congelati per la review. La ditta di manutenzione torna il 2 gennaio.",
+      "requires": { "flags": { "has": ["wetlab_chained"] } },
+      "choices": [
+        {
+          "label": "Vai al lab. Sposti tutto nel freezer di chimica. Chiavi prestate.",
+          "effects": { "stats": { "stamina": -3, "burocrazia": 2 }, "reputation": { "peers": 2 }, "flags": ["salvati_campioni_capodanno"] }
+        },
+        {
+          "label": "Trasferimento d'emergenza a una clinica universitaria limitrofa.",
+          "effects": { "stats": { "networking": 2, "fondi": -2, "stamina": -1 }, "flags": ["clinica_amica_freezer"] }
+        },
+        {
+          "label": "Niente. Resti a casa con la famiglia. La probabilità statistica è bassa.",
+          "effects": { "stats": { "stamina": 2 }, "reputation": { "supervisor": -3, "peers": -2 }, "flags": ["campioni_persi_capodanno"] }
+        }
+      ]
+    },
+    {
+      "id": "char_bio_reagente_4500",
+      "phase": "year-2",
+      "tags": ["biologo", "lab", "fondi", "character_specific"],
+      "weight": 38,
+      "title": "4500 € per un kit",
+      "text": "Devi ordinare un kit di antibody per il deliverable di marzo. Listino: 4.500 € per 50 reazioni. Una collega ti suggerisce di provare a comprarlo «scientific samples» dalla casa madre USA — costa 1.200 ma è ufficialmente per «testing only, not for clinical use». La distinzione, sul tuo lavoro, è invisibile. Il PI scuote la testa: «Fai come vuoi tu.»",
+      "requires": { "flags": { "has": ["wetlab_chained"] } },
+      "choices": [
+        {
+          "label": "Compri il kit ufficiale. 4.500 €. Brucia il 30% del budget annuale.",
+          "effects": { "stats": { "fondi": -4, "burocrazia": 1 }, "reputation": { "ateneo_hr": 1 }, "flags": ["kit_full_price"] }
+        },
+        {
+          "label": "Compri «scientific samples». Risparmio enorme. Etica grigia.",
+          "effects": { "stats": { "fondi": -1, "intelligenza": 1, "stamina": -1 }, "reputation": { "peers": 1, "mur": -1 }, "flags": ["kit_grey_market"] }
+        },
+        {
+          "label": "Provi a sostituire l'antibody con uno generico open-source.",
+          "effects": { "stats": { "stamina": -2, "intelligenza": 2 }, "flags": ["antibody_alternativo"] }
+        }
+      ]
+    },
+    {
+      "id": "char_bio_tirocinante_disastro",
+      "phase": "year-1",
+      "tags": ["biologo", "lab", "workplace", "character_specific"],
+      "weight": 35,
+      "title": "La tirocinante ha rovinato i campioni",
+      "text": "Mercoledì mattina. La tirocinante di tesi triennale, brava ma alle prime armi, ti dice quasi piangendo: «Credo di aver scambiato due piastre. Quelle del controllo con quelle del trattamento.» Tre settimane di lavoro. Una pubblicazione che doveva arrivare per il deadline del PRIN. La guardi. Ha vent'anni. Tu ne avevi venti quando hai fatto la prima cazzata in lab.",
+      "requires": { "flags": { "has": ["wetlab_chained"] } },
+      "choices": [
+        {
+          "label": "«Tranquilla. Ricominciamo. Stavolta facciamolo insieme.»",
+          "effects": { "stats": { "stamina": -3, "intelligenza": 1, "burocrazia": -1 }, "reputation": { "peers": 2 }, "flags": ["mentore_paziente"] }
+        },
+        {
+          "label": "Le mostri che è stato un errore grave. Le restanze del PRIN sono in gioco.",
+          "effects": { "stats": { "persuasione": 1, "stamina": -2 }, "reputation": { "peers": -1 }, "flags": ["sgridata_tirocinante"] }
+        },
+        {
+          "label": "Rifai tu, senza dirle altro. Tre weekend al lab.",
+          "effects": { "stats": { "stamina": -4, "intelligenza": 2, "burocrazia": 1 }, "flags": ["lavoro_solitario_per_tirocinante"] }
+        }
+      ]
+    },
+    {
+      "id": "char_bio_clinico_coautore",
+      "phase": "year-2",
+      "tags": ["biologo", "peers", "publications", "character_specific"],
+      "weight": 36,
+      "title": "Il clinico vuole coautoria",
+      "text": "Un primario del policlinico ti scrive: «Visto il vostro paper. Lo voglio firmare come quart{o|a} autore. Posso fornirti accesso ai pazienti del prossimo studio.» Lui ha contribuito zero al paper attuale. È un baratto: nome sul tuo articolo in cambio di accesso futuro. Senza i suoi pazienti, il PRIN clinico non funziona.",
+      "requires": { "flags": { "has": ["wetlab_chained"] } },
+      "choices": [
+        {
+          "label": "Acceti. È così che funziona la ricerca clinica.",
+          "effects": { "stats": { "networking": 2, "intelligenza": -1 }, "reputation": { "peers": -2, "supervisor": 1 }, "flags": ["coautoria_ghost_clinico"] }
+        },
+        {
+          "label": "«Per il prossimo paper, sì. Su questo no — non ha contribuito.»",
+          "effects": { "stats": { "persuasione": 2, "stamina": -1 }, "reputation": { "peers": 2, "supervisor": -1 }, "flags": ["limite_etico_coautoria"] }
+        },
+        {
+          "label": "Senti il PI in privato. Lui ti dice: «Aggiungilo, conviene.»",
+          "effects": { "stats": { "burocrazia": 1, "intelligenza": -1 }, "reputation": { "supervisor": 1 }, "flags": ["pi_consiglia_coautoria"] }
+        }
+      ]
+    },
+    {
+      "id": "char_bio_animal_ethics",
+      "phase": "year-1",
+      "tags": ["biologo", "lab", "etica", "character_specific"],
+      "weight": 30,
+      "title": "Il protocollo dell'animal house",
+      "text": "Il tuo PI ti dice: «Per il deliverable di luglio servono 40 ratti. Devi sottomettere il protocollo al CESA. Tempo medio di approvazione: 7 mesi.» Sei a maggio. La via «alternativa» — usare topi già autorizzati di un altro gruppo — è tecnicamente legale ma non risponde al protocollo PRIN. La via «ufficiale» è impossibile. La via «di mezzo» è una zona grigia etica.",
+      "requires": { "flags": { "has": ["wetlab_chained"] } },
+      "choices": [
+        {
+          "label": "Sottometti il protocollo formale. Il PRIN slitta di un anno.",
+          "effects": { "stats": { "burocrazia": 3, "stamina": -1 }, "reputation": { "mur": -1, "ateneo_hr": 1 }, "flags": ["protocollo_corretto"] }
+        },
+        {
+          "label": "Topi del gruppo amico. Le immagini sono identiche, nessuno noterà.",
+          "effects": { "stats": { "burocrazia": -1, "intelligenza": 1 }, "reputation": { "peers": 1, "mur": -2 }, "flags": ["zona_grigia_etica"] }
+        },
+        {
+          "label": "Pivoti l'esperimento su cellule. Cambi il PRIN col MUR.",
+          "effects": { "stats": { "intelligenza": 2, "burocrazia": 2, "stamina": -2 }, "flags": ["pivot_in_vitro"] }
+        }
+      ]
+    },
+    {
+      "id": "char_uma_monografia_pagare",
+      "phase": "year-2",
+      "tags": ["umanista", "publications", "fondi", "character_specific"],
+      "weight": 38,
+      "title": "L'editore ti chiede 2200 €",
+      "text": "L'editore «riconosciuto» dall'ANVUR ti scrive: «La sua monografia è accettata. Il contributo alla stampa è di 2.200 € più 35 copie d'obbligo. Il libro uscirà entro 14 mesi, una volta ricevuto il bonifico.» 2.200 € sono il tuo stipendio netto di un mese. La monografia ti serve per l'ASN. L'alternativa è un editore minore che non conta nei criteri.",
+      "requires": { "flags": { "has": ["mediane_in_pericolo"] } },
+      "choices": [
+        {
+          "label": "Paghi. Bonifico stasera, prima che ci ripensi.",
+          "effects": { "stats": { "fondi": -4, "stamina": -1 }, "reputation": { "supervisor": 1 }, "flags": ["monografia_pagata"] }
+        },
+        {
+          "label": "Editore minore. Niente bonifico. Niente ASN, probabilmente.",
+          "effects": { "stats": { "fondi": 1, "stamina": 1 }, "reputation": { "peers": 1 }, "flags": ["monografia_editor_minore"] }
+        },
+        {
+          "label": "Chiedi al dipartimento un cofinanziamento. Loro hanno il fondo monografie.",
+          "effects": { "stats": { "burocrazia": 2, "persuasione": 1 }, "reputation": { "direttore_dipartimento": -1, "ateneo_hr": 1 }, "flags": ["fondo_monografie_richiesto"] }
+        }
+      ]
+    },
+    {
+      "id": "char_uma_archivio_orario",
+      "phase": "year-1",
+      "tags": ["umanista", "fieldwork", "character_specific"],
+      "weight": 32,
+      "title": "L'archivio chiude alle 13",
+      "text": "Il fondo manoscritti che devi consultare per la monografia è a 230 km. Apertura: martedì e giovedì, 9-13. Solo su prenotazione. Massimo 4 manoscritti al giorno. Hai bisogno di consultarne 28. Conto: 7 settimane di trasferte, due al mese. Spese viaggio non rimborsate, in attesa di delibera dipartimentale.",
+      "requires": { "flags": { "has": ["mediane_in_pericolo"] } },
+      "choices": [
+        {
+          "label": "Affitti una stanza vicino l'archivio per due mesi. Sacrificio pesante.",
+          "effects": { "stats": { "fondi": -3, "stamina": -2, "intelligenza": 2 }, "flags": ["affitto_archivio"] }
+        },
+        {
+          "label": "Treno-giorno. Sette settimane. Sopravviverai con i libri sul treno.",
+          "effects": { "stats": { "stamina": -3, "fondi": -2 }, "flags": ["pendolarismo_archivio"] }
+        },
+        {
+          "label": "Riformuli la ricerca: digitalizzato pre-1980 + visita fisica solo per 8 manoscritti.",
+          "effects": { "stats": { "intelligenza": 2, "stamina": 1 }, "flags": ["ricerca_riformulata"] }
+        }
+      ]
+    },
+    {
+      "id": "char_uma_lingua_articolo",
+      "phase": "year-2",
+      "tags": ["umanista", "publications", "identita", "character_specific"],
+      "weight": 32,
+      "title": "Italiano o inglese?",
+      "text": "Articolo finito. Sessanta pagine sulla filologia romanza tardo-medievale. La rivista italiana che conta nel settore lo prende se è in italiano (è la regola, non scritta). Quella inglese — sterzata da poco verso l'open access — lo prende solo in inglese e con 1.800 € di APC. Il MIUR pesa l'articolo allo stesso modo. Le commissioni ASN no.",
+      "requires": { "flags": { "has": ["mediane_in_pericolo"] } },
+      "choices": [
+        {
+          "label": "Italiano. Rivista nazionale. Niente APC. Ti riconosce il settore.",
+          "effects": { "stats": { "fondi": 1, "intelligenza": 1 }, "reputation": { "peers": 2, "barone": 1 }, "flags": ["pubblicato_italiano"] }
+        },
+        {
+          "label": "Inglese. Open access. 1800 €. Visibilità internazionale.",
+          "effects": { "stats": { "fondi": -3, "networking": 2 }, "reputation": { "peers": -1, "mur": 1 }, "flags": ["pubblicato_inglese"] }
+        },
+        {
+          "label": "Doppia versione, due riviste diverse. Tre mesi di lavoro extra.",
+          "effects": { "stats": { "stamina": -3, "intelligenza": 1, "fondi": -1 }, "flags": ["doppia_lingua_pubblicazione"] }
+        }
+      ]
+    },
+    {
+      "id": "char_uma_settore_estinzione",
+      "phase": "year-3",
+      "tags": ["umanista", "identita", "uscita", "character_specific"],
+      "weight": 30,
+      "title": "Il settore in via di estinzione",
+      "text": "Riunione di sezione. Il direttore di dipartimento legge la circolare ANVUR: tre settori SSD «in via di estinzione» nel dipartimento, tra cui il tuo. Niente concorsi nuovi previsti per cinque anni. Il tuo SSD è specifico — filologia romanza con specialità tardo-medievale. In Italia ci sono 12 strutturati. Lo dice senza pathos, come una nota fiscale.",
+      "requires": { "flags": { "has": ["mediane_in_pericolo"] } },
+      "choices": [
+        {
+          "label": "Resti. È la tua vocazione. Il sistema cambierà.",
+          "effects": { "stats": { "intelligenza": 2, "stamina": -2 }, "reputation": { "peers": 1 }, "flags": ["resistenza_settore"] }
+        },
+        {
+          "label": "Ampli il profilo: aggiungi un secondo SSD per non essere unico.",
+          "effects": { "stats": { "networking": 1, "intelligenza": 1, "stamina": -2 }, "flags": ["secondo_ssd_strategico"] }
+        },
+        {
+          "label": "Cominci a guardare al Liceo classico — concorso aperto a marzo.",
+          "effects": { "stats": { "networking": 1, "stamina": 2 }, "reputation": { "supervisor": -1, "peers": -1 }, "flags": ["liceo_classico_opzione"] }
+        }
+      ]
+    },
+    {
+      "id": "char_uma_recensione_cattiva",
+      "phase": "year-2",
+      "tags": ["umanista", "publications", "peers", "character_specific"],
+      "weight": 28,
+      "title": "La recensione cattiva",
+      "text": "Esce su una rivista di settore — la più letta — la recensione della tua prima monografia. È firmata da un Ordinario che non hai mai conosciuto. Tre pagine. La prima è sintesi. Le altre due sono demolizione: «approccio metodologicamente datato», «bibliografia carente», «conclusioni che ripetono cose già dette». La recensione finisce, letteralmente, con: «Ci si augura che la giovane studiosa rifletta sulla scelta del proprio campo di studi.»",
+      "requires": { "flags": { "has": ["mediane_in_pericolo"] } },
+      "choices": [
+        {
+          "label": "Scrivi una risposta articolata. Tre pagine di replica. La rivista la pubblica.",
+          "effects": { "stats": { "persuasione": 2, "stamina": -2, "intelligenza": 1 }, "reputation": { "peers": 1, "barone": -2 }, "flags": ["replica_articolata"] }
+        },
+        {
+          "label": "Ignori. Riprendi il lavoro. La recensione la dimenticano in sei mesi.",
+          "effects": { "stats": { "stamina": 1, "intelligenza": 1 }, "flags": ["recensione_ignorata"] }
+        },
+        {
+          "label": "Crollo. Ti chiudi in casa due settimane. Non apri più la rivista.",
+          "effects": { "stats": { "stamina": -3, "intelligenza": -1, "networking": -1 }, "reputation": { "peers": -1 }, "flags": ["crollo_post_recensione"] }
+        }
+      ]
+    },
+    {
+      "id": "char_ing_recruiter_settimanale",
+      "phase": "any",
+      "tags": ["ingegnere", "industry", "linkedin", "character_specific"],
+      "weight": 40,
+      "title": "Quattro recruiter in una settimana",
+      "text": "Apri LinkedIn. Quattro messaggi nuovi questa settimana. Microsoft Dublino: «We have an opening in your area, 75k EUR.» Una start-up di Milano: «Cerchiamo CTO, equity + 60k.» Una grande consulting: «Lead Data Scientist, 90k base.» Vodafone: «Senior, ricerca + sviluppo, 70k.» Tu sei RTD-A, 32k netti, contratto a scadenza. Apri le offerte una a una, le rileggi, chiudi tutto.",
+      "requires": { "flags": { "has": ["industria_offre_sempre"] } },
+      "choices": [
+        {
+          "label": "Rispondi a tutte. Sei fissati. Quattro colloqui in due settimane.",
+          "effects": { "stats": { "networking": 3, "stamina": -2, "burocrazia": -1 }, "reputation": { "supervisor": -1 }, "flags": ["colloqui_paralleli_industria"] }
+        },
+        {
+          "label": "Solo la Microsoft Dublino. È la più seria. Le altre archiviate.",
+          "effects": { "stats": { "networking": 1, "stamina": 1 }, "flags": ["microsoft_serio"] }
+        },
+        {
+          "label": "Risposta gentile a tutti: «Per ora rimango in accademia.» Lo dici a te.",
+          "effects": { "stats": { "stamina": -1, "intelligenza": -1 }, "reputation": { "supervisor": 1 }, "flags": ["recruiter_declinati"] }
+        }
+      ]
+    },
+    {
+      "id": "char_ing_brevetto_ateneo",
+      "phase": "year-2",
+      "tags": ["ingegnere", "industry", "brevetti", "character_specific"],
+      "weight": 35,
+      "title": "Il brevetto se lo prende l'ateneo",
+      "text": "Hai sviluppato un algoritmo che potrebbe avere un'applicazione industriale concreta. L'ufficio Trasferimento Tecnologico ti dice: «Ottimo. Lo brevetto è dell'ateneo al 100%. Lei come inventore avrà il 30% delle royalty future, se ci saranno. Le faccio firmare la cessione domani.» Domani. Senza tempo per leggere. Senza un avvocato.",
+      "requires": { "flags": { "has": ["industria_offre_sempre"] } },
+      "choices": [
+        {
+          "label": "Firmi. È così che funziona. Il 30% è meglio del niente.",
+          "effects": { "stats": { "burocrazia": 1, "fondi": -1 }, "reputation": { "ateneo_hr": 2 }, "flags": ["brevetto_ceduto"] }
+        },
+        {
+          "label": "Chiedi 48 ore. Mandi il documento a un avvocato amico.",
+          "effects": { "stats": { "burocrazia": 2, "persuasione": 2, "stamina": -1 }, "reputation": { "ateneo_hr": -1 }, "flags": ["consultato_avvocato_brevetto"] }
+        },
+        {
+          "label": "Pivoti: pubblichi l'algoritmo open-source. Niente brevetto per nessuno.",
+          "effects": { "stats": { "intelligenza": 2, "fondi": -2, "networking": 1 }, "reputation": { "ateneo_hr": -3, "peers": 2 }, "flags": ["open_source_anti_brevetto"] }
+        }
+      ]
+    },
+    {
+      "id": "char_ing_spin_off_fondatore",
+      "phase": "year-3",
+      "tags": ["ingegnere", "industry", "spin_off", "character_specific"],
+      "weight": 32,
+      "title": "Lo spin-off del PI",
+      "text": "Il tuo PI ti propone di fondare con lui uno spin-off accademico sull'algoritmo del PRIN. Lui ci mette il nome, la rete, il know-how. Tu ci metti il codice, le notti, e il tempo. Equity proposto: 15% per te, 60% per lui, 25% per l'ateneo. Lui pagherà uno stipendio aggiuntivo (oltre l'RTD-A) di 800 €/mese per il tuo «consulenza tecnica.»",
+      "requires": { "flags": { "has": ["industria_offre_sempre"] } },
+      "choices": [
+        {
+          "label": "Accetti il 15%. È il primo gradino — vediamo dove porta.",
+          "effects": { "stats": { "fondi": 2, "networking": 2, "stamina": -2 }, "reputation": { "supervisor": 3 }, "flags": ["spin_off_quindici"] }
+        },
+        {
+          "label": "Negozi il 25%. Lui scuote la testa. Poi accetta.",
+          "effects": { "stats": { "persuasione": 3, "fondi": 3, "stamina": -2 }, "reputation": { "supervisor": 1 }, "flags": ["spin_off_venticinque"] }
+        },
+        {
+          "label": "Declini. Vuoi fondare da sol{o|a} quando finisce il contratto.",
+          "effects": { "stats": { "stamina": 1, "intelligenza": 1, "networking": -1 }, "reputation": { "supervisor": -2 }, "flags": ["spin_off_proprio_in_futuro"] }
+        }
+      ]
+    },
+    {
+      "id": "char_ing_phd_in_big_tech",
+      "phase": "year-2",
+      "tags": ["ingegnere", "peers", "identita", "character_specific"],
+      "weight": 30,
+      "title": "Tutti i tuoi PhD studenti in Big Tech",
+      "text": "Riunione semestrale del gruppo. Aggiornamento alumni: tre tuoi ex-PhD adesso lavorano in Google Zurigo, due in Meta Londra, uno in OpenAI San Francisco. Stipendio medio: 140k€. Tu sei a 32k. Tu li hai formati. Sono brillantissimi. Sono giustamente felici. Ognuno di loro, durante la difesa, aveva detto: «Magari resto in accademia.»",
+      "requires": { "flags": { "has": ["industria_offre_sempre"] } },
+      "choices": [
+        {
+          "label": "Sorrisi sinceri. Vai a casa e apri le candidature per Big Tech.",
+          "effects": { "stats": { "networking": 2, "stamina": -1 }, "flags": ["candidature_post_riunione"] }
+        },
+        {
+          "label": "Pensieri amari. Tieni la faccia. Continui col prossimo PhD.",
+          "effects": { "stats": { "stamina": -2, "intelligenza": 1 }, "flags": ["amarezza_silenziosa"] }
+        },
+        {
+          "label": "Ne parli al PI dopo. Lui: «È normale. È la dinamica.» Cambi discorso.",
+          "effects": { "stats": { "stamina": -1, "networking": -1 }, "reputation": { "supervisor": -1 }, "flags": ["pi_minimizza"] }
+        }
+      ]
+    },
+    {
+      "id": "char_ing_pnrr_industria",
+      "phase": "year-2",
+      "tags": ["ingegnere", "PNRR", "industry", "character_specific"],
+      "weight": 33,
+      "title": "Il partner industriale del PNRR",
+      "text": "Sul tuo progetto PNRR c'è un partner industriale obbligatorio: una multinazionale del settore. Loro vogliono che tu sviluppi un modulo di codice integrato col loro proprietario. Codice closed-source. La pubblicazione dei risultati sarà subordinata a loro approvazione. Il MUR non si occupa: l'integrazione industria-università è considerata buona prassi.",
+      "requires": { "flags": { "has": ["industria_offre_sempre"] } },
+      "choices": [
+        {
+          "label": "Sviluppi. Codice closed. Niente pubblicazione, ma rendiconto perfetto.",
+          "effects": { "stats": { "fondi": 2, "burocrazia": 2, "intelligenza": -2 }, "reputation": { "ateneo_hr": 1, "mur": 1, "peers": -2 }, "flags": ["pnrr_codice_chiuso"] }
+        },
+        {
+          "label": "Negozi una parte open-source. Compromesso.",
+          "effects": { "stats": { "persuasione": 2, "intelligenza": 1, "stamina": -2 }, "reputation": { "peers": 1 }, "flags": ["pnrr_compromesso_open"] }
+        },
+        {
+          "label": "Rifiuti. Esci dal PNRR. Cerchi un finanziamento autonomo.",
+          "effects": { "stats": { "fondi": -3, "intelligenza": 2 }, "reputation": { "supervisor": -2, "peers": 2 }, "flags": ["uscita_pnrr_proprietario"] }
+        }
+      ]
     }
   ]
 }
