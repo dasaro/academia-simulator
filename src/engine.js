@@ -236,6 +236,13 @@ export function applyChoice(state, data, choice) {
   const scenarioId = state.currentScenario.id;
   const reactionToShow = resolveChoice(state, choice, "choice");
 
+  // forceNext: la prossima iterazione di advanceToNextScenario userà
+  // questo ID invece di pescare random. Permette follow-up immediati
+  // (confronto col partner, reazione PI, esito denuncia, ecc.).
+  if (choice.forceNext) {
+    state.forcedNext = choice.forceNext;
+  }
+
   state.history.push({ turn: state.turn, scenarioId, label: choice.label });
   state.feed.push({
     kind: "choice",
@@ -304,6 +311,10 @@ export function applyEventChoice(state, data, choice) {
   const event = state.pendingEvent;
   const reactionToShow = resolveChoice(state, choice, "event_choice");
 
+  if (choice.forceNext) {
+    state.forcedNext = choice.forceNext;
+  }
+
   state.history.push({ turn: state.turn, eventId: event.id, label: choice.label });
   state.feed.push({
     kind: "event_choice",
@@ -343,9 +354,22 @@ function advanceToNextScenario(state, data) {
   // Skip empty months (no eligible scenario) up to MAX_TURNS. Without this,
   // the early-game pool exhaustion would falsely fire the scadenza ending.
   while (state.turn <= MAX_TURNS) {
-    const next = pickScenario(data.scenarios, state);
+    // forceNext: bypassa il random pick — usato per i follow-up immediati
+    // (es. confronto col partner, reazione del PI, esito denuncia). Reset
+    // dopo l'uso così non si incastra in loop.
+    let next = null;
+    if (state.forcedNext) {
+      next = data.scenarios.find(s => s.id === state.forcedNext) ?? null;
+      state.forcedNext = null;
+    }
+    if (!next) next = pickScenario(data.scenarios, state);
     if (next) {
       state.currentScenario = next;
+      // Mark as seen even if forced — evita che lo stesso follow-up rifiri
+      // più tardi via random pick.
+      if (!state.seenScenarios.includes(next.id)) {
+        state.seenScenarios.push(next.id);
+      }
       state.feed.push({
         kind: "scenario",
         turn: state.turn,
