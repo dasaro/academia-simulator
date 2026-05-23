@@ -20,9 +20,11 @@ export function createGameState(character, gender = "m", state = {}) {
   const contractType = state.contractType || character.defaultContractType || "PON";
   const ageBand = state.ageBand || character.defaultAgeBand || "33to40";
   const stance = state.stance || character.defaultStance || "compliant";
+  const orientation = state.orientation || character.defaultOrientation || "etero";
   const contractFlag = `contract_${contractType}`;
   const ageFlag = `age_${ageBand}`;
   const stanceFlag = `stance_${stance}`;
+  const orientationFlag = `orientation_${orientation}`;
   // Derived contract-class flags so scenarios can gate on "any RTD-A subtype"
   // instead of having to enumerate PON+PNRR+MSCA+FFO each time. The two
   // exclusive non-RTD-A classes get their own derived flag too.
@@ -33,7 +35,7 @@ export function createGameState(character, gender = "m", state = {}) {
   if (contractType === "CONTRATTISTA") derivedFlags.push("is_td_nonrtda");
   const startingFlags = [
     ...(character.startingFlags ?? []),
-    genderFlag, contractFlag, ageFlag, stanceFlag,
+    genderFlag, contractFlag, ageFlag, stanceFlag, orientationFlag,
     ...derivedFlags,
   ];
   const avatar = state.avatar || character.defaultAvatar || {
@@ -41,7 +43,7 @@ export function createGameState(character, gender = "m", state = {}) {
     hairColor: 1, shirt: 0, skin: 1, shirtStyle: "default",
   };
   return {
-    character: { ...structuredClone(character), gender, contractType, ageBand, stance, avatar },
+    character: { ...structuredClone(character), gender, contractType, ageBand, stance, orientation, avatar },
     turn: 1,
     stats: { ...character.stats },
     reputation: { ...character.startingReputation },

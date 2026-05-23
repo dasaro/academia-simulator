@@ -94,6 +94,8 @@ export function renderContentWarning(root, onDismiss) {
   card.appendChild(el("p", { className: "cw-body" },
     "Giocando come donna il gioco rende esplicito un trattamento differenziale che nella realtà italiana è quotidiano e cumulativo: la maternità rappresentata come difetto da nascondere, commenti sul corpo e sull'abbigliamento, mani sulla spalla, inviti a cena «di lavoro», domande illegali in commissione su «intenzioni familiari», il «cara» davanti ai colleghi e il «collega» nelle email ai maschi, ritorsioni dopo un rifiuto educato, vittimizzazione secondaria nelle denunce. Ogni scena è ancorata a casi pubblici (Sapienza 2018, Bologna 2022, Cagliari 2024, Torino 2024, Pavia/Mojoli 2024-25, Verona/Nocini 2026) o a quello che il chat di chi vive il sistema lascia trapelare."));
   card.appendChild(el("p", { className: "cw-body" },
+    "Scegliendo orientamento «LGBTQ» si sblocca un cluster narrativo aggiuntivo: lo stesso quid pro quo (dottorato/contratto/cattedra in cambio di disponibilità) ma con il double-bind specifico dell'outing — denunciare può significare essere out-ed in un dipartimento che non sapeva. È il meccanismo che spiega perché questi casi vengono mediatizzati meno, non perché siano meno frequenti. Ancorato a inchieste UDU/Arcigay, FRA-EU LGBTI Survey 2024, rete Lenford di avvocatura LGBTI+. Il pattern del «mentor-padrino» e della rete sotterranea di solidarietà è documentato in numerose testimonianze raccolte da Arcigay e in casi giudiziari italiani non sempre arrivati alla stampa nazionale."));
+  card.appendChild(el("p", { className: "cw-body" },
     "Le scene di molestia e di coercizione sono presentate in modo clinico, mai grafico; servono a nominare un problema reale dell'accademia italiana di cui spesso non si parla. I finali più gravi mostrano sempre risorse di aiuto reali (1522, Differenza Donna, Telefono Amico, Samaritans, CUG d'ateneo, ANAC, Mai più zitte). Non c'è un finale di vittoria — il gioco è una critica del sistema, non un percorso di successo."));
   card.appendChild(el("p", { className: "cw-body cw-note" },
     "Se stai attraversando un momento difficile o hai subito violenza, considera di fermarti qui. Numero antiviolenza nazionale: 1522 (24h, gratuito, anonimo). Telefono Amico Italia: 02 2327 2327. Samaritans Onlus: 06 77208977."));
@@ -164,6 +166,15 @@ const STANCES = [
   { id: "withdrawn", name: "Disimpegnat{o|a}", hint: "Fai la tua ricerca. Non vai ai consigli, non firmi niente. Diventi invisibile. Primo della lista quando tagliano." },
 ];
 
+// Orientamento — sblocca cluster narrativi specifici (quid pro quo e
+// micro-aggressioni hanno meccanismi diversi a seconda dell'orientamento,
+// in particolare il double-bind dell'outing per i giocatori LGBTQ).
+const ORIENTATIONS = [
+  { id: "etero",            name: "Etero",                hint: "Cluster narrativo di default. Quid pro quo classico, commenti sulla maternità, decoro." },
+  { id: "lgbtq",            name: "LGBTQ",                hint: "Sblocca scenari sul mentor-padrino, sul double-bind dell'outing, sulla rete di solidarietà queer accademica. Ancorato a inchieste UDU/Arcigay/FRA-EU 2024." },
+  { id: "non_specificato",  name: "Non specificat{o|a}", hint: "Sblocca i pattern generali ma non i cluster orientamento-specifici. Scegli questa opzione se preferisci non dichiarare." },
+];
+
 function renderStatePicker(root, character, gender, onSelect) {
   root.innerHTML = "";
   const wrap = el("div", { className: "screen screen--select" });
@@ -174,6 +185,7 @@ function renderStatePicker(root, character, gender, onSelect) {
   const state = { contractType: character.defaultContractType || "PON",
                   ageBand: character.defaultAgeBand || "33to40",
                   stance: character.defaultStance || "compliant",
+                  orientation: character.defaultOrientation || "etero",
                   avatar: {
                     hair: gender === "f" ? "long_f" : "short_m",
                     hairColor: 1,  // castano scuro
@@ -325,10 +337,31 @@ function renderStatePicker(root, character, gender, onSelect) {
   renderStances();
   stanceCard.appendChild(stanceGroup);
 
+  const orientationCard = el("div", { className: "state-card" });
+  orientationCard.appendChild(el("h3", {}, "Orientamento"));
+  orientationCard.appendChild(el("p", { className: "state-card__sub" },
+    "Sblocca scenari aggiuntivi. Il quid pro quo accademico ha meccanismi diversi a seconda dell'orientamento — in particolare il double-bind dell'outing. Lascia «Etero» se non vuoi esplorare questi cluster."));
+  const orientationGroup = el("div", { className: "state-options" });
+  function renderOrientations() {
+    orientationGroup.innerHTML = "";
+    for (const o of ORIENTATIONS) {
+      const opt = el("button", {
+        className: `state-option${state.orientation === o.id ? " selected" : ""}`,
+        onClick: () => { state.orientation = o.id; renderOrientations(); },
+      });
+      opt.appendChild(el("strong", {}, interpolate(o.name, { character: { gender } })));
+      opt.appendChild(el("span", { className: "state-hint" }, o.hint));
+      orientationGroup.appendChild(opt);
+    }
+  }
+  renderOrientations();
+  orientationCard.appendChild(orientationGroup);
+
   wrap.appendChild(avatarCard);
   wrap.appendChild(contractCard);
   wrap.appendChild(ageCard);
   wrap.appendChild(stanceCard);
+  wrap.appendChild(orientationCard);
 
   const actions = el("div", { className: "state-actions" });
   actions.appendChild(el("button", {

@@ -26918,6 +26918,412 @@
           }
         }
       ]
+    },
+    {
+      "id": "qpq_lgbtq_padrino_riconoscimento",
+      "phase": "year-1",
+      "tags": ["m_gender", "orientation_lgbtq", "supervisor"],
+      "weight": 28,
+      "title": "«Mi sei sempre piaciuto, lo sai»",
+      "text": "Cocktail di benvenuto del dipartimento. Il direttore ti tira da parte sul terrazzo. «Senti, voglio che tu sappia una cosa. Mi sei sempre piaciuto. Lo sai. Non lo dico nel senso che pensi tu, eh — non subito. Dico che noi siamo pochi, qui dentro. Pochi a capirsi. Se hai bisogno di qualcosa, le mie porte sono aperte.» Sorride. Lui ha sessantadue anni, è uno dei pochi gay-out del dipartimento. È anche l'unico che decide chi diventa associato.",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq"] } },
+      "choices": [
+        {
+          "label": "«Grazie direttore. Ne sono onorato.» Cambi argomento.",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -1, "networking": 1 },
+            "reputation": { "direttore_dipartimento": 1 },
+            "flags": ["lgbtq_padrino_offerto", "lgbtq_distanza_educata"]
+          }
+        },
+        {
+          "label": "«Allora, direttore, le chiedo subito una cosa: il bando.»",
+          "effects": {
+            "stats": { "networking": 3, "stamina": -1, "intelligenza": -1 },
+            "reputation": { "direttore_dipartimento": 3 },
+            "flags": ["lgbtq_padrino_accettato", "cordata_barone"]
+          }
+        },
+        {
+          "label": "«Lavoriamo bene, prof. Non ho bisogno di altro che merito.»",
+          "effects": {
+            "stats": { "persuasione": 2, "intelligenza": 1 },
+            "reputation": { "direttore_dipartimento": -2 },
+            "flags": ["lgbtq_padrino_rifiutato", "lgbtq_no_pubblico"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_offerta_convegno",
+      "phase": "year-1",
+      "tags": ["m_gender", "orientation_lgbtq", "supervisor", "quid_pro_quo"],
+      "weight": 28,
+      "title": "Convegno a Berlino, stanza condivisa",
+      "text": "Esce un convegno internazionale in cui il direttore è invitato keynote. Lui ti scrive: «Ti porto con me. Ho prenotato due notti, un Airbnb carino — risparmiamo sul bilancio del dipartimento. È un quartiere bello, ci sono dei posti dove andiamo dopo le sessioni. So che ti piacciono.» Berlino. Lui. Un Airbnb. Tu sai che «posti dove andiamo dopo le sessioni» è una formula con un sottotesto.",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq"] } },
+      "choices": [
+        {
+          "label": "«Direttore, preferisco hotel separato. Lo pago io se serve.»",
+          "effects": {
+            "stats": { "fondi": -2, "persuasione": 2 },
+            "reputation": { "direttore_dipartimento": -2 },
+            "flags": ["lgbtq_no_pubblico", "lgbtq_protezione_spazi"]
+          }
+        },
+        {
+          "label": "Accetti l'Airbnb. Sai esattamente dove sei.",
+          "effects": {
+            "stats": { "networking": 2, "stamina": -3, "intelligenza": -1 },
+            "reputation": { "direttore_dipartimento": 3 },
+            "flags": ["lgbtq_relazione_iniziata", "gender_corpo_oggetto"]
+          }
+        },
+        {
+          "label": "«Volentieri, ma porto anche Tizio. Co-autore.»",
+          "effects": {
+            "stats": { "persuasione": 2, "networking": 1 },
+            "reputation": { "direttore_dipartimento": -1, "peers": 1 },
+            "flags": ["lgbtq_protezione_via_collega"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_double_bind_outing",
+      "phase": "year-2",
+      "tags": ["m_gender", "orientation_lgbtq", "harassment", "denuncia"],
+      "weight": 26,
+      "title": "Il double-bind",
+      "text": "Hai un faldone. Tre email del direttore esplicite, due testimoni colleghi gay che hanno visto la stessa cosa con altri prima di te, lo screenshot del Airbnb a Berlino. Vai dalla referente CUG. Lei legge in silenzio per quindici minuti. Poi: «Senti. Posso aprire un procedimento. Ma devi sapere che il dipartimento è il dipartimento. Lei è dichiaratamente etero in tutti i documenti. Il direttore è dichiaratamente gay. Se denuncia, dovrà spiegare il contesto. Lo capisce, vero?» Lo capisci. Significa che la denuncia è anche un coming out forzato in un dipartimento in cui non eri ancora out.",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq", "lgbtq_relazione_iniziata"] } },
+      "choices": [
+        {
+          "label": "«Lo capisco. Procediamo lo stesso.»",
+          "effects": {
+            "stats": { "persuasione": 3, "stamina": -3, "burocrazia": 2 },
+            "reputation": { "direttore_dipartimento": -3, "peers": 2, "sindacato": 2 },
+            "flags": ["lgbtq_outing_forzato_accettato", "gender_denuncia_formalizzata"]
+          }
+        },
+        {
+          "label": "«Aspetto. Voglio prima parlarne con la mia famiglia.»",
+          "effects": {
+            "stats": { "stamina": -2, "intelligenza": 1 },
+            "flags": ["lgbtq_outing_rimandato"]
+          }
+        },
+        {
+          "label": "«Allora chiudo il file. Vivo con quello che è successo.»",
+          "effects": {
+            "stats": { "stamina": -3, "intelligenza": -1 },
+            "flags": ["lgbtq_silenzio_per_paura_outing", "gender_silenzio_subito"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_rete_solidarieta",
+      "phase": "year-1",
+      "tags": ["m_gender", "orientation_lgbtq", "peers", "solidarieta"],
+      "weight": 28,
+      "title": "La rete sotterranea",
+      "text": "Un dottorando senior di un altro gruppo ti aggiunge a una chat WhatsApp. Sei membri, tutti gay out e closeted, tutti del settore. «Benvenuto. Qui ci aiutiamo. Se ti capita qualcosa, scrivi. Se senti dire qualcosa, scrivi. C'è un padre Pio del nostro settore» — il nome che ti dicono è uno dei nomi più conosciuti — «e abbiamo un foglio Google condiviso con tutti i pattern raccolti negli ultimi dieci anni.» Ti girano il link. È una cosa che non avresti mai immaginato esistesse.",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq"] } },
+      "choices": [
+        {
+          "label": "Apri il foglio. Lo studi per due ore. Riconosci nomi.",
+          "effects": {
+            "stats": { "intelligenza": 2, "networking": 2 },
+            "reputation": { "peers": 2 },
+            "flags": ["lgbtq_rete_attivata", "gender_rete_protezione"]
+          }
+        },
+        {
+          "label": "Ringrazi e ti aggiungi. Tieni il telefono in tasca.",
+          "effects": {
+            "stats": { "networking": 1, "stamina": 1 },
+            "reputation": { "peers": 1 },
+            "flags": ["lgbtq_rete_passiva"]
+          }
+        },
+        {
+          "label": "Esci dalla chat. Non vuoi essere classificato così.",
+          "effects": {
+            "stats": { "stamina": -1, "networking": -1 },
+            "flags": ["lgbtq_distanza_dalla_rete"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_pattern_padrini",
+      "phase": "year-2",
+      "tags": ["m_gender", "orientation_lgbtq", "whisper_network"],
+      "weight": 26,
+      "title": "Vent'anni di allievi prediletti",
+      "text": "Dal foglio Google condiviso della rete. Il direttore del tuo dipartimento ha avuto, negli ultimi vent'anni, undici dottorandi personali. Otto uomini gay o bisessuali. Tre etero (con relazioni più formali, meno problemi). Sei di quegli otto adesso sono in cattedra altrove (i protetti riusciti). Due hanno abbandonato l'accademia entro tre anni dalla discussione (i casi sotterranei). Uno è in causa civile pendente da otto anni — il file PDF della sentenza di primo grado è linkato. È un pattern. È nel settore. È noto a chi lo deve sapere. Non è mai uscito sulla stampa.",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq", "lgbtq_rete_attivata"] } },
+      "choices": [
+        {
+          "label": "Documenti il pattern in un'analisi accademica. Pubblicabile.",
+          "effects": {
+            "stats": { "intelligenza": 3, "persuasione": 2, "stamina": -2 },
+            "reputation": { "direttore_dipartimento": -3, "barone": -2, "peers": 2 },
+            "flags": ["lgbtq_pattern_pubblicato", "qpq_pattern_pubblicato"]
+          }
+        },
+        {
+          "label": "Lo condividi col tuo avvocato. Costruisci una strategia personale.",
+          "effects": {
+            "stats": { "burocrazia": 3, "intelligenza": 1, "fondi": -1 },
+            "flags": ["lgbtq_strategia_legale"]
+          }
+        },
+        {
+          "label": "Lo leggi. Lo chiudi. Lo tieni a mente per quando servirà.",
+          "effects": {
+            "stats": { "intelligenza": 1, "stamina": -1 },
+            "flags": ["lgbtq_pattern_riconosciuto"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_partner_estero",
+      "phase": "year-1",
+      "tags": ["m_gender", "orientation_lgbtq", "vita_privata"],
+      "weight": 24,
+      "title": "Il tuo compagno a Madrid",
+      "text": "Il tuo compagno fa il medico a Madrid. Avevate detto: chiudo il dottorato, vengo da te. Sono passati due anni. Stamattina lui ti chiama: «Senti, ho letto online quello che ha scritto Antonella Viola. Si dice di quelle cose anche del tuo direttore?» Tu non rispondi subito. Lui aggiunge: «Va bene. Forse non vuoi parlarne. Ma se è quello, vieni qui. Adesso. Trova un postdoc qua. Non vali quello che ti sta chiedendo.»",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq"] } },
+      "choices": [
+        {
+          "label": "«Mi sto candidando a tre cose a Madrid. Te lo dico stasera.»",
+          "effects": {
+            "stats": { "networking": 2, "stamina": 1, "persuasione": 1 },
+            "flags": ["lgbtq_uscita_partner", "fuggito_estero"]
+          }
+        },
+        {
+          "label": "«Ho bisogno di chiudere il dottorato. Un anno e mezzo.»",
+          "effects": {
+            "stats": { "stamina": -2, "intelligenza": 1 },
+            "flags": ["lgbtq_resistenza_relazionale"]
+          }
+        },
+        {
+          "label": "«Hai ragione. Stasera scrivo le dimissioni.»",
+          "effects": {
+            "stats": { "stamina": 2, "networking": 1, "fondi": -1 },
+            "reputation": { "direttore_dipartimento": -2 },
+            "flags": ["lgbtq_dimissioni_per_partner", "dimissionato"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_dottorato_arrivato",
+      "phase": "year-1",
+      "tags": ["m_gender", "orientation_lgbtq", "quid_pro_quo"],
+      "weight": 26,
+      "title": "Borsa arrivata",
+      "text": "Sei stato col direttore a Berlino. Quattro mesi dopo, lui ti convoca nel suo studio. «Ecco. La borsa di dottorato del mio PRIN. Il bando esce giovedì. Ti scrivo i requisiti adesso. Cucio tutto su di te.» Sorride paterno. «Lo sai, è una cosa che si fa per affetto. Tra noi.» Quel «tra noi» ha due possibili significati che si sovrappongono e si fanno entrambi sentire.",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq", "lgbtq_relazione_iniziata"] } },
+      "choices": [
+        {
+          "label": "«Grazie, direttore. La leggo io stesso, se possibile.» Prendi distanza.",
+          "effects": {
+            "stats": { "fondi": 2, "stamina": -2, "intelligenza": 1 },
+            "reputation": { "direttore_dipartimento": 1 },
+            "flags": ["lgbtq_dottorato_via_quidproquo", "gender_dottorato_via_quidproquo"]
+          }
+        },
+        {
+          "label": "«Direttore, non mi cuciamo addosso il bando. Lo vinco o non lo vinco.»",
+          "effects": {
+            "stats": { "persuasione": 3, "stamina": -1, "intelligenza": 2 },
+            "reputation": { "direttore_dipartimento": -3 },
+            "flags": ["lgbtq_no_pubblico_filiera"]
+          }
+        },
+        {
+          "label": "«Mi mandi il bando ufficiale per email, direttore.»",
+          "effects": {
+            "stats": { "burocrazia": 2, "persuasione": 1 },
+            "flags": ["gender_quidproquo_documentato"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_rifiuto_pagato",
+      "phase": "year-2",
+      "tags": ["m_gender", "orientation_lgbtq", "harassment"],
+      "weight": 26,
+      "title": "«Non sei dei nostri, allora»",
+      "text": "Tre mesi dopo aver rifiutato la cena, la stanza in Airbnb, l'invito ai «posti dove andiamo dopo». Il direttore ti incontra in corridoio. Non sorride. «Senti. Per la promozione interna, ho fatto un'altra scelta. Tizio mi sembra più affidabile. Per ora.» Cammina via. Per «affidabile» lui intende un'altra cosa. Una collega della rete sotterranea ti scrive il giorno dopo: «Te lo aspettavi. Continua. Documenta.»",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq", "lgbtq_padrino_rifiutato"] } },
+      "choices": [
+        {
+          "label": "Documenti. CUG, sindacato, avvocato, rete sotterranea, tutto in 48h.",
+          "effects": {
+            "stats": { "burocrazia": 3, "persuasione": 2, "stamina": -2 },
+            "reputation": { "direttore_dipartimento": -3, "sindacato": 2, "peers": 2 },
+            "flags": ["lgbtq_documentazione_ritorsione", "gender_ritorsione_documentata"]
+          }
+        },
+        {
+          "label": "Cambi gruppo di ricerca. Il PI di un altro dip ti vuole.",
+          "effects": {
+            "stats": { "networking": 2, "stamina": 1 },
+            "reputation": { "direttore_dipartimento": -1 },
+            "flags": ["lgbtq_cambio_gruppo"]
+          }
+        },
+        {
+          "label": "Aspetti che scada il contratto. Sei a metà ASN.",
+          "effects": {
+            "stats": { "stamina": -2, "intelligenza": -1 },
+            "flags": ["gender_no_punita"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_outing_armato",
+      "phase": "year-2",
+      "tags": ["m_gender", "orientation_lgbtq", "harassment"],
+      "weight": 22,
+      "title": "L'outing come arma",
+      "text": "Una settimana dopo la tua denuncia formale al CUG, il direttore — informalmente, durante una pausa caffè del consiglio — lascia cadere davanti a tre colleghi: «Sapete, X ha avuto un problema con me su una questione personale. Niente di lavoro, eh. Una storia di cuore. Sapete come sono certe rotture.» Una frase. Quattro colleghi che adesso sanno. Domani lo sa il dipartimento. La denuncia formale è ancora protetta da riservatezza CUG. La sua frase no.",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq", "lgbtq_outing_forzato_accettato"] } },
+      "choices": [
+        {
+          "label": "Querela. Per diffamazione e per outing forzato.",
+          "effects": {
+            "stats": { "burocrazia": 3, "persuasione": 3, "stamina": -3, "fondi": -2 },
+            "reputation": { "direttore_dipartimento": -3, "sindacato": 2 },
+            "flags": ["lgbtq_querela_outing", "burocr_diffida_tar"]
+          }
+        },
+        {
+          "label": "Mandi una mail circolare a tutto il dipartimento. Conti la storia tu.",
+          "effects": {
+            "stats": { "persuasione": 3, "stamina": -3, "networking": 1 },
+            "reputation": { "direttore_dipartimento": -3, "peers": 2 },
+            "flags": ["lgbtq_outing_riprende_voce", "attivista_visibile"]
+          }
+        },
+        {
+          "label": "Non rispondi. Ti chiudi in casa per tre giorni.",
+          "effects": {
+            "stats": { "stamina": -4, "intelligenza": -2 },
+            "flags": ["lgbtq_crollo", "pers_silenzio_dolore"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_offerta_intermediata",
+      "phase": "year-1",
+      "tags": ["m_gender", "orientation_lgbtq", "peers"],
+      "weight": 22,
+      "title": "L'intermediario",
+      "text": "Un dottorando senior — uno dei sei della rete sotterranea — ti prende da parte. «Senti, il direttore mi ha chiesto di parlarti. Lui ti vede bene. Dice che potresti avere il PRIN. Magari ci troviamo tutti e tre a cena, vediamo come va. Lui è una brava persona, davvero. Quando l'ho fatto io, mi è stato dietro per tre anni. Adesso sono in cattedra a Bologna.» Sorride. Non lo dice come molestia. Lo dice come consiglio.",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq"] } },
+      "choices": [
+        {
+          "label": "«Capisco. Però no. Lo dirò io a lui se serve.»",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -1 },
+            "reputation": { "direttore_dipartimento": -1 },
+            "flags": ["lgbtq_no_pubblico"]
+          }
+        },
+        {
+          "label": "«Grazie. Ti faccio sapere.» Aspetti che cambi argomento.",
+          "effects": {
+            "stats": { "stamina": -1, "intelligenza": 1 },
+            "flags": ["lgbtq_intermediario_ricevuto"]
+          }
+        },
+        {
+          "label": "«Hai pensato che tu sei il sintomo, non la soluzione?»",
+          "effects": {
+            "stats": { "persuasione": 3, "stamina": -2 },
+            "reputation": { "peers": 1 },
+            "flags": ["lgbtq_intermediario_sfidato"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_consenso_complicato",
+      "phase": "year-2",
+      "tags": ["m_gender", "orientation_lgbtq", "identita"],
+      "weight": 22,
+      "title": "«Era reale?»",
+      "text": "Sei a Madrid, settimo mese di post-doc, hai chiuso col direttore due anni fa. Il tuo compagno ti chiede ad alta voce mentre apparecchiate: «Senti, vorrei capire una cosa, una volta per tutte. Quella roba col direttore. Tu l'hai voluta? Eri innamorato? O era solo... la borsa?» Tu metti giù la forchetta. Non hai mai chiarito con te stesso quella domanda. Sai cosa è successo. Non sai più cosa significava.",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq", "lgbtq_dottorato_via_quidproquo"] } },
+      "choices": [
+        {
+          "label": "«Penso fosse reale per me. Per lui era controllo.»",
+          "effects": {
+            "stats": { "intelligenza": 2, "persuasione": 1, "stamina": -1 },
+            "flags": ["lgbtq_lucida_consenso"]
+          }
+        },
+        {
+          "label": "«Era la borsa. E vergognarsi è il costo.»",
+          "effects": {
+            "stats": { "intelligenza": 1, "stamina": -2 },
+            "flags": ["lgbtq_lucida_strumentale", "pers_silenzio_dolore"]
+          }
+        },
+        {
+          "label": "«Non lo so. Non lo saprò mai. Era entrambe le cose insieme.»",
+          "effects": {
+            "stats": { "intelligenza": 1, "stamina": -1 },
+            "flags": ["lgbtq_ambiguita_riconosciuta"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qpq_lgbtq_assemblea_arcigay",
+      "phase": "year-2",
+      "tags": ["m_gender", "orientation_lgbtq", "collettivo", "solidarieta"],
+      "weight": 24,
+      "title": "Arcigay, mercoledì alle 21",
+      "text": "Arcigay nazionale lancia un gruppo di lavoro su «molestie nei contesti accademici» — esce un comunicato sul sito. Un membro della rete sotterranea ti scrive: «Mercoledì assemblea a Bologna, ne parleranno otto persone. Tre giornaliste sono in sala. Vuoi parlare? Anche anonimo, dietro paravento, fa lo stesso. Sennò ascolti.» Il tuo nome non è ancora in nessun foglio Excel. Hai una scelta.",
+      "requires": { "flags": { "has": ["m_gender", "orientation_lgbtq"] } },
+      "choices": [
+        {
+          "label": "Vai. Parli col tuo nome. Decidono le giornaliste cosa fare.",
+          "effects": {
+            "stats": { "persuasione": 3, "stamina": -2, "networking": 3 },
+            "reputation": { "direttore_dipartimento": -3, "peers": 3, "sindacato": 2 },
+            "flags": ["lgbtq_testimonianza_pubblica", "qpq_testimonianza_pubblica", "attivista_visibile"]
+          }
+        },
+        {
+          "label": "Vai. Parli anonimo dietro paravento. Vali lo stesso.",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -1, "networking": 2 },
+            "reputation": { "peers": 2 },
+            "flags": ["lgbtq_testimonianza_anonima", "qpq_testimonianza_anonima"]
+          }
+        },
+        {
+          "label": "Vai. Solo ad ascoltare. Stasera tornare a casa e respirare.",
+          "effects": {
+            "stats": { "stamina": 1, "networking": 1 },
+            "reputation": { "peers": 1 },
+            "flags": ["lgbtq_ascolto_assemblea"]
+          }
+        }
+      ]
     }
   ]
 }

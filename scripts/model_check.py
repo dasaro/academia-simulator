@@ -52,6 +52,8 @@ def collect_flag_setters(scenarios, events, characters):
         out[f].append(("engine", "createGameState (ageBand)"))
     for f in ("stance_compliant", "stance_resistant", "stance_withdrawn"):
         out[f].append(("engine", "createGameState (stance)"))
+    for f in ("orientation_etero", "orientation_lgbtq", "orientation_non_specificato"):
+        out[f].append(("engine", "createGameState (orientation)"))
     for f in ("is_rtda", "is_borsa", "is_td_nonrtda"):
         out[f].append(("engine", "createGameState (derived contract class)"))
     for c in characters["characters"]:

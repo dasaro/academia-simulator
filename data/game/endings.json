@@ -1486,6 +1486,56 @@
         { "name": "Mai più zitte",                       "contact": "collettivi locali",             "note": "se vuoi che il tuo no diventi parte di qualcosa" },
         { "name": "Avvocate del diritto del lavoro accademico", "contact": "rete locale specializzata", "note": "ricorsi TAR per bandi pilotati" }
       ]
+    },
+    {
+      "id": "dottorato_che_pesa_lgbtq",
+      "title": "Il dottorato che pesa (versione gay)",
+      "perishCause": "Hai accettato. Lo porti addosso. In più hai dovuto stare zitto.",
+      "priority": 116,
+      "condition": {
+        "all": [
+          { "minTurn": 22 },
+          { "flags": { "has": ["m_gender", "orientation_lgbtq", "lgbtq_dottorato_via_quidproquo"] } },
+          {
+            "flags": {
+              "hasNot": ["career_strutturato_ottenuto"]
+            }
+          }
+        ]
+      },
+      "epilogue": "Hai accettato la borsa. Sono passati cinque, sette, dieci anni. Il direttore di dipartimento è morto due anni fa al suo settantesimo compleanno — il dipartimento gli ha intitolato un'aula. Il convegno commemorativo è stato un'apologia. Tu non sei andato. Una ricercatrice giovane del settore ti aveva detto in privato: «Capisco se non vieni. Ti capirei comunque.»\n\nIl PhD lo hai discusso con voto pieno. Le pubblicazioni del dottorato sono buone — quattro nomi, sempre lui senior. Quando ti hanno offerto l'assegno, tre anni fa, un collega di un'altra città ti aveva guardato per qualche secondo di troppo. «Ah. Sì. Sapevo.» Cosa sapeva non te l'ha mai chiesto. Quel «sapevo» è una parola che hai imparato a leggere come una pietra silenziosa nelle conversazioni di networking.\n\nIl tuo compagno a Madrid ti ha aspettato per quattro anni, poi non ce l'ha fatta più. Si è preso un altro. Adesso vive con un dentista colombiano. Non lo dice ma è felice. Tu sei contento per lui. Senti anche l'altra cosa.\n\nIn Italia hai dovuto vivere con due silenzi sovrapposti. Il primo silenzio era quello che tieni nel settore — «la relazione col direttore non si è mai discussa, sì grazie». Il secondo silenzio era con i tuoi genitori, che non sono mai stati out al posto tuo. Tua madre ha capito tre anni fa, una sera di Natale. Non ha detto niente. Ha versato il vino. Adesso ogni Natale parla di «come sta Andrés» — il dentista colombiano, l'ex del tuo ex. Le piacevi quando eri felice e basta.\n\nPubblichi bene. Hai un gruppo internazionale che ti rispetta. Sei in lista per concorsi da associato, dovresti vincere uno tra Padova, Pisa, e Trieste nei prossimi due anni. Sai esattamente quale dipartimento è ancora aperto e quale è ancora il vecchio Italia. Sai il nome di quattro dottorandi del settore che adesso, in quel preciso momento, stanno avendo una conversazione con un loro mentor che assomiglia a quella che avevi avuto tu a Berlino.\n\nTu non hai costruito niente di pubblico contro il sistema. Hai costruito qualcosa di privato: la rete sotterranea ha sei membri in più, perché ogni tanto trovi qualcuno di nuovo e lo aggiungi. È poco. È quello che riesci a fare.\n\nQuesto finale non è una sconfitta totale. Sei riuscito a fare carriera. Sei riuscito a vivere. Hai imparato a leggere il «sapevo» negli sguardi degli altri come una valuta stabile. Quello che il sistema italiano chiama un successo. Quello che tu, ogni tanto, prima di addormentarti, chiami con un'altra parola.",
+      "resources": [
+        { "name": "Arcigay nazionale",                       "contact": "arcigay.it",                "note": "supporto psicologico e legale per persone LGBTQ" },
+        { "name": "Telefono Amico Lambda",                  "contact": "030 3729978",                "note": "ascolto LGBTQ, mer/gio/dom 18-22" },
+        { "name": "Avvocate per il contrasto alle molestie", "contact": "centri antiviolenza locali", "note": "vale anche per quid pro quo gay" },
+        { "name": "Mai più zitte / Non una di meno",         "contact": "collettivi locali",          "note": "se vuoi parlarne con chi capisce" },
+        { "name": "Psicoterapia con specialista trauma+identità", "contact": "rete locale, SSN o privato", "note": "il doppio peso non è ineluttabile" }
+      ]
+    },
+    {
+      "id": "dottorato_che_non_ho_avuto_lgbtq",
+      "title": "Il dottorato che non ho avuto (versione gay)",
+      "perishCause": "Hai detto no. Hai pagato il prezzo doppio.",
+      "priority": 114,
+      "condition": {
+        "all": [
+          { "minTurn": 20 },
+          { "flags": { "has": ["m_gender", "orientation_lgbtq", "lgbtq_padrino_rifiutato"] } },
+          {
+            "flags": {
+              "hasNot": ["career_strutturato_ottenuto", "lgbtq_dottorato_via_quidproquo"]
+            }
+          }
+        ]
+      },
+      "epilogue": "Hai detto no al direttore di dipartimento. «Lavoriamo bene, prof. Non ho bisogno di altro che merito.» Lui aveva sorriso. Tre mesi dopo Tizio aveva la promozione che doveva essere tua. Sei mesi dopo il tuo articolo era in fondo alla pila. Un anno dopo il contratto non è stato rinnovato — motivazione formale «esaurimento fondi», motivazione informale che il dipartimento sapeva e che la rete sotterranea ha messo nel foglio Google.\n\nHai fatto causa civile. Tre anni di processo. La rete sotterranea ha contribuito 4.200 euro all'avvocata. Hai vinto al primo grado — la sentenza ha riconosciuto la ritorsione strutturale, ha condannato l'università a 28.000 euro di risarcimento. È stato un precedente piccolo ma reale. Il direttore non è stato neanche sfiorato penalmente — il reato penale (atti sessuali senza consenso) lo avresti dovuto formalizzare con materiale che a Berlino non avevi avuto modo di raccogliere.\n\nIntanto avevi vinto un postdoc a Madrid. Il tuo compagno ti ha aperto la porta di casa, ti ha versato un bicchiere di vino, e ti ha detto: «Adesso possiamo cucinare insieme.» Sono passati otto anni. Vivete in una casa con un balcone affacciato sul Madrid Río. Hai vinto una posizione permanente al CSIC tre anni fa. Pubblichi sul tema della violenza istituzionale nelle accademie del Sud-Europa. Hai 19 paper, due monografie, un libro di public-facing scholarship che si chiama «I patrigni accademici», pubblicato da un editore femminista spagnolo. È stato tradotto in italiano da Settenove.\n\nLa rete sotterranea italiana adesso ha 34 membri. Tu ne sei una specie di reference internazionale. Ricevi una decina di email all'anno da dottorandi italiani che attraversano oggi quello che hai attraversato tu. Hai un file Excel con quattordici avvocate specializzate, otto referenti CUG affidabili, due giornaliste che pubblicano sul tema. Hai imparato a leggere le situazioni come si legge una scacchiera.\n\nSei in Spagna. L'Italia è una cosa che vai a trovare due volte all'anno, ai funerali di parenti, e per il Pride di Roma una volta a giugno. Tua madre adesso ti chiede di Andrés — il tuo Andrés, non quello dell'altro epilogo. Sono passati quasi vent'anni dalla cena con il direttore al Madrid. Quella cena non è successa. Ti sei salvato dicendo no.\n\nQuesto finale è la cosa più vicina a una vittoria che il gioco contempli, per la traccia lgbtq. Hai vinto contro un sistema che era costruito perché tu non vincessi. Hai pagato in anni, in soldi, in salute. Ne è valsa la pena. Hai costruito qualcosa che ad altre persone serve. La risposta non comprende mai la parola «vergogna».",
+      "resources": [
+        { "name": "Arcigay nazionale",                                 "contact": "arcigay.it",          "note": "supporto psicologico, legale, mediatico" },
+        { "name": "Settenove edizioni",                                 "contact": "settenove.it",        "note": "casa editrice femminista, pubblica anche temi LGBTQ accademia" },
+        { "name": "Rete Lenford — avvocatura LGBTI+",                  "contact": "retelenford.it",      "note": "advocacy legale specializzata" },
+        { "name": "FRA — Fundamental Rights Agency / EU LGBTI Survey",  "contact": "fra.europa.eu",       "note": "dati comparativi EU 2024" },
+        { "name": "Mai più zitte / Non una di meno",                   "contact": "collettivi locali",   "note": "il pattern è lo stesso, le persone diverse" }
+      ]
     }
   ]
 }
