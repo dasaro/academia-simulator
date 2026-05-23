@@ -1436,6 +1436,56 @@
         { "name": "ANAC — whistleblowing",             "contact": "anticorruzione.it",   "note": "per bandi cuciti / concorsi pilotati" },
         { "name": "Avvocatura femminista",              "contact": "centri antiviolenza locali", "note": "per causa civile" }
       ]
+    },
+    {
+      "id": "dottorato_che_pesa",
+      "title": "Il dottorato che pesa",
+      "perishCause": "Hai accettato. Lo porti addosso.",
+      "priority": 115,
+      "condition": {
+        "all": [
+          { "minTurn": 22 },
+          { "flags": { "has": ["f_gender", "gender_dottorato_via_quidproquo"] } },
+          {
+            "flags": {
+              "hasNot": ["career_strutturato_ottenuto"]
+            }
+          }
+        ]
+      },
+      "epilogue": "Hai accettato la borsa. Sono passati cinque, sette, dieci anni. Il direttore di dipartimento è andato in pensione due anni fa con un convegno in suo onore al quale tu non sei andata. La relazione era finita molto prima — ufficialmente, perché non c'era mai stata, ma quel «ufficialmente» è una parola che hai dovuto imparare a dire senza tradire il viso.\n\nIl PhD lo hai discusso con voto pieno. Le pubblicazioni del dottorato sono buone. Sono anche scritte tutte sotto il suo nome come coautore senior. Quando ti hanno offerto l'assegno di ricerca, tre anni fa, una collega senior che non ti ama particolarmente ti ha detto a un convegno: «Ah, sei tu quella. Il dossier circolava.» Hai sorriso. Hai cambiato discorso. Hai bevuto un bicchiere di vino in meno del solito, quella sera.\n\nHai imparato a vivere con due cose contemporaneamente: la consapevolezza che senza quel sì del 2014 non saresti mai entrata, e la consapevolezza che la persona che eri prima del 2014 — quella che faceva la magistrale con la borsa di studio, che leggeva Foucault sul treno alle 7 del mattino, che voleva fare ricerca per cambiare il modo in cui si pensava il suo campo — quella persona è morta a venticinque anni in una stanza d'albergo a Cetraro, senza che nessuna l'abbia accompagnata al funerale. Compresa tu.\n\nLavori bene. Pubblichi. Il tuo gruppo internazionale ti rispetta — loro non sanno la storia, non c'è nessuna ragione per cui la dovrebbero sapere. Ai congressi all'estero ti senti più viva. In dipartimento sai esattamente quali tre colleghe parlano di te alle spalle e quali due colleghe sanno tutto e ti vogliono bene comunque. Mantieni con quelle due un'amicizia silenziosa, quasi sacra.\n\nNon ti sei sposata. Non hai avuto figli. La cosa con il direttore aveva intossicato qualcosa nel modo di stare con un uomo che non sai ancora bene cosa sia. Forse un giorno. Forse no.\n\nUna sera, in metro, hai visto una ragazza di ventitré anni col cellulare in mano e l'espressione che riconosci immediatamente — qualcuno le sta scrivendo qualcosa che non dovrebbe scrivere, e lei sta calcolando il prezzo. Per dieci secondi pensi di scenderle accanto e dirle: «Senti, te lo dico per esperienza.» Ma è una di quelle frasi che non sai mai come prendono. Lasci che scenda alla sua fermata. Ti ripeti: ognuna sa come la prende.\n\nQuesto finale non è una sconfitta totale. Sei riuscita a fare carriera. Hai una vita. Hai delle amiche. Tieni il peso. Il peso però lo tieni tu — il direttore di dipartimento è morto serenamente l'anno scorso, e il dipartimento gli ha intitolato una sala. Il sistema italiano ha protetto sé stesso. E tu hai protetto te.",
+      "resources": [
+        { "name": "1522 — antiviolenza nazionale",      "contact": "1522",                          "note": "24h, gratuito, anonimo" },
+        { "name": "Differenza Donna",                    "contact": "06 5500 5300",                  "note": "centri antiviolenza" },
+        { "name": "Mai più zitte / Non una di meno",    "contact": "collettivi locali",             "note": "se vuoi parlarne con chi capisce" },
+        { "name": "CUG d'ateneo",                        "contact": "interno ateneo",                "note": "anche per casi storici, anche dopo anni" },
+        { "name": "Psicoterapia con specialista trauma", "contact": "rete locale, SSN o privato",    "note": "il peso non è ineluttabile" }
+      ]
+    },
+    {
+      "id": "dottorato_che_non_ho_avuto",
+      "title": "Il dottorato che non ho avuto",
+      "perishCause": "Hai detto no a quella cena.",
+      "priority": 113,
+      "condition": {
+        "all": [
+          { "minTurn": 20 },
+          { "flags": { "has": ["f_gender", "gender_quidproquo_rifiutato"] } },
+          {
+            "flags": {
+              "hasNot": ["career_strutturato_ottenuto", "gender_dottorato_via_quidproquo"]
+            }
+          }
+        ]
+      },
+      "epilogue": "Hai detto no a quella cena. «Direttore, ci vediamo in dipartimento alle 17, non a cena.» Poi a giugno è uscita la graduatoria e tu sei stata tredicesima su quattordici. La vincitrice era una ragazza arrivata a giugno. Le tue tre Q1 valevano meno di una scheda CV onesta ma sottile, perché c'era una variabile non scritta che faceva moltiplicare l'una e dividere l'altra.\n\nTi sei ricandidata altrove. Hai vinto, anno dopo, una borsa in un altro ateneo, in una città di settecentomila abitanti che non avevi mai visto e che è diventata casa tua. Il direttore di dipartimento di lì era un'altra persona — non un santo, ma una persona. Hai discusso il PhD con voto pieno. Sei diventata assegnista. Adesso, dieci anni dopo, sei RTD-B. L'ASN è passata al secondo giro.\n\nQuella borsa che non avevi avuto è diventata, lentamente, quello che ti definisce. Non perché ne parli — ne parli pochissimo. Perché quando una dottoranda timida ti scrive da un altro ateneo per chiederti un parere su una cosa che le è successa, tu sai esattamente cosa risponderle. E perché quando il sindacato cerca rappresentanti per il tavolo sulle molestie nelle università, hanno chiamato te. E perché quando una collega entra in dipartimento e ti dice in privato che il PI del suo gruppo le ha messo una mano sulla spalla per la quinta volta in due mesi, tu hai un foglio Excel con i nomi di otto avvocate specializzate in diritto del lavoro accademico, perché ti sei costruita una rete in dieci anni.\n\nNon hai la cattedra del direttore di dipartimento del tuo primo ateneo. Non avrai mai la sua reputazione. Non sei mai stata invitata al suo convegno-tributo. Hai un'altra cosa: ogni mattina ti svegli e sai esattamente perché sei dove sei. La risposta non comprende mai la parola «vergogna».\n\nCi sono giorni in cui pensi a quella ragazza di ventitré anni che era arrivata a giugno e che era stata quattordicesima, vincitrice. Avrà pubblicato? Avrà fatto carriera? Avrà chiuso quella relazione? Avrà pagato il prezzo che paghi tu quando dici sì, oppure il prezzo che paghi tu quando dici no? Non sai chi tra voi due ha preso la decisione migliore. Sai solo che le due decisioni non avrebbero dovuto esistere. Che il sistema italiano avrebbe dovuto offrire un terzo modo — quello in cui la tua candidatura aveva tre Q1 e basta, e bastavano.\n\nQuesto finale è la cosa più vicina a una vittoria che il gioco contempli. Hai vinto contro tutti i pronostici. E ti sei costruita un'identità intera attorno al «no» di quella sera. Non è una vittoria felice. È una vittoria solida.",
+      "resources": [
+        { "name": "1522 — antiviolenza nazionale",      "contact": "1522",                          "note": "24h, gratuito, anonimo" },
+        { "name": "ANAC — whistleblowing",               "contact": "anticorruzione.it",             "note": "bandi cuciti, concorsi pilotati" },
+        { "name": "ADI / ARTeD",                          "contact": "siti associazioni",             "note": "rete di chi è passato per la stessa cosa" },
+        { "name": "Mai più zitte",                       "contact": "collettivi locali",             "note": "se vuoi che il tuo no diventi parte di qualcosa" },
+        { "name": "Avvocate del diritto del lavoro accademico", "contact": "rete locale specializzata", "note": "ricorsi TAR per bandi pilotati" }
+      ]
     }
   ]
 }
