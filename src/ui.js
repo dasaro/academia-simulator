@@ -21,6 +21,31 @@ function toggleDrawer(name) {
 let _lastFeedLength = 0;
 let _lastCharacterId = null;
 
+// Maps state.character.contractType to the noun phrases scenarios use
+// when they reference the player's contract. Keeps text coherent when
+// the player is e.g. a POSTDOC and the scenario was authored in generic
+// "il tuo PON" wording. Resolution:
+//
+//   {contract_short}  — short label:  "PON" / "PNRR" / "MSCA" / "FFO" / "assegno" / "TD"
+//   {contract_long}   — definite-article phrase: "il tuo PON" / "la tua MSCA" / "il tuo assegno di ricerca"
+//   {contract_full}   — full descriptor: "RTD-A PON" / "MSCA" / "assegnista di ricerca" / "contratto a tempo determinato"
+//   {job_role}        — what you ARE: "RTD-A" / "assegnista" / "contrattista"
+const CONTRACT_PHRASES = {
+  PON:          { short: "PON",        long: "il tuo PON",                  full: "RTD-A PON",       role: "RTD-A" },
+  PNRR:         { short: "PNRR",       long: "il tuo PNRR",                 full: "RTD-A PNRR",      role: "RTD-A" },
+  MSCA:         { short: "MSCA",       long: "la tua MSCA",                 full: "MSCA / Marie Curie", role: "RTD-A MSCA" },
+  FFO:          { short: "FFO",        long: "il tuo contratto FFO",        full: "RTD-A su FFO d'ateneo", role: "RTD-A" },
+  POSTDOC:      { short: "assegno",    long: "il tuo assegno",              full: "assegno di ricerca",     role: "assegnista" },
+  CONTRATTISTA: { short: "contratto",  long: "il tuo contratto a termine",  full: "contratto a tempo determinato", role: "contrattista" },
+};
+function contractPhrase(state, key) {
+  const ct = state?.character?.contractType ?? "PON";
+  return (CONTRACT_PHRASES[ct] ?? CONTRACT_PHRASES.PON)[key] ?? "";
+}
+function capitalize(s) {
+  return typeof s === "string" && s.length > 0 ? s[0].toUpperCase() + s.slice(1) : s;
+}
+
 function interpolate(s, state) {
   if (typeof s !== "string" || !state?.character) return s;
   const g = state.character.gender ?? "m";
@@ -30,6 +55,11 @@ function interpolate(s, state) {
       if (g === "nb") return nb ?? m;
       return m;
     })
+    .replace(/\{contract_short\}/g, contractPhrase(state, "short"))
+    .replace(/\{contract_long\}/g,  contractPhrase(state, "long"))
+    .replace(/\{Contract_long\}/g,  capitalize(contractPhrase(state, "long")))
+    .replace(/\{contract_full\}/g,  contractPhrase(state, "full"))
+    .replace(/\{job_role\}/g,       contractPhrase(state, "role"))
     .replace(/\{ssd\}/g, state.character.ssd ?? "")
     .replace(/\{name\}/g, state.character.name ?? "");
 }

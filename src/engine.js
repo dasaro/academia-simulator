@@ -22,9 +22,18 @@ export function createGameState(character, gender = "m", state = {}) {
   const contractFlag = `contract_${contractType}`;
   const ageFlag = `age_${ageBand}`;
   const stanceFlag = `stance_${stance}`;
+  // Derived contract-class flags so scenarios can gate on "any RTD-A subtype"
+  // instead of having to enumerate PON+PNRR+MSCA+FFO each time. The two
+  // exclusive non-RTD-A classes get their own derived flag too.
+  const RTDA_TYPES = new Set(["PON", "PNRR", "MSCA", "FFO"]);
+  const derivedFlags = [];
+  if (RTDA_TYPES.has(contractType)) derivedFlags.push("is_rtda");
+  if (contractType === "POSTDOC")  derivedFlags.push("is_borsa");
+  if (contractType === "CONTRATTISTA") derivedFlags.push("is_td_nonrtda");
   const startingFlags = [
     ...(character.startingFlags ?? []),
     genderFlag, contractFlag, ageFlag, stanceFlag,
+    ...derivedFlags,
   ];
   return {
     character: { ...structuredClone(character), gender, contractType, ageBand, stance },
