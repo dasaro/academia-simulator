@@ -1367,6 +1367,75 @@
         { "name": "Pratica meditativa o psicoterapia", "contact": "vedi rete locale", "note": "per il dolore non clinico" },
         { "name": "ADI / ARTeD",                       "contact": "siti delle associazioni",   "note": "se vuoi riannodare il filo con la prima domanda" }
       ]
+    },
+    {
+      "id": "bravissima_a_sorridere",
+      "title": "Sei diventata bravissima a sorridere",
+      "perishCause": "Erosione attraverso cento «vabbè»",
+      "priority": 108,
+      "condition": {
+        "all": [
+          { "minTurn": 28 },
+          { "flags": { "has": ["f_gender"] } },
+          {
+            "flags": {
+              "hasAny": [
+                "gender_silenzio_subito",
+                "gender_battuta_normalizzata",
+                "gender_vita_ristretta",
+                "gender_corpo_oggetto"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasNot": ["career_strutturato_ottenuto"]
+            }
+          }
+        ]
+      },
+      "epilogue": "Hai retto. Tre anni di contratto, una proroga, l'ASN passata al secondo tentativo. Sei ancora qui. Non sei stata licenziata, non hai denunciato nessuno, non hai cambiato dipartimento. Hai imparato qualcosa di più importante: a sorridere.\n\nA sorridere quando il direttore ti chiama «cara» davanti agli studenti. A sorridere quando il barone ti scrive alle 23:34 con l'oggetto «pensieri». A sorridere quando ti chiedono in commissione delle tue «intenzioni familiari». A sorridere quando il portinaio ti dice signorina. A sorridere quando il PI ti mette la mano sulla spalla per la quinta volta in due mesi e tu hai imparato esattamente di quanti centimetri scostarti per restare educata.\n\nNon vai più sola nello studio di tre professori. Hai un'idea di guardaroba che chiami «professionale» e che è il modo accettabile di dire «invisibile». Hai smesso di firmarti con il nome e il cognome — usi solo le iniziali, così via email non si capisce subito che sei una donna. Sei diventata bravissima a non esistere come corpo nel dipartimento. E in questo, finalmente, ti hanno smesso di guardare male.\n\nUna sera tornando a casa con il tuo compagno, lui ti dice che ridi molto meno di quando vi siete conosciuti. Tu lo guardi e non sai cosa rispondere. Forse sì. Forse sorridere e ridere sono due cose diverse, una è una funzione di sopravvivenza e l'altra è una cosa che si fa con qualcuno. Lo abbracci. Andate a dormire.\n\nDieci anni fa, al dottorato, una tua amica aveva detto a un convegno una battuta intelligente. Tutti avevano riso. Tu adesso non ricordi più la battuta. Ma ricordi com'era ridere così, in un'aula piena di colleghe e colleghi, senza dover prima calcolare se la frase potrebbe essere usata contro di te.\n\nQuesto finale non è una tragedia. È quello che il sistema considera un successo: la tua carriera è andata avanti, la tua dignità si è solo aggiustata, l'università ha mantenuto il suo equilibrio interno. Sei una statistica positiva del rapporto ANVUR sull'equilibrio di genere — 44% di RTD donne, dopotutto. Sei in quel 44%. La cifra non dice quanto sorridere ti è costato.",
+      "resources": [
+        { "name": "1522 — antiviolenza nazionale", "contact": "1522",         "note": "24h, gratuito, anonimo" },
+        { "name": "CUG d'ateneo",                  "contact": "interno ateneo", "note": "anche solo per parlarne" },
+        { "name": "Differenza Donna",              "contact": "06 5500 5300",  "note": "centri antiviolenza, anche per molestie sul lavoro" },
+        { "name": "Mai più zitte / Non una di meno", "contact": "collettivi locali", "note": "se vuoi non essere sola" }
+      ]
+    },
+    {
+      "id": "prezzo_del_no",
+      "title": "Il prezzo del «no»",
+      "perishCause": "Hai detto no. L'hai pagato.",
+      "priority": 112,
+      "condition": {
+        "all": [
+          { "minTurn": 18 },
+          { "flags": { "has": ["f_gender"] } },
+          {
+            "flags": {
+              "hasAny": [
+                "gender_no_punita",
+                "gender_ritorsione_documentata",
+                "gender_evita_cena_dueposti"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasNot": ["career_strutturato_ottenuto"]
+            }
+          }
+        ]
+      },
+      "epilogue": "Avevi detto no. A una cena. A una mano sulla spalla. A una domanda «scorretta ma necessaria» in commissione. A un caffè a Roma con un Barone che ti aveva scritto alle 23:34. Avevi detto no a quattro cose piccole — nessuna di queste, da sola, avrebbe meritato una denuncia. Quattro «no» piccoli, educati, fermi.\n\nLa risposta del sistema non è arrivata in una telefonata. È arrivata in quaranta piccole assenze.\n\nLa tua email che resta senza risposta tre settimane. Il tuo nome che non compare nella unità del PRIN al quale avevi lavorato per sei mesi. Il bando RTD-B nel tuo settore che esce con requisiti talmente specifici da escludere chiunque tranne una persona — non te. La riunione del dipartimento che si è tenuta in un giorno in cui sapevano che eri in maternità a rischio. Il convegno internazionale dove tutti gli altri del gruppo sono stati invitati e tu no, «per uno svista, scusaci». Quella «svista» che, contandole, è la sesta in due anni.\n\nSenti la voce di una collega senior, quella della macchinetta del caffè: «Te lo dico per esperienza. Lasciamo perdere.» Avresti dovuto darle ascolto. Avresti dovuto andare a cena. Una sola cena. Quanto male può fare una cena.\n\nQuando il contratto scade, non ti rinnovano. La motivazione formale è «esaurimento dei fondi sul progetto», che ufficialmente è vera — il PI ha deciso di destinare i fondi altrove. La motivazione informale, quella che tu sai e che tre colleghe sanno e che la professoressa associata che è stata «la tua referente CUG» sa, non sarà mai scritta da nessuna parte.\n\nApri il faldone che hai costruito in due anni. Email screenshottate. Una bozza di denuncia. Tre testimonianze di colleghe (di cui due ritrattate sotto pressione la settimana scorsa). Lo guardi. Il faldone è completo, ma il sistema italiano non punisce chi ha fatto quello che ti hanno fatto. Punisce chi lo nomina.\n\nDecidi cosa fare. Forse vai in industria. Forse fai causa civile all'università sapendo che durerà quattro anni e ti costerà sette mila euro di avvocato. Forse — questa è l'opzione che il sistema preferisce — scrivi un articolo accademico sulla discriminazione di genere in università. Lo pubblichi su una rivista Q1 internazionale. Diventa quello che gli inglesi chiamano «your area of expertise». Sopravviverai. Ma sarai diventata, per il resto della tua carriera, la donna che ha detto no e ne è uscita per parlarne.\n\nLa cosa peggiore: ogni nuova RTDA che entra nel dipartimento, quando si chiede se andare a quella cena, riceverà — alla macchinetta del caffè — il consiglio di una collega senior che dice: «Te lo dico per esperienza. È meglio se vai. Lasciamo perdere.»",
+      "resources": [
+        { "name": "1522 — antiviolenza nazionale",    "contact": "1522",                "note": "24h, gratuito, anonimo" },
+        { "name": "Differenza Donna",                  "contact": "06 5500 5300",       "note": "centri antiviolenza" },
+        { "name": "CUG d'ateneo",                      "contact": "interno ateneo",      "note": "anche per ritorsioni post-rifiuto" },
+        { "name": "ADI / ARTeD",                        "contact": "siti associazioni",  "note": "supporto legale per ricercatrici precarie" },
+        { "name": "ANAC — whistleblowing",             "contact": "anticorruzione.it",   "note": "per bandi cuciti / concorsi pilotati" },
+        { "name": "Avvocatura femminista",              "contact": "centri antiviolenza locali", "note": "per causa civile" }
+      ]
     }
   ]
 }

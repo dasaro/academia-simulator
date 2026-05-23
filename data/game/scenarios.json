@@ -25732,6 +25732,720 @@
           }
         }
       ]
+    },
+    {
+      "id": "gen_amministrativo_incinta_battuta",
+      "phase": "year-1",
+      "tags": ["f_gender", "harassment", "maternity"],
+      "weight": 38,
+      "title": "«Ma sei incinta che ti preoccupi?»",
+      "text": "Stai aspettando un parere dall'amministrativo del PON sui giorni di permesso. Lui ti scrive su WhatsApp alle 18:30: «Ma sei incinta che ti preoccupi tanto? 😄 Se non lo sei, cerca di stare attenta...» Punto. Sorridente. La frase ti rimane lì, sospesa. Non è un'eccezione: è il tono normale. Lo sai perché tre colleghe te lo hanno raccontato uguale, parola per parola.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "Rispondi con una faccina e cambi argomento. «Vabbè.»",
+          "effects": {
+            "stats": { "stamina": -2, "burocrazia": 1 },
+            "flags": ["gender_silenzio_subito", "pers_silenzio_dolore"]
+          }
+        },
+        {
+          "label": "«A questo punto ci resto incinta di proposito.» Battuta acida.",
+          "effects": {
+            "stats": { "persuasione": 1, "stamina": -1 },
+            "reputation": { "ateneo_hr": -2 },
+            "flags": ["gender_etichettata_complicata"]
+          }
+        },
+        {
+          "label": "Screenshot. Lo mandi al CUG e in copia al sindacato.",
+          "effects": {
+            "stats": { "burocrazia": 3, "stamina": -2, "persuasione": 1 },
+            "reputation": { "ateneo_hr": -3, "sindacato": 2, "peers": 2 },
+            "flags": ["gender_documenta_micro_aggressione", "cug_segnalazione_aperta"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_commissione_intenzioni_famiglia",
+      "phase": "year-2",
+      "tags": ["f_gender", "concorso", "harassment"],
+      "weight": 40,
+      "title": "«E intenzioni familiari?»",
+      "text": "Ultima parte del colloquio per il concorso RTD-B. Tre commissari, tu. Il presidente, sessant'anni, si schiarisce la voce: «Una domanda finale, dottoressa. So che è scorretta, ma noi non possiamo permetterci sorprese. Lei ha... intenzioni familiari nei prossimi tre anni?» Sorride paternalmente. Gli altri due guardano il tavolo. Tu hai venti secondi per scegliere come stare in piedi.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "«Sto pianificando di concentrarmi sul lavoro per ora.» Sorridi.",
+          "effects": {
+            "stats": { "persuasione": 1, "stamina": -2 },
+            "reputation": { "barone": 1 },
+            "flags": ["gender_silenzio_subito"]
+          }
+        },
+        {
+          "label": "«Mi scusi, ma la domanda non è scorretta — è illegale.» Tono fermo.",
+          "effects": {
+            "stats": { "persuasione": 3, "intelligenza": 1, "stamina": -1 },
+            "reputation": { "barone": -3, "ateneo_hr": -1, "peers": 2, "sindacato": 2 },
+            "flags": ["gender_no_pubblico", "gender_etichettata_complicata"]
+          }
+        },
+        {
+          "label": "«Domanda alla quale non rispondo, signor presidente.» Silenzio.",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -2 },
+            "reputation": { "barone": -2, "peers": 1 },
+            "flags": ["gender_rifiuta_domanda", "gender_documenta_micro_aggressione"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_pi_fortunata_bambino",
+      "phase": "year-2",
+      "tags": ["f_gender", "maternity", "supervisor"],
+      "weight": 36,
+      "title": "«Sei fortunata che hai avuto il bambino»",
+      "text": "Riunione interna per discutere chi presentare al concorso. Il PI, paterno: «Tu sei fortunata, sai. Hai avuto il bambino, quindi adesso hai il fattore correttivo per la maternità nei concorsi. Hai anche potuto lavorare un po' da casa durante il congedo, no?» Lui pensa di farti un complimento. Tu hai allattato per quattordici ore consecutive con un articolo aperto sul portatile. Non ti viene fuori una sola parola.",
+      "requires": { "flags": { "has": ["f_gender", "genitore"] } },
+      "choices": [
+        {
+          "label": "Sorridi. Annuisci. «Sì certo, prof.»",
+          "effects": {
+            "stats": { "stamina": -2, "intelligenza": -1 },
+            "reputation": { "supervisor": 1 },
+            "flags": ["gender_silenzio_subito"]
+          }
+        },
+        {
+          "label": "«In realtà ho lavorato pochissimo, avevo un neonato.» Voce piatta.",
+          "effects": {
+            "stats": { "persuasione": 1, "stamina": -1 },
+            "reputation": { "supervisor": -1 },
+            "flags": ["gender_corregge_in_privato"]
+          }
+        },
+        {
+          "label": "«Prof, il fattore correttivo è una compensazione, non un bonus.»",
+          "effects": {
+            "stats": { "persuasione": 2, "intelligenza": 1 },
+            "reputation": { "supervisor": -2, "peers": 1 },
+            "flags": ["gender_no_pubblico"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_direttore_sbrighi_nascere",
+      "phase": "year-2",
+      "tags": ["f_gender", "maternity", "harassment"],
+      "weight": 36,
+      "title": "«Si sbrighi a farlo nascere»",
+      "text": "Consiglio di dipartimento. Settimo mese. Il direttore, in tono scherzoso davanti a quaranta colleghi: «Dottoressa, si sbrighi a farlo nascere quel bambino, sennò sa quante attività di recupero le tocca fare!» Risata generale. Una collega all'altro capo del tavolo guarda nel piatto. Tuo marito ti aveva detto stamattina: prenditi cura del bambino, non delle loro stronzate.",
+      "requires": { "flags": { "has": ["f_gender", "genitore"] } },
+      "choices": [
+        {
+          "label": "Sorridi anche tu. «Eh, direttore...» Ridi piano.",
+          "effects": {
+            "stats": { "stamina": -3, "intelligenza": -1 },
+            "reputation": { "direttore_dipartimento": 1 },
+            "flags": ["gender_silenzio_subito"]
+          }
+        },
+        {
+          "label": "«Se ci tiene così tanto, le porto il referto, direttore.»",
+          "effects": {
+            "stats": { "persuasione": 3, "stamina": -1 },
+            "reputation": { "direttore_dipartimento": -2, "peers": 2 },
+            "flags": ["gender_pungente_pubblica"]
+          }
+        },
+        {
+          "label": "Ti alzi a metà riunione. Esci senza dire niente.",
+          "effects": {
+            "stats": { "stamina": -2 },
+            "reputation": { "direttore_dipartimento": -1, "peers": 1 },
+            "flags": ["gender_uscita_silenziosa"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_capo_chiudete_gambe",
+      "phase": "any",
+      "tags": ["f_gender", "harassment"],
+      "weight": 34,
+      "title": "«Certo non chiudete le gambe»",
+      "text": "Pausa pranzo in mensa con tre colleghe. Una racconta: ieri, in laboratorio, davanti a tutti, il suo PI le ha detto «certo non chiudete le gambe» parlando dei contratti e della maternità. Lei non sa se ridere o piangere. Le altre due guardano la pasta scotta. Tu pensi: era questione di tempo prima che capitasse anche a me. Una di voi quattro si è già messa a piangere quest'anno.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "Ridete tutte. Vi riempite il caffè. Vabbè.",
+          "effects": {
+            "stats": { "stamina": -2, "networking": 1 },
+            "reputation": { "peers": 1 },
+            "flags": ["gender_battuta_normalizzata", "gender_silenzio_subito"]
+          }
+        },
+        {
+          "label": "«Mettila per iscritto. Anche solo per te. Un giorno serve.»",
+          "effects": {
+            "stats": { "intelligenza": 1, "burocrazia": 1, "stamina": -1 },
+            "reputation": { "peers": 2 },
+            "flags": ["gender_dossier_collettivo", "gender_rete_protezione"]
+          }
+        },
+        {
+          "label": "«Andiamo dal CUG. Tutte insieme. Adesso.»",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -2 },
+            "reputation": { "ateneo_hr": -1, "peers": 3, "sindacato": 1 },
+            "flags": ["cug_segnalazione_aperta", "gender_rete_protezione"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_whisper_drago",
+      "phase": "year-1",
+      "tags": ["f_gender", "harassment", "whisper_network"],
+      "weight": 35,
+      "title": "Te lo dico per esperienza",
+      "text": "Caffè alla macchinetta. Una collega più anziana ti vede, si avvicina, abbassa la voce. «Senti. Prof. Drago — sì, quello che ti sta seguendo per la pubblicazione — non chiuderti mai la porta alle spalle quando entri nel suo ufficio. Te lo dico per esperienza. Lasciamo perdere.» Si gira, prende il caffè, se ne va. Non hai chiesto. Lei te lo ha detto.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "«Grazie.» Lo metti negli appunti. Cambi argomento.",
+          "effects": {
+            "stats": { "intelligenza": 1, "networking": 1 },
+            "reputation": { "peers": 2 },
+            "flags": ["gender_rete_protezione", "gender_dossier_collettivo"]
+          }
+        },
+        {
+          "label": "«Cosa intendi? È successo qualcosa?»",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -1 },
+            "reputation": { "peers": 2 },
+            "flags": ["gender_rete_alleanza_profonda"]
+          }
+        },
+        {
+          "label": "Lasci correre. Forse esagera. Drago è educatissimo con te.",
+          "effects": {
+            "stats": { "stamina": 1, "intelligenza": -1 },
+            "flags": ["gender_avvertimento_ignorato"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_regola_non_scritta",
+      "phase": "year-2",
+      "tags": ["f_gender", "concorso", "maternity"],
+      "weight": 33,
+      "title": "«Aspetta il prossimo giro»",
+      "text": "Una collega senior — strutturata, alleata — ti prende da parte. «Senti, lo so che il bando ERC ti interessa. Ma sai com'è. Loro sanno che hai partorito ad aprile. Te lo dico per esperienza: non ti sceglieranno. Aspetta il prossimo.» Lo dice gentilmente. Lo dice come si dice una verità che le costa.",
+      "requires": { "flags": { "has": ["f_gender", "genitore"] } },
+      "choices": [
+        {
+          "label": "«Hai ragione. Sai com'è.» Non applichi.",
+          "effects": {
+            "stats": { "stamina": 1, "intelligenza": -1 },
+            "flags": ["gender_auto_esclusa", "gender_silenzio_subito"]
+          }
+        },
+        {
+          "label": "Applichi comunque. Vediamo se hanno ragione loro o tu.",
+          "effects": {
+            "stats": { "stamina": -1, "intelligenza": 2, "persuasione": 1 },
+            "flags": ["gender_no_pubblico"]
+          }
+        },
+        {
+          "label": "«Tu lo dici per proteggermi o perché sai chi vincerà?»",
+          "effects": {
+            "stats": { "persuasione": 2, "intelligenza": 1 },
+            "reputation": { "peers": 1 },
+            "flags": ["gender_lucida_sul_sistema"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_nota_femminile_gruppo",
+      "phase": "year-1",
+      "tags": ["f_gender", "supervisor"],
+      "weight": 32,
+      "title": "«Una nota femminile al gruppo»",
+      "text": "Caffè di benvenuto. Il PI ti presenta agli altri ricercatori del gruppo, quattro uomini. «Lei sarà la dottoressa X. Porterà finalmente una nota femminile al gruppo. Sai, una sensibilità diversa. Saremo tutti più educati, eh ragazzi?» Risata. Tu non sai dove guardare. Sei dottore di ricerca con tre Q1, non una pianta in vaso.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "Sorridi, stringi mani. Ne parlerai col tuo compagno stasera.",
+          "effects": {
+            "stats": { "networking": 1, "stamina": -1 },
+            "flags": ["gender_silenzio_subito"]
+          }
+        },
+        {
+          "label": "«Spero soprattutto di portare una nota di ricerca, prof.»",
+          "effects": {
+            "stats": { "persuasione": 2, "intelligenza": 1 },
+            "reputation": { "supervisor": -1, "peers": 1 },
+            "flags": ["gender_no_pubblico"]
+          }
+        },
+        {
+          "label": "«Ah sì? Allora educhiamoci, ragazzi, partendo da questa frase.»",
+          "effects": {
+            "stats": { "persuasione": 3, "stamina": -1 },
+            "reputation": { "supervisor": -2, "peers": 2 },
+            "flags": ["gender_pungente_pubblica"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_cara_davanti_collega_email",
+      "phase": "any",
+      "tags": ["f_gender", "supervisor"],
+      "weight": 34,
+      "title": "Cara nei corridoi, collega via email",
+      "text": "Te ne sei accorta a marzo. Il PI ti chiama «cara» davanti agli studenti, davanti agli altri ricercatori, in mensa. Ai tuoi colleghi maschi: «collega Tizio», «dottor Caio», «professor Sempronio» — anche se hanno il tuo stesso titolo. Nelle email a te scrive «Cara dottoressa», agli uomini «Egregio dottor X». Una collega te lo aveva fatto notare ridendo: «Pure tu? Lo fa anche a me.»",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "Inizi a firmarti «Prof.ssa» nelle email di risposta.",
+          "effects": {
+            "stats": { "burocrazia": 1, "stamina": -1 },
+            "reputation": { "supervisor": -1 },
+            "flags": ["gender_resistenza_lessicale"]
+          }
+        },
+        {
+          "label": "Glielo dici alla prossima occasione, in privato.",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -2 },
+            "reputation": { "supervisor": -2 },
+            "flags": ["gender_corregge_in_privato"]
+          }
+        },
+        {
+          "label": "Lasci stare. Non è la battaglia che vuoi combattere.",
+          "effects": {
+            "stats": { "stamina": -1, "intelligenza": -1 },
+            "flags": ["gender_silenzio_subito"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_decoro_convegno",
+      "phase": "year-2",
+      "tags": ["f_gender", "convegno"],
+      "weight": 32,
+      "title": "«Mi raccomando, fai decoro»",
+      "text": "Giovedì parti per un convegno internazionale. Mercoledì pomeriggio, in dipartimento, il direttore ti ferma sulle scale: «Mi raccomando, fai decoro. Rappresenti il dipartimento. Eviti il jeans, eh?» Sorride bonario. Stamattina hai sentito al volo lo stesso direttore parlare col tuo collega Tizio del convegno: «Tizio, mi raccomando, divertiti.»",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "«Certo, direttore.» Annuisci. Indossi il jeans comunque.",
+          "effects": {
+            "stats": { "stamina": -1, "persuasione": 1 },
+            "flags": ["gender_silenzio_subito", "gender_resistenza_privata"]
+          }
+        },
+        {
+          "label": "«Le ha detto la stessa cosa a Tizio?»",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -1 },
+            "reputation": { "direttore_dipartimento": -2 },
+            "flags": ["gender_no_pubblico"]
+          }
+        },
+        {
+          "label": "Cambi guardaroba. Tailleur grigio. Niente attriti.",
+          "effects": {
+            "stats": { "fondi": -1, "stamina": -2, "intelligenza": -1 },
+            "flags": ["gender_vita_ristretta", "gender_corpo_oggetto"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_invito_cena_lavoro",
+      "phase": "year-1",
+      "tags": ["f_gender", "supervisor", "harassment"],
+      "weight": 34,
+      "title": "«Cena di lavoro, a due»",
+      "text": "Il PI ti scrive alle 19:42. «Ci sarebbero un paio di cose da discutere sulla tua pubblicazione. Domani sera ho la riunione del PRIN, ma mercoledì potremmo cenare insieme — c'è un posto carino dietro l'università, ti porto io. È più tranquillo di parlarne lì che in dipartimento.» Mercoledì sera. A due. Lui ha cinquantasei anni, sposato. Tu hai un cellulare in mano e cinque minuti per decidere.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "«Volentieri, prof, ma facciamolo a pranzo in mensa.»",
+          "effects": {
+            "stats": { "persuasione": 2, "intelligenza": 1 },
+            "reputation": { "supervisor": -1 },
+            "flags": ["gender_evita_cena_dueposti", "gender_rete_protezione"]
+          }
+        },
+        {
+          "label": "Accetti. È solo lavoro. (È solo lavoro.)",
+          "effects": {
+            "stats": { "stamina": -2, "networking": 1 },
+            "reputation": { "supervisor": 2 },
+            "flags": ["gender_cena_accettata", "gender_dipendenza_pi"]
+          }
+        },
+        {
+          "label": "«Posso venire anche con Tizio? È coautore.»",
+          "effects": {
+            "stats": { "persuasione": 2, "intelligenza": 1 },
+            "reputation": { "supervisor": -1, "peers": 1 },
+            "flags": ["gender_protezione_via_collega"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_mano_spalla_paterno",
+      "phase": "any",
+      "tags": ["f_gender", "supervisor", "harassment", "body"],
+      "weight": 32,
+      "title": "La mano sulla spalla",
+      "text": "Studio del PI. Quarto incontro questa settimana. Stai parlando dei risultati del PRIN. Lui ti si avvicina per guardare lo schermo, ti mette una mano sulla spalla. La lascia lì. Non se ne accorge — o finge di non accorgersene. È la quinta volta in due mesi. La prima volta avevi pensato di esserti immaginata.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "Ti scosti. Diventa una sua scelta se notare o no.",
+          "effects": {
+            "stats": { "stamina": -1, "persuasione": 1 },
+            "flags": ["gender_corpo_oggetto"]
+          }
+        },
+        {
+          "label": "«Prof, mi mette a disagio.» Frase secca.",
+          "effects": {
+            "stats": { "persuasione": 3, "stamina": -2 },
+            "reputation": { "supervisor": -3 },
+            "flags": ["gender_no_pubblico", "gender_etichettata_complicata"]
+          }
+        },
+        {
+          "label": "Non dici niente. Aggiusti lo schermo come distrazione.",
+          "effects": {
+            "stats": { "stamina": -2, "intelligenza": -1 },
+            "flags": ["gender_silenzio_subito", "gender_corpo_oggetto"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_email_barone_2330",
+      "phase": "year-2",
+      "tags": ["f_gender", "barone", "harassment"],
+      "weight": 30,
+      "title": "Email del Barone, 23:30",
+      "text": "23:34 di un giovedì. Notifica Outlook. Mittente: il Barone (settore tuo, ateneo dove vorresti applicare). Oggetto: «pensieri». Corpo: «Cara X, ho riletto la sua ultima pubblicazione. Vorrei discuterne con lei a fine settimana, magari prendendo un caffè a Roma. Sa, lei mi pare una mente notevole. — F.»\nIl tuo compagno guarda l'orologio e ti chiede se è successo qualcosa. Non sai cosa rispondere.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "Rispondi formalmente, citando il direttore del tuo dipartimento in cc.",
+          "effects": {
+            "stats": { "intelligenza": 2, "burocrazia": 2, "persuasione": 1 },
+            "reputation": { "barone": -1 },
+            "flags": ["gender_email_protetta_cc"]
+          }
+        },
+        {
+          "label": "Accetti il caffè. Sai che sa quello che sai che sai.",
+          "effects": {
+            "stats": { "networking": 2, "stamina": -2, "intelligenza": -1 },
+            "reputation": { "barone": 2 },
+            "flags": ["gender_cordata_barone_iniziata", "cordata_barone"]
+          }
+        },
+        {
+          "label": "Non rispondi. Ne parli al sindacato e a tre colleghe in privato.",
+          "effects": {
+            "stats": { "stamina": -1, "networking": 1 },
+            "reputation": { "sindacato": 1, "peers": 1, "barone": -2 },
+            "flags": ["gender_rete_protezione", "gender_documenta_micro_aggressione"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_bando_cucito_ragazza",
+      "phase": "year-2",
+      "tags": ["f_gender", "concorso", "barone"],
+      "weight": 32,
+      "title": "Il bando «cucito»",
+      "text": "Esce un bando RTD-B nel tuo settore. Lo leggi. I requisiti sono talmente specifici da escludere chiunque tranne una persona: la dottoranda che il Barone segue da quattro anni. Una collega ti scrive in privato: «Eh, è la sua allieva. Lo sai com'è.» Senti due voci dentro: una dice «non vincerei mai», l'altra dice «sai com'è».",
+      "requires": { "flags": { "has": ["f_gender", "is_rtda"] } },
+      "choices": [
+        {
+          "label": "Applichi comunque. Almeno un nome in più nelle statistiche.",
+          "effects": {
+            "stats": { "stamina": -2, "burocrazia": 2, "persuasione": 1 },
+            "flags": ["gender_concorso_simbolico"]
+          }
+        },
+        {
+          "label": "Segnali ad ANAC. Il bando è troppo cucito per essere legale.",
+          "effects": {
+            "stats": { "burocrazia": 3, "stamina": -2, "persuasione": 2 },
+            "reputation": { "barone": -3, "peers": 1, "sindacato": 1 },
+            "flags": ["gender_denuncia_anac", "gender_no_pubblico"]
+          }
+        },
+        {
+          "label": "Non applichi. Sai com'è. Apri un altro bando, fuori sede.",
+          "effects": {
+            "stats": { "stamina": 1, "networking": 1 },
+            "flags": ["gender_auto_esclusa"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_signorina_portineria",
+      "phase": "year-1",
+      "tags": ["f_gender", "daily_life"],
+      "weight": 28,
+      "title": "«Signorina, qui non possono»",
+      "text": "Quinto giorno nel nuovo dipartimento. Il portinaio ti ferma di nuovo. «Signorina, gli studenti devono passare dal cancello laterale.» Mostri il badge per la quarta volta. Lui ride: «Eh, ma è giovane, signorina! Si capisce.» Stamattina ha salutato il dottore Tizio chiamandolo «professore» — Tizio è anche lui RTDA, ha tre anni meno di te.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "«Guardi che sono ricercatrice.» Voce neutra.",
+          "effects": {
+            "stats": { "persuasione": 1, "stamina": -1 },
+            "flags": ["gender_corpo_oggetto", "gender_infantilizzata"]
+          }
+        },
+        {
+          "label": "Lasci correre. Passi dal cancello laterale.",
+          "effects": {
+            "stats": { "stamina": -1, "intelligenza": -1 },
+            "flags": ["gender_vita_ristretta", "gender_silenzio_subito"]
+          }
+        },
+        {
+          "label": "«La prossima volta che mi chiama signorina apro un ticket.»",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -1 },
+            "reputation": { "ateneo_hr": -1 },
+            "flags": ["gender_no_pubblico"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_rifiuto_invito_ritorsione",
+      "phase": "year-2",
+      "tags": ["f_gender", "supervisor", "harassment"],
+      "weight": 30,
+      "title": "Il prezzo del «no»",
+      "text": "È passato un mese da quando hai declinato l'invito a cena del PI. Da allora: tre email senza risposta, il tuo articolo è «in fondo alla pila», la riunione del PRIN si è tenuta senza convocarti. Stamattina scopri che ha messo Tizio come PI di un'unità per cui ti aveva promesso il ruolo a luglio. Lui sorride quando ti incrocia in corridoio. È tutto perfetto. Ed è tutto perfettamente leggibile.",
+      "requires": { "flags": { "has": ["f_gender", "gender_evita_cena_dueposti"] } },
+      "choices": [
+        {
+          "label": "Documenti tutto. Vai al sindacato col faldone.",
+          "effects": {
+            "stats": { "burocrazia": 3, "persuasione": 2, "stamina": -2 },
+            "reputation": { "supervisor": -3, "sindacato": 2 },
+            "flags": ["gender_ritorsione_documentata", "burocr_sindacato_attivato"]
+          }
+        },
+        {
+          "label": "Cerchi un altro PI. Cambi gruppo. Costa, ma respiri.",
+          "effects": {
+            "stats": { "networking": 2, "stamina": 1, "fondi": -1 },
+            "reputation": { "supervisor": -2, "peers": 1 },
+            "flags": ["gender_cambio_gruppo_per_protezione"]
+          }
+        },
+        {
+          "label": "Niente. Aspetti fine contratto. Sei a metà ASN.",
+          "effects": {
+            "stats": { "stamina": -2, "intelligenza": -1 },
+            "flags": ["gender_no_punita", "gender_silenzio_subito"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_collettivo_mai_piu_zitte",
+      "phase": "year-2",
+      "tags": ["f_gender", "collettivo", "solidarieta"],
+      "weight": 30,
+      "title": "«Mai più zitte»",
+      "text": "Esce sulla stampa nazionale: in un ateneo italiano un docente è stato sospeso per molestie su tre studentesse. Si forma un collettivo studentesco — «Mai più zitte». Loro propongono un appello nazionale di solidarietà delle ricercatrici. Una collega ti scrive: «Tu firmi?» Il modulo chiede ateneo, nome, cognome, settore. Pubblico. Sui social.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "Firmi. Nome, cognome, ateneo, settore. Pubblico.",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -1, "networking": 2 },
+            "reputation": { "peers": 3, "barone": -2, "direttore_dipartimento": -1, "sindacato": 2 },
+            "flags": ["gender_firma_mai_piu_zitte", "attivista_visibile"]
+          }
+        },
+        {
+          "label": "Firmi come anonima. C'è anche quella opzione.",
+          "effects": {
+            "stats": { "persuasione": 1, "networking": 1 },
+            "reputation": { "peers": 1 },
+            "flags": ["gender_firma_anonima"]
+          }
+        },
+        {
+          "label": "Non firmi. Hai un contratto da rinnovare a febbraio.",
+          "effects": {
+            "stats": { "stamina": -1, "intelligenza": -1 },
+            "flags": ["gender_silenzio_subito", "gender_paura_ritorsione"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_evita_studio_x",
+      "phase": "year-2",
+      "tags": ["f_gender", "vita_ristretta", "auto_censura"],
+      "weight": 28,
+      "title": "Vita ristretta",
+      "text": "Te ne sei accorta facendo i conti col calendario. Non sei più stata sola nello studio di tre professori del dipartimento — non da ottobre. Per parlare con loro chiedi sempre un appuntamento in mensa, o in aula, o «porto con me un'idea da discutere col gruppo». Non sono più scelte: sono regole interne. Lo stesso vale per la missione fuori sede del prossimo mese: ti sei accordata con due colleghe per andare insieme.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "È così. È così che funziona. Continui.",
+          "effects": {
+            "stats": { "stamina": -1, "intelligenza": -1 },
+            "flags": ["gender_vita_ristretta", "gender_silenzio_subito"]
+          }
+        },
+        {
+          "label": "Lo dici alla rappresentante CUG: questa è la realtà.",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -1 },
+            "reputation": { "ateneo_hr": 1, "peers": 1 },
+            "flags": ["cug_segnalazione_aperta", "gender_documenta_micro_aggressione"]
+          }
+        },
+        {
+          "label": "Scrivi un articolo sotto pseudonimo. Una rivista lo prende.",
+          "effects": {
+            "stats": { "intelligenza": 3, "persuasione": 2, "stamina": -2 },
+            "reputation": { "peers": 2 },
+            "flags": ["gender_voce_pubblica_pseudonimo"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_vittimizzazione_secondaria",
+      "phase": "year-2",
+      "tags": ["f_gender", "harassment", "denuncia"],
+      "weight": 28,
+      "title": "«Ma sei sicura?»",
+      "text": "Vai dalla referente CUG del dipartimento, una professoressa associata che conosci da poco. Le racconti la frase del barone. La cena. Il «non chiudere la porta». Lei ascolta in silenzio. Quando finisci: «Senti, lo so che è difficile. Ma sei sicura? Magari aveva bevuto, era stanco. Sai com'è — il barone, di quella generazione lì. Forse stai dando troppo peso. Vuoi pensarci una settimana prima di formalizzare?»",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "«Sono sicura. Voglio formalizzare adesso.»",
+          "effects": {
+            "stats": { "persuasione": 3, "stamina": -2, "burocrazia": 2 },
+            "reputation": { "barone": -3, "ateneo_hr": -1, "peers": 2 },
+            "flags": ["gender_denuncia_formalizzata"]
+          }
+        },
+        {
+          "label": "«Forse hai ragione. Pensiamoci.» Esci.",
+          "effects": {
+            "stats": { "stamina": -3, "intelligenza": -1 },
+            "flags": ["gender_silenzio_subito", "gender_vittimizzazione_secondaria"]
+          }
+        },
+        {
+          "label": "«Vado dalla CUG d'ateneo. Tu non sei la mia interlocutrice.»",
+          "effects": {
+            "stats": { "persuasione": 3, "burocrazia": 1, "stamina": -1 },
+            "reputation": { "ateneo_hr": -2, "peers": 1 },
+            "flags": ["gender_escalation_cug_ateneo"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_studente_caffe_post_esame",
+      "phase": "year-1",
+      "tags": ["f_gender", "didattica"],
+      "weight": 28,
+      "title": "«Le offrirei un caffè»",
+      "text": "Fine sessione d'esami. Studente di Magistrale, ventiquattro anni, sufficiente con riserva. Esce dall'aula, torna indietro: «Dottoressa, le offrirei un caffè per ringraziarla. La trovo... molto preparata. Mi piacerebbe parlare ancora del programma. Magari fuori dipartimento.» Sorriso confidente. Lui pensa di essere galante. Tu hai diciotto secondi per chiarire i ruoli.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "«Grazie, ma il rapporto è studente-docente. La saluto.»",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": -1 },
+            "flags": ["gender_no_pubblico"]
+          }
+        },
+        {
+          "label": "«Sì, certo, caffè in dipartimento, ci vediamo coi colleghi.»",
+          "effects": {
+            "stats": { "stamina": 1, "networking": 1 },
+            "flags": ["gender_ridefinisce_situazione"]
+          }
+        },
+        {
+          "label": "Ridi. «No grazie, ho già un compagno.» Lui ride anche.",
+          "effects": {
+            "stats": { "stamina": -1, "intelligenza": -1 },
+            "flags": ["gender_silenzio_subito", "gender_corpo_oggetto"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen_collega_maschio_alleato",
+      "phase": "any",
+      "tags": ["f_gender", "peers", "solidarieta"],
+      "weight": 26,
+      "title": "L'alleato maldestro",
+      "text": "Un collega RTD-A maschio ti ferma dopo il consiglio. «Senti, volevo dirti — quello che ha detto il direttore prima, su di te e la gravidanza, era proprio fuori luogo. È ingiusto, eh. Non capisco come fa la gente.» Lo dice con sincerità. È la prima volta che un collega maschio te lo dice. È anche, però, la prima volta in tre anni e tu stamattina sei sopravvissuta a tre frasi simili.",
+      "requires": { "flags": { "has": ["f_gender"] } },
+      "choices": [
+        {
+          "label": "«Grazie. Voi maschi alleati avete un problema: siete pochi.»",
+          "effects": {
+            "stats": { "persuasione": 2, "networking": 2 },
+            "reputation": { "peers": 2 },
+            "flags": ["gender_alleato_educato"]
+          }
+        },
+        {
+          "label": "«Grazie davvero.» Sorridi. Hai bisogno di sentirlo.",
+          "effects": {
+            "stats": { "stamina": 2, "networking": 2 },
+            "reputation": { "peers": 2 },
+            "flags": ["gender_solidarieta_ricevuta"]
+          }
+        },
+        {
+          "label": "«Bene. Allora la prossima volta intervieni TU in consiglio.»",
+          "effects": {
+            "stats": { "persuasione": 3 },
+            "reputation": { "peers": 2 },
+            "flags": ["gender_alleato_responsabilizzato"]
+          }
+        }
+      ]
     }
   ]
 }
