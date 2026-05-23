@@ -29815,6 +29815,282 @@
           }
         }
       ]
+    },
+    {
+      "id": "fu_evt_colloquio_serio",
+      "phase": "any",
+      "tags": ["industria", "followup", "uscita"],
+      "weight": 1,
+      "title": "Il colloquio, martedì alle 11",
+      "text": "Sala riunioni vetrata, undicesimo piano, Milano centro. Tre persone — Head of Data Science, HR senior, un futuro collega. Una bottiglia d'acqua sul tavolo. La prima ora è tecnica: ti chiedono come gestiresti un dataset da 14 milioni di righe con feature engineering parziale. Tu rispondi bene. La seconda ora è la conversazione vera. «Sappiamo che lei è in accademia. Sappiamo che lascia qualcosa. Ci dica perché lo fa.» La domanda non ammette frasi fatte.",
+      "requires": { "flags": { "has": ["industria_offerta_accettata"] } },
+      "choices": [
+        {
+          "label": "«Perché in accademia il mio lavoro vale meno della firma di altri.»",
+          "effects": { "stats": { "persuasione": 3, "fondi": 3, "networking": 2 }, "flags": ["industria_offerta_firmata", "career_silent_exit", "dimissionato"] }
+        },
+        {
+          "label": "«Perché non ho più tempo di aspettare un sistema che non cambia.»",
+          "effects": { "stats": { "persuasione": 2, "fondi": 3, "stamina": 2 }, "flags": ["industria_offerta_firmata", "career_silent_exit", "pers_uscito_industria"] }
+        },
+        {
+          "label": "«Mi scusi. Non sono pronto/a oggi. Mi prendo una settimana.»",
+          "effects": { "stats": { "stamina": -2, "intelligenza": 1 }, "flags": ["industria_offerta_rimandata"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_recruiter_post_taglio",
+      "phase": "any",
+      "tags": ["industria", "uscita", "followup"],
+      "weight": 1,
+      "title": "Tre messaggi in ventiquattr'ore",
+      "text": "Dal momento in cui hai aggiornato Linkedin, tre messaggi: una start-up di Bologna (45k + equity), una società di consulenza milanese (60k + bonus), e — sorprendentemente — un'università all'estero (tenure-track, 52k netti, ma niente PRIN). Il dipartimento ha tagliato. Tu hai tre porte aperte. Tre porte diverse.",
+      "requires": { "flags": { "has": ["job_search_attivo"] } },
+      "choices": [
+        {
+          "label": "Università all'estero. Stipendio modesto, ma è ancora ricerca.",
+          "effects": { "stats": { "networking": 2, "stamina": 1, "fondi": 1, "intelligenza": 2 }, "flags": ["fuggito_estero", "career_silent_exit"] }
+        },
+        {
+          "label": "Start-up di Bologna. Equity vale se l'azienda decolla.",
+          "effects": { "stats": { "networking": 2, "fondi": 2, "stamina": -1 }, "flags": ["startup_bologna", "career_silent_exit"] }
+        },
+        {
+          "label": "Consulenza Milano. 60k subito, niente sogni.",
+          "effects": { "stats": { "fondi": 4, "stamina": 1, "intelligenza": -1 }, "flags": ["consulenza_milano", "pers_uscito_industria"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_workshop_giornata",
+      "phase": "any",
+      "tags": ["workshop", "followup", "networking"],
+      "weight": 1,
+      "title": "La giornata che ti aveva fatto bene",
+      "text": "Aula di Bologna, sei panelisti, venti persone in sala. Nel pomeriggio, durante il coffee break, una professoressa dell'Università di Trento ti chiama da parte. «Senti, ho letto i tuoi ultimi due paper. Stiamo formando un piccolo consorzio EU su questo tema. Cerchiamo un membro junior. A partire da gennaio. Ti interessa?»",
+      "requires": { "flags": { "has": ["workshop_invito_accettato"] } },
+      "choices": [
+        {
+          "label": "«Si, mi mandi la proposal. La leggo questa settimana.»",
+          "effects": { "stats": { "networking": 3, "intelligenza": 2, "stamina": 1 }, "flags": ["consorzio_eu_ingresso"] }
+        },
+        {
+          "label": "«Mi mandi il summary. Voglio prima parlarne col mio gruppo.»",
+          "effects": { "stats": { "networking": 2, "intelligenza": 1, "burocrazia": 1 }, "flags": ["consorzio_in_valutazione"] }
+        },
+        {
+          "label": "«Grazie. Sono al 100% sul mio progetto fino a dicembre.»",
+          "effects": { "stats": { "stamina": 1, "intelligenza": -1 }, "flags": ["consorzio_eu_rifiutato"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_premio_cerimonia",
+      "phase": "any",
+      "tags": ["premio", "followup", "identita"],
+      "weight": 1,
+      "title": "Pisa, sabato sera, 19:14",
+      "text": "Sala storica, settanta persone in platea, due telecamere RAI. Sei sul palco. La presidente della Società ti consegna la targa di plexiglass. Adesso devi parlare per trenta minuti. Hai preparato un discorso di routine — vita, ricerca, ringraziamenti. Sul fondo della sala vedi due dottorande del tuo settore, occhi attenti. Una collega di un altro ateneo — vittima di molestie l'anno scorso — è in seconda fila.",
+      "requires": { "flags": { "has": ["premio_giovane_accettato"] } },
+      "choices": [
+        {
+          "label": "Cambi il discorso. Parli del precariato, citi i numeri ANVUR.",
+          "effects": { "stats": { "persuasione": 3, "networking": 3, "intelligenza": 2 }, "reputation": { "peers": 3, "barone": -1, "mur": -1 }, "flags": ["premio_discorso_politico", "attivista_visibile"] }
+        },
+        {
+          "label": "Discorso preparato. Ringraziamenti, vita, ricerca. Sicuro.",
+          "effects": { "stats": { "persuasione": 1, "networking": 2 }, "reputation": { "peers": 1 }, "flags": ["premio_discorso_neutro"] }
+        },
+        {
+          "label": "«Grazie. Lascio la parola a chi non riesce mai ad averla.» Inviti la collega.",
+          "effects": { "stats": { "persuasione": 3, "stamina": -1, "networking": 2 }, "reputation": { "peers": 3, "barone": -2 }, "flags": ["premio_gesto_solidarieta", "attivista_visibile"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_consiglio_onesto",
+      "phase": "any",
+      "tags": ["mentorship", "peers", "followup"],
+      "weight": 1,
+      "title": "Un'ora vera con l'assegnista",
+      "text": "Sala riunioni vuota, due caffè dalla macchinetta. Lui ti racconta tutto in quaranta minuti — la borsa che scade ad aprile, il PI che non risponde alle email, la fidanzata che vuole andare in Germania, il padre malato. Quando finisce: «Tu cosa avresti fatto? Veramente.»",
+      "requires": { "flags": { "has": ["pers_consigliere_giovani"] } },
+      "choices": [
+        {
+          "label": "«La verità: vai in Germania. Lo dico per esperienza.»",
+          "effects": { "stats": { "persuasione": 3, "intelligenza": 2 }, "reputation": { "peers": 3 }, "flags": ["consiglio_onesto_dato"] }
+        },
+        {
+          "label": "«Aspetta sei mesi. Il PI può cambiare se gli porti un ERC.»",
+          "effects": { "stats": { "persuasione": 2, "intelligenza": 1 }, "reputation": { "peers": 1 }, "flags": ["consiglio_strategico_dato"] }
+        },
+        {
+          "label": "«Senti, non lo so. Quello che so io è solo il mio caso.»",
+          "effects": { "stats": { "stamina": -1, "intelligenza": 1 }, "reputation": { "peers": 2 }, "flags": ["consiglio_umile_dato"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_commissione_esterna",
+      "phase": "any",
+      "tags": ["concorso", "followup", "etica"],
+      "weight": 1,
+      "title": "Commissione esterna, giorno tre",
+      "text": "Terzo giorno di commissione. Quattro candidati al concorso RTT. Uno è chiaramente «di casa» — il dossier plasmato sulle indicazioni del bando. Un'altra candidata è oggettivamente più solida (h-index doppio, ERC starting), ma viene da altro ateneo. Il presidente di commissione ti dice durante la pausa pranzo: «Allora, siamo d'accordo? Convergiamo sul nostro.»",
+      "requires": { "flags": { "has": ["commissione_esterna_accettata"] } },
+      "choices": [
+        {
+          "label": "«No. Voto la candidata esterna. Mi spiace.»",
+          "effects": { "stats": { "persuasione": 3, "intelligenza": 2, "stamina": -2 }, "reputation": { "barone": -3, "peers": 2 }, "flags": ["commissione_voto_etico"] }
+        },
+        {
+          "label": "«Va bene.» Voti il candidato di casa.",
+          "effects": { "stats": { "networking": 2, "intelligenza": -1 }, "reputation": { "barone": 2, "peers": -2 }, "flags": ["commissione_voto_filiera"] }
+        },
+        {
+          "label": "«Mi astengo. Verbalizzo il fatto come motivazione.»",
+          "effects": { "stats": { "persuasione": 2, "burocrazia": 2, "stamina": -1 }, "reputation": { "barone": -1, "peers": 1 }, "flags": ["commissione_astensione_motivata"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_tar_udienza",
+      "phase": "any",
+      "tags": ["burocrazia", "followup", "etica"],
+      "weight": 1,
+      "title": "TAR, udienza dopo otto mesi",
+      "text": "Aula 3 del TAR Lazio, dieci di mattina, ottobre. Il tuo avvocato espone in venti minuti. L'avvocatura dello Stato risponde in dieci. Il giudice ascolta, prende appunti, dice: «Riservata in decisione.» Esce. Fuori dall'aula chiedi al tuo avvocato: «Cosa pensi?» Lui: «Cinquanta-cinquanta. Te lo dico onestamente. Se vinciamo, l'ateneo deve pubblicare gli atti. Se perdiamo, paghi le spese.»",
+      "requires": { "flags": { "has": ["burocr_diffida_tar"] } },
+      "choices": [
+        {
+          "label": "Aspetti la sentenza. Lavori tre mesi in apnea.",
+          "effects": { "stats": { "stamina": -3, "intelligenza": 1, "burocrazia": 1 }, "flags": ["tar_attesa_sentenza"] }
+        },
+        {
+          "label": "Ritiri il ricorso prima della sentenza. Tagli le perdite.",
+          "effects": { "stats": { "stamina": 1, "fondi": -1 }, "flags": ["tar_ritiro_strategico"] }
+        },
+        {
+          "label": "Scrivi alla giornalista. Il TAR diventa pubblico.",
+          "effects": { "stats": { "persuasione": 3, "networking": 2, "stamina": -2 }, "reputation": { "ateneo_hr": -3, "mur": -2 }, "flags": ["tar_inchiesta_giornalistica", "attivista_visibile"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_applico_estero",
+      "phase": "any",
+      "tags": ["estero", "uscita", "followup"],
+      "weight": 1,
+      "title": "Quattro proposte da quattro città",
+      "text": "Hai mandato il CV per il bando del tuo collega in Olanda. Risposta in dieci giorni: shortlist. Poi: chiamata video con la PI. Poi: offerta concreta in due mesi. Altre tre cose nel frattempo, perché eri attivo: Lione (postdoc 24 mesi), Zurigo (RTT-equivalent 3+3), Stoccolma (assistant professor permanente, 58k netti). Quattro PDF aperti, il/la compagn{a|o} che fa pasta in cucina e chiede dove vorresti andare.",
+      "requires": { "flags": { "has": ["applico_bando_collega"] } },
+      "choices": [
+        {
+          "label": "Stoccolma. Permanente, paga meglio, lì respiri.",
+          "effects": { "stats": { "networking": 3, "fondi": 4, "stamina": 2, "intelligenza": 2 }, "flags": ["estero_stoccolma", "fuggito_estero"] }
+        },
+        {
+          "label": "Olanda. Stesso campo del collega, network più stretto.",
+          "effects": { "stats": { "networking": 4, "fondi": 2, "stamina": 1 }, "flags": ["estero_olanda", "fuggito_estero"] }
+        },
+        {
+          "label": "Zurigo. Ricerca più solida, stipendio enorme, vita cara.",
+          "effects": { "stats": { "networking": 2, "fondi": 5, "stamina": 1, "intelligenza": 3 }, "flags": ["estero_zurigo", "fuggito_estero"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_conversazione_carta",
+      "phase": "any",
+      "tags": ["vita_privata", "money", "followup"],
+      "weight": 1,
+      "title": "La conversazione di una vita",
+      "text": "Vi sedete in cucina. Tiri fuori l'estratto conto. Lei o lui legge per due minuti in silenzio. Poi: «Quanto tempo è che dura?» Sei mesi. «E non me lo hai mai detto?» Tu spieghi. «Senti. Possiamo fare due cose. Una: prendiamo i miei soldi per coprire i tuoi prossimi sei mesi. Due: ti dimetti, ed entri in industria. Una delle due. Stasera.»",
+      "requires": { "flags": { "has": ["carta_credito_rifiutata"] } },
+      "choices": [
+        {
+          "label": "«Mi dimetto. Entro in industria.»",
+          "effects": { "stats": { "stamina": 2, "fondi": 3 }, "reputation": { "supervisor": -2 }, "flags": ["dimissionato", "pers_uscito_industria", "career_silent_exit"] }
+        },
+        {
+          "label": "«Accetto il prestito. Sei mesi e finiamo l'ASN insieme.»",
+          "effects": { "stats": { "fondi": 2, "stamina": 1, "intelligenza": 1 }, "flags": ["partner_prestito_accettato"] }
+        },
+        {
+          "label": "«Non posso accettare né l'una né l'altra. Devo pensarci da sol{o|a}.»",
+          "effects": { "stats": { "stamina": -3, "intelligenza": 1 }, "flags": ["partner_decisione_rimandata", "pers_partner_lontano"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_prima_sessione_mentoring",
+      "phase": "any",
+      "tags": ["mentorship", "peers", "followup"],
+      "weight": 1,
+      "title": "Prima sessione settimanale",
+      "text": "Giovedì mattina, 10:00, sala lettura della biblioteca. Tu, il dottorando, due caffè e tre paper sul tavolo. Lui ti chiede: «Io non capisco cosa il mio PI vuole esattamente. Mi dice fai questo, fai quell'altro, ma non c'è una linea. Tu come fai?» Per la prima volta da anni qualcuno ti tratta come mentor vero, non come pari.",
+      "requires": { "flags": { "has": ["mentoring_dottorando"] } },
+      "choices": [
+        {
+          "label": "«Costruiamo insieme il tuo piano di tesi, in tre settimane.»",
+          "effects": { "stats": { "intelligenza": 3, "persuasione": 2, "stamina": -1 }, "reputation": { "peers": 3 }, "flags": ["mentor_piano_costruito"] }
+        },
+        {
+          "label": "«Per ora chiediti: cosa vuoi TU dal dottorato? Il PI è secondario.»",
+          "effects": { "stats": { "intelligenza": 2, "persuasione": 2 }, "reputation": { "peers": 2 }, "flags": ["mentor_domanda_centrale"] }
+        },
+        {
+          "label": "«Ti spiego come funziona la politica del gruppo. Pratico.»",
+          "effects": { "stats": { "networking": 2, "intelligenza": 1 }, "reputation": { "peers": 1 }, "flags": ["mentor_politico"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_barone_risponde_concorso",
+      "phase": "any",
+      "tags": ["concorso", "barone", "followup"],
+      "weight": 1,
+      "title": "Il barone, faccia a faccia",
+      "text": "Studio del barone, lunedì alle 16. Tu lo guardi dall'altra parte della scrivania. Lui sorride. «Vede, dottore/dottoressa. I bandi su misura non sono illegali — sono lo standard del nostro paese. Il concorso del prossimo autunno è scritto per qualcuno che si è meritato di esserlo. Lei è una persona promettente, ma ha bisogno di pazienza. Tra due anni — se rimaniamo amici — c'è un altro concorso più adatto.» Pausa. «Rimaniamo amici, vero?»",
+      "requires": { "flags": { "has": ["voci_concorso_indagate"] } },
+      "choices": [
+        {
+          "label": "«Certo, prof. Sarò paziente.» Sorridi.",
+          "effects": { "stats": { "stamina": -1, "networking": 2 }, "reputation": { "barone": 2 }, "flags": ["barone_promessa_futuro", "cordata_barone"] }
+        },
+        {
+          "label": "«No, prof. Applico comunque. Vediamo cosa scrive il TAR.»",
+          "effects": { "stats": { "persuasione": 3, "stamina": -2, "burocrazia": 2 }, "reputation": { "barone": -3, "sindacato": 2 }, "flags": ["barone_sfidato_apertamente", "career_sfida_concorso_cucito"] }
+        },
+        {
+          "label": "«Prof, perché non parla anche con il rettore? Sono curios{o|a}.»",
+          "effects": { "stats": { "persuasione": 2, "intelligenza": 2 }, "reputation": { "barone": -1 }, "flags": ["barone_escalation_minacciata"] }
+        }
+      ]
+    },
+    {
+      "id": "fu_evt_lettera_in_pubblico",
+      "phase": "any",
+      "tags": ["collettivo", "followup", "politica"],
+      "weight": 1,
+      "title": "La lettera è arrivata sui giornali",
+      "text": "Sei giorni dopo aver firmato la lettera ADI/ARTeD contro la riforma, il sito di un quotidiano nazionale pubblica i nomi di tutti i firmatari. 4.831 firme. Il tuo nome è lì. Il direttore di dipartimento ti scrive un'email alle 18:42, oggetto «conversazione necessaria»: «Possiamo vederci domattina alle 9? Vorrei capire cosa l'ha portata a firmare senza prima parlarne in dipartimento.» Tono cortese. Sottinteso evidente.",
+      "requires": { "flags": { "has": ["burocr_lettera_collettiva"] } },
+      "choices": [
+        {
+          "label": "«Certo, direttore.» Vai domani con un avvocato accanto al telefono.",
+          "effects": { "stats": { "persuasione": 2, "burocrazia": 2, "stamina": -1 }, "reputation": { "direttore_dipartimento": -2, "sindacato": 1 }, "flags": ["lettera_difesa_attiva"] }
+        },
+        {
+          "label": "«Direttore, ho firmato come privato cittadino. La conversazione la facciamo in consiglio.»",
+          "effects": { "stats": { "persuasione": 3, "stamina": -1 }, "reputation": { "direttore_dipartimento": -3, "peers": 2 }, "flags": ["lettera_difesa_pubblica", "attivista_visibile"] }
+        },
+        {
+          "label": "«Mi scuso, direttore. È stato un errore di comunicazione.» Ritrai.",
+          "effects": { "stats": { "persuasione": -2, "stamina": -2 }, "reputation": { "peers": -3, "sindacato": -2 }, "flags": ["lettera_ritrattata", "pers_silenzio_dolore"] }
+        }
+      ]
     }
   ]
 }

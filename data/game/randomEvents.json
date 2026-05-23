@@ -68,7 +68,8 @@
           "reaction": {
             "from": "sindacato",
             "text": "Diecimila firme in due settimane. Una conferenza stampa al MUR. La riforma passa lo stesso, ma adesso siete riconoscibili come categoria."
-          }
+          },
+          "forceNext": "fu_evt_lettera_in_pubblico"
         },
         {
           "label": "Aspetti istruzioni dall'ateneo. Speri che il transitorio ti includa.",
@@ -299,13 +300,15 @@
               "stamina": 2
             },
             "flags": [
-              "pers_uscito_industria"
+              "pers_uscito_industria",
+              "industria_offerta_accettata"
             ]
           },
           "reaction": {
             "from": null,
             "text": "Il contratto è in PDF. Firmi col touchpad. Tre giorni dopo non rispondi più alle mail dell'ateneo. La vita, scopri, costa molto meno di quanto pensavi."
-          }
+          },
+          "forceNext": "fu_evt_colloquio_serio"
         },
         {
           "label": "Lasci in inbox. «Ci penso.»",
@@ -541,13 +544,15 @@
               ]
             },
             "flags": [
-              "pers_piano_b_attivo"
+              "pers_piano_b_attivo",
+              "job_search_attivo"
             ]
           },
           "reaction": {
             "from": null,
             "text": "Tre messaggi da reclutatori entro la settimana. Te li tieni in tasca."
-          }
+          },
+          "forceNext": "fu_evt_recruiter_post_taglio"
         }
       ]
     },
@@ -713,12 +718,16 @@
             },
             "reputation": {
               "peers": 1
-            }
+            },
+            "flags": [
+              "workshop_invito_accettato"
+            ]
           },
           "reaction": {
             "from": null,
             "text": "Bologna ti accoglie con la nebbia. Esci dalla giornata con tre idee nuove e un contatto solido."
-          }
+          },
+          "forceNext": "fu_evt_workshop_giornata"
         },
         {
           "label": "Declini. Hai troppo da rendicontare.",
@@ -757,12 +766,16 @@
             },
             "reputation": {
               "peers": 2
-            }
+            },
+            "flags": [
+              "premio_giovane_accettato"
+            ]
           },
           "reaction": {
             "from": "peers",
             "text": "Tre persone della rete dei precari ti scrivono: «Te lo meriti tutto.» Per una settimana ti senti meno solo/a."
-          }
+          },
+          "forceNext": "fu_evt_premio_cerimonia"
         },
         {
           "label": "Accetti via mail, salti la cerimonia. Hai un deliverable.",
@@ -804,12 +817,16 @@
             },
             "reputation": {
               "peers": 2
-            }
+            },
+            "flags": [
+              "pers_consigliere_giovani"
+            ]
           },
           "reaction": {
             "from": null,
             "text": "Lui ti ringrazia in modo che capisci. Tu pensi: «Non so se mi ringrazierà tra cinque anni.»"
-          }
+          },
+          "forceNext": "fu_evt_consiglio_onesto"
         },
         {
           "label": "«Senti, fai come ti sembra. Io sto solo cercando di tirare avanti.»",
@@ -875,6 +892,12 @@
                 "text": "La commissione si trascina. Due settimane di lavoro non rendicontato. Quando torni, hai 217 mail."
               }
             }
+          },
+          "forceNext": "fu_evt_commissione_esterna",
+          "effects": {
+            "flags": [
+              "commissione_esterna_accettata"
+            ]
           }
         },
         {
@@ -1019,7 +1042,8 @@
           "reaction": {
             "from": "ateneo_hr",
             "text": "L'ateneo riceve la diffida. Cambiano tono. La risposta arriva entro 21 giorni, formale. Quello che era nascosto adesso è in PDF nel tuo desktop."
-          }
+          },
+          "forceNext": "fu_evt_tar_udienza"
         },
         {
           "label": "Lasci perdere. Non vuoi rovinarti la salute per dei verbali.",
@@ -1093,12 +1117,16 @@
               "add": [
                 "contatto_estero"
               ]
-            }
+            },
+            "flags": [
+              "applico_bando_collega"
+            ]
           },
           "reaction": {
             "from": "peers",
             "text": "Ti dice: «Scadenza fra 22 giorni. Apri la procedura, ne parliamo.» Dormi quattro ore."
-          }
+          },
+          "forceNext": "fu_evt_applico_estero"
         }
       ]
     },
@@ -1169,12 +1197,16 @@
             "stats": {
               "stamina": 1,
               "persuasione": 1
-            }
+            },
+            "flags": [
+              "carta_credito_rifiutata"
+            ]
           },
           "reaction": {
             "from": null,
             "text": "Una conversazione difficile, ma onesta. Da quella sera, non sei più sol{o|a} a portare il peso."
-          }
+          },
+          "forceNext": "fu_evt_conversazione_carta"
         },
         {
           "label": "Lo nascondi. Cerchi un piano B in autonomia.",
@@ -1248,12 +1280,16 @@
             },
             "reputation": {
               "peers": 2
-            }
+            },
+            "flags": [
+              "mentoring_dottorando"
+            ]
           },
           "reaction": {
             "from": "peers",
             "text": "Lui ti scriverà fra due anni: «Sei stata/o il/la prima persona seria in questo posto.» Tu lo conserverai."
-          }
+          },
+          "forceNext": "fu_evt_prima_sessione_mentoring"
         },
         {
           "label": "Lo aiuti con le cose pratiche. Niente di più.",
@@ -1372,6 +1408,12 @@
                 "text": "«Voci di corridoio. Non commento.» Sai cosa significa: non per te."
               }
             }
+          },
+          "forceNext": "fu_evt_barone_risponde_concorso",
+          "effects": {
+            "flags": [
+              "voci_concorso_indagate"
+            ]
           }
         },
         {
