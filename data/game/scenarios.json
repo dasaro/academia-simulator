@@ -66,7 +66,7 @@
         "rendicontazione",
         "bureaucracy"
       ],
-      "weight": 90,
+      "weight": 47,
       "title": "Primo rendiconto su SIRI",
       "text": "Il portale SIRI ti dice che devi rendicontare 6 mesi entro venerdì. Ieri diceva 5. Apri un ticket al supporto e nel frattempo cerchi di compilare. Alle 23:47 la sessione scade per la terza volta.",
       "choices": [
@@ -129,7 +129,7 @@
         "funding",
         "pi_catch22"
       ],
-      "weight": 80,
+      "weight": 45,
       "title": "Esce il bando PRIN",
       "text": "Il MUR pubblica il bando PRIN. Il termine progetto è 36 mesi. Il tuo contratto scade tra 28. Le FAQ del MUR dicono che 'di norma' devi coprire l'intero periodo. Le FAQ dell'ateneo dicono il contrario. Nessuno sa.",
       "choices": [
@@ -186,7 +186,7 @@
         "asn",
         "career"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Apre la tornata ASN",
       "text": "Le soglie sono pubblicate. Ne superi due su tre. La terza la superi 'in linea di principio' ma classe-A è ambiguo. Hai 30 giorni per decidere se presentare domanda. Una volta presentata, hai un cooldown di un anno se ti bocciano.",
       "choices": [
@@ -242,7 +242,7 @@
         "concorso",
         "politics"
       ],
-      "weight": 75,
+      "weight": 43,
       "title": "Esce un concorso RTT (ma è destinato)",
       "text": "Il dipartimento bandisce un RTT. Il profilo SSD coincide con il tuo al 90%. Tutti sanno che è per il dottorando del Barone. Il bando scade tra 15 giorni.",
       "choices": [
@@ -299,7 +299,7 @@
         "maternity",
         "bureaucracy"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Una notizia personale",
       "text": "Aspetti un figlio. Per legge hai diritto a 5 mesi di astensione obbligatoria. L'ufficio risorse umane ti dice che il progetto non si proroga: «Dovrà recuperare le attività al rientro.»",
       "requires": {
@@ -364,7 +364,7 @@
         "money",
         "bureaucracy"
       ],
-      "weight": 40,
+      "weight": 34,
       "repeatable": true,
       "title": "Lo stipendio di questo mese",
       "text": "Apri il cedolino. Ti sono stati trattenuti 380 euro. Nessuno sa perché. La segreteria dice di chiedere al MUR. Il MUR dice di chiedere all'ateneo.",
@@ -419,7 +419,7 @@
         "mobility",
         "escape"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Un'email dall'estero",
       "text": "Un gruppo di ricerca europeo ti propone un postdoc di 2 anni. Stipendio doppio, niente rendicontazione, niente concorso. Il tuo RTD-A italiano è ancora attivo.",
       "requires": {
@@ -476,7 +476,7 @@
         "funding",
         "deadline"
       ],
-      "weight": 85,
+      "weight": 46,
       "title": "Sei mesi alla fine del progetto",
       "text": "Il progetto PON scade. Il responsabile ti dice: «Stiamo cercando i fondi per la proroga. Non c'è nulla di sicuro.» Hai una pubblicazione in revisione, due studenti in tesi, un debito di rendiconti.",
       "requires": {
@@ -532,7 +532,7 @@
       "tags": [
         "filler"
       ],
-      "weight": 8,
+      "weight": 30,
       "repeatable": true,
       "title": "Un mese senza scossoni",
       "text": "Niente bandi nuovi. Niente PEC dal MUR. Il responsabile è in convegno. Le pubblicazioni dormono. Hai tempo per leggere un paper. È quasi sospetto.",
@@ -571,7 +571,7 @@
       "tags": [
         "networking"
       ],
-      "weight": 25,
+      "weight": 30,
       "repeatable": true,
       "requires": {
         "minTurn": 6
@@ -614,7 +614,7 @@
       "tags": [
         "teaching"
       ],
-      "weight": 30,
+      "weight": 31,
       "repeatable": true,
       "requires": {
         "minTurn": 4
@@ -662,7 +662,7 @@
         "publications",
         "politics"
       ],
-      "weight": 55,
+      "weight": 38,
       "repeatable": true,
       "title": "L'ordine degli autori",
       "text": "Stai per sottomettere un paper. Il responsabile ti dice: «Mettiamo me come primo, tu come secondo. Mi serve per la commissione ASN.» Il lavoro è 90% tuo.",
@@ -724,7 +724,7 @@
         "mur",
         "faq"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Le FAQ del MUR si contraddicono",
       "text": "La FAQ n. 4 del 7 novembre dice che non puoi partecipare al PRIN. La FAQ del 18 novembre conferma il divieto, ma in modo più restrittivo per i DM 737 e 856. Una FAQ uscita ieri sembra dire l'opposto. Il MUR alle PEC non risponde. Il tuo PI ti dice: «Decidi tu.»",
       "requires": {
@@ -784,7 +784,7 @@
         "ateneo_hr",
         "maternity"
       ],
-      "weight": 75,
+      "weight": 43,
       "title": "Recupero della maternità",
       "text": "Sei appena rientrata. L'ufficio personale ti scrive: la circolare MUR del 9 agosto 2022 prevede attività aggiuntive da svolgere entro la scadenza naturale del contratto, per recuperare i 5 mesi di congedo obbligatorio. L'art. 24, comma 9-ter della L. 240/2010 dice però che la proroga è automatica.",
       "requires": {
@@ -855,7 +855,7 @@
         "bureaucracy",
         "ateneo_hr"
       ],
-      "weight": 60,
+      "weight": 39,
       "repeatable": true,
       "title": "La nota fantasma",
       "text": "L'ufficio risorse umane cita la «nota MUR prot. n. 14039 del 9 agosto» per negarti un diritto. Cerchi sul sito del MUR: non c'è. Cambi i numeri di protocollo: niente. Chiedi all'ufficio: «Ce l'ha solo il direttore generale.»",
@@ -914,7 +914,7 @@
         "siri",
         "rendicontazione"
       ],
-      "weight": 60,
+      "weight": 39,
       "repeatable": true,
       "title": "SIRI chiude la sessione",
       "text": "Sono le 23:47. Devi chiudere la rendicontazione bimestrale prima di mezzanotte. Il sistema dice 0.1 ore minime per attività, ma il MUR non lo sa: «errore: l'azienda fornitrice ha messo il lower bound a 0.1, scrivici a una mail.» La mail rimbalza.",
@@ -974,7 +974,7 @@
         "mur",
         "siri"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "La modulistica predisposta dal MUR",
       "text": "Il disciplinare DM 1062 art. 3 comma 9 prescrive una «relazione annuale su modulistica predisposta dal MUR» entro 30 giorni dal termine annualità. Sono passati 35 giorni. Sulla piattaforma SIRI non c'è alcuna interfaccia. CINECA risponde: «stanno predisponendo il format, vi avviseremo.»",
       "requires": {
@@ -1033,7 +1033,7 @@
         "anvur",
         "mur"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "Integrazione ANVUR richiesta",
       "text": "Mail automatica CINECA al tuo responsabile: «esiti negativi o parzialmente positivi delle verifiche ANVUR. Integrazioni/controdeduzioni entro 10 giorni.» Il sistema chiede: «indicazioni più specifiche, anche se sintetiche, sui contenuti e cronoprogramma.» Sei al sesto mese di un progetto da 36 mesi. Nessuno ha mai visto un cronoprogramma.",
       "requires": {
@@ -1092,7 +1092,7 @@
         "bureaucracy",
         "ateneo_hr"
       ],
-      "weight": 45,
+      "weight": 35,
       "repeatable": true,
       "title": "Trasmettere via Titulus",
       "text": "L'ufficio ti scrive: «La sua richiesta deve essere trasmessa, tramite il Dipartimento di afferenza, via Titulus, all'Ufficio competente.» Tu non sai cosa sia Titulus. Lo chiedi: «è la piattaforma dove protocollano i documenti. Si chiede al segretario.» Il segretario è in ferie fino al 15 settembre.",
@@ -1147,7 +1147,7 @@
         "mur",
         "autorizzazione"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Tempi MUR: non meno di 45 giorni",
       "text": "Hai chiesto l'autorizzazione al MUR per partecipare a un bando di ateneo. L'amministrativo ti dice: «tempi di risposta? Non meno di 45 giorni.» Il bando scade tra 28. Un collega: «io non aspetto l'autorizzazione, basta la presa d'atto, la mando in CdD e parto.»",
       "requires": {
@@ -1204,7 +1204,7 @@
         "mur",
         "pec"
       ],
-      "weight": 50,
+      "weight": 37,
       "repeatable": true,
       "title": "La PEC silente",
       "text": "Hai mandato la PEC al MUR otto mesi fa. Nessuna risposta. La rimandi. Errore: «destinatario già contattato.» Chiedi all'ufficio ricerca: «forse l'hanno presa in carico, vedremo.» Tre mesi dopo, nuova FAQ MUR che peggiora la tua posizione retroattivamente.",
@@ -1259,7 +1259,7 @@
         "ateneo_hr",
         "smart_working"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il modulino dello smart working",
       "text": "Chiedi di lavorare per due settimane da un'altra sede. L'ufficio ti dice: «serve la PEC del responsabile.» Il responsabile dice: «io firmo, ma scrivila tu.» Il MUR poi risponde: «autorizzazione implicita nella rendicontazione, non serve nostra presa d'atto.» Tre mesi sprecati.",
       "requires": {
@@ -1316,7 +1316,7 @@
         "mur",
         "circolare"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "Circolare retroattiva",
       "text": "Il regolamento d'ateneo sui RTDA, pubblicato a luglio 2024, ha efficacia da gennaio 2024. Cita la circolare MUR prot. 9393 dell'8 luglio 2022 con un'interpretazione restrittiva. Le tue rendicontazioni dei primi sei mesi 2024 sono ora «da rivedere.»",
       "requires": {
@@ -1374,7 +1374,7 @@
         "ateneo_hr",
         "cdd"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Manca il visto del direttore",
       "text": "Il CdD ti ha autorizzato a partecipare a un progetto a costo zero. Il verbale è pronto. L'ufficio centrale dice: «manca il visto del direttore di dipartimento sulla delibera, non possiamo procedere.» Il direttore è in convegno una settimana. La scadenza è tra 4 giorni.",
       "requires": {
@@ -1435,7 +1435,7 @@
         "ateneo_hr",
         "money"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Addizionali trattenute",
       "text": "Ultima busta paga di dicembre. Ti trattengono 380 euro di addizionali comunali e regionali del 2024. Scoprirai a marzo che si pagano «in differita di un anno»: dato che non avrai busta paga 2025, te le scalano ora. Nessuno ti ha avvisato.",
       "requires": {
@@ -1493,7 +1493,7 @@
         "ateneo_hr",
         "maternity"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Proroga o recupero?",
       "text": "Sei collega di una RTDA appena rientrata dalla maternità. A lei l'ateneo ha concesso la proroga. A te no: «prima delibera, attività aggiuntive entro la scadenza naturale.» Stesso ateneo, stesso DM 1062, stesse circolari. L'ufficio: «dipende dal dipartimento.»",
       "requires": {
@@ -1563,7 +1563,7 @@
         "money",
         "dimissioni"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Vuoi dimetterti? Restituisci",
       "text": "Hai vinto un RTDB altrove. Vuoi dimetterti tra 2 settimane. L'ufficio amministrativo ti dice: «come da disciplinare, deve restituire tutti gli stipendi del periodo non ancora rendicontato.» Un collega: «se ti dimetti il giorno dopo la rendicontazione, non restituisci nulla. Aspetta.»",
       "requires": {
@@ -1621,7 +1621,7 @@
         "anvur",
         "siri"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Attestato di coerenza fantasma",
       "text": "ANVUR chiede al tuo PI un «attestato di coerenza» firmato dal Direttore in fase di bando. Il documento non è mai stato firmato. Né protocollato. Né, forse, esistito. Sei chiamato a fornirlo entro 10 giorni.",
       "requires": {
@@ -1682,7 +1682,7 @@
         "bureaucracy",
         "regolamento"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Decreto contro il collegio di dottorato",
       "text": "Un decreto MUR di marzo 2022, art. 3.1, equipara i ricercatori di ruolo solo agli RTD-B. Tu sei RTDA. Sei stato espulso retroattivamente dal collegio del dottorato. Il direttore: «mi spiace, è la norma.»",
       "requires": {
@@ -1742,7 +1742,7 @@
         "supervisor",
         "mur"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il responsabile scientifico se ne va",
       "text": "Il tuo PI ha vinto una cattedra altrove e si dimette dal progetto a 6 mesi dalla fine. La procedura UNIFI: richiesta del RS, delibera CdD, trasmissione via Titulus, sostituzione su SIRI. Tutti i passaggi in 60 giorni. Il sostituto designato non sa nemmeno cosa rendiconti.",
       "requires": {
@@ -1799,7 +1799,7 @@
         "money",
         "ateneo_hr"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Il decreto rettorale n. 1/2023",
       "text": "Il decreto rettorale n. 1/2023 ha disposto un contributo di 1500€ (ADIR medio) per ciascun ricercatore. Tu non l'hai visto in busta paga. L'ufficio ricerca: «sono overhead di progetto, da spendere per la ricerca, non sono soldi tuoi.» Il decreto non specifica.",
       "requires": {
@@ -1852,7 +1852,7 @@
         "sindacato",
         "tar"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Minaccia diffida e TAR",
       "text": "L'ateneo ti chiede di restituire 3 mesi di stipendi per una sospensione disputata. Un collega ti racconta: «alla Calabria, una lettera del sindacalista con minaccia di diffida e ricorso al TAR ha fatto fare un passo indietro su tutto. Chi non terrorizza si ammala di terrore.»",
       "requires": {
@@ -1914,7 +1914,7 @@
         "rinnovo",
         "ateneo_hr"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Il buco di dieci giorni",
       "text": "Il tuo contratto è iniziato l'11 gennaio 2022 per problemi di feste e firma. Il rinnovo biennale scade il 10 gennaio 2027. Il nuovo bando RTT per cui ti vorresti candidare richiede di essere «in servizio» a una data che cade dieci giorni dopo la tua scadenza. L'ufficio: «niente da fare, sono norme MUR.»",
       "requires": {
@@ -1970,7 +1970,7 @@
         "regolamento",
         "teaching"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "60 ore di didattica frontale obbligatorie",
       "text": "Il regolamento d'ateneo impone 60 ore di didattica frontale ai RTDA. Le FAQ MUR dicono che è «fino a» un massimo, non un obbligo. Il dipartimento legge «almeno 60». L'ufficio: «se non fai 60 ore frontali, integra con didattica integrativa, ma serve registro.»",
       "requires": {
@@ -2031,7 +2031,7 @@
         "asn",
         "publications"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Bocciato/a con le soglie ampiamente superate",
       "text": "Esito ASN: bocciato/a. Tutte e tre le soglie ampiamente superate, articoli su riviste di fascia A, quattro criteri su quattro. Motivazione della commissione: 'parziale congruenza, mancata originalità complessiva'. Hai dodici mesi di cooldown prima di poter riprovare.",
       "requires": {
@@ -2093,7 +2093,7 @@
         "asn",
         "commissione"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Quattro titoli su tre, ma solo due",
       "text": "La commissione precedente ti aveva riconosciuto quattro titoli su tre richiesti. Questa tornata, con atto notorio controfirmato dai coautori che attesta il tuo contributo, te ne riconosce due. Stessi paper, regole diverse. Un brevetto e la cofondazione di un jointlab spariti dal computo.",
       "requires": {
@@ -2153,7 +2153,7 @@
         "asn",
         "publications"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Il workshop alla conferenza top non è titolo",
       "text": "Hai organizzato un workshop di ottimizzazione numerica alla più prestigiosa conferenza di robotica al mondo. La commissione ASN non te lo riconosce come titolo. Hai l'h-index di un ordinario. Ti hanno segato per i titoli organizzativi.",
       "requires": {
@@ -2217,7 +2217,7 @@
         "ricorso",
         "tar"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il TAR ti dà ragione, la commissione ti riboccia",
       "text": "Sentenza TAR Lazio: la commissione 'ha insufficientemente motivato' sulla coerenza delle tue pubblicazioni con le tematiche interdisciplinari del settore. Vizio di motivazione, atto annullato. La nuova commissione ti riboccia con motivazione diversa: 'maturità scientifica non ancora compiuta'.",
       "requires": {
@@ -2282,7 +2282,7 @@
         "concorso",
         "politics"
       ],
-      "weight": 75,
+      "weight": 43,
       "title": "Un RTT ospedaliero cucito addosso",
       "text": "Esce un bando RTT-ospedaliero. I criteri preferenziali corrispondono esattamente al CV di una persona che già lavora con il responsabile del settore: gli anni in quella struttura, il brevetto specifico, la collaborazione con quel preciso istituto. Il candidato favorito ha già vinto, ma poi gli anni non sono stati riconosciuti e il concorso è stato annullato. Lo riapriranno.",
       "requires": {
@@ -2347,7 +2347,7 @@
         "concorso",
         "ssd"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Il dottorando del Barone è già RTD-B",
       "text": "Quando hai vinto l'RTD-A c'era nel tuo settore un dottorando appena uscito dalla scuola di dottorato. Oggi quel dottorando è RTD-B nel tuo ateneo. Tu sei ancora RTD-A. Il tuo finisce fra dieci mesi. Nel tuo SSD non si è aperto altro: non si potrebbe, in piena correttezza, e dunque non si farà.",
       "requires": {
@@ -2412,7 +2412,7 @@
         "publications",
         "reviewer"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "Reviewer 2 vuole le sue citazioni",
       "text": "Il paper è parcheggiato in revisione da un anno e mezzo. Reviewer 2 chiede che inserisci tre riferimenti molto specifici. Sono articoli del suo gruppo. Senza quelli non lo accetta.",
       "requires": {
@@ -2482,7 +2482,7 @@
         "publications",
         "supervisor"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Solo classe A. Tranne quando.",
       "text": "Il responsabile ti ha appena detto, in riunione di gruppo: 'Mi raccomando, no riviste scientifiche, solo classe A e meglio se internazionali.' Dodici ore dopo, in privato: 'Tizio mi ha chiesto un pezzo per un numero monografico di una rivista sconosciuta. Glielo scrivi?' Le scadenze coincidono.",
       "requires": {
@@ -2545,7 +2545,7 @@
         "asn",
         "ssd"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Non puoi entrare nel collegio di dottorato",
       "text": "L'ufficio dottorato ti scrive: il DM 301/2022 specifica che i ricercatori ammessi al collegio sono 'di tipo b'. Tu sei RTD-A. Hai l'abilitazione. Hai i titoli. Sei stato in commissione d'esame finale di un dottorato due anni fa. Ti dicono che ora non si può più. È un criterio ASN che ti manca per la prima fascia.",
       "requires": {
@@ -2610,7 +2610,7 @@
         "concorso",
         "publications"
       ],
-      "weight": 35,
+      "weight": 33,
       "repeatable": true,
       "title": "L'ordinario con due pubblicazioni",
       "text": "In dipartimento c'è un PO con h-index 5 che è diventato ordinario con due pubblicazioni in carriera. Te lo hanno raccontato come 'leggenda'. Oggi presiede la commissione di valutazione del tuo terzo anno.",
@@ -2669,7 +2669,7 @@
         "concorso",
         "networking"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "L'intrusa nella rete Facebook",
       "text": "Hai chiesto alla rete Facebook degli RTDA generici se potevi lasciare un POR per un PNRR. Una docente associata del tuo settore - dell'ateneo dove vorresti applicare - ti fa una ramanzina sui 'fondi che vanno persi'. Scopri che è iscritta alla rete. Lei ti conosce di vista, voi siete quattro gatti.",
       "requires": {
@@ -2733,7 +2733,7 @@
         "asn",
         "concorso"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "La finestra under-40 si chiude",
       "text": "Compirai 41 anni a marzo. La quota PRIN under-40 e diversi bandi 'giovani ricercatori' ti tagliano fuori automaticamente. Hai consumato due tornate ASN senza ottenerla: una bocciatura, una rinuncia. La prossima tornata esce dopo il tuo compleanno.",
       "requires": {
@@ -2799,7 +2799,7 @@
         "publications",
         "supervisor"
       ],
-      "weight": 70,
+      "weight": 42,
       "repeatable": true,
       "title": "Lui deve fare ASN prima fascia",
       "text": "Hai scritto novanta per cento del paper. Il responsabile ti dice: «Sai, devo presentare i titoli per l'ASN prima fascia. Mi metti come primo autore, sì? Poi sull'acknowledgements ti citiamo, non ti preoccupare. È solo per questa volta.» Negli ultimi diciotto mesi è la quarta 'solo per questa volta'.",
@@ -2869,7 +2869,7 @@
         "publications",
         "ssd"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Una casa editrice specializzata in ASN",
       "text": "Sei in un settore non bibliometrico. Una casa editrice ti contatta: per cinquecento euro pubblicano la tua monografia con ISBN, fascia A presunta, in tre mesi. Specializzati 'in chi deve abilitarsi'. Un collega di una tornata di dieci anni fa ti dice che la cosa esisteva già allora.",
       "requires": {
@@ -2938,7 +2938,7 @@
       "tags": [
         "publications"
       ],
-      "weight": 30,
+      "weight": 31,
       "repeatable": true,
       "title": "Scopus ti attribuisce a un altro",
       "text": "Apri Scopus a tre settimane dalla scadenza per la domanda ASN: tre dei tuoi articoli sono attribuiti a un omonimo cinese. Le citazioni totali sembrano quintuplicate (poi scopri che è un bug temporaneo). Apri un ticket. Risposta automatica: 'in lavorazione'. Stimato: 30 giorni.",
@@ -2992,7 +2992,7 @@
         "concorso",
         "supervisor"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il terzo anno libero",
       "text": "Il responsabile, in pausa caffè: «Il terzo anno te lo lascio libero così costruisci fondi e CV per la tua carriera. Lo conviene a entrambi.» Nei progetti precedenti del gruppo, il 'terzo anno libero' si è tradotto in nuovi rendiconti, una scuola estiva da organizzare e tre tesisti aggiuntivi.",
       "requires": {
@@ -3056,7 +3056,7 @@
         "concorso",
         "mobility"
       ],
-      "weight": 35,
+      "weight": 33,
       "title": "Tieni l'RTD-A. Aspetti il B che non arriva.",
       "text": "Hai vinto un'offerta di postdoc all'estero, stipendio doppio. Il tuo responsabile ti dice: «Aspetta sei mesi. L'ateneo programmerà un RTD-B nel settore.» Ne è stato annunciato uno, è saltato per la frenata milleproroghe. Il responsabile rilancia: «Aspetta altri sei mesi.» Il prossimo annuncio è 'imminente' da quattordici mesi.",
       "requires": {
@@ -3125,7 +3125,7 @@
         "concorso",
         "barone"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Aspettavo l'altro per il B",
       "text": "Esce finalmente un bando RTD-B nel tuo settore. Vai a chiedere conferma al responsabile. Risposta: «Ah, ti dovevo dire, ma il profilo è per X. Sappiamo che ha bisogno per arrivare all'ASN. Te lo facciamo per il prossimo, davvero.» X è un assegnista che è entrato nella rete otto mesi fa.",
       "requires": {
@@ -3191,7 +3191,7 @@
       "tags": [
         "publications"
       ],
-      "weight": 40,
+      "weight": 34,
       "repeatable": true,
       "title": "Special Issue MDPI con sconto",
       "text": "Email in inbox: 'Paper Invitation for Special Issue. IF 3.252, CiteScore 5.0, Discount 20%.' Tu hai un draft praticamente pronto. Sai che AIRC considera 'valenza zero' i paper MDPI. Sai anche che molti reviewer ASN sono bizzarramente più severi su queste. Sai infine che paghi 2500 euro di APC.",
@@ -3261,7 +3261,7 @@
         "asn",
         "publications"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Accettato ma non ancora su Scopus",
       "text": "L'articolo sulla rivista più prestigiosa del settore è accettato ed esce in early access. Ma non è ancora indicizzato su Scopus né su WoS. Mancano due settimane alla scadenza ASN. Il DM richiede codice WoS o Scopus tra le dodici pubblicazioni.",
       "requires": {
@@ -3318,7 +3318,7 @@
         "concorso",
         "ssd"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "La riserva del 25 per cento RTT",
       "text": "Esce un bando RTT con riserva del 25% per chi è o è stato RTD-A o assegnista per almeno tre anni. Il tuo SSD bandisce due posti. La quota riservata copre uno solo. Tre RTDA del tuo ateneo soddisfano i requisiti. Il bando scade fra venti giorni.",
       "requires": {
@@ -3385,7 +3385,7 @@
         "asn",
         "publications"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Il brevetto non te lo riconoscono",
       "text": "La commissione ASN non ti riconosce il brevetto come titolo. A un altro candidato del tuo settore, con un brevetto simile, lo hanno riconosciuto la tornata scorsa. Stessa commissione, in parte. Non c'è scritto da nessuna parte quale tipo di brevetto vale.",
       "requires": {
@@ -3443,7 +3443,7 @@
         "prin",
         "rendicontazione"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Il PRIN ti chiede 0,1 ore",
       "text": "Per essere inserito/a nel PRIN senza incorrere nel doppio finanziamento dovresti mettere 0 ore. Ma il sistema, terziarizzato da non si sa quale azienda, accetta come minimo 0,1. Mezza giornata di rendicontazione spalmata su due anni di progetto. Le FAQ del MUR tacciono. Il bando scade alle 17:00.",
       "requires": {
@@ -3501,7 +3501,7 @@
         "anvur",
         "bureaucracy"
       ],
-      "weight": 75,
+      "weight": 43,
       "title": "L'attestato di coerenza fantasma",
       "text": "Il MUR ti chiede di caricare su SIRI l'«attestato di coerenza». Nessuno sa cosa sia. Il tuo responsabile dice che forse l'aveva firmato il direttore due anni fa, ma non è stato mai protocollato. La segretaria del dipartimento dice di chiedere all'ufficio progetti. L'ufficio progetti dice di chiedere al MUR. È un mistero, come il PRIN.",
       "requires": {
@@ -3566,7 +3566,7 @@
         "missione",
         "spese"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Una conferenza dall'altra parte del globo",
       "text": "Avevi pianificato da un anno una missione per incontrare ex-colleghi di dottorato in un'università oltreoceano. Tutto a tue spese. Adesso ti dicono che essendo a tempo pieno sul progetto, anche se la missione è a costo zero, dovrai «recuperare» quelle ore al rientro. Il biglietto è già pagato.",
       "requires": {
@@ -3627,7 +3627,7 @@
         "erasmus",
         "spese"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Ciclo di seminari pagato da Erasmus+",
       "text": "Un'università ospite ti invita per un ciclo di seminari, con rimborso Erasmus+ erogato direttamente da loro. L'helpdesk di Erasmus+ ti scrive che spetta all'ateneo decidere se rientri nei canoni. La tua amministrazione invoca «doppio finanziamento». La cifra in ballo è 4000 euro.",
       "requires": {
@@ -3686,7 +3686,7 @@
         "rendicontazione",
         "siri"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "Rendiconta in 500 caratteri",
       "text": "La finestra di rendicontazione bimestrale su SIRI ti dà 500 caratteri per descrivere due mesi di ricerca. Sei comma con virgola. Hai sviluppato un algoritmo, scritto due paper, supervisionato tre tesisti. Ma anche solo elencare i titoli sfora il limite. Il sistema non accetta abbreviazioni.",
       "requires": {
@@ -3739,7 +3739,7 @@
         "azienda",
         "smart"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Sei mesi in azienda, ma sei a 800 km",
       "text": "Il contratto prevede sei mesi in azienda. L'azienda è a Bologna, tu sei in Calabria. Per attivare lo smart working serve una lettera firmata da te, dal responsabile aziendale, dal responsabile scientifico e dal direttore di dipartimento. Quattro firme, tre uffici, una PEC.",
       "requires": {
@@ -3801,7 +3801,7 @@
         "anvur",
         "verifica"
       ],
-      "weight": 80,
+      "weight": 45,
       "title": "Richiesta di integrazione ANVUR",
       "text": "Sul portale SIRI compare la dicitura: «si richiedono indicazioni più specifiche (anche se sintetiche) sui contenuti e il cronoprogramma delle attività previste dal progetto di ricerca». Il tuo responsabile l'ha visto adesso. Hai trenta giorni. Se non integri, l'ateneo potrebbe perdere i 150.000 euro residui.",
       "requires": {
@@ -3864,7 +3864,7 @@
         "fondi_ricerca",
         "overheads"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Gli overheads del tuo progetto",
       "text": "Sai che nel finanziamento del tuo progetto c'è un 20% di spese generali. In teoria l'ateneo può destinarle al ricercatore per missioni, materiali, pubblicazioni. In pratica, finiscono nel «fondo dei fondi» dell'ateneo. Il direttore del dipartimento ti guarda con compassione: «Per i materiali chiedi a chi ha vinto un PRIN».",
       "requires": {
@@ -3924,7 +3924,7 @@
         "msca",
         "contratto"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Il pre-accordo Marie Curie",
       "text": "Hai vinto una Marie Curie con Seal of Excellence. L'ateneo aveva firmato un pre-accordo per due anni full-time. Ora, a ridosso della firma, ti riscrivono: «Il contratto RTD-A può essere solo di 3 anni e i 150.000 euro non bastano per il full-time. Ti facciamo part-time per tre anni.» Hai perso metà stipendio. Le mail al MUR rimangono senza risposta.",
       "requires": {
@@ -3992,7 +3992,7 @@
         "prin",
         "associato"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Il PI strutturato ti vuole 'a costo zero'",
       "text": "Esce un nuovo PRIN. Un collega strutturato di un altro dipartimento ti propone di entrare nella sua unità a 0,1 ore, costo zero. Il progetto è inerente al 60% al tuo PON, al 40% no. Lui guadagna un'unità ben pubblicata, tu un titolo per l'ASN ma nessun finanziamento.",
       "requires": {
@@ -4062,7 +4062,7 @@
         "pnrr",
         "contratto"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Hai vinto un bando PNRR",
       "text": "Hai vinto un piccolo bando PNRR come PI. Per usufruirne dovresti dimetterti dal PON in corso e firmare un nuovo contratto, oppure tentare la via dell'«addendum» che unisce i due finanziamenti facendoti passare a tempo pieno. L'ufficio progetti non l'ha mai fatto. Il MUR non risponde.",
       "requires": {
@@ -4127,7 +4127,7 @@
         "rendicontazione",
         "supervisor"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Il responsabile non approva il rendiconto",
       "text": "Hai caricato il bimestre su SIRI. Il responsabile scientifico deve approvarlo dal suo profilo. Da tre settimane non lo fa. La scadenza è dopodomani. Risponde con un «poi vedo» a ogni messaggio. Senza la sua approvazione, niente stipendio per il mese.",
       "requires": {
@@ -4187,7 +4187,7 @@
         "erc",
         "career"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Un collega ha vinto l'ERC Consolidator",
       "text": "Un collega del dipartimento ha appena vinto un ERC Consolidator. Si offre di affiancarti per buttare giù uno Starting. È «su base individuale», non richiede neanche di essere dipendente dell'ateneo. Però sei al 100% sul PON. Scrivere un ERC richiede sei mesi di lavoro serale.",
       "requires": {
@@ -4249,7 +4249,7 @@
         "missione",
         "spese"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "L'anticipo per il corso",
       "text": "Devi frequentare un corso di meta-analisi da 1500 euro per il tuo lavoro di campo. La missione è autorizzata. Ma all'amministrazione ti dicono: «E mica possiamo pagarti un corso». Produci una dichiarazione formale sulla necessità. Loro chiedono altra documentazione. Il corso è tra dieci giorni.",
       "requires": {
@@ -4306,7 +4306,7 @@
         "rendicontazione",
         "siri"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "La relazione annuale che non c'è",
       "text": "Il disciplinare prevede una relazione tecnico-scientifica annuale entro 30 giorni dalla scadenza dell'annualità. Il tuo primo anno scade il 31 gennaio. Sul portale SIRI non c'è nessuna finestra aperta. Il MUR risponde che CINECA «sta predisponendo il format». Tu non sai se mandare comunque qualcosa al dipartimento.",
       "requires": {
@@ -4364,7 +4364,7 @@
         "cofinanziamento",
         "ateneo"
       ],
-      "weight": 75,
+      "weight": 43,
       "title": "Il terzo anno è 'cofinanziato'",
       "text": "Il PON copre due anni al 100%. Il terzo anno è cofinanziato dall'ateneo. Adesso scopri che il «cofinanziamento» significa che i fondi sono comunque vincolati e che non puoi rendicontare ore su altri progetti neanche nell'ultimo anno. È un cofinanziamento di facciata. Resterai blindato fino alla fine.",
       "requires": {
@@ -4427,7 +4427,7 @@
         "fis",
         "career"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Esce il bando FIS",
       "text": "Il Fondo Italiano per la Scienza apre. Bando da PI individuale. Se vinci, ti dimetti dal PON. Però il FIS richiede almeno il 50% di ore/uomo e tu sei al 100% sul progetto attuale. Le FAQ dicono che si può candidare anche un disoccupato. Il tuo ateneo dice «no» a tutto a prescindere.",
       "requires": {
@@ -4488,7 +4488,7 @@
         "fondi_ricerca",
         "isolamento"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Non hai fondi neanche per le penne",
       "text": "Tre anni di contratto, zero euro di fondi di ricerca personali. Per andare a un congresso a Vienna devi chiedere al supervisor che ha un PRIN. Per comprare un anticorpo, accattonaggio. Per la quota di una conference, scali dai fondi di gruppo. Hai pubblicato due paper l'anno scorso, ma quest'anno con 90 ore di didattica e zero supporto, niente.",
       "requires": {
@@ -4554,7 +4554,7 @@
         "dimissioni",
         "rendicontazione"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Dimissioni: restituzione delle mensilità",
       "text": "Pensi di dimetterti per accettare un'offerta migliore. L'ufficio ti scrive: «Se lo fai prima o dopo la scadenza dell'annualità restituisci le mensilità percepite». Hai lavorato 10 mesi, ma se ti dimetti ora dovrai restituire 8000 euro. Se aspetti due settimane, zero. Il nuovo contratto inizia tra dieci giorni.",
       "requires": {
@@ -4620,7 +4620,7 @@
         "partner",
         "azienda"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Il partner industriale ritira la firma",
       "text": "Stai chiudendo un progetto Horizon con un consorzio europeo. L'azienda partner italiana, che doveva cofinanziare 50.000 euro come quota matching, all'ultimo manda una PEC: «Non riusciamo a deliberare in tempo». Senza di loro il consorzio salta. La scadenza per firmare il grant agreement è tra cinque giorni.",
       "requires": {
@@ -4685,7 +4685,7 @@
         "proroga",
         "maternita"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "Proroga o 'recupero intensivo'?",
       "text": "Sei stato/a 5 mesi in malattia/maternità. L'ufficio HR ti scrive: il contratto è prorogato di 3 mesi (non 5) ma devi svolgere «attività aggiuntive entro la conclusione naturale del contratto». Lavoro doppio per due mesi. Su una collega altro ateneo è stata fatta solo la proroga, senza recupero.",
       "requires": {
@@ -4759,7 +4759,7 @@
         "azienda",
         "controllo"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il MUR vuole l'attestazione (ancora)",
       "text": "Sei già a fine progetto. L'ufficio ricerca ti scrive: il MUR sta facendo un controllo a campione e vuole, di nuovo, l'attestazione dell'azienda per il periodo svolto. L'hai già consegnata tre mesi fa. L'ufficio te la chiede comunque, «per controllo incrociato». L'azienda, dopo tre anni, non risponde più alle tue PEC.",
       "requires": {
@@ -4820,7 +4820,7 @@
         "funding",
         "obiettivi"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Gli obiettivi non si raggiungeranno",
       "text": "A metà progetto è chiaro che gli obiettivi scritti dal supervisor tre anni fa erano fantascienza. Hai campioni biologici che non arrivano, partner che hanno cambiato strategia, una pubblicazione respinta dopo otto mesi di revisione. Sei a 14 mesi dalla scadenza. Devi decidere come riformulare i deliverable.",
       "repeatable": true,
@@ -4885,7 +4885,7 @@
         "money",
         "exit"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "La banca dice no al mutuo",
       "text": "Hai un contratto RTD-A di tre anni, due prorogabili. La banca legge la parola «termine» e si ferma lì: niente garanzie, niente mutuo, niente casa. Il funzionario suggerisce «un genitore garante» con tono comprensivo. Hai 34 anni.",
       "requires": {
@@ -4943,7 +4943,7 @@
         "money",
         "morale"
       ],
-      "weight": 35,
+      "weight": 33,
       "repeatable": true,
       "title": "Lo stipendio del cugino",
       "text": "Cena di famiglia. Tuo cugino ingegnere ti racconta del suo aumento: 3400 netti. Tu prendi 1955 dopo cinque anni di università, un dottorato e un postdoc. Tua zia dice «ma tu fai una cosa bella, lo studio». Sorridi.",
@@ -4993,7 +4993,7 @@
         "mobility",
         "exit"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Un'offerta a 800 km",
       "text": "Il tuo compagno (o la tua compagna) ha ricevuto un'offerta a tempo indeterminato a 800 km di distanza. Il tuo concorso uscirà «tra qualche mese, forse». Lo dicono da diciotto. La conversazione a cena è iniziata leggera. Ora siete tutti e due in silenzio.",
       "requires": {
@@ -5052,7 +5052,7 @@
         "health",
         "bureaucracy"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Gravidanza a rischio",
       "text": "Aspetti un figlio. Il ginecologo ti mette in gravidanza a rischio: riposo, niente trasferte. L'amministrazione: «Non è che non va a lavorare senza che il suo PI lo sappia? Mi mandi i documenti entro domani o la metto in malattia.» È martedì pomeriggio.",
       "requires": {
@@ -5118,7 +5118,7 @@
         "maternity",
         "bureaucracy"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "Il «recupero» dopo il parto",
       "text": "Sei rientrata dai cinque mesi obbligatori. Il responsabile scientifico ti convoca con un sorriso comprensivo: «Sai com'è, dovrai recuperare quei mesi con attività aggiuntive. Magari di sera, quando dorme. È solo un anno.» Hai allattato due ore fa.",
       "requires": {
@@ -5185,7 +5185,7 @@
         "paternity",
         "family"
       ],
-      "weight": 35,
+      "weight": 33,
       "title": "Dieci giorni di paternità",
       "text": "Tua moglie ha partorito venerdì. La legge ti riconosce 10 giorni di congedo obbligatorio. Il direttore di dipartimento: «I 10 giorni te li puoi prendere, ma la lezione di mercoledì la fai lo stesso, vero? E il referee report scade venerdì prossimo.»",
       "requires": {
@@ -5245,7 +5245,7 @@
         "health",
         "burnout"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Mal di testa da sette settimane",
       "text": "Hai mal di testa da quasi due mesi, ogni giorno. Brufen 600 non fa più effetto. Il neurologo ti prescrive amitriptilina, ma «ti rincoglionirà al pomeriggio». Domani hai consiglio di dipartimento e tre riunioni di progetto.",
       "requires": {
@@ -5299,7 +5299,7 @@
         "health",
         "mental_health"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Prima seduta dalla psicologa",
       "text": "Hai 36 anni e non sei mai stato/a in terapia. Stamattina sì. La psicologa ti chiede cosa ti porta lì. Inizi a parlare del PON e dopo dodici minuti stai piangendo. Costa 65 euro a settimana. Non è rimborsabile.",
       "requires": {
@@ -5351,7 +5351,7 @@
         "mental_health",
         "peers"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Un collega vuole dimettersi",
       "text": "Una collega ti scrive in privato. Suo amico, RTD-A in un altro ateneo, dall'ansia non dorme. Ha pensato di dimettersi ma teme di non poter più fare concorsi pubblici. Lei ti chiede consiglio. È quasi mezzanotte.",
       "requires": {
@@ -5405,7 +5405,7 @@
         "mental_health",
         "naspi"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Hai scritto la lettera. Non l'hai mandata.",
       "text": "Hai stampato la lettera di dimissioni a luglio. La tieni nello zaino da quattro mesi. Hai pianto due volte a settimana per un mese. Tuo marito ti ha detto «fai come vuoi». Il responsabile non si è accorto di niente, perché tu sei sempre puntuale.",
       "requires": {
@@ -5462,7 +5462,7 @@
         "caregiver",
         "health"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "Tuo padre è in ospedale",
       "text": "Tuo padre è in oncologia per un tumore polmonare. Lo accompagni alle visite. Ne hai due ore di macchina per arrivare al lavoro, due per tornare. Non esiste un regolamento per il caregiver universitario. Sei amministratore/trice di sostegno da settembre.",
       "requires": {
@@ -5519,7 +5519,7 @@
         "family",
         "logistics"
       ],
-      "weight": 45,
+      "weight": 35,
       "repeatable": true,
       "title": "Il nido comunale chiude alle 14",
       "text": "Hai una bambina di un anno. Il nido comunale chiude alle 14, quello privato vuole 800€ al mese. L'oratorio non prende bambini sotto l'anno. Il dipartimento non ha un asilo. Hai consiglio di facoltà alle 15 e oggi tua madre è influenzata.",
@@ -5573,7 +5573,7 @@
         "mobility",
         "family"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Due mesi e mezzo all'estero, obbligatori",
       "text": "Il contratto prevede un periodo all'estero. Ti hanno assegnato un laboratorio nel nord Europa che non risponde alle mail. Hai un figlio di due anni e un partner che non può prendersi aspettativa. Quei due mesi e mezzo li devi fare, o ti revocano i fondi.",
       "requires": {
@@ -5631,7 +5631,7 @@
         "burnout",
         "mental_health"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Il corpo si è fermato",
       "text": "Stamattina ti sei seduta sul letto e non ti sei più alzata. Tre ore. La psicoterapeuta ti dice: «Questo si chiama burnout, e a un certo punto il corpo decide.» Hai due deadline questa settimana. Tuo figlio chiede perché piangi.",
       "requires": {
@@ -5689,7 +5689,7 @@
         "exit",
         "money"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Un'azienda ti scrive su LinkedIn",
       "text": "Un recruiter di una farmaceutica/IT ti scrive: posizione senior, stipendio 55k, tempo indeterminato, niente PEC dal MUR. Hai 41 anni, tre lauree, 24 pubblicazioni, e sei ancora «in mano a Cristo». Hai colloquio mercoledì se vuoi.",
       "requires": {
@@ -5747,7 +5747,7 @@
         "health",
         "rest"
       ],
-      "weight": 25,
+      "weight": 30,
       "repeatable": true,
       "title": "Un weekend senza email",
       "text": "Tua madre ti ha invitata al mare. Tre giorni. C'è una revisione in scadenza lunedì ma a te le orecchie ti fischiano da una settimana e oggi alle 11 ti sei addormentata sulla scrivania. Il sole c'è.",
@@ -5799,7 +5799,7 @@
         "family",
         "maternity"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il secondo figlio. Non ora.",
       "text": "Tuo marito chiede da mesi. Tu hai 38 anni e mezzo. Il primo è cresciuto guardandoti rendicontare. La gravidanza a rischio precedente potrebbe ripetersi. Se rimani incinta ora, il MUR chiede «attività di recupero» e il tuo concorso slitta. Domani la pillola la prendi o no?",
       "requires": {
@@ -5850,7 +5850,7 @@
         "naspi",
         "career"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "NASpI per 18 mesi, in attesa dell'RTT",
       "text": "Il contratto è scaduto venerdì. Da lunedì sei disoccupata: NASpI 18 mesi all'80% del reddito. Domanda sulla piattaforma INPS, che si blocca due volte. Il concorso RTT del tuo SSD potrebbe uscire «entro l'autunno». Da otto mesi.",
       "requires": {
@@ -5910,7 +5910,7 @@
         "peers",
         "morale"
       ],
-      "weight": 20,
+      "weight": 30,
       "repeatable": true,
       "title": "Una pizza con i precari",
       "text": "Sette persone della rete dei precari si incontrano per una pizza. Si comincia parlando del MUR, si finisce parlando di figli, ex, mutui, terapie. Alle 23:30 nessuno vuole andare a casa.",
@@ -5963,7 +5963,7 @@
         "morale",
         "identity"
       ],
-      "weight": 30,
+      "weight": 31,
       "repeatable": true,
       "title": "Perché continui a farlo",
       "text": "Sono le 22:50, sei in dipartimento da dodici ore, hai mangiato un pezzo di focaccia alle 14. Un dottorando ti chiede se può tornare domani per discutere la tesi. Gli dici di sì. Quando esce ti chiedi: perché lo faccio ancora.",
@@ -6012,7 +6012,7 @@
         "bureaucracy",
         "rest"
       ],
-      "weight": 25,
+      "weight": 30,
       "repeatable": true,
       "title": "Le ferie che perdi a fine anno",
       "text": "Sono i primi di dicembre. Hai 14 giorni di ferie residue. L'ufficio personale ti scrive: non puoi accumularle, vanno smaltite entro il 31. Il responsabile: «Le pubblicazioni le chiudiamo prima delle ferie, ok?» Domani è venerdì.",
@@ -6068,7 +6068,7 @@
         "supervisor",
         "phantom_project"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "Il progetto sulla carta vs il progetto vero",
       "text": "Il titolo del tuo progetto è altisonante: «Analisi concettuale dell'algorithmic fairness». In pratica il responsabile scientifico ti spiega che l'azienda partner vuole un OCR per leggere numeri sui moduli. Lui ti dice: «Tanto quelli dell'azienda non ne capiscono niente, fatti i fatti tuoi.»",
       "requires": {
@@ -6125,7 +6125,7 @@
         "supervisor",
         "teaching"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "«Un favore»: la lezione di domani",
       "text": "Il responsabile ti scrive alle 19: «Mi faresti la lezione di domani mattina? Devo partire per un convegno. È sui modelli predittivi, sai già tutto.» Non sai niente. Le slide non esistono. Domattina lezione alle 9.",
       "requires": {
@@ -6182,7 +6182,7 @@
         "peers",
         "daily_grind"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "L'esperto di LaTeX del dipartimento",
       "text": "Sei l'unico nel dipartimento che sa usare LaTeX bene. Quattro colleghi strutturati ti scrivono nello stesso mese per «un piccolo aiuto sul template della rivista». Sono progetti loro, paper loro, monografie loro. Te ne ringrazieranno a voce.",
       "repeatable": true,
@@ -6245,7 +6245,7 @@
         "bureaucracy",
         "ateneo"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il referente PON dell'ateneo",
       "text": "Hai una domanda chiara: posso fare didattica nel corso magistrale? Il referente PON ti dice di chiedere al regolamento d'ateneo. Il regolamento rimanda al disciplinare. Il disciplinare rimanda al referente. Lui ti riguarda e dice: «Sa, le indicazioni cambiano.»",
       "requires": {
@@ -6300,7 +6300,7 @@
         "teaching",
         "students"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Co-relatore di fatto, non di nome",
       "text": "Hai seguito sette tesisti quest'anno. Il regolamento d'ateneo non ti permette di essere relatore unico come RTD-A. Un collega strutturato ti dice: «Tu lavori, io firmo. Tanto è la prassi.» Lo studente ti chiama 'professore' e crede sia tu il suo riferimento.",
       "requires": {
@@ -6355,7 +6355,7 @@
         "teaching",
         "ateneo"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Sopra il monte, sotto la legge",
       "text": "Hai 130 ore di didattica frontale quest'anno. Il contratto dice «tra 8 e 32 ore». Il regolamento del tuo ateneo dice «60 ore minime per soddisfare l'impegno didattico». Quattro corsi diversi. Un responsabile PON dell'ateneo ti dice: «È normale, per gli RTD-A.»",
       "requires": {
@@ -6412,7 +6412,7 @@
         "publications",
         "supervisor"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Il capo che non ha letto",
       "text": "Il responsabile ti chiede di metterlo come ultimo autore sul paper. Ti chiede anche di rivedere il paper di una sua collaboratrice che è stato rejected 8 mesi fa: 40 pagine, ipotesi superate, dati da rifare. «Sai com'è, glielo dobbiamo.»",
       "requires": {
@@ -6475,7 +6475,7 @@
         "publications",
         "supervisor"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "«Dipende da chi te lo chiede»",
       "text": "Il responsabile ieri ti ha detto: «Mi raccomando, solo classe A, meglio se internazionali.» Oggi ti scrive: «Tizio cura un numero monografico per una rivista scientifica, glielo scrivi un pezzo?» La rivista non è classe A. Non è classe niente.",
       "requires": {
@@ -6531,7 +6531,7 @@
         "peers",
         "department"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Il consiglio di dipartimento",
       "text": "Sei al primo consiglio di dipartimento. Tre ore, 47 punti all'ordine del giorno. Si parla di programmazione del personale per il prossimo triennio. Nessuno menziona gli RTD-A in scadenza. Quando alzi la mano, il direttore guarda l'orologio.",
       "requires": {
@@ -6589,7 +6589,7 @@
         "company_period",
         "daily_grind"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Il supermercato della statistica",
       "text": "Sei in azienda per il periodo obbligatorio. Ti chiedono di «rielaborare i dati» di un loro report, condurre focus group sui loro temi (non i tuoi), e insegnare Excel di base a tre stagisti. Ti invitano al caffè tre volte e una manager ti dice: «Pensavi fosse così complicato?»",
       "requires": {
@@ -6642,7 +6642,7 @@
         "travel",
         "ateneo"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "La conferenza dall'altra parte del globo",
       "text": "Hai pianificato da mesi un convegno con un collaboratore in Australia. Spese tue. Ora che hai vinto l'RTD-A, l'ufficio missioni ti dice: «In linea di principio si può, ma devi recuperare quelle ore al rientro.» Sette giorni più jet-lag.",
       "requires": {
@@ -6701,7 +6701,7 @@
         "students",
         "publications"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "L'analisi statistica della dottoranda",
       "text": "Una dottoranda di un altro gruppo, mai vista, ti scrive: «Mi hanno detto che lei è bravissima con la statistica. Le mando i miei dati? Sono solo 40 pazienti. Il mio professore mi ha detto di chiederlo a lei.» Allegato: cartella Drive con file Excel da 320MB.",
       "requires": {
@@ -6753,7 +6753,7 @@
         "peers",
         "absurdity"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Il consiglio paternalistico",
       "text": "Una collega ti racconta: un suo capo, dipartimento accanto, ha detto a una ragazza in dottorato che voleva un figlio: «Certo, non chiudete le gambe.» Tu sei testimone della conversazione di ricostruzione. La collega ti chiede: «Glielo dico al rettore?»",
       "requires": {
@@ -6811,7 +6811,7 @@
         "peers",
         "competition"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Il collega che ha vinto",
       "text": "Il collega che ha vinto l'RTT al posto tuo ti incontra alla macchinetta. «Ehi, hai un minuto? Sto preparando l'ASN. Tu come hai impostato i titoli? Mi daresti i tuoi PDF di esempio?»",
       "requires": {
@@ -6868,7 +6868,7 @@
         "supervisor",
         "daily_grind"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il capo in tensione per il concorso",
       "text": "Il tuo responsabile sta per andare al concorso da ordinario. È nervosissimo. Risponde a monosillabi, ti scrive alle 22:30 chiedendo dati che gli hai già mandato, ti convoca per un meeting e poi cancella. Ti chiede di assistere a una sua lezione e «prendere appunti su come si pone con gli studenti».",
       "requires": {
@@ -6922,7 +6922,7 @@
         "supervisor",
         "health"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Le terapie e l'insistenza",
       "text": "Sei in cura per una patologia cronica. Il capo lo sa. Eppure ti chiede di prendere ore di assistenza in più «per mancanza di personale». Sta insistendo da settimane. Le terapie ti distruggono. Vai a lavoro come un cadavere.",
       "requires": {
@@ -6980,7 +6980,7 @@
         "department",
         "uncertainty"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Voci di corridoio sul rinnovo",
       "text": "Un collega ti ferma in corridoio: «Hai sentito? Pare che quest'anno il dipartimento rinnovi solo un RTD-A, e solo se cofinanziato al 90% dal PI.» Non è una notizia ufficiale. Il tuo PI non ha mai parlato di soldi. Sei al venticinquesimo mese.",
       "requires": {
@@ -7039,7 +7039,7 @@
         "peers",
         "alternatives"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "L'offerta dalla telematica",
       "text": "Un'università telematica ti contatta per un contratto di docenza. Stipendio buono, ricerca limitata, prestigio incerto. Il direttore del tuo dipartimento ti ha appena detto a mezza bocca che il rinnovo «sarà difficile». Un collega del CRUI fa intuire che le telematiche sono il futuro, anche se «la concorrenza è sleale».",
       "requires": {
@@ -7098,7 +7098,7 @@
         "peers",
         "burnout"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Il collega che vuole dimettersi",
       "text": "Un collega ti scrive: «Sto male. Non ce la faccio più. Voglio dimettermi ma sul contratto c'è scritto 'giusta causa' e non so cosa significhi. Tu sai? Posso parlare con te?» Tu non sei avvocato. Lui sta tanto, tanto male.",
       "requires": {
@@ -7156,7 +7156,7 @@
         "teaching",
         "students"
       ],
-      "weight": 50,
+      "weight": 37,
       "repeatable": true,
       "title": "Il tesista alle 23 di domenica",
       "text": "Un tesista ti scrive su: «Buonasera professoressa, scusi se la disturbo a quest'ora ma ho fatto una modifica importante al capitolo 3 e vorrei un suo parere prima di domani. Dissertazione fra otto giorni.» Sono le 23:14. Domenica.",
@@ -7209,7 +7209,7 @@
         "barone",
         "daily_grind"
       ],
-      "weight": 40,
+      "weight": 34,
       "repeatable": true,
       "title": "Saluto in corridoio",
       "text": "Il barone del settore ti saluta vicino alla macchinetta del caffè. È la prima volta in tre anni. Ti chiede della tua tesi di dottorato, sbagliando il titolo. Poi: «Senti, avrei una cosa per te. Hai due minuti?»",
@@ -7266,7 +7266,7 @@
         "supervisor",
         "daily_grind"
       ],
-      "weight": 35,
+      "weight": 33,
       "repeatable": true,
       "title": "Chiamata dall'America alle 19",
       "text": "Il tuo supervisore è in convegno negli Stati Uniti. Ti chiama alle 19 (le 13 lì): «Non trovo quella presentazione, mi puoi fare le foto e mandarmele su ? È sulla mia scrivania, terzo cassetto.» Sei già fuori ufficio.",
@@ -7320,7 +7320,7 @@
         "department",
         "daily_grind"
       ],
-      "weight": 45,
+      "weight": 35,
       "repeatable": true,
       "title": "«Cose di dipartimento»",
       "text": "Il direttore ti chiede di occuparti di: 1) organizzare l'open day per le matricole, 2) coordinare il sito web del laboratorio, 3) essere segretario in due commissioni d'esame, 4) preparare la presentazione del dipartimento per la VQR. «Sai, le ho proposto te perché sei il più giovane.»",
@@ -7379,7 +7379,7 @@
         "bureaucracy",
         "supervisor"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Negozi il rendiconto con il responsabile",
       "text": "Il responsabile pretende che imputi tre giorni a un'attività che non hai mai fatto. Dice: «È solo formale, lo capirai col tempo.» Sai che è una bugia rendicontativa. Sai anche che se rifiuti, ti ricorderà.",
       "choices": [
@@ -7495,7 +7495,7 @@
         "career",
         "consumable"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Tre lettere di referenza richieste dal bando",
       "text": "Un bando da ricercatore chiede tre lettere di referenza «con almeno una di estero». Qualcuno ha scritto, fra colleghi, sarcastico: «In Italia la raccomandazione esiste già in un altro modo: i capi alzano il telefono.» Tu hai mandato richieste a tre potenziali firmatari. Un ordinario in pensione, finalmente, te ne manda una scritta a mano.",
       "requires": {
@@ -7545,7 +7545,7 @@
         "consumable",
         "high_stakes"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Il concorso che potresti vincere",
       "text": "Esce un bando RTT in un altro ateneo. Non è cucito su nessuno. Sei competitivo/a, almeno sulla carta. Il colloquio è tra dieci giorni.",
       "requires": {
@@ -7666,7 +7666,7 @@
         "high_stakes",
         "consumable"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Accesso agli atti del concorso che hai perso",
       "text": "Vuoi capire perché hai perso quel concorso. Il regolamento ti dà diritto all'accesso agli atti entro 30 giorni. L'ufficio personale dell'ateneo ti dice: «Non è semplice come pensa.»",
       "requires": {
@@ -7762,7 +7762,7 @@
         "health",
         "consumable"
       ],
-      "weight": 60,
+      "weight": 39,
       "requires": {
         "minTurn": 10
       },
@@ -7826,7 +7826,7 @@
         "health",
         "consumable"
       ],
-      "weight": 30,
+      "weight": 31,
       "repeatable": true,
       "requires": {
         "minTurn": 12,
@@ -7884,7 +7884,7 @@
         "bureaucracy",
         "consumable"
       ],
-      "weight": 35,
+      "weight": 33,
       "repeatable": true,
       "title": "Un caffè alla segreteria amministrativa",
       "text": "Sei in coda al bar del dipartimento. Davanti a te c'è la segretaria amministrativa. Quella vera, quella che SA come si compila il modulo. Sorride.",
@@ -7924,7 +7924,7 @@
         "bureaucracy",
         "consumable"
       ],
-      "weight": 45,
+      "weight": 35,
       "repeatable": true,
       "requires": {
         "minTurn": 6
@@ -8007,7 +8007,7 @@
         "publications",
         "high_stakes"
       ],
-      "weight": 50,
+      "weight": 37,
       "requires": {
         "minTurn": 10
       },
@@ -8098,7 +8098,7 @@
         "peers",
         "consumable"
       ],
-      "weight": 35,
+      "weight": 33,
       "requires": {
         "minTurn": 8
       },
@@ -8166,7 +8166,7 @@
         "peers",
         "consumable"
       ],
-      "weight": 40,
+      "weight": 34,
       "requires": {
         "minTurn": 14,
         "inventory": {
@@ -8221,7 +8221,7 @@
         "mobility",
         "consumable"
       ],
-      "weight": 45,
+      "weight": 35,
       "requires": {
         "minTurn": 18
       },
@@ -8274,7 +8274,7 @@
         "mobility",
         "consumable"
       ],
-      "weight": 50,
+      "weight": 37,
       "requires": {
         "minTurn": 24,
         "inventory": {
@@ -8329,7 +8329,7 @@
         "politics",
         "high_stakes"
       ],
-      "weight": 55,
+      "weight": 38,
       "requires": {
         "minTurn": 20,
         "flags": {
@@ -8406,7 +8406,7 @@
         "family",
         "high_stakes"
       ],
-      "weight": 30,
+      "weight": 31,
       "requires": {
         "minTurn": 12
       },
@@ -8476,7 +8476,7 @@
         "character_specific",
         "matematico"
       ],
-      "weight": 65,
+      "weight": 41,
       "requires": {
         "inventory": {
           "has": [
@@ -8562,7 +8562,7 @@
         "character_specific",
         "politologo"
       ],
-      "weight": 60,
+      "weight": 39,
       "requires": {
         "inventory": {
           "has": [
@@ -8647,7 +8647,7 @@
         "character_specific",
         "biologo"
       ],
-      "weight": 65,
+      "weight": 41,
       "requires": {
         "inventory": {
           "has": [
@@ -8751,7 +8751,7 @@
         "character_specific",
         "umanista"
       ],
-      "weight": 65,
+      "weight": 41,
       "requires": {
         "inventory": {
           "has": [
@@ -8836,7 +8836,7 @@
         "character_specific",
         "ingegnere"
       ],
-      "weight": 50,
+      "weight": 37,
       "repeatable": true,
       "requires": {
         "inventory": {
@@ -8911,7 +8911,7 @@
         "character_specific",
         "ingegnere"
       ],
-      "weight": 70,
+      "weight": 42,
       "requires": {
         "inventory": {
           "has": [
@@ -8970,7 +8970,7 @@
         "azienda",
         "contratto"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Il contratto dice 'mesi in azienda' e basta",
       "text": "Apri il tuo contratto. C'è il titolo del progetto, il responsabile scientifico e i mesi in azienda. Nulla di concreto su cosa devi fare. Il responsabile ti dice: «Tanto quelli dell'azienda non capiscono niente, fa' quello che vuoi». Però l'azienda si aspetta che tu faccia OCR di documenti.",
       "requires": {
@@ -9059,7 +9059,7 @@
         "azienda",
         "smart_working"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Smart working aziendale: chi deve firmare?",
       "text": "Vuoi chiedere lo smart working per il periodo in azienda. Una collega ti dice che lei ha fatto firmare la comunicazione ad azienda, responsabile scientifico, direttore di dipartimento e a sé stessa. Quattro firme. Un'altra ti dice che il suo ufficio ne pretende solo una. Il MUR non risponde.",
       "requires": {
@@ -9144,7 +9144,7 @@
         "azienda",
         "cambio"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Vuoi cambiare azienda partner",
       "text": "L'azienda partner del tuo bando non collabora, non risponde alle email, e tu vorresti farti il periodo in un'altra impresa attinente alla ricerca. Una collega l'ha fatto: PEC al ministero, motivazione 'migliore approfondimento del tema'. Tu non sai a quale indirizzo scrivere e gli uffici sono evasivi.",
       "requires": {
@@ -9239,7 +9239,7 @@
         "azienda",
         "controllo"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "L'azienda chiede a TE la procedura",
       "text": "L'azienda vuole una procedura ufficiale per certificare il tuo periodo in impresa: con quale modulo? Con quale formato? Ti chiedono a te di mandargliela. Tu non hai idea, e il MUR non ha pubblicato nulla. Ogni ateneo ha fatto diversamente.",
       "requires": {
@@ -9327,7 +9327,7 @@
         "azienda",
         "doppio_finanziamento"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "L'azienda partner ti offre una consulenza extra",
       "text": "L'azienda con cui collabori sul PON ti propone una consulenza retribuita su un tema diverso. È coerente? È doppio finanziamento? Il tuo ateneo non lo sa. Una collega di Firenze dice che a lei l'hanno bocciata; un'altra a Brescia dice di sì.",
       "requires": {
@@ -9420,7 +9420,7 @@
         "azienda",
         "sfruttamento"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Vogliono un'analisi statistica de novo aggratis",
       "text": "Il referente aziendale non ha mai letto la scheda progetto. Ti chiede di rifare daccapo l'analisi statistica dei dati che avevano comprato da un fornitore esterno. Vuole risultati 'pilotati' su una loro ipotesi. Tu dici che è una consulenza extra, da conto terzi.",
       "requires": {
@@ -9510,7 +9510,7 @@
         "azienda",
         "controllo"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "In azienda non si firma niente",
       "text": "Hai svolto il periodo in impresa. Adesso devi documentarlo, ma in azienda non hai mai timbrato un cartellino né firmato un foglio presenze. Serve un diario? Un'attestazione del CEO? Una autocertificazione? I tuoi colleghi hanno fatto in tre modi diversi.",
       "requires": {
@@ -9605,7 +9605,7 @@
         "azienda",
         "medicina"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Assistenza ospedaliera VS periodo in azienda",
       "text": "Sei settore MED con assistenza in ospedale. Da contratto devi fare 8 mesi in azienda. L'ospedale ti vuole presente, l'azienda ti aspetta, la didattica continua. Il dipartimento ti dice: «un modo si trova». Servirebbe il dono dell'ubiquità.",
       "requires": {
@@ -9691,7 +9691,7 @@
         "azienda",
         "crisi"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "L'azienda partner chiude i battenti",
       "text": "L'azienda con cui dovevi finire i 6 mesi ha messo i libri in tribunale. Il MUR ti chiede chi assumerà i deliverable, l'ateneo si gira dall'altra parte. Devi trovare un'altra impresa partner in 30 giorni o il contratto è revocabile.",
       "requires": {
@@ -9783,7 +9783,7 @@
         "azienda",
         "controllo"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "L'azienda è cambiata di proprietà",
       "text": "Il MUR ti chiede l'attestazione di un periodo svolto 18 mesi fa. Nel frattempo l'azienda è stata acquisita da un fondo, il vecchio CEO è andato in Svizzera, il referente che ti seguiva non risponde alle email aziendali. Hai 10 giorni.",
       "requires": {
@@ -9903,7 +9903,7 @@
         "azienda",
         "burocrazia"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Convenzione, lettera o niente?",
       "text": "Alcuni atenei chiedono una convenzione formale con l'azienda. Altri si accontentano di una lettera di accordo. Altri ancora di niente. Tu vai in impresa senza assicurazione e senza un documento. Una collega ti dice: «Andiamo come ospiti?».",
       "requires": {
@@ -9990,7 +9990,7 @@
         "azienda",
         "rendicontazione"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Rendicontare 6 mesi in 500 caratteri",
       "text": "Devi rendicontare il periodo in azienda nella piattaforma MUR. Hai 500 caratteri. Una collega ha scritto solo: «Periodo in azienda, sviluppo e conclusione». Sei mesi di lavoro condensati in tre parole. Tu pensi: ne valeva la pena di tutta quella fatica?",
       "requires": {
@@ -10074,7 +10074,7 @@
         "azienda",
         "relazioni"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Il referente aziendale non risponde",
       "text": "Il referente aziendale è un dirigente Senior di cui non hai mai visto la faccia. Comunica solo via email, una volta ogni tre settimane, con una riga. Non ha mai letto la scheda progetto e ti chiede di rifare cose che hai già consegnato. Hai bisogno della sua firma per chiudere.",
       "requires": {
@@ -10163,7 +10163,7 @@
         "azienda",
         "interpretazione"
       ],
-      "weight": 35,
+      "weight": 33,
       "title": "Una fondazione conta come azienda?",
       "text": "Il tuo periodo dovrebbe essere svolto presso una fondazione iscritta al Registro Economico Amministrativo. È «azienda» o no? Le FAQ del MUR dicono una cosa, l'ufficio ricerca un'altra, un collega ha già fatto così senza problemi.",
       "requires": {
@@ -10247,7 +10247,7 @@
         "azienda",
         "estero"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Azienda all'estero in smart working",
       "text": "L'azienda partner è a Barcellona (l'unica nel tuo settore). Devi spendere 6 mesi lì, ma il rimborso spese non te lo passano e il volo è a carico tuo. Una collega ti suggerisce: fai tutto in smart, tecnicamente sei in azienda «da remoto».",
       "requires": {
@@ -10334,7 +10334,7 @@
         "azienda",
         "interpretazione"
       ],
-      "weight": 30,
+      "weight": 31,
       "title": "Stessa azienda, due tirocinanti contemporaneamente",
       "text": "L'azienda dove sei in impresa ti chiede se può prendersi un secondo tirocinante PON sullo stesso periodo. Tecnicamente non c'è un divieto, ma all'ufficio ricerca «non sanno». Inoltre, l'azienda è anche in collaborazione con il tuo gruppo da prima del PON: i lavori si sovrappongono.",
       "requires": {
@@ -10416,7 +10416,7 @@
         "azienda",
         "uscita"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "L'azienda partner ti vuole assumere a TI",
       "text": "L'azienda partner del tuo PON ti propone un contratto a tempo indeterminato. Stipendio doppio. Vorrebbero che tu finisca prima il PON, però. Se ti dimetti rischi di dover restituire mensilità. Se accetti ora, l'università perde un posto e tu chiudi tutti i ponti accademici.",
       "requires": {
@@ -10510,7 +10510,7 @@
         "azienda",
         "consulenza"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "5 giorni di lezioni in un'azienda estera",
       "text": "Un'azienda all'estero ti propone 5 giorni di lezioni retribuite. Non c'entra col tuo PON. Una collega di Firenze dice: «Se sono lezioni strutturate in un corso ci vuole autorizzazione del rettore». L'ufficio incarichi vuole 15 giorni di preavviso. Tu ne hai 8.",
       "requires": {
@@ -10595,7 +10595,7 @@
         "azienda",
         "doppio_finanziamento"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il PI ti vuole in un PRIN a 0.1 ore",
       "text": "Il tuo responsabile vinto un PRIN ti vuole inserire come unità a 0.1 mesi-uomo. «Tanto è simbolico». Ma il regolamento PON vieta il doppio finanziamento, e l'amministrativo di Ca' Foscari ha detto a un collega che la quota deve essere ZERO, non 0.1. Sennò scatta la revoca del progetto.",
       "requires": {
@@ -10681,7 +10681,7 @@
         "azienda",
         "consulenza"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Vogliono che torni dopo per altre analisi",
       "text": "Hai finito il periodo in azienda. Ora vogliono che torni a fare consulenza statistica su nuovi dati. Stessa azienda, ma tematica diversa dal PON. L'università dice che è conflitto d'interessi e non puoi prendere un euro. Ti chiedono di lavorare gratis 'come contributo spese'.",
       "requires": {
@@ -10771,7 +10771,7 @@
         "azienda",
         "uscita"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Dimissioni anticipate per andare in azienda",
       "text": "Vuoi dimetterti 4 mesi prima della scadenza per accettare l'offerta di un'azienda. In teoria le dimissioni volontarie da tempo determinato non sono previste senza giusta causa. L'università potrebbe chiederti un indennizzo. Un collega dice: «Mobbing, è facile da provare nelle nostre condizioni».",
       "requires": {
@@ -10861,7 +10861,7 @@
         "collective_action",
         "letter"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Si organizza la lettera collettiva sulle disparità RTDA",
       "text": "Sul gruppo gira una bozza: «Lettera per la parità di ricerca tra i RTDA». Le istruzioni sono chiare: mandare una mail con oggetto specifico, anche solo copia-incolla del consenso. Chi raccoglie le firme aggiorna ogni ora la lista. Lunedì la spediscono al MUR. Tu sei nuovo/a in questo casino.",
       "choices": [
@@ -10958,7 +10958,7 @@
         "peers",
         "organizing"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "Il doodle per l'assemblea zoom",
       "text": "Qualcuno lancia: «Ragazzi/e, organizziamo un'assemblea via zoom, parliamoci e capiamo cosa fare (sindacato, occupazione, vertenza nazionale).» Parte un doodle con orari tardo pomeriggio per chi ha figli. Tre giorni dopo: 80 risposte, ma il sondaggio è andato in tilt e bisogna rifarlo.",
       "choices": [
@@ -11044,7 +11044,7 @@
         "outsider",
         "danger"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Si è intrufolata una associata nella rete",
       "text": "Una collega scrive: «Sul gruppo FB dei ricercatori si è intrufolata una docente associata del mio settore. Mi ha fatto una ramanzina sui fondi che vanno persi se interrompo il contratto. Lavora nell'ateneo dove ho fatto domanda per il PNRR. Può danneggiarmi.» Gli admin chiedono in privato di chi si tratta.",
       "choices": [
@@ -11126,7 +11126,7 @@
         "money_pay",
         "comparison"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "Uno screenshot di stipendio fa girare la rete",
       "text": "Un/a collega manda uno screenshot del cedolino con la matricola censurata. «Mi è arrivato così, 1.800 €. Voi quanto prendete?» Parte un thread infinito di confronto: Messina 3.652, Bari 2.150, Firenze diverso. Stessa categoria, stesso lordo, mille atenei. La rete si scalda.",
       "choices": [
@@ -11191,7 +11191,7 @@
         "peers",
         "welcome"
       ],
-      "weight": 35,
+      "weight": 33,
       "title": "Una collega entra nella rete e si presenta",
       "text": "«Ciao a tutti, sono stata appena inserita. Grazie per avermi fatta accedere. RTDA-PNRR, settore med, primo anno. Avrei un dubbio sul periodo in azienda.» Sono le 22:47 di un martedì. Tre persone le rispondono entro cinque minuti.",
       "choices": [
@@ -11248,7 +11248,7 @@
         "danger",
         "supervisor"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il tuo responsabile chiede di entrare nella rete locale",
       "text": "Stanno aprendo un sotto-gruppo UNINA con gli amministrativi degli uffici centrali. Il tuo responsabile scientifico ti scrive: «Aggiungimi a quel gruppo che hai, devo essere aggiornato.» Tu sai che lì dentro si dice di tutto.",
       "choices": [
@@ -11335,7 +11335,7 @@
         "peers",
         "data_gathering"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Il sondaggio per il censimento RTDA-PON",
       "text": "Un/a collega lancia un Google Form: «Devo dimostrare che il nostro contratto non è stato un cattivo investimento per il Ministero. Compilate e diffondete.» Domande: pubblicazioni durante il contratto, periodo all'estero, fondi attratti. Sono 287 nella rete. Al momento hanno risposto 148.",
       "choices": [
@@ -11405,7 +11405,7 @@
         "peers",
         "moderation"
       ],
-      "weight": 25,
+      "weight": 30,
       "repeatable": true,
       "title": "Entra il bot dei consigli azionari USA",
       "text": "Le 14:32 di un mercoledì. Un account nuovo posta: «Salve a tutti, questo è un gruppo gratuito di analisi delle azioni statunitensi. Il giorno prima dell'apertura condivideremo la storia interna di ogni azione. Almeno il 60% del tuo reddito mensile garantito. Iscriviti al link.» Cinque secondi dopo, un altro spam identico.",
@@ -11455,7 +11455,7 @@
         "legal",
         "split"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Una collega chiede consigli per una causa legale",
       "text": "In rete: «Ragazze il mio avvocato dice che posso fare causa al MUR per la cosa del recupero della maternità. Le altre nella mia situazione vogliono unirsi? Costo dell'avvocato diviso per chi entra.» La rete si divide subito: tre dicono «io ci sto», cinque consigliano cautela, qualcuno parla di prudenza con il proprio dipartimento.",
       "choices": [
@@ -11547,7 +11547,7 @@
         "morale",
         "humor"
       ],
-      "weight": 30,
+      "weight": 31,
       "repeatable": true,
       "title": "Parte una serie di meme sulla Ministra",
       "text": "Un/a collega ha messo la Saccomandi in maschera per Carnevale come avatar del gruppo. «Io mi vesto da Saccomandi», commenta. Parte una raffica di meme: la ministra che decurta gli 0,1 dallo stipendio, l'editto pontificio, la festa in maschera con tutti vestiti da paradigmi del futuro. Dieci minuti di pura terapia di gruppo.",
@@ -11605,7 +11605,7 @@
         "gossip",
         "rumor"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Gira la voce: rinnovi solo per chi pubblica Q1",
       "text": "In rete: «Si dice che il mio direttore stia preparando una griglia. Solo chi ha almeno due Q1 in tre anni viene proposto per il rinnovo.» Non è scritto da nessuna parte. Te lo dice una persona di cui ti fidi. Te lo dicono altri due con versioni leggermente diverse.",
       "choices": [
@@ -11692,7 +11692,7 @@
         "organizing",
         "disillusion"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "L'assemblea zoom: 80 iscritti, 12 collegati",
       "text": "Ore 18:00 di un mercoledì. Apri la stanza zoom dell'assemblea della community RTDA. Si erano iscritti in 80 al doodle. Sono collegati in 12. Uno è ovviamente quello che ha sempre da dire qualcosa. Due hanno la camera spenta e sono palesemente con i bambini in braccio.",
       "requires": {
@@ -11781,7 +11781,7 @@
         "press",
         "escalation"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Inviamo la lettera a tutti i giornali, suggerisce qualcuno",
       "text": "In rete: «La lettera nuova è pronta. Secondo me dovrebbe essere inviata al Ministero e per copia conoscenza: commissioni istruzione camera e senato, rettori, CRUI, CUN, a quanti più quotidiani possibili, sindacati, pubblicata su tutti i gruppi Facebook pertinenti.» Qualcuno avverte: «I giornali, senza richieste 'notiziabili', daranno meno spazio.»",
       "choices": [
@@ -11867,7 +11867,7 @@
         "morale",
         "ritual"
       ],
-      "weight": 20,
+      "weight": 30,
       "repeatable": true,
       "title": "La sera del 24 dicembre, parte la cascata di auguri",
       "text": "Le 21:14 del 24 dicembre. Un/a collega scrive: «Auguri di pon natale 🎅». Nel giro di tre minuti, 28 messaggi di auguri si accavallano. «Augurissimi di buone feste e di buon anno a tutti voi e alle vostre famiglie, che l'anno nuovo ci porti una bella ASN.» Hai gli occhi un po' lucidi.",
@@ -11917,7 +11917,7 @@
         "outsider",
         "argument"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Un associato anziano spiega come funziona",
       "text": "Un professore associato (vecchio iscritto alla rete, quasi PA) interviene: «Cari, è una questione annosa ma non c'è nulla che il ministero possa fare. Tutto è in perimetro legalmente corretto. Le posizioni come la vostra sono volutamente create senza autonomia. Io a mio tempo ho preso l'ASN in 7 settori senza essere PI...» Tre persone iniziano a smontarlo punto per punto.",
       "choices": [
@@ -12002,7 +12002,7 @@
         "peers",
         "collaboration"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Il foglio condiviso per matchare temi di ricerca",
       "text": "Qualcuno ricorda: «C'era un Google Doc che avevamo messo in descrizione del gruppo, dove ognuno mette il proprio tema di ricerca, per vedere se ci sono interessi comuni o incrociabili. Aggiornatelo, perché alcuni l'hanno saltato.» Il foglio ha 47 righe vuote.",
       "choices": [
@@ -12081,7 +12081,7 @@
         "peers",
         "celebration"
       ],
-      "weight": 35,
+      "weight": 33,
       "repeatable": true,
       "title": "«E mi sono abilitato»",
       "text": "Le 9:47 di un mercoledì. Un/a collega del gruppo posta una schermata della pagina ASN. «E mi sono abilitato.» Niente preamboli, niente faccine. Sotto si accumulano 47 cuori, otto «in bocca al lupo per il concorso», tre «PA-arrivo-anch-io», una promessa di pizzata a fine mese.",
@@ -12142,7 +12142,7 @@
         "mutual_help",
         "skills"
       ],
-      "weight": 35,
+      "weight": 33,
       "repeatable": true,
       "title": "Cerco qualcuno che mi aiuti con le API di Twitter",
       "text": "In rete: «Ciao, sfrutto questo strumento per chiedere se ci sono colleghi disposti a darmi una mano per estrarre un corpus di dati testuali da Twitter. Si tratterebbe di usare Twitter API. Se conoscete qualcuno che possa aiutarmi mi contatti in privato.» Tu hai fatto la tesi su quello. Pochi giorni.",
@@ -12201,7 +12201,7 @@
         "departure",
         "morale"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Una collega si dimette",
       "text": "In rete: «Ciao a tutti, ho vinto un RTDB e mi dimetto dall'RTDA. Voglio ringraziarvi per tutto. La mia uni dice che il ministero richiederà una rendicontazione ad hoc per i mesi spuri. Qualcuno ha esperienze?» È una di quelle che rispondeva sempre, anche di notte. Per molti era il faro.",
       "requires": {
@@ -12284,7 +12284,7 @@
         "collective_action",
         "letter"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Una seconda lettera: la versione vecchia gira ancora",
       "text": "La prima lettera è partita. Ma qualcuno scopre: «Ho preso la versione vecchia, manca la parte sugli RTDB.» Si discute febbrilmente in chat — chi ha mandato il file giusto? La raccolta firme continua, e c'è da decidere se aggiornare o spedire così. Cinque ore a discutere di un PDF.",
       "choices": [
@@ -12373,7 +12373,7 @@
         "erc",
         "starting"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "ERC Starting: l'orologio dei sette anni",
       "text": "L'ERC Starting accetta candidati fino a sette anni dalla discussione del dottorato. Tu hai finito nel 2018 e ti restano tredici mesi. Hai vinto un'estensione di sei mesi per maternità, ma il portale ERC chiede una certificazione tradotta in inglese e asseverata. L'ufficio internazionalizzazione ti dice: «Mai fatto.»",
       "requires": {
@@ -12489,7 +12489,7 @@
         "msca",
         "host"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "MSCA Postdoctoral: l'host institution si tira indietro",
       "text": "Il tuo MSCA Postdoctoral Fellowship è scritto. Manca la lettera di hosting di un'università del Nord. Tre settimane prima della deadline, il direttore del dipartimento ospitante ti scrive: «Mi spiace, non abbiamo capacità ricettiva, le posizioni RTDA sono cofinanziate al 50%, dovremmo metterci l'altro 50%. Auguri.»",
       "requires": {
@@ -12580,7 +12580,7 @@
         "fis",
         "starting"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "FIS Starting: chi paga il PI dal quarto anno?",
       "text": "Stai scrivendo un FIS Starting. La chiamata diretta come RTT è prevista per la durata del progetto, ma sei anni di RTT contro tre di finanziamento. Il dipartimento dovrebbe garantire gli ultimi tre anni con fondi propri. Il direttore: «Mi metto a discutere col rettore solo se porti 1.5 milioni in dote. Sotto, no.»",
       "requires": {
@@ -12669,7 +12669,7 @@
         "fis",
         "valutazione"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "FIS2: ti fermano alla prima fase",
       "text": "Hai mandato il FIS2 a luglio. A dicembre ti arriva la mail: progetto non ammesso alla seconda fase di valutazione. Niente commenti, niente scheda. Subito dopo esce il bando FIS3, che ammette esplicitamente la ripresentazione anche di chi non è passato in seconda fase. Per il MUR, vale per ogni progetto. Per l'ERC, no.",
       "requires": {
@@ -12750,7 +12750,7 @@
         "horizon",
         "zero_ore"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Horizon Europe: ti inseriscono come WP leader a zero ore",
       "text": "È uscito un nuovo bando Horizon. Un docente del dipartimento ti propone come responsabile di un WP. «Ti metto a zero ore, costo zero, non a budget. Tu però scrivi il WP.» Significa 25 pagine, due call a settimana, e nessun finanziamento se non un titolo per l'ASN.",
       "requires": {
@@ -12841,7 +12841,7 @@
         "msca",
         "seal"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Seal of Excellence: il sigillo, non i soldi",
       "text": "La Commissione ti dà il Seal of Excellence sulla tua MSCA. Bel pezzo di carta. Sull'ultimo bando ministeriale per Seal/Marie Curie c'erano 400 RTDA disponibili, sono arrivate 173 domande, tutte finanziate. Quest'anno il bando è chiuso. Devi trovare da solo un ateneo italiano che cofinanzi la tua posizione.",
       "requires": {
@@ -12936,7 +12936,7 @@
         "young_researcher",
         "pnrr"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "Young Researcher PNRR: il bando della fuga dei cervelli",
       "text": "Esce il bando Young Researcher PNRR. Linea Seal of Excellence: per chi ha vinto e concluso una Marie Curie. Linea Rientro dei cervelli: per chi torna dall'estero. Ti finanziano un nuovo RTDA da tre anni più spese di ricerca. Devi dimetterti dal contratto attuale a un mese dalla scadenza. Il responsabile ti dice: «Pensa a quello che hai investito qui.»",
       "requires": {
@@ -13018,7 +13018,7 @@
         "pnrr",
         "spoke"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "PNRR Spoke: il referente dice di no",
       "text": "Il tuo dipartimento è Spoke 4 di un Centro Nazionale PNRR. Un docente vuole inserirti nelle attività di disseminazione e nella stesura di un deliverable. Lo Spoke leader però gira voce nei corridoi: «I PON DM 1062 non possono partecipare, neanche a costo zero. Anche la didattica frontale è da evitare.»",
       "requires": {
@@ -13102,7 +13102,7 @@
         "pnrr",
         "cascata"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Bandi a cascata: deadline impossibile",
       "text": "I bandi PNRR a cascata prevedono il reclutamento di assegnisti. Lo Spoke ti propone di scrivere un sub-progetto come assegnista. Però le aggiudicazioni escono il 28 luglio e gli assegni devono essere banditi entro il 31. Tre giorni netti. L'ufficio ricerca ti dice: «Ce la facciamo se lavori sabato e domenica.»",
       "requires": {
@@ -13181,7 +13181,7 @@
         "fse",
         "regionale"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "FSE Veneto: il bando senza ore-uomo",
       "text": "Regione Veneto pubblica un bando FSE: progetti con assegni, borse, mobilità, niente costi per il coordinatore. Tu come coordinatore non esporresti né ore né euro. L'ufficio ricerca dice: «Non vediamo incompatibilità.» Il PI del tuo PON dovrebbe firmare una lettera d'incarico per attività gratuite.",
       "requires": {
@@ -13263,7 +13263,7 @@
         "airc",
         "fondazione"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "AIRC MFAG: la fondazione che vuole fare l'ERC",
       "text": "L'AIRC apre il bando MFAG, stile europeo: chiamata diretta del PI, hosting institution come per ERC. Il tuo ateneo dice che è in contrapposizione con la Gelmini, niente chiamata diretta possibile. Un collega ti ricorda che AIRC e WWCR non sono considerati 'progetti grossi' come ERC o Armenise: niente punti organico, niente RTDB convertibile in associato.",
       "requires": {
@@ -13345,7 +13345,7 @@
         "msca",
         "global"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "MSCA Global: la chiamata diretta promessa",
       "text": "I vincitori di MSCA Global possono essere chiamati direttamente come RTDB nel tuo ateneo: lo prevede il regolamento. Tu hai il Global, finanziato anche tutto il terzo anno dall'ateneo. La rettrice però congela tutte le chiamate dirette per i prossimi tre mesi: «Esaminiamo prima la situazione punti organico.»",
       "requires": {
@@ -13438,7 +13438,7 @@
         "ffo",
         "ateneo"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "FFO tagliato: il rettore congela le assunzioni",
       "text": "Il MUR riduce il FFO di un 12% in legge di bilancio. Il rettore congela le assunzioni per sei mesi. Il tuo dipartimento aveva pianificato un bando RTDB con la riserva del 25%. Salta. Il PNRR sta finendo, il piano straordinario è finito da un pezzo. Il direttore: «Nel 2026 ci sarà spending review. Forse accorpamenti.»",
       "requires": {
@@ -13524,7 +13524,7 @@
         "horizon",
         "consorzio"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Horizon: il consorzio è formato, manca solo te",
       "text": "Un consorzio europeo di sette atenei ti vuole come responsabile del WP3. Il coordinator è polacco. Mancano tre giorni alla submission. Il tuo ateneo dice: «Non puoi essere host institution finché sei al 100% sul PON. Devi dimetterti prima.» Tu non vuoi dimetterti senza la certezza del finanziamento.",
       "requires": {
@@ -13606,7 +13606,7 @@
         "armenise",
         "fondazione"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Armenise-Harvard: il rientro a fanale",
       "text": "L'Armenise-Harvard Foundation apre un bando per giovani PI di rientro. Solo ERC e Armenise sono considerati 'grossi' nei tuoi regolamenti d'ateneo: portano punti organico e ti danno una posizione da RTDB convertibile in associato se hai l'ASN. La domanda chiede due lettere di mentor, di cui una di Harvard.",
       "requires": {
@@ -13685,7 +13685,7 @@
         "cariplo",
         "fondazione"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Cariplo Giovani Ricercatori: due anni dal PhD",
       "text": "Esce il bando Cariplo per giovani ricercatori. La PI dev'essere chi ha il dottorato da non più di due anni. Tu hai quattro anni. Una collega di un altro ateneo, dottorata da due anni, ti chiede di entrare come partner. Tu non sei ammissibile. «Forse possiamo metterti come collaboratrice scientifica, non a budget.»",
       "requires": {
@@ -13762,7 +13762,7 @@
         "msca",
         "staff_exchange"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "MSCA Staff Exchange: un milione, non puoi neanche figurare",
       "text": "Hai scritto un MSCA Staff Exchange. Vinto. Un milione di euro. Però sei RTDA su PON e nei deliverable formali tu «non puoi nemmeno figurare come svuotacestino». Il consorzio lo coordini di fatto. La rendicontazione la firma un PA che l'ultima cosa che ha scritto risale alla caduta del muro.",
       "requires": {
@@ -13853,7 +13853,7 @@
         "salute",
         "ministero"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Ricerca Finalizzata: comitato etico fermo da otto mesi",
       "text": "Ti candidi alla Ricerca Finalizzata del Ministero della Salute come GR-2. Il progetto è su un'innovazione clinica. Il comitato etico del tuo ospedale di riferimento ha tenuto la pratica sulla scrivania della segreteria per quattro mesi prima ancora di metterla in seduta. Sono passati otto mesi. La deadline è tra ventidue giorni.",
       "requires": {
@@ -13930,7 +13930,7 @@
         "dottorato",
         "pnrr"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Dottorato innovativo PNRR: l'impresa rinuncia",
       "text": "Il tuo dipartimento ha vinto due borse di dottorato innovativo PNRR cofinanziate da un'impresa. Tu sei il tutor designato. L'impresa, a sei mesi dall'inizio, dice: «Cambia governance, abbiamo deciso di non cofinanziare più.» Lo sgravio contributivo PNRR diventa una chimera. Le borse rischiano di essere revocate dal MUR.",
       "requires": {
@@ -14015,7 +14015,7 @@
         "montalcini",
         "rientro"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Rita Levi-Montalcini: chiamata diretta dall'estero",
       "text": "Esce il bando Montalcini per il rientro dei cervelli. La chiamata diretta è prevista, ti farebbero RTDB. Tu sei in Italia da sempre. Per essere eleggibile dovresti aver passato almeno tre anni all'estero negli ultimi cinque. Hai fatto un visiting di nove mesi a Berlino, ma ti dicono: «Non bastano. Forse se aggiungi due mesi MSCA…»",
       "requires": {
@@ -14094,7 +14094,7 @@
         "maternity",
         "regional"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "«La proroga la diamo solo agli RTD-B»",
       "text": "Telefoni all'ufficio personale a tempo determinato. La voce dall'altra parte, secca: «Senta, per i RTDA su fondi esterni, la proroga di maternità noi qui a Torino la diamo solo agli RTDB. Voi PON vi arrangiate con le attività di recupero.» Niente di scritto, naturalmente. Una collega ha già raccolto la stessa telefonata, parola per parola.",
       "requires": {
@@ -14195,7 +14195,7 @@
         "ateneo_hr",
         "regional"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "L'overhead che sparisce in centrale",
       "text": "Il regolamento PON dice che il 20% di overhead va «alla struttura». A Sapienza interpretano «struttura» come l'amministrazione centrale, non il tuo dipartimento. Risultato: zero fondi di ricerca per i RTDA PON. Il responsabile dei progetti PNRR ti risponde: «Io mi occupo solo di PNRR, non so dirle.» Il bando interno di Ateneo ha scritto in chiaro: vietato agli RTDA PNRR partecipare.",
       "requires": {
@@ -14290,7 +14290,7 @@
         "money",
         "regional"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Richiesta congiunta al Poliba",
       "text": "Al Politecnico di Bari c'è un precedente: ai vecchi RTDA AIM erano stati dati fondi di ricerca specifici. Adesso un collega propone: «Facciamo una lettera firmata da tutti gli RTDA PON dell'ateneo, la portiamo in Senato e in CDA. È il CDA che deve approvare, sono soldi.» Ti chiedono di firmare. Sai che la tua supervisor non vede di buon occhio queste mobilitazioni.",
       "requires": {
@@ -14387,7 +14387,7 @@
         "money",
         "regional"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "Una pacca sulla spalla a Brescia",
       "text": "Hai provato in mille modi a chiedere fondi di ricerca aggiuntivi all'ateneo di Brescia. La risposta finale, scritta da un dirigente: «Chieda al suo Dipartimento se ha bisogno di soldi per reagenti e missioni.» Pacca sulla spalla. Niente decreto, niente delibera. Mentre a Ca' Foscari hanno avuto 2600€, al Poliba 6000€, a Trento li stanno deliberando.",
       "requires": {
@@ -14447,7 +14447,7 @@
         "regional",
         "supervisor"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "La delibera quadro di Palermo",
       "text": "Il responsabile ti annuncia: «A Palermo abbiamo una delibera quadro sulla programmazione che permette la rateizzazione dello 0,5 di punto organico per RTT durante l'RTT stesso. Se vinci un europeo, ti incentiviamo con sconti importanti sui punti organico.» Sembra una boccata d'aria fresca dopo mesi di no. Ma il responsabile aggiunge: «In dipartimento però l'ordinario X dice che lui preferirebbe il suo discepolo. Io ci provo, ma serve che tu mi presenti un progetto pesante entro 30 giorni.»",
       "requires": {
@@ -14537,7 +14537,7 @@
         "rettore",
         "regional"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il rettore si dimette",
       "text": "Il rettore della tua università si è dimesso. Travolto dallo scandalo delle fatture a un'azienda di famiglia. Tu sei in piena negoziazione per il rinnovo del contratto, e tutte le pratiche in firma rettorale sono ferme. Il prorettore vicario non vuole assumersi nulla: «Aspettiamo le elezioni del nuovo rettore.» Le elezioni sono fra quattro mesi. Tu scadi fra tre.",
       "requires": {
@@ -14625,7 +14625,7 @@
         "money",
         "regional"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "ADIR medio o overhead? Dipende dall'ateneo",
       "text": "Ricevi una mail interna: «Con Decreto Rettorale n. 1/2023 è stata disposta l'assegnazione a ciascun ricercatore di un contributo pari all'ADIR medio di Ateneo (1.500€), e 3.850,56€ per chi ha il periodo all'estero, corrispondente alla differenza UCS Italia/estero.» Bellissimo. Solo che tu lavori a Brescia o Genova e questa mail non ti è mai arrivata. A Ca' Foscari l'hanno avuta. Al Poliba 6000€. A Parma niente. Stesso contratto, finanziamenti diversi.",
       "requires": {
@@ -14694,7 +14694,7 @@
         "maternity",
         "regional"
       ],
-      "weight": 65,
+      "weight": 41,
       "title": "La Task Force MUR di Catania",
       "text": "Ricevi una mail intestata «Task Force MUR c/o UNICT». Ti scrivono che, in conseguenza di un incontro con la referente MUR per i DM 1061/1062 presso Sapienza, ti suggeriscono di acquisire «crediti formativi cautelativi» da deliberare in dipartimento, da usare in compensazione a eventuali sospensioni anche non prevedibili. Tradotto: ti chiedono di accumulare ore di lavoro in anticipo, in caso domani tu ti ammali o restassi incinta. La cosa puzza.",
       "requires": {
@@ -14790,7 +14790,7 @@
         "ateneo_hr",
         "regional"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Continuità di settore, non di persona",
       "text": "A Firenze il senato accademico ha ribadito una linea netta: la continuità di percorso fra RTD di ateneo e RTD su fondi esterni è «continuità sul settore, non sulla persona». In altre parole: il tuo settore può ottenere un nuovo RTT, ma non sei tu il candidato naturale. Un rappresentante in SA ti dice: «Sarà una guerra fra poveri. Non ci sarà l'assorbimento dei PON/PNRR.» Hai due anni per costruirti una posizione altrove.",
       "requires": {
@@ -14878,7 +14878,7 @@
         "career",
         "regional"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Bologna e Sapienza pubblicano i regolamenti RTT",
       "text": "Bologna, Parma e Politecnico di Bari hanno già pubblicato i regolamenti RTT. Sapienza ha i regolamenti ma i bandi sono ancora fermi. Il tuo ateneo: silenzio totale. Una collega ti gira il regolamento di Bologna: 50 pagine, 47 articoli, regole su mobilità, terza missione, valutazione tutto codificato. Il tuo ufficio: «Stiamo aspettando direttive nazionali.» Le direttive nazionali non arriveranno mai.",
       "requires": {
@@ -14945,7 +14945,7 @@
         "didattica",
         "regional"
       ],
-      "weight": 70,
+      "weight": 42,
       "title": "Il paradosso delle 60 ore di Palermo",
       "text": "A Palermo il regolamento dei corsi di laurea impone ai RTD, anche PON, 60 ore frontali. Ma per i PON REACT c'è una delibera del CDA che decide una deroga al regolamento dei RTDA, non obbligando più ai 60 CFU minimi. Per i PNRR esiste un regolamento ad hoc che esclude l'obbligo di didattica frontale. Il problema: nessuno sa quale regola si applichi al tuo contratto. Il referente didattico: «Mi mandi il decreto di assunzione, controllo.» Il decreto cita due regolamenti diversi.",
       "requires": {
@@ -15029,7 +15029,7 @@
         "money",
         "regional"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Le addizionali siciliane sul cedolino",
       "text": "Apri il primo cedolino del nuovo anno. La tredicesima del collega di Trento è 150 euro più alta della tua, a parità di contratto. Scopri il motivo: in Sicilia (e in altre regioni del sud) le addizionali regionali e comunali sono più alte. Il collega di Catania paga circa 85€ in più di IRPEF mensile. Stesso decreto, stesso disciplinare, stesso valore di lavoro. Tasse diverse.",
       "requires": {
@@ -15091,7 +15091,7 @@
         "ateneo_hr",
         "regional"
       ],
-      "weight": 60,
+      "weight": 39,
       "title": "L'attestato di coerenza che nessuno ha firmato",
       "text": "Il tuo responsabile a Messina ti dice: «In fase di presentazione del progetto PON, prima dei concorsi, abbiamo presentato un'attestazione di coerenza che doveva firmare il direttore del dipartimento. Non è mai stata firmata né protocollata. L'ANVUR adesso ce la chiede.» La segretaria del dipartimento ha scritto all'ufficio ricercatori PON UNIME e alla referente MUR. Nessuna risposta da settimane. Sei tu che devi caricare il documento su SIRI.",
       "requires": {
@@ -15193,7 +15193,7 @@
         "ateneo_hr",
         "regional"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "«A Unina non si manda nulla al MUR»",
       "text": "Sei alla Federico II. Cerchi conferma sulla relazione annuale: dove va? L'amministrativa, gentile e sicura: «A Unina facciamo così. Si invia all'ufficio del direttore a fine dicembre. Al MUR non si manda niente. A meno che l'ufficio grandi progetti non glielo chieda esplicitamente.» Il tuo collega di Trento ha invece caricato tutto su SIRI da settimane. Il contratto cita testualmente «relazione annuale al MUR».",
       "requires": {
@@ -15259,7 +15259,7 @@
         "tar",
         "regional"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Il precedente del 2019 alla Calabria",
       "text": "Un collega meridionalista ti ricorda: «All'Università della Calabria, nel 2019, una collega del vecchio PON AIM si è dimessa per un RTD-B nella stessa sede. L'ateneo le ha chiesto la restituzione delle mensilità percepite. È bastata una lettera del sindacalista con minaccia di diffida e ricorso al TAR per fermare tutto. Il ministero, interpellato per parere, dopo quattro anni non ha ancora risposto.» Adesso a te chiedono la stessa cosa. Sai che il bluff funziona.",
       "requires": {
@@ -15335,7 +15335,7 @@
         "career",
         "regional"
       ],
-      "weight": 50,
+      "weight": 37,
       "title": "Selezione interna a Padova",
       "text": "Sei a Padova. Il dipartimento ha ricevuto 10 candidature di RTDA che vogliono essere ricollocati come RTT. Ne può proporre cinque. Il consiglio di dipartimento sceglie con un voto. Il tuo settore ne ha tre da accettare. I criteri pubblicati non includono nessun riferimento a chi è già nel dipartimento da più anni: si parla solo di «strategicità» e «merito». Il barone del settore ha già detto chi sosterrà.",
       "requires": {
@@ -15424,7 +15424,7 @@
         "money",
         "regional"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "Soldi del terzo anno usati come overhead a Trento",
       "text": "L'ufficio ricerca di Trento ti dice: «Temporaneamente le facciamo usare degli overhead dei soldi accantonati per il suo terzo anno, nel mentre che il senato delibera.» In pratica ti stanno anticipando i tuoi stessi fondi futuri come se fossero un beneficio. Quando il senato deciderà (ammesso che decida), potresti dovere restituire la differenza, oppure no. Nessuna delibera, nessun atto formale.",
       "requires": {
@@ -15487,7 +15487,7 @@
         "career",
         "regional"
       ],
-      "weight": 45,
+      "weight": 35,
       "title": "L'incubatore ARCA non c'è più",
       "text": "Un collega di Verona ti racconta che lì gli RTDA possono partecipare alle spin-off come soci e con cariche, perché l'università fa da incubatore. A Palermo c'era ARCA, consorzio che faceva da incubatore Unipa: l'hanno liquidata. Tu hai una spin-off in testa, ma il regolamento Unipa non fa più da incubatore e quindi devi capire se la cosa è ancora compatibile col tuo contratto RTDA PON.",
       "requires": {
@@ -15554,7 +15554,7 @@
         "money",
         "regional"
       ],
-      "weight": 55,
+      "weight": 38,
       "title": "I fondi regionali siciliani PON AIM",
       "text": "Il responsabile ti spiega: «Come AIM siciliani trovammo i fondi regionali che al 50% hanno finanziato la proroga, filtrati dall'ateneo. Quindi voi REACT EU potreste fare la stessa cosa: chiedere proroga al rettorato, sperando che la Regione Siciliana stanzi un fondo specifico.» Bellissimo. Solo che la Regione Siciliana è ferma, le elezioni regionali sono passate da poco, e nessuno sa quando uscirà un nuovo avviso.",
       "requires": {
@@ -15617,7 +15617,7 @@
         "ateneo_hr",
         "regional"
       ],
-      "weight": 40,
+      "weight": 34,
       "title": "Lo SPID che non ti riconosce a Messina",
       "text": "Hai firmato il contratto RTDA a Messina due settimane fa. Provi ad accedere a SIRI con SPID: «Utente non riconosciuto come ricercatore.» L'ufficio: «Eh, ci vuole tempo per agganciare l'identità digitale al LoginMIUR. Non sappiamo dirle quanto.» Nel frattempo la scadenza della prima rendicontazione si avvicina. Il tuo SPID è collegato a mail personale, non istituzionale.",
       "requires": {
@@ -15679,7 +15679,7 @@
         "daily_life",
         "workplace_micro"
       ],
-      "weight": 30,
+      "weight": 31,
       "repeatable": true,
       "title": "La macchinetta del caffè è rotta",
       "text": "Terzo giorno consecutivo: la macchinetta del caffè al primo piano è guasta. Il cartello «in riparazione» è quello dell'anno scorso. Hanno detto in segreteria che il dipartimento ne ordinerà un'altra «entro otto mesi, fondi permettendo». Per ora: bar a 400 metri, oppure la moka che ti sei portata da casa.",
@@ -15732,7 +15732,7 @@
         "workplace_micro",
         "boundaries"
       ],
-      "weight": 45,
+      "weight": 35,
       "repeatable": true,
       "title": "Mail del responsabile alle 23:47, sabato",
       "text": "Telefono che vibra sul comodino. È sabato sera. La mail del responsabile dice: «Domattina presto avrei bisogno di sapere se possiamo includere quella tabella nel deliverable. Nessuna fretta.» «Nessuna fretta» significa entro le 9 di domenica. Lo sai.",
@@ -15814,7 +15814,7 @@
         "family",
         "high_emotional"
       ],
-      "weight": 35,
+      "weight": 33,
       "title": "Ferie di agosto, di nuovo no",
       "text": "Avevi prenotato dieci giorni in montagna con la famiglia. Costo già pagato: 750€. Tre settimane prima della partenza esce la finestra di rendicontazione: 1-31 agosto. «Col fresco», ridevano. Il responsabile dice: «Non puoi proprio?» con quel tono che non è una domanda.",
       "requires": {
@@ -15907,7 +15907,7 @@
         "bureaucracy_micro",
         "it"
       ],
-      "weight": 40,
+      "weight": 34,
       "repeatable": true,
       "title": "SPID, quinta volta nella mattinata",
       "text": "Il portale dell'ateneo ti disconnette ogni 15 minuti per «inattività». Sei attivissimo/a: stai compilando un modulo da 23 pagine. Per la quinta volta apri l'app SPID, premi il bottone, aspetti il push, inserisci il PIN. Sono le 11:40. Hai iniziato alle 9.",
@@ -15955,7 +15955,7 @@
         "daily_life",
         "workplace_micro"
       ],
-      "weight": 35,
+      "weight": 33,
       "repeatable": true,
       "title": "Pranzo: distributore o sotto la pioggia",
       "text": "Non c'è mensa convenzionata. Non c'è frigorifero in dipartimento (il responsabile lo tiene per i suoi yogurt). Hai 30 minuti tra una riunione e l'altra. Piove. Il distributore al piano -1 fa solo tramezzini al tonno scaduti il 12.",
@@ -16000,7 +16000,7 @@
         "students",
         "workplace_micro"
       ],
-      "weight": 50,
+      "weight": 37,
       "repeatable": true,
       "title": "«{Professore|Professoressa}, è un attimo»",
       "text": "Stai correggendo un paper con scadenza domani. Bussano alla porta. Studente del terzo anno: «{Professore|Professoressa}, scusi, è un attimo. Solo una domanda veloce sull'esercizio 4.» Lo dice ogni volta. «Un attimo» di solito sono 25 minuti.",
@@ -16073,7 +16073,7 @@
         "daily_life",
         "workplace_micro"
       ],
-      "weight": 25,
+      "weight": 30,
       "repeatable": true,
       "title": "Parcheggio. Anche oggi no.",
       "text": "Giri il parcheggio del dipartimento per il terzo giro. Niente. I posti riservati ai docenti strutturati sono tre, sempre occupati. Tu sei RTD-A: non hai posto assegnato. Cominci a piovere. Sei già in ritardo per la riunione delle 9.",
@@ -16147,7 +16147,7 @@
         "family",
         "workplace_micro"
       ],
-      "weight": 30,
+      "weight": 31,
       "repeatable": true,
       "title": "Teams a microfono spento, la suocera al telefono",
       "text": "Riunione Teams del consorzio PNRR, 28 partecipanti, parla il PI di un altro ateneo. Microfono spento, telecamera spenta. Il telefono privato vibra: tua suocera. Sesta volta in venti minuti. Sai che se non rispondi richiama. Se rispondi devi disattivare l'audio della riunione e perdere il filo.",
@@ -16218,7 +16218,7 @@
         "daily_life",
         "bureaucracy_micro"
       ],
-      "weight": 35,
+      "weight": 33,
       "repeatable": true,
       "title": "Domenica pomeriggio, finestra ANVUR",
       "text": "Piove. Avresti voluto vedere un film. Avresti voluto leggere quel libro che hai in pila da Natale. Invece sei alla scrivania, tre ore filate, a compilare la finestra ANVUR. 500 caratteri per descrivere un anno di ricerca. Riscrivi sei volte. Sotto le diciotto cancelli tutto e ricominci.",
@@ -16263,7 +16263,7 @@
         "workplace_micro",
         "networking"
       ],
-      "weight": 30,
+      "weight": 31,
       "repeatable": true,
       "title": "Il collega che ti ferma in corridoio",
       "text": "Esci dal bagno. In corridoio incrocia un collega RTD-B che non vedi da mesi. Sguardo stanco. «Hai due secondi? Mi serve un consiglio.» Hai dieci minuti prima della lezione, le slide sono sul portatile in ufficio. Lui aspetta.",
@@ -16316,7 +16316,7 @@
         "daily_life",
         "workplace_micro"
       ],
-      "weight": 25,
+      "weight": 30,
       "repeatable": true,
       "title": "Trenord, binario 14 minuti dopo",
       "text": "Sei pendolare. Lo sei diventato/a perché in città l'affitto è 900 mensili. Stamattina il binario del treno per il dipartimento è uscito 14 minuti dopo l'orario. Devi correre con la borsa del laptop. Hai la lezione alle 9.",
@@ -16362,7 +16362,7 @@
         "workplace_micro",
         "supervisor"
       ],
-      "weight": 30,
+      "weight": 31,
       "repeatable": true,
       "title": "Foto-copie e caffè «di supporto al lavoro agile»",
       "text": "Il responsabile ti chiama in stanza: «Mi fai un caffè? E già che ci sei, fai 60 copie del paper di Tizio. Anzi 80, una mi serve.» Hai il PhD. Hai due paper sotto revisione. Hai 35 anni. La stampante è in fondo al corridoio.",
@@ -16440,7 +16440,7 @@
         "publications",
         "family"
       ],
-      "weight": 35,
+      "weight": 33,
       "title": "Babbo Natale ti porta major revisions",
       "text": "25 dicembre, 11 del mattino. Apri l'inbox per controllare gli auguri. C'è la decisione editoriale del paper che hai mandato a settembre: major revisions, 10 giorni. La famiglia ti chiama dalla cucina: «Le tagliatelle!» Tua zia ti vuole presentare al cugino dentista.",
       "requires": {
@@ -16502,7 +16502,7 @@
         "fondi",
         "bureaucracy_micro"
       ],
-      "weight": 30,
+      "weight": 31,
       "title": "Busta paga: meno 100 euro",
       "text": "Apri la busta paga del mese. Sono 100 euro meno di quella di gennaio. Cerchi la voce. «Addizionali regionali 2022 – conguaglio.» Da marzo a novembre. Avevi messo da parte quei soldi per la rata della macchina. Ora non più.",
       "choices": [
@@ -16553,7 +16553,7 @@
         "daily_life",
         "workplace_micro"
       ],
-      "weight": 30,
+      "weight": 31,
       "repeatable": true,
       "title": "Smart working, anzi divano-working",
       "text": "Modulo smart working firmato per oggi: «attività di ricerca presso domicilio». In pratica: divano, plaid, gatto che ti ostruisce la tastiera, tre referee report da scrivere. Verso le 16 il responsabile ti chiama: «Sei in dipartimento? Avrei bisogno di una firma.»",
@@ -16605,7 +16605,7 @@
         "social",
         "isolation"
       ],
-      "weight": 25,
+      "weight": 30,
       "repeatable": true,
       "title": "Compleanno di un'amica, sabato sera",
       "text": "Messaggio di un'amica del liceo: «Stasera ceniamo, vieni? È un sacco che non ci si vede.» Hai il workshop di lunedì, le slide a metà, l'introduzione del paper aperta da una settimana. Quaranta minuti di trucco e ti senti già stanca.",
@@ -16659,7 +16659,7 @@
         "workplace_micro",
         "bureaucracy_micro"
       ],
-      "weight": 20,
+      "weight": 30,
       "repeatable": true,
       "title": "La stampante mangia di nuovo i fogli",
       "text": "Devi consegnare entro le 12 il modulo cartaceo firmato. La stampante del piano è inceppata. La stampante dell'altro piano stampa righe storte. Il tecnico arriva «entro settimana», hanno detto. Sono le 11:34.",
@@ -16704,7 +16704,7 @@
         "health",
         "personal"
       ],
-      "weight": 30,
+      "weight": 31,
       "title": "La visita dermatologica prenotata sei mesi fa",
       "text": "Ti hanno chiamato dall'ASL: la visita dermatologica per quel neo che ti preoccupa è giovedì mattina, ore 9:30. Giovedì alle 10 hai la lezione del corso PNRR su cui sei docente unica. Non sai se andare al privato (180€) o riprenotare tra otto mesi.",
       "requires": {
@@ -16759,7 +16759,7 @@
         "daily_life",
         "personal"
       ],
-      "weight": 20,
+      "weight": 30,
       "title": "Acqua calda fuori uso, 7 di mattina",
       "text": "Il boiler ha smesso di funzionare. Doccia gelida. Hai una commissione in dipartimento alle 9. Il tecnico viene «tra le 14 e le 18, finestra ampia.» Devi decidere: ti prendi mezza giornata, smart working pomeriggio? O passi tutto a tuo/a partner e vai lo stesso?",
       "choices": [
@@ -16812,7 +16812,7 @@
         "family",
         "deadline"
       ],
-      "weight": 30,
+      "weight": 31,
       "title": "Pasquetta col laptop in vista mare",
       "text": "Pasquetta. Gita al mare con la famiglia. Hai promesso di non lavorare. Alle 11 squilla il telefono: «Scusa, è uscita la versione di reviewer 2 con commenti devastanti. Il PI vuole una replica entro stasera.» Il mare è proprio bello oggi.",
       "requires": {
@@ -16902,7 +16902,7 @@
         "gender_f",
         "maternity"
       ],
-      "weight": 60,
+      "weight": 39,
       "requires": {
         "flags": {
           "has": [
@@ -17005,7 +17005,7 @@
         "gender_f",
         "harassment"
       ],
-      "weight": 45,
+      "weight": 35,
       "requires": {
         "flags": {
           "has": [
@@ -17082,7 +17082,7 @@
         "concorso",
         "gender_f"
       ],
-      "weight": 65,
+      "weight": 41,
       "requires": {
         "flags": {
           "has": [
@@ -17183,7 +17183,7 @@
         "gender_m",
         "paternity"
       ],
-      "weight": 55,
+      "weight": 38,
       "requires": {
         "flags": {
           "has": [
@@ -17280,7 +17280,7 @@
         "health",
         "gender_m"
       ],
-      "weight": 50,
+      "weight": 37,
       "repeatable": true,
       "requires": {
         "flags": {
@@ -17367,7 +17367,7 @@
         "health",
         "gender_m"
       ],
-      "weight": 40,
+      "weight": 34,
       "requires": {
         "flags": {
           "has": [
@@ -17428,7 +17428,7 @@
         "workplace",
         "gender_f"
       ],
-      "weight": 50,
+      "weight": 37,
       "repeatable": true,
       "requires": {
         "flags": {
@@ -17525,7 +17525,7 @@
         "gender_f",
         "politics"
       ],
-      "weight": 40,
+      "weight": 34,
       "requires": {
         "flags": {
           "has": [
@@ -17619,7 +17619,7 @@
         "gender_m",
         "money"
       ],
-      "weight": 45,
+      "weight": 35,
       "requires": {
         "flags": {
           "has": [
@@ -17695,7 +17695,7 @@
         "health",
         "redemption"
       ],
-      "weight": 35,
+      "weight": 33,
       "requires": {
         "minTurn": 12,
         "flags": {
@@ -17767,7 +17767,7 @@
         "workplace",
         "redemption"
       ],
-      "weight": 35,
+      "weight": 33,
       "requires": {
         "minTurn": 16,
         "flags": {
@@ -17849,7 +17849,7 @@
         "health",
         "redemption"
       ],
-      "weight": 40,
+      "weight": 34,
       "requires": {
         "minTurn": 14,
         "flags": {
@@ -17904,7 +17904,7 @@
         "funding",
         "redemption"
       ],
-      "weight": 35,
+      "weight": 33,
       "requires": {
         "minTurn": 22,
         "flags": {
@@ -17961,7 +17961,7 @@
         "peers",
         "redemption"
       ],
-      "weight": 30,
+      "weight": 31,
       "requires": {
         "minTurn": 18,
         "flags": {
@@ -18884,7 +18884,7 @@
         "parent",
         "family"
       ],
-      "weight": 55,
+      "weight": 38,
       "repeatable": true,
       "requires": {
         "minTurn": 6,
@@ -18964,7 +18964,7 @@
         "parent",
         "health"
       ],
-      "weight": 50,
+      "weight": 37,
       "repeatable": true,
       "requires": {
         "minTurn": 8,
@@ -19061,7 +19061,7 @@
         "parent",
         "family"
       ],
-      "weight": 45,
+      "weight": 35,
       "requires": {
         "minTurn": 20,
         "flags": {
@@ -19139,7 +19139,7 @@
         "bureaucracy",
         "direttore"
       ],
-      "weight": 50,
+      "weight": 37,
       "requires": {
         "minTurn": 14
       },
@@ -19231,7 +19231,7 @@
         "sindacato",
         "politics"
       ],
-      "weight": 45,
+      "weight": 35,
       "requires": {
         "minTurn": 10
       },
@@ -19318,7 +19318,7 @@
         "sindacato",
         "politics"
       ],
-      "weight": 50,
+      "weight": 37,
       "requires": {
         "minTurn": 14,
         "reputation": {
@@ -19396,7 +19396,7 @@
         "telematica",
         "career"
       ],
-      "weight": 55,
+      "weight": 38,
       "requires": {
         "minTurn": 20
       },
@@ -19453,7 +19453,7 @@
         "politics",
         "callback"
       ],
-      "weight": 50,
+      "weight": 37,
       "requires": {
         "minTurn": 14,
         "flags": {
@@ -19523,7 +19523,7 @@
         "industry",
         "callback"
       ],
-      "weight": 55,
+      "weight": 38,
       "requires": {
         "minTurn": 10,
         "flags": {
@@ -19598,7 +19598,7 @@
         "family",
         "callback"
       ],
-      "weight": 50,
+      "weight": 37,
       "requires": {
         "minTurn": 12,
         "flags": {
@@ -19666,7 +19666,7 @@
         "funding",
         "callback"
       ],
-      "weight": 60,
+      "weight": 39,
       "requires": {
         "minTurn": 22,
         "flags": {
@@ -19758,7 +19758,7 @@
         "personal",
         "callback"
       ],
-      "weight": 40,
+      "weight": 34,
       "repeatable": true,
       "requires": {
         "minTurn": 14,
@@ -19828,7 +19828,7 @@
         "subtle",
         "workplace"
       ],
-      "weight": 35,
+      "weight": 33,
       "requires": {
         "minTurn": 6,
         "flags": {
@@ -19902,7 +19902,7 @@
         "soft_power",
         "workplace"
       ],
-      "weight": 35,
+      "weight": 33,
       "requires": {
         "minTurn": 10,
         "flags": {
@@ -20000,7 +20000,7 @@
         "power_coercion",
         "asn"
       ],
-      "weight": 40,
+      "weight": 34,
       "requires": {
         "minTurn": 22,
         "flags": {
@@ -20109,7 +20109,7 @@
         "harassment",
         "witnessing"
       ],
-      "weight": 35,
+      "weight": 33,
       "requires": {
         "minTurn": 12
       },
@@ -20188,7 +20188,7 @@
         "harassment",
         "subtle"
       ],
-      "weight": 25,
+      "weight": 30,
       "requires": {
         "minTurn": 8,
         "flags": {
@@ -20256,7 +20256,7 @@
         "harassment",
         "procedural"
       ],
-      "weight": 45,
+      "weight": 35,
       "requires": {
         "minTurn": 14,
         "flags": {
@@ -20338,7 +20338,7 @@
         "harassment",
         "retaliation"
       ],
-      "weight": 50,
+      "weight": 37,
       "requires": {
         "minTurn": 18,
         "flags": {
@@ -20419,7 +20419,7 @@
         "high_stakes",
         "transformation"
       ],
-      "weight": 70,
+      "weight": 42,
       "requires": {
         "minTurn": 24
       },
