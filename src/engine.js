@@ -36,8 +36,12 @@ export function createGameState(character, gender = "m", state = {}) {
     genderFlag, contractFlag, ageFlag, stanceFlag,
     ...derivedFlags,
   ];
+  const avatar = state.avatar || character.defaultAvatar || {
+    hair: gender === "f" ? "long_f" : "short_m",
+    hairColor: 1, shirt: 0, skin: 1, shirtStyle: "default",
+  };
   return {
-    character: { ...structuredClone(character), gender, contractType, ageBand, stance },
+    character: { ...structuredClone(character), gender, contractType, ageBand, stance, avatar },
     turn: 1,
     stats: { ...character.stats },
     reputation: { ...character.startingReputation },
@@ -193,6 +197,14 @@ function resolveChoice(state, choice, source = "choice") {
     state.feed.push({ kind: "delta", turn: state.turn, source, changes: deltaLog });
   }
 
+  // Attach the rep delta toward the reaction's `from` faction (if any), so
+  // the UI can render the NPC's avatar with an appropriate mood.
+  if (reactionToShow && reactionToShow.from) {
+    const repForFrom = deltaLog
+      .filter(d => d.kind === "reputation" && d.key === reactionToShow.from)
+      .reduce((acc, d) => acc + (d.delta || 0), 0);
+    return { ...reactionToShow, _repDelta: repForFrom };
+  }
   return reactionToShow;
 }
 
@@ -235,6 +247,7 @@ export function applyChoice(state, data, choice) {
       turn: state.turn,
       from: reactionToShow.from ?? null,
       text: interpolate(reactionToShow.text, state),
+      repDelta: reactionToShow._repDelta ?? 0,
     });
   }
 
@@ -302,6 +315,7 @@ export function applyEventChoice(state, data, choice) {
       turn: state.turn,
       from: reactionToShow.from ?? null,
       text: interpolate(reactionToShow.text, state),
+      repDelta: reactionToShow._repDelta ?? 0,
     });
   }
 
@@ -406,6 +420,7 @@ export function useItem(state, data, itemId) {
       turn: state.turn,
       from: reactionToShow.from ?? null,
       text: interpolate(reactionToShow.text, state),
+      repDelta: reactionToShow._repDelta ?? 0,
     });
   }
 

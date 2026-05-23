@@ -3,6 +3,11 @@
 
 import { evalCondition } from "./conditions.js";
 import { interpolate } from "./interpolate.js";
+import {
+  renderAvatar, renderNpcAvatar, npcLabel,
+  derivePlayerMood, reactionMood,
+  SKIN_TONES, HAIR_COLORS, SHIRT_COLORS, HAIR_STYLE_LABELS,
+} from "./avatar.js";
 
 // Drawer state — driven by a single `body[data-drawer]` attribute that the
 // CSS responds to via `body[data-drawer="sidebar"] .sidebar { transform: 0 }`.
@@ -48,6 +53,14 @@ const STANCE_LABELS = {
   compliant: "allineat{o|a}",
   resistant: "militante",
   withdrawn: "disimpegnat{o|a}",
+};
+
+const MOOD_LABEL = {
+  neutral:  "in equilibrio",
+  happy:    "vai forte",
+  tired:    "stanc{o|a}",
+  stressed: "sotto pressione",
+  crisis:   "crisi",
 };
 function contractLabel(id) { return CONTRACT_LABELS[id] || id || "RTD-A"; }
 function ageLabel(id) { return AGE_LABELS[id] || id || ""; }
@@ -158,7 +171,101 @@ function renderStatePicker(root, character, gender, onSelect) {
 
   const state = { contractType: character.defaultContractType || "PON",
                   ageBand: character.defaultAgeBand || "33to40",
-                  stance: character.defaultStance || "compliant" };
+                  stance: character.defaultStance || "compliant",
+                  avatar: {
+                    hair: gender === "f" ? "long_f" : "short_m",
+                    hairColor: 1,  // castano scuro
+                    shirt: 0,      // blu
+                    skin: 1,       // chiara/media
+                    shirtStyle: "default",
+                  } };
+
+  // ---------------- Avatar builder con live preview ----------------
+  const avatarCard = el("div", { className: "state-card state-card--avatar" });
+  avatarCard.appendChild(el("h3", {}, "Aspetto"));
+  avatarCard.appendChild(el("p", { className: "state-card__sub" },
+    "Quattro tratti rapidi. L'avatar ti seguirà in tutta la partita — e l'espressione cambierà con lo stress."));
+
+  const avatarPreviewWrap = el("div", { className: "avatar-preview-wrap" });
+  const avatarPreview = el("div", { className: "avatar-preview" });
+  avatarPreviewWrap.appendChild(avatarPreview);
+
+  function refreshPreview() {
+    avatarPreview.innerHTML = "";
+    avatarPreview.appendChild(renderAvatar(state.avatar, "neutral", 120));
+  }
+
+  // Swatch row helper — clickable color cells
+  function makeSwatchRow(palette, currentKey, setterKey, labelText) {
+    const row = el("div", { className: "avatar-row" });
+    row.appendChild(el("span", { className: "avatar-row__label" }, labelText));
+    const swatches = el("div", { className: "avatar-swatches" });
+    for (let i = 0; i < palette.length; i++) {
+      const cell = el("button", {
+        className: `avatar-swatch${state.avatar[setterKey] === i ? " selected" : ""}`,
+        style: `background:${palette[i]}`,
+        title: palette[i],
+        "aria-label": `${labelText} ${i+1}`,
+        onClick: () => {
+          state.avatar[setterKey] = i;
+          refreshAvatarUI();
+        },
+      });
+      swatches.appendChild(cell);
+    }
+    row.appendChild(swatches);
+    return row;
+  }
+
+  // Hair style row — text buttons (each style is qualitatively different)
+  const hairRow = el("div", { className: "avatar-row" });
+  hairRow.appendChild(el("span", { className: "avatar-row__label" }, "Capelli"));
+  const hairBtns = el("div", { className: "avatar-hair-row" });
+  for (const [key, label] of Object.entries(HAIR_STYLE_LABELS)) {
+    const btn = el("button", {
+      className: `avatar-hair-btn${state.avatar.hair === key ? " selected" : ""}`,
+      onClick: () => { state.avatar.hair = key; refreshAvatarUI(); },
+    }, label.split(" — ")[0]);
+    hairBtns.appendChild(btn);
+  }
+  hairRow.appendChild(hairBtns);
+
+  const colorHairRow = makeSwatchRow(HAIR_COLORS, state.avatar.hairColor, "hairColor", "Colore capelli");
+  const shirtRow = makeSwatchRow(SHIRT_COLORS, state.avatar.shirt, "shirt", "Maglietta");
+  const skinRow = makeSwatchRow(SKIN_TONES, state.avatar.skin, "skin", "Tono pelle");
+
+  const avatarControls = el("div", { className: "avatar-controls" });
+  avatarControls.appendChild(hairRow);
+  avatarControls.appendChild(colorHairRow);
+  avatarControls.appendChild(shirtRow);
+  avatarControls.appendChild(skinRow);
+
+  function refreshAvatarUI() {
+    // Re-render all swatches (selected state) + preview
+    avatarCard.querySelectorAll(".avatar-swatch.selected").forEach(e => e.classList.remove("selected"));
+    avatarCard.querySelectorAll(".avatar-hair-btn.selected").forEach(e => e.classList.remove("selected"));
+    // Apply selected based on current state — find by index via DOM order
+    const swatchGroups = avatarCard.querySelectorAll(".avatar-swatches");
+    // swatchGroups order: hairColor, shirt, skin
+    const idxs = [state.avatar.hairColor, state.avatar.shirt, state.avatar.skin];
+    swatchGroups.forEach((group, gi) => {
+      const cells = group.querySelectorAll(".avatar-swatch");
+      if (cells[idxs[gi]]) cells[idxs[gi]].classList.add("selected");
+    });
+    // Hair style buttons
+    const hairButtons = avatarCard.querySelectorAll(".avatar-hair-btn");
+    const hairKeys = Object.keys(HAIR_STYLE_LABELS);
+    hairButtons.forEach((btn, i) => {
+      if (hairKeys[i] === state.avatar.hair) btn.classList.add("selected");
+    });
+    refreshPreview();
+  }
+
+  const avatarBody = el("div", { className: "avatar-body" });
+  avatarBody.appendChild(avatarPreviewWrap);
+  avatarBody.appendChild(avatarControls);
+  avatarCard.appendChild(avatarBody);
+  refreshPreview();
 
   const contractCard = el("div", { className: "state-card" });
   contractCard.appendChild(el("h3", {}, "Tipo di contratto"));
@@ -216,6 +323,7 @@ function renderStatePicker(root, character, gender, onSelect) {
   renderStances();
   stanceCard.appendChild(stanceGroup);
 
+  wrap.appendChild(avatarCard);
   wrap.appendChild(contractCard);
   wrap.appendChild(ageCard);
   wrap.appendChild(stanceCard);
@@ -286,6 +394,10 @@ export function renderGame(root, state, factions, items, handlers) {
     "aria-label": "Apri stats e inventario",
     onClick: () => toggleDrawer("sidebar"),
   }, "☰"));
+  const playerMood = derivePlayerMood(state);
+  const mbarAvatar = el("div", { className: "mobile-bar__avatar" });
+  mbarAvatar.appendChild(renderAvatar(state.character.avatar, playerMood, 32));
+  mbar.appendChild(mbarAvatar);
   mbar.appendChild(el("div", { className: "mobile-bar__title" }, state.character.name));
   mbar.appendChild(el("div", { className: "mobile-bar__turn" },
     `M${state.turn} · A${Math.ceil(state.turn / 12)}`));
@@ -303,15 +415,23 @@ export function renderGame(root, state, factions, items, handlers) {
   });
   wrap.appendChild(scrim);
 
-  // Left sidebar: live stats, reputation, inventory
+  // Left sidebar: avatar + live stats, reputation, inventory
   const sidebar = el("aside", { className: "sidebar" });
-  sidebar.appendChild(el("div", { className: "char-summary" },
-    el("h3", {}, state.character.name),
-    el("div", { className: "ssd" }, state.character.ssd),
-    el("div", { className: "char-state" }, contractLabel(state.character.contractType) + " · " + ageLabel(state.character.ageBand)),
-    el("div", { className: "char-stance" }, stanceLabel(state.character.stance, state.character.gender)),
-    el("div", { className: "turn-counter" }, `Mese ${state.turn}  ·  Anno ${Math.ceil(state.turn / 12)}`),
-  ));
+  const charSummary = el("div", { className: "char-summary" });
+  const sidebarAvatar = el("div", { className: "char-summary__avatar" });
+  sidebarAvatar.appendChild(renderAvatar(state.character.avatar, playerMood, 92));
+  sidebarAvatar.appendChild(el("span", { className: `mood-tag mood-tag--${playerMood}` },
+    interpolate(MOOD_LABEL[playerMood] ?? playerMood, state)));
+  charSummary.appendChild(sidebarAvatar);
+  charSummary.appendChild(el("h3", {}, state.character.name));
+  charSummary.appendChild(el("div", { className: "ssd" }, state.character.ssd));
+  charSummary.appendChild(el("div", { className: "char-state" },
+    contractLabel(state.character.contractType) + " · " + ageLabel(state.character.ageBand)));
+  charSummary.appendChild(el("div", { className: "char-stance" },
+    stanceLabel(state.character.stance, state.character.gender)));
+  charSummary.appendChild(el("div", { className: "turn-counter" },
+    `Mese ${state.turn}  ·  Anno ${Math.ceil(state.turn / 12)}`));
+  sidebar.appendChild(charSummary);
   sidebar.appendChild(el("h4", {}, "Stats"));
   sidebar.appendChild(renderStatBars(state.stats));
   sidebar.appendChild(el("h4", {}, "Reputazione"));
@@ -370,11 +490,18 @@ export function renderGame(root, state, factions, items, handlers) {
   }
 
   if (state.perished) {
-    main.appendChild(el("div", { className: "perish-banner" },
-      el("h2", {}, "Perish."),
-      el("div", { className: "perish-cause" }, interpolate(state.ending.perishCause, state)),
-      el("button", { className: "btn", onClick: handlers.onRestart }, "Nuova carriera"),
-    ));
+    const perishBanner = el("div", { className: "perish-banner" });
+    // Avatar finale in "crisis" mood — l'immagine del finale
+    const finalAvatar = el("div", { className: "perish-banner__avatar" });
+    finalAvatar.appendChild(renderAvatar(state.character.avatar, "crisis", 140));
+    perishBanner.appendChild(finalAvatar);
+    perishBanner.appendChild(el("h2", {}, "Perish."));
+    perishBanner.appendChild(el("div", { className: "perish-cause" },
+      interpolate(state.ending.perishCause, state)));
+    perishBanner.appendChild(el("button", {
+      className: "btn", onClick: handlers.onRestart,
+    }, "Nuova carriera"));
+    main.appendChild(perishBanner);
   }
 
   // Right column: dossier — long-term narrative state (milestones + flag log)
@@ -625,12 +752,23 @@ function renderFeedEntry(entry) {
   }
   if (entry.kind === "reaction") {
     const from = FACTION_DISPLAY[entry.from] ?? entry.from ?? "";
-    return el("article", { className: "feed-entry feed-entry--reaction" },
-      el("header", {},
-        el("span", { className: "month" }, `M${entry.turn}`),
-        el("span", { className: "reaction-from" }, from)),
-      el("p", {}, entry.text),
-    );
+    // Avatar NPC: deduco il mood dalla delta di reputazione associata
+    // (positiva → happy, negativa → stressed). Se non c'è, neutral.
+    const npcMoodForEntry = reactionMood(entry.from, entry.repDelta);
+    const npcAvatar = renderNpcAvatar(entry.from, npcMoodForEntry, 44);
+    const article = el("article", { className: "feed-entry feed-entry--reaction" });
+    const header = el("header", {},
+      el("span", { className: "month" }, `M${entry.turn}`),
+      el("span", { className: "reaction-from" }, from));
+    article.appendChild(header);
+    const body = el("div", { className: "reaction-body" });
+    if (npcAvatar) {
+      const avatarSlot = el("div", { className: "reaction-avatar" }, npcAvatar);
+      body.appendChild(avatarSlot);
+    }
+    body.appendChild(el("p", {}, entry.text));
+    article.appendChild(body);
+    return article;
   }
   if (entry.kind === "consume") {
     return el("article", { className: "feed-entry feed-entry--consume" },
