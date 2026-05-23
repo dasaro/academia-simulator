@@ -615,7 +615,7 @@
           },
           "reaction": {
             "from": "peers",
-            "text": "Lei risponde dalla sala d'aspetto di Fiumicino: «La metterò in cornice. Davvero.»"
+            "text": "Lei risponde dalla sala d'attesa di Fiumicino: «La metterò in cornice. Davvero.»"
           }
         }
       ]
@@ -1065,7 +1065,7 @@
     },
     {
       "id": "evt_collega_rtdb_olanda",
-      "title": "Un collega ha vinto un RTDB e si dimette",
+      "title": "Un collega ha vinto un RTD-B e si dimette",
       "text": "Un compagno di precariato della rete dei precari scrive: «Ho vinto un RTDB altrove, mi dimetto. Vi devo una birra a tutti.» Ti chiede se anche tu vuoi guardare il bando.",
       "triggerChance": 0.04,
       "requires": {

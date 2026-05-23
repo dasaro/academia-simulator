@@ -9,7 +9,7 @@
       ],
       "weight": 10,
       "title": "Il primo giorno",
-      "text": "{contract_long} è firmato. Il responsabile ti accoglie con un sorriso: «Allora, il progetto sarebbe su {ssd}, ma in realtà ci serviresti per fare un'altra cosa. Andiamo a prendere un caffè e ti spiego.» Sulla scrivania ti aspettano: 1) la scheda progetto che descrive obiettivi che non hai mai visto prima, 2) un foglio di rendicontazione, 3) tre studenti che ti aspettano.",
+      "text": "{contract_long} è firmato. Il responsabile ti accoglie con un sorriso: «Allora, il progetto sarebbe su {ssd}, ma in realtà ci serviresti per fare un'altra cosa. Andiamo a prendere un caffè e ti spiego.» Sulla scrivania ti aspettano: 1) la scheda progetto che descrive obiettivi che non hai mai visto prima, 2) un foglio di rendicontazione, 3) tre studenti in attesa.",
       "choices": [
         {
           "label": "Accetti il riassetto. Pace e fondi.",
@@ -922,7 +922,7 @@
       "weight": 39,
       "repeatable": true,
       "title": "SIRI chiude la sessione",
-      "text": "Sono le 23:47. Devi chiudere la rendicontazione bimestrale prima di mezzanotte. Il sistema dice 0.1 ore minime per attività, ma il MUR non lo sa: «errore: l'azienda fornitrice ha messo il lower bound a 0.1, scrivici a una mail.» La mail rimbalza.",
+      "text": "Sono le 23:47. Devi chiudere la rendicontazione bimestrale prima di mezzanotte. Il sistema dice 0.1 ore minime per attività, ma il MUR non lo sa: «errore: l'azienda fornitrice ha messo il lower bound a 0.1, scrivici una mail.» La mail rimbalza.",
       "requires": {
         "minTurn": 3
       },
@@ -1022,7 +1022,7 @@
           }
         },
         {
-          "label": "Sollechiti l'ufficio ricerca: «scadenza scaduta, di chi è la colpa?»",
+          "label": "Solleciti l'ufficio ricerca: «scadenza scaduta, di chi è la colpa?»",
           "effects": {
             "stats": {
               "persuasione": 1,
@@ -1051,7 +1051,7 @@
       },
       "choices": [
         {
-          "label": "Costruisci un GANTT in due notti.",
+          "label": "Costruisci un Gantt in due notti.",
           "effects": {
             "stats": {
               "stamina": -3,
@@ -1397,7 +1397,7 @@
       },
       "choices": [
         {
-          "label": "Insegui il direttore via. Foto della firma da hotel.",
+          "label": "Insegui il direttore in trasferta. Foto della firma dall'hotel.",
           "effects": {
             "stats": {
               "networking": 1,
@@ -1700,7 +1700,7 @@
       ],
       "weight": 35,
       "title": "Decreto contro il collegio di dottorato",
-      "text": "Un decreto MUR di marzo 2022, art. 3.1, equipara i ricercatori di ruolo solo agli RTD-B. Tu sei RTDA. Sei stato espulso retroattivamente dal collegio del dottorato. Il direttore: «mi spiace, è la norma.»",
+      "text": "Un decreto MUR di marzo 2022, art. 3.1, equipara i ricercatori di ruolo solo agli RTD-B. Tu sei RTDA. Sei stat{o|a} espuls{o|a} retroattivamente dal collegio del dottorato. Il direttore: «mi spiace, è la norma.»",
       "requires": {
         "minTurn": 10,
         "flags": {
@@ -1918,7 +1918,7 @@
           }
         },
         {
-          "label": "Chiedi un avvocato del lavoro privato. 300€ consulto.",
+          "label": "Chiedi un avvocato del lavoro privato. 300€ a consulto.",
           "effects": {
             "stats": {
               "fondi": -1,
@@ -2126,7 +2126,7 @@
       ],
       "weight": 39,
       "title": "Quattro titoli su tre, ma solo due",
-      "text": "La commissione precedente ti aveva riconosciuto quattro titoli su tre richiesti. Questa tornata, con atto notorio controfirmato dai coautori che attesta il tuo contributo, te ne riconosce due. Stessi paper, regole diverse. Un brevetto e la cofondazione di un jointlab spariti dal computo.",
+      "text": "La commissione precedente ti aveva riconosciuto quattro titoli su tre richiesti. Questa tornata, con atto notorio controfirmato dai coautori che attesta il tuo contributo, te ne riconosce due. Stessi paper, regole diverse. Un brevetto e la cofondazione di un joint lab spariti dal computo.",
       "requires": {
         "minTurn": 10
       },
@@ -2261,7 +2261,7 @@
       },
       "choices": [
         {
-          "label": "Secondo ricorso. Vi serviranno cento euro a testa in cinquanta.",
+          "label": "Secondo ricorso. Vi servono cento euro a testa, in cinquanta.",
           "effects": {
             "stats": {
               "burocrazia": 3,
@@ -2293,7 +2293,7 @@
           }
         },
         {
-          "label": "Pubblichi sentenza e motivazione sul gruppo Facebook RTDA. Visibilità tossica.",
+          "label": "Pubblichi sentenza e motivazione sul gruppo Facebook degli RTDA. Visibilità tossica.",
           "effects": {
             "stats": {
               "persuasione": 2,
@@ -2455,13 +2455,13 @@
       ],
       "weight": 41,
       "title": "Reviewer 2 vuole le sue citazioni",
-      "text": "Il paper è parcheggiato in revisione da un anno e mezzo. Reviewer 2 chiede che inserisci tre riferimenti molto specifici. Sono articoli del suo gruppo. Senza quelli non lo accetta.",
+      "text": "Il paper è parcheggiato in revisione da un anno e mezzo. Reviewer 2 chiede che tu inserisca tre riferimenti molto specifici. Sono articoli del suo gruppo. Senza quelli non lo accetta.",
       "requires": {
         "minTurn": 10
       },
       "choices": [
         {
-          "label": "Aggiungi le citazioni. Mediche e bibliografiche. Forse passa.",
+          "label": "Aggiungi le citazioni. Metodiche e bibliografiche. Forse passa.",
           "effects": {
             "stats": {
               "stamina": 1,
@@ -2525,7 +2525,7 @@
       ],
       "weight": 39,
       "title": "Solo classe A. Tranne quando.",
-      "text": "Il responsabile ti ha appena detto, in riunione di gruppo: 'Mi raccomando, no riviste scientifiche, solo classe A e meglio se internazionali.' Dodici ore dopo, in privato: 'Tizio mi ha chiesto un pezzo per un numero monografico di una rivista sconosciuta. Glielo scrivi?' Le scadenze coincidono.",
+      "text": "Il responsabile ti ha appena detto, in riunione di gruppo: 'Mi raccomando, niente riviste non scientifiche, solo classe A e meglio se internazionali.' Dodici ore dopo, in privato: 'Tizio mi ha chiesto un pezzo per un numero monografico di una rivista sconosciuta. Glielo scrivi?' Le scadenze coincidono.",
       "requires": {
         "minTurn": 6
       },
@@ -2858,7 +2858,7 @@
       "weight": 42,
       "repeatable": true,
       "title": "Lui deve fare ASN prima fascia",
-      "text": "Hai scritto novanta per cento del paper. Il responsabile ti dice: «Sai, devo presentare i titoli per l'ASN prima fascia. Mi metti come primo autore, sì? Poi sull'acknowledgements ti citiamo, non ti preoccupare. È solo per questa volta.» Negli ultimi diciotto mesi è la quarta 'solo per questa volta'.",
+      "text": "Hai scritto il novanta per cento del paper. Il responsabile ti dice: «Sai, devo presentare i titoli per l'ASN prima fascia. Mi metti come primo autore, sì? Poi sull'acknowledgements ti citiamo, non ti preoccupare. È solo per questa volta.» Negli ultimi diciotto mesi è la quarta 'solo per questa volta'.",
       "requires": {
         "minTurn": 10
       },
@@ -3050,7 +3050,7 @@
       ],
       "weight": 37,
       "title": "Il terzo anno libero",
-      "text": "Il responsabile, in pausa caffè: «Il terzo anno te lo lascio libero così costruisci fondi e CV per la tua carriera. Lo conviene a entrambi.» Nei progetti precedenti del gruppo, il 'terzo anno libero' si è tradotto in nuovi rendiconti, una scuola estiva da organizzare e tre tesisti aggiuntivi.",
+      "text": "Il responsabile, in pausa caffè: «Il terzo anno te lo lascio libero così costruisci fondi e CV per la tua carriera. Conviene a entrambi.» Nei progetti precedenti del gruppo, il 'terzo anno libero' si è tradotto in nuovi rendiconti, una scuola estiva da organizzare e tre tesisti aggiuntivi.",
       "requires": {
         "minTurn": 2
       },
@@ -3217,7 +3217,7 @@
           }
         },
         {
-          "label": "Non ti candidi. Accetti la promessa, scrivi un PEC educata di sollecito.",
+          "label": "Non ti candidi. Accetti la promessa, scrivi una PEC educata di sollecito.",
           "effects": {
             "stats": {
               "burocrazia": 2,
@@ -3266,7 +3266,7 @@
       },
       "choices": [
         {
-          "label": "Accetti il Special Issue. Il paper esce in sei settimane.",
+          "label": "Accetti lo Special Issue. Il paper esce in sei settimane.",
           "effects": {
             "stats": {
               "stamina": 1,
@@ -3397,7 +3397,7 @@
       },
       "choices": [
         {
-          "label": "Ti candidi e prepari un CV ottimo. Settimane di sonno scarso.",
+          "label": "Ti candidi e prepari un ottimo CV. Settimane di sonno scarso.",
           "effects": {
             "stats": {
               "stamina": -3,
@@ -3895,7 +3895,7 @@
       },
       "choices": [
         {
-          "label": "Fai un Gantt chart serio con cronoprogramma a tre anni. Pernotti in dipartimento.",
+          "label": "Fai un diagramma di Gantt serio con cronoprogramma a tre anni. Pernotti in dipartimento.",
           "effects": {
             "stats": {
               "burocrazia": 3,
@@ -3963,7 +3963,7 @@
       },
       "choices": [
         {
-          "label": "Fai una richiesta formale citando il decreto. Allegata, copia degli overheads AIM 2018.",
+          "label": "Fai una richiesta formale citando il decreto. Alleghi copia degli overheads AIM 2018.",
           "effects": {
             "stats": {
               "burocrazia": 2,
@@ -4344,7 +4344,7 @@
           }
         },
         {
-          "label": "Lasci perdere. L'ERC «si vince con applicazioni sci-fi».",
+          "label": "Lasci perdere. L'ERC «si vince con proposte da fantascienza».",
           "effects": {
             "stats": {
               "stamina": 1,
@@ -4367,7 +4367,7 @@
       ],
       "weight": 37,
       "title": "L'anticipo per il corso",
-      "text": "Devi frequentare un corso di meta-analisi da 1500 euro per il tuo lavoro di campo. La missione è autorizzata. Ma all'amministrazione ti dicono: «E mica possiamo pagarti un corso». Produci una dichiarazione formale sulla necessità. Loro chiedono altra documentazione. Il corso è tra dieci giorni.",
+      "text": "Devi frequentare un corso di meta-analisi da 1500 euro per il tuo lavoro di campo. La missione è autorizzata. Ma all'amministrazione ti dicono: «E mica possiamo pagarle un corso». Produci una dichiarazione formale sulla necessità. Loro chiedono altra documentazione. Il corso è tra dieci giorni.",
       "requires": {
         "minTurn": 10
       },
@@ -4644,7 +4644,7 @@
           }
         },
         {
-          "label": "Continui l'accattonaggio individuale. Funziona, in qualche modo.",
+          "label": "Continui l'accattonaggio individuale. In qualche modo funziona.",
           "effects": {
             "stats": {
               "persuasione": 1,
@@ -4818,7 +4818,7 @@
       ],
       "weight": 41,
       "title": "Proroga o 'recupero intensivo'?",
-      "text": "Sei stato/a 5 mesi in malattia/maternità. L'ufficio HR ti scrive: il contratto è prorogato di 3 mesi (non 5) ma devi svolgere «attività aggiuntive entro la conclusione naturale del contratto». Lavoro doppio per due mesi. Su una collega altro ateneo è stata fatta solo la proroga, senza recupero.",
+      "text": "Sei stato/a 5 mesi in malattia/maternità. L'ufficio HR ti scrive: il contratto è prorogato di 3 mesi (non 5) ma devi svolgere «attività aggiuntive entro la conclusione naturale del contratto». Lavoro doppio per due mesi. A una collega di un altro ateneo è stata concessa solo la proroga, senza recupero.",
       "requires": {
         "minTurn": 18,
         "flags": {
@@ -4847,7 +4847,7 @@
           }
         },
         {
-          "label": "Fai ricorso. La legge dice proroga, non recupero. Hai una sentenza dalla parte.",
+          "label": "Fai ricorso. La legge dice proroga, non recupero. Hai una sentenza dalla tua parte.",
           "effects": {
             "stats": {
               "persuasione": 3,
@@ -4865,7 +4865,7 @@
           }
         },
         {
-          "label": "Confronti col rete dei precari: scoperto che ogni ateneo fa come gli pare.",
+          "label": "Ti confronti con la rete dei precari: scopri che ogni ateneo fa come gli pare.",
           "effects": {
             "stats": {
               "networking": 2,
@@ -4915,7 +4915,7 @@
           }
         },
         {
-          "label": "Riinvii la stessa attestazione vecchia. Sperando colino la differenza.",
+          "label": "Reinvii la stessa vecchia attestazione, sperando che non colgano la differenza.",
           "effects": {
             "stats": {
               "burocrazia": 1,
@@ -4927,7 +4927,7 @@
           }
         },
         {
-          "label": "Scrivi all'ufficio: «Va a chiederla voi all'azienda, io non ci lavoro più».",
+          "label": "Scrivi all'ufficio: «Andate a chiedergliela voi all'azienda, io non ci lavoro più».",
           "effects": {
             "stats": {
               "persuasione": 1,
@@ -5131,7 +5131,7 @@
       ],
       "weight": 39,
       "title": "Un'offerta a 800 km",
-      "text": "Il tuo compagno (o la tua compagna) ha ricevuto un'offerta a tempo indeterminato a 800 km di distanza. Il tuo concorso uscirà «tra qualche mese, forse». Lo dicono da diciotto. La conversazione a cena è iniziata leggera. Ora siete tutti e due in silenzio.",
+      "text": "Il tuo compagno (o la tua compagna) ha ricevuto un'offerta a tempo indeterminato a 800 km di distanza. Il tuo concorso uscirà «tra qualche mese, forse». Lo dicono da diciotto. Il discorso a cena è iniziato leggero. Ora siete tutti e due in silenzio.",
       "requires": {
         "minTurn": 4
       },
@@ -5164,7 +5164,7 @@
           }
         },
         {
-          "label": "Dici «vado io con te». Cerchi qualcosa nella sua città.",
+          "label": "Dici «vengo io con te». Cerchi qualcosa nella sua città.",
           "effects": {
             "stats": {
               "stamina": 1,
@@ -5256,7 +5256,7 @@
       ],
       "weight": 41,
       "title": "Il «recupero» dopo il parto",
-      "text": "Sei rientrata dai cinque mesi obbligatori. Il responsabile scientifico ti convoca con un sorriso comprensivo: «Sai com'è, dovrai recuperare quei mesi con attività aggiuntive. Magari di sera, quando dorme. È solo un anno.» Hai allattato due ore fa.",
+      "text": "Sei rientrata dai cinque mesi obbligatori. Il responsabile scientifico ti convoca con un sorriso comprensivo: «Sai com'è, dovrai recuperare quei mesi con attività aggiuntive. Magari di sera, quando dorme il piccolo. È solo un anno.» Hai allattato due ore fa.",
       "requires": {
         "minTurn": 8,
         "flags": {
@@ -5494,7 +5494,7 @@
       ],
       "weight": 34,
       "title": "Un collega vuole dimettersi",
-      "text": "Una collega ti scrive in privato. Suo amico, RTD-A in un altro ateneo, dall'ansia non dorme. Ha pensato di dimettersi ma teme di non poter più fare concorsi pubblici. Lei ti chiede consiglio. È quasi mezzanotte.",
+      "text": "Una collega ti scrive in privato. Un suo amico, RTD-A in un altro ateneo, dall'ansia non dorme. Ha pensato di dimettersi ma teme di non poter più fare concorsi pubblici. Lei ti chiede consiglio. È quasi mezzanotte.",
       "requires": {
         "minTurn": 12,
         "flags": {
@@ -5553,7 +5553,7 @@
       ],
       "weight": 42,
       "title": "Hai scritto la lettera. Non l'hai mandata.",
-      "text": "Hai stampato la lettera di dimissioni a luglio. La tieni nello zaino da quattro mesi. Hai pianto due volte a settimana per un mese. Tuo marito ti ha detto «fai come vuoi». Il responsabile non si è accorto di niente, perché tu sei sempre puntuale.",
+      "text": "Hai stampato la lettera di dimissioni a luglio. La tieni nello zaino da quattro mesi. Hai pianto due volte a settimana per un mese. Tuo/a partner ti ha detto «fai come vuoi». Il responsabile non si è accorto di niente, perché tu sei sempre puntuale.",
       "requires": {
         "minTurn": 18
       },
@@ -5752,7 +5752,7 @@
           }
         },
         {
-          "label": "Negozi 2,5 mesi anziché sei. Sufficienti per la regola.",
+          "label": "Negozi 2,5 mesi e li difendi a oltranza. Sufficienti per la regola.",
           "effects": {
             "stats": {
               "persuasione": 2,
@@ -5779,7 +5779,7 @@
       ],
       "weight": 38,
       "title": "Il corpo si è fermato",
-      "text": "Stamattina ti sei seduta sul letto e non ti sei più alzata. Tre ore. La psicoterapeuta ti dice: «Questo si chiama burnout, e a un certo punto il corpo decide.» Hai due deadline questa settimana. Tuo figlio chiede perché piangi.",
+      "text": "Stamattina ti sei sedut{o|a} sul letto e non ti sei più alzata. Tre ore. La psicoterapeuta ti dice: «Questo si chiama burnout, e a un certo punto il corpo decide.» Hai due deadline questa settimana. Tuo figlio chiede perché piangi.",
       "requires": {
         "minTurn": 24
       },
@@ -5837,7 +5837,7 @@
       ],
       "weight": 38,
       "title": "Un'azienda ti scrive su LinkedIn",
-      "text": "Un recruiter di una farmaceutica/IT ti scrive: posizione senior, stipendio 55k, tempo indeterminato, niente PEC dal MUR. Hai 41 anni, tre lauree, 24 pubblicazioni, e sei ancora «in mano a Cristo». Hai colloquio mercoledì se vuoi.",
+      "text": "Un recruiter di una farmaceutica/IT ti scrive: posizione senior, stipendio 55k, tempo indeterminato, niente PEC dal MUR. Hai 41 anni, tre lauree, 24 pubblicazioni, e sei ancora «in mani altrui». Hai colloquio mercoledì se vuoi.",
       "requires": {
         "minTurn": 22,
         "flags": {
@@ -5901,7 +5901,7 @@
       "weight": 30,
       "repeatable": true,
       "title": "Un weekend senza email",
-      "text": "Tua madre ti ha invitata al mare. Tre giorni. C'è una revisione in scadenza lunedì ma a te le orecchie ti fischiano da una settimana e oggi alle 11 ti sei addormentata sulla scrivania. Il sole c'è.",
+      "text": "Tua madre ti ha invitat{o|a} al mare. Tre giorni. C'è una revisione in scadenza lunedì ma ti fischiano le orecchie da una settimana e oggi alle 11 ti sei addormentat{o|a} sulla scrivania. Il sole c'è.",
       "requires": {
         "minTurn": 18
       },
@@ -6008,7 +6008,7 @@
       ],
       "weight": 38,
       "title": "NASpI per 18 mesi, in attesa dell'RTT",
-      "text": "Il contratto è scaduto venerdì. Da lunedì sei disoccupata: NASpI 18 mesi all'80% del reddito. Domanda sulla piattaforma INPS, che si blocca due volte. Il concorso RTT del tuo SSD potrebbe uscire «entro l'autunno». Da otto mesi.",
+      "text": "Il contratto è scaduto venerdì. Da lunedì sei disoccupat{o|a}: NASpI 18 mesi all'80% del reddito. Domanda sulla piattaforma INPS, che si blocca due volte. Il concorso RTT del tuo SSD potrebbe uscire «entro l'autunno». Da otto mesi.",
       "requires": {
         "minTurn": 30,
         "flags": {
@@ -6326,7 +6326,7 @@
           }
         },
         {
-          "label": "Vai in aula e fai un seminario sui tuoi temi. Improvvisi.",
+          "label": "Vai in aula e tieni un seminario sui tuoi temi. Improvvisi.",
           "effects": {
             "stats": {
               "persuasione": 2,
@@ -6349,7 +6349,7 @@
         "daily_grind"
       ],
       "weight": 38,
-      "title": "L'esperto di LaTeX del dipartimento",
+      "title": "L'espert{o|a} di LaTeX del dipartimento",
       "text": "Sei l'unico nel dipartimento che sa usare LaTeX bene. Quattro colleghi strutturati ti scrivono nello stesso mese per «un piccolo aiuto sul template della rivista». Sono progetti loro, paper loro, monografie loro. Te ne ringrazieranno a voce.",
       "repeatable": true,
       "requires": {
@@ -6473,7 +6473,7 @@
       ],
       "weight": 38,
       "title": "Co-relatore di fatto, non di nome",
-      "text": "Hai seguito sette tesisti quest'anno. Il regolamento d'ateneo non ti permette di essere relatore unico come RTD-A. Un collega strutturato ti dice: «Tu lavori, io firmo. Tanto è la prassi.» Lo studente ti chiama 'professore' e crede sia tu il suo riferimento.",
+      "text": "Hai seguito sette tesisti quest'anno. Il regolamento d'ateneo non ti permette di essere relatore unico come RTD-A. Un collega strutturato ti dice: «Tu lavori, io firmo. Tanto è la prassi.» Lo studente ti chiama «professore» e crede sia tu il suo riferimento.",
       "requires": {
         "minTurn": 5,
         "flags": {
@@ -6714,7 +6714,7 @@
       ],
       "weight": 35,
       "title": "Il consiglio di dipartimento",
-      "text": "Sei al primo consiglio di dipartimento. Tre ore, 47 punti all'ordine del giorno. Si parla di programmazione del personale per il prossimo triennio. Nessuno menziona i {job_role} in scadenza. Quando alzi la mano, il direttore guarda l'orologio.",
+      "text": "Sei al tuo primo consiglio di dipartimento. Tre ore, 47 punti all'ordine del giorno. Si parla di programmazione del personale per il prossimo triennio. Nessuno menziona i {job_role} in scadenza. Quando alzi la mano, il direttore guarda l'orologio.",
       "requires": {
         "minTurn": 12
       },
@@ -6964,7 +6964,7 @@
           }
         },
         {
-          "label": "Le suggerisci di mettere per iscritto e di valutare con avvocato.",
+          "label": "Le suggerisci di mettere per iscritto e di valutare con un avvocato.",
           "effects": {
             "stats": {
               "persuasione": 1,
@@ -7466,7 +7466,7 @@
       },
       "choices": [
         {
-          "label": "Torni in ufficio. Foto,, fine.",
+          "label": "Torni in ufficio. Foto, fine.",
           "effects": {
             "stats": {
               "stamina": -2
@@ -8607,10 +8607,10 @@
         "minTurn": 12
       },
       "title": "Tuo zio sta morendo, o quasi",
-      "text": "Tuo zio è in ospedale. Tua madre te lo dice asciutta al telefono — non è una richiesta. Hai un deliverable venerdì. Sai già come finirà. Una collega aveva scritto, qualche mese fa, qualche mese fa: «Se mio zio sta morendo, sinceramente il culo non lo do più.» Tu non sei ancora arrivato/a a dirlo.",
+      "text": "Tuo zio è in ospedale. Tua madre te lo dice asciutta al telefono — non è una richiesta. Hai un deliverable venerdì. Sai già come finirà. Una collega aveva scritto, qualche mese fa: «Se mio zio sta morendo, sinceramente il culo non lo do più.» Tu non sei ancora arrivato/a a dirlo.",
       "choices": [
         {
-          "label": "Vai alla festa. Il deliverable può aspettare.",
+          "label": "Vai da lui. Il deliverable può aspettare.",
           "effects": {
             "stats": {
               "stamina": 3
@@ -8960,7 +8960,7 @@
       "text": "Stai finendo una monografia su un autore minore del Settecento. Un editore universitario serio (Il Mulino) la prenderebbe, ma vuole un'altra revisione. Una casa editrice che vende ISBN per ASN la prende così com'è, con 1.800€ di contributo.",
       "choices": [
         {
-          "label": "Vai sul Mulino. Investi sei mesi in più.",
+          "label": "Punti sul Mulino. Investi sei mesi in più.",
           "consume": [
             "monografia_in_corso"
           ],
@@ -9713,7 +9713,7 @@
       ],
       "weight": 37,
       "title": "In azienda non si firma niente",
-      "text": "Hai svolto il periodo in impresa. Adesso devi documentarlo, ma in azienda non hai mai timbrato un cartellino né firmato un foglio presenze. Serve un diario? Un'attestazione del CEO? Una autocertificazione? I tuoi colleghi hanno fatto in tre modi diversi.",
+      "text": "Hai svolto il periodo in impresa. Adesso devi documentarlo, ma in azienda non hai mai timbrato un cartellino né firmato un foglio presenze. Serve un diario? Un'attestazione del CEO? Un'autocertificazione? I tuoi colleghi hanno fatto in tre modi diversi.",
       "requires": {
         "minTurn": 14
       },
@@ -10250,7 +10250,7 @@
           }
         },
         {
-          "label": "Aggiungi solo 'periodo in azienda' per crianza.",
+          "label": "Aggiungi solo 'periodo in azienda' per scrupolo.",
           "effects": {
             "stats": {
               "stamina": 1,
@@ -10262,7 +10262,7 @@
           },
           "reaction": {
             "from": "peers",
-            "text": "«Sì, almeno la dicitura ce la metto, per crianza.»"
+            "text": "«Sì, almeno la dicitura ce la metto, per scrupolo.»"
           }
         }
       ]
@@ -10623,7 +10623,7 @@
         "uscita"
       ],
       "weight": 38,
-      "title": "L'azienda partner ti vuole assumere a TI",
+      "title": "L'azienda partner ti vuole assumere a tempo indeterminato",
       "text": "L'azienda partner del {contract_short} ti propone un contratto a tempo indeterminato. Stipendio doppio. Vorrebbero che tu finisca prima il PON, però. Se ti dimetti rischi di dover restituire mensilità. Se accetti ora, l'università perde un posto e tu chiudi tutti i ponti accademici.",
       "requires": {
         "minTurn": 25,
@@ -10813,7 +10813,7 @@
       ],
       "weight": 37,
       "title": "Il PI ti vuole in un PRIN a 0.1 ore",
-      "text": "Il tuo responsabile vinto un PRIN ti vuole inserire come unità a 0.1 mesi-uomo. «Tanto è simbolico». Ma il regolamento PON vieta il doppio finanziamento, e l'amministrativo di Ca' Foscari ha detto a un collega che la quota deve essere ZERO, non 0.1. Sennò scatta la revoca del progetto.",
+      "text": "Il tuo responsabile ha vinto un PRIN e ti vuole inserire come unità a 0.1 mesi-uomo. «Tanto è simbolico». Ma il regolamento PON vieta il doppio finanziamento, e l'amministrativo di Ca' Foscari ha detto a un collega che la quota deve essere ZERO, non 0.1. Sennò scatta la revoca del progetto.",
       "requires": {
         "minTurn": 12,
         "flags": {
@@ -10994,7 +10994,7 @@
       ],
       "weight": 35,
       "title": "Dimissioni anticipate per andare in azienda",
-      "text": "Vuoi dimetterti 4 mesi prima della scadenza per accettare l'offerta di un'azienda. In teoria le dimissioni volontarie da tempo determinato non sono previste senza giusta causa. L'università potrebbe chiederti un indennizzo. Un collega dice: «Mobbing, è facile da provare nelle nostre condizioni».",
+      "text": "Vuoi dimetterti 4 mesi prima della scadenza per accettare l'offerta di un'azienda. In teoria le dimissioni volontarie da un tempo determinato non sono previste senza giusta causa. L'università potrebbe chiederti un indennizzo. Un collega dice: «Mobbing, è facile da provare nelle nostre condizioni».",
       "requires": {
         "minTurn": 24
       },
@@ -11084,7 +11084,7 @@
       ],
       "weight": 42,
       "title": "Si organizza la lettera collettiva sulle disparità RTDA",
-      "text": "Sul gruppo gira una bozza: «Lettera per la parità di ricerca tra i RTDA». Le istruzioni sono chiare: mandare una mail con oggetto specifico, anche solo copia-incolla del consenso. Chi raccoglie le firme aggiorna ogni ora la lista. Lunedì la spediscono al MUR. Tu sei nuovo/a in questo casino.",
+      "text": "Sul gruppo gira una bozza: «Lettera per la parità di ricerca tra gli RTDA». Le istruzioni sono chiare: mandare una mail con oggetto specifico, anche solo copia-incolla del consenso. Chi raccoglie le firme aggiorna ogni ora la lista. Lunedì la spediscono al MUR. Tu sei nuovo/a in questo casino.",
       "choices": [
         {
           "label": "Provi a convincere altri tre del tuo dipartimento a firmare.",
@@ -11273,7 +11273,7 @@
         "danger"
       ],
       "weight": 38,
-      "title": "Si è intrufolata una associata nella rete",
+      "title": "Si è intrufolata un'associata nella rete",
       "text": "Una collega scrive: «Sul gruppo FB dei ricercatori si è intrufolata una docente associata del mio settore. Mi ha fatto una ramanzina sui fondi che vanno persi se interrompo il contratto. Lavora nell'ateneo dove ho fatto domanda per il PNRR. Può danneggiarmi.» Gli admin chiedono in privato di chi si tratta.",
       "choices": [
         {
@@ -12748,7 +12748,7 @@
       ],
       "weight": 37,
       "title": "MSCA Postdoctoral: l'host institution si tira indietro",
-      "text": "Il tuo MSCA Postdoctoral Fellowship è scritto. Manca la lettera di hosting di un'università del Nord. Tre settimane prima della deadline, il direttore del dipartimento ospitante ti scrive: «Mi spiace, non abbiamo capacità ricettiva, le posizioni RTDA sono cofinanziate al 50%, dovremmo metterci l'altro 50%. Auguri.»",
+      "text": "La tua MSCA Postdoctoral Fellowship è scritta. Manca la lettera di hosting di un'università del Nord. Tre settimane prima della deadline, il direttore del dipartimento ospitante ti scrive: «Mi spiace, non abbiamo capacità ricettiva, le posizioni RTDA sono cofinanziate al 50%, dovremmo metterci l'altro 50%. Auguri.»",
       "requires": {
         "minTurn": 6,
         "flags": {
@@ -12759,7 +12759,7 @@
       },
       "choices": [
         {
-          "label": "Contatti un secondo ateneo via supervisor. Tre settimane.",
+          "label": "Contatti un secondo ateneo tramite il supervisor. Tre settimane.",
           "check": {
             "stat": "networking",
             "dc": 16,
@@ -13823,7 +13823,7 @@
       ],
       "weight": 37,
       "title": "Horizon: il consorzio è formato, manca solo te",
-      "text": "Un consorzio europeo di sette atenei ti vuole come responsabile del WP3. Il coordinator è polacco. Mancano tre giorni alla submission. Il tuo ateneo dice: «Non puoi essere host institution finché sei al 100% sul {contract_short}. Devi dimetterti prima.» Tu non vuoi dimetterti senza la certezza del finanziamento.",
+      "text": "Un consorzio europeo di sette atenei ti vuole come responsabile del WP3. Il coordinatore è polacco. Mancano tre giorni alla submission. Il tuo ateneo dice: «Non puoi essere host institution finché sei al 100% sul {contract_short}. Devi dimetterti prima.» Tu non vuoi dimetterti senza la certezza del finanziamento.",
       "requires": {
         "minTurn": 11,
         "flags": {
@@ -13909,7 +13909,7 @@
         "fondazione"
       ],
       "weight": 34,
-      "title": "Armenise-Harvard: il rientro a fanale",
+      "title": "Armenise-Harvard: il rientro a fari accesi",
       "text": "L'Armenise-Harvard Foundation apre un bando per giovani PI di rientro. Solo ERC e Armenise sono considerati 'grossi' nei tuoi regolamenti d'ateneo: portano punti organico e ti danno una posizione da RTDB convertibile in associato se hai l'ASN. La domanda chiede due lettere di mentor, di cui una di Harvard.",
       "requires": {
         "minTurn": 8
@@ -14404,7 +14404,7 @@
       ],
       "weight": 42,
       "title": "«La proroga la diamo solo agli RTD-B»",
-      "text": "Telefoni all'ufficio personale a tempo determinato. La voce dall'altra parte, secca: «Senta, per i RTDA su fondi esterni, la proroga di maternità noi qui a Torino la diamo solo agli RTDB. Voi PON vi arrangiate con le attività di recupero.» Niente di scritto, naturalmente. Una collega ha già raccolto la stessa telefonata, parola per parola.",
+      "text": "Telefoni all'ufficio personale a tempo determinato. La voce dall'altra parte, secca: «Senta, per gli RTDA su fondi esterni, la proroga di maternità noi qui a Torino la diamo solo agli RTDB. Voi PON vi arrangiate con le attività di recupero.» Niente di scritto, naturalmente. Una collega ha già raccolto la stessa telefonata, parola per parola.",
       "requires": {
         "minTurn": 10,
         "flags": {
@@ -14712,7 +14712,7 @@
       ],
       "weight": 35,
       "title": "Una pacca sulla spalla a Brescia",
-      "text": "Hai provato in mille modi a chiedere fondi di ricerca aggiuntivi all'ateneo di Brescia. La risposta finale, scritta da un dirigente: «Chieda al suo Dipartimento se ha bisogno di soldi per reagenti e missioni.» Pacca sulla spalla. Niente decreto, niente delibera. Mentre a Ca' Foscari hanno avuto 2600€, al Poliba 6000€, a Trento li stanno deliberando.",
+      "text": "Hai provato in mille modi a chiedere fondi di ricerca aggiuntivi all'ateneo di Brescia. La risposta finale, scritta da un dirigente: «Chieda al suo Dipartimento se ha bisogno di soldi per reagenti e missioni.» Pacca sulla spalla. Niente decreto, niente delibera. Mentre a Ca' Foscari hanno avuto 2.600€, al Poliba 6.000€, a Trento li stanno deliberando.",
       "requires": {
         "minTurn": 14,
         "flags": {
@@ -15441,7 +15441,7 @@
       ],
       "weight": 39,
       "title": "L'attestato di coerenza che nessuno ha firmato",
-      "text": "Il tuo responsabile a Messina ti dice: «In fase di presentazione del progetto PON, prima dei concorsi, abbiamo presentato un'attestazione di coerenza che doveva firmare il direttore del dipartimento. Non è mai stata firmata né protocollata. L'ANVUR adesso ce la chiede.» La segretaria del dipartimento ha scritto all'ufficio ricercatori PON UNIME e alla referente MUR. Nessuna risposta da settimane. Sei tu che devi caricare il documento su SIRI.",
+      "text": "Il tuo responsabile a Messina ti dice: «In fase di presentazione del progetto PON, prima dei concorsi, abbiamo presentato un'attestazione di coerenza che doveva firmare il direttore del dipartimento. Non è mai stata firmata né protocollata. L'ANVUR adesso ce la chiede.» La segretaria del dipartimento ha scritto all'ufficio ricercatori PON UNIME e alla referente MUR. Nessuna risposta da settimane. Tocca a te caricare il documento su SIRI.",
       "requires": {
         "minTurn": 8,
         "flags": {
@@ -15754,7 +15754,7 @@
           }
         },
         {
-          "label": "Conviene con un collega di scambiarsi voti in CDD.",
+          "label": "Concordi con un collega di scambiarvi i voti in CDD.",
           "effects": {
             "stats": {
               "networking": 2,
@@ -16068,7 +16068,7 @@
       "text": "Terzo giorno consecutivo: la macchinetta del caffè al primo piano è guasta. Il cartello «in riparazione» è quello dell'anno scorso. Hanno detto in segreteria che il dipartimento ne ordinerà un'altra «entro otto mesi, fondi permettendo». Per ora: bar a 400 metri, oppure la moka che ti sei portata da casa.",
       "choices": [
         {
-          "label": "Scendi al bar. 1,40 al giorno, tutti i giorni, fa una cena.",
+          "label": "Scendi al bar. 1,40 al giorno, tutti i giorni, fanno una cena.",
           "effects": {
             "stats": {
               "stamina": 1,
@@ -16464,7 +16464,7 @@
       "weight": 30,
       "repeatable": true,
       "title": "Parcheggio. Anche oggi no.",
-      "text": "Giri il parcheggio del dipartimento per il terzo giro. Niente. I posti riservati ai docenti strutturati sono tre, sempre occupati. Tu sei RTD-A: non hai posto assegnato. Cominci a piovere. Sei già in ritardo per la riunione delle 9.",
+      "text": "Giri il parcheggio del dipartimento per il terzo giro. Niente. I posti riservati ai docenti strutturati sono tre, sempre occupati. Tu sei RTD-A: non hai posto assegnato. Comincia a piovere. Sei già in ritardo per la riunione delle 9.",
       "choices": [
         {
           "label": "Parcheggi a 800 metri. Arrivi inzuppato/a alla riunione delle 9:15.",
@@ -16661,7 +16661,7 @@
       "weight": 31,
       "repeatable": true,
       "title": "Il collega che ti ferma in corridoio",
-      "text": "Esci dal bagno. In corridoio incrocia un collega RTD-B che non vedi da mesi. Sguardo stanco. «Hai due secondi? Mi serve un consiglio.» Hai dieci minuti prima della lezione, le slide sono sul portatile in ufficio. Lui aspetta.",
+      "text": "Esci dal bagno. In corridoio incroci un collega RTD-B che non vedi da mesi. Sguardo stanco. «Hai due secondi? Mi serve un consiglio.» Hai dieci minuti prima della lezione, le slide sono sul portatile in ufficio. Lui aspetta.",
       "choices": [
         {
           "label": "«Dimmi. Cinque minuti li trovo.» Lo ascolti.",
@@ -17475,7 +17475,7 @@
               },
               "reaction": {
                 "from": null,
-                "text": "«Senti, scusami, ma ti meriti che si parli sinceramente. Non è razzismo: è realismo.» La cordata ricorderà."
+                "text": "«Senti, scusami, ma ti meriti che si parli sinceramente. Non è sessismo: è realismo.» La cordata ricorderà."
               }
             }
           }
@@ -18037,7 +18037,7 @@
         "minTurn": 10
       },
       "title": "«Ma quando inizi a guadagnare davvero?»",
-      "text": "Tua suocera, al pranzo della domenica, ti chiede davanti a tutti: «Allora, questo dottorato di trentaquattro anni... quando inizi a portare a casa qualcosa di serio?» Tutti tacciono. Aspettano la tua risposta. Tu fai il calcolo veloce: ufficialmente lo stipendio è 1.300, il resto sono integrazioni che vanno e vengono.",
+      "text": "Tua suocera, al pranzo della domenica, ti chiede davanti a tutti: «Allora, questo dottorato a trentaquattro anni... quando inizi a portare a casa qualcosa di serio?» Tutti tacciono. Aspettano la tua risposta. Tu fai il calcolo veloce: ufficialmente lo stipendio è 1.300, il resto sono integrazioni che vanno e vengono.",
       "choices": [
         {
           "label": "«Mamma, basta. Lo sai cosa faccio.»",
@@ -18595,7 +18595,7 @@
         }
       },
       "title": "Primo giorno all'università",
-      "text": "Conosci il presidente del corso di laurea da quando facevi l'erasmus. Vi salutate per nome. Stamattina hai firmato {contract_long}. Lui ti dice in confidenza: «Ti tengo d'occhio io. Tra tre anni, se tutto va come deve, ti ritrovi un B con la mia firma. Devi solo essere visibile alle persone giuste.» Sei nella cordata. Lo sai. Lo sapevi prima ancora di accettare.",
+      "text": "Conosci il presidente del corso di laurea da quando facevi l'Erasmus. Vi salutate per nome. Stamattina hai firmato {contract_long}. Lui ti dice in confidenza: «Ti tengo d'occhio io. Tra tre anni, se tutto va come deve, ti ritrovi un B con la mia firma. Devi solo essere visibile alle persone giuste.» Sei nella cordata. Lo sai. Lo sapevi prima ancora di accettare.",
       "choices": [
         {
           "label": "Vai a salutare il barone in ufficio. Cinque minuti, due battute.",
@@ -18734,7 +18734,7 @@
         }
       },
       "title": "Primo giorno in laboratorio",
-      "text": "Hai dormito quattro ore. La piastra di ieri sera era contaminata. Stamattina firmi {contract_long}. Il PI ti dice: «Bravo. Adesso ci servi su un altro progetto, però. Quello vecchio lo finisce un dottorando. Vieni che ti spiego.» Tu annuisci. Non c'è tempo di chiedere chiarimenti — c'è una incubatrice da settare alle 11.",
+      "text": "Hai dormito quattro ore. La piastra di ieri sera era contaminata. Stamattina firmi {contract_long}. Il PI ti dice: «Bravo. Adesso ci servi su un altro progetto, però. Quello vecchio lo finisce un dottorando. Vieni che ti spiego.» Tu annuisci. Non c'è tempo di chiedere chiarimenti — c'è un'incubatrice da settare alle 11.",
       "choices": [
         {
           "label": "«Posso vedere il piano sperimentale?»",
@@ -19010,7 +19010,7 @@
         }
       },
       "title": "Primo giorno al laboratorio TLC",
-      "text": "Hai due offerte dall'industria sul tavolo. Una di Milano, una di Zurigo. Stipendio doppio. Stamattina hai firmato {contract_long} e archiviato le offerte. Il PI ti accoglie: «Bravo. Sai che ci servirebbe un primo posizionamento del nostro algoritmo sul mercato. Un brevetto, magari. Lavoriamo insieme.» Annuisci. Apri Linkedin durante la riunione, su un altro schermo.",
+      "text": "Hai due offerte dall'industria sul tavolo. Una di Milano, una di Zurigo. Stipendio doppio. Stamattina hai firmato {contract_long} e archiviato le offerte. Il PI ti accoglie: «Bravo. Sai che ci servirebbe un primo posizionamento del nostro algoritmo sul mercato. Un brevetto, magari. Lavoriamo insieme.» Annuisci. Apri LinkedIn durante la riunione, su un altro schermo.",
       "choices": [
         {
           "label": "«Per me non è una questione di soldi.»",
@@ -19247,7 +19247,7 @@
           },
           "reaction": {
             "from": "supervisor",
-            "text": "«Ah. Si arrangerà. Le riunioni di dipartimento sono il martedì alle 15:00. Avviserà tu lei?»"
+            "text": "«Ah. Si arrangerà. Le riunioni di dipartimento sono il martedì alle 15:00. La avviserà lei?»"
           }
         },
         {
@@ -19481,7 +19481,7 @@
         }
       },
       "title": "Il secondo figlio: il calcolo che non vuoi fare",
-      "text": "Vuoi un secondo figlio. La tua compagna / il tuo compagno anche. Il tuo contratto scade fra 16 mesi. Una collega aveva scritto, qualche mese fa: «Se non avessi 38 anni sarei arrivata ad almeno tre figli.» E ancora: «Il mio programma di avere un secondo figlio se ne va a buttane.» Fai il calcolo.",
+      "text": "Vuoi un secondo figlio. La tua compagna / il tuo compagno anche. Il tuo contratto scade fra 16 mesi. Una collega aveva scritto, qualche mese fa: «Se non avessi 38 anni sarei arrivata ad almeno tre figli.» E ancora: «Il mio programma di avere un secondo figlio se ne va a puttane.» Fai il calcolo.",
       "choices": [
         {
           "label": "Provate adesso. Il sistema si arrangerà.",
@@ -19646,7 +19646,7 @@
         "minTurn": 10
       },
       "title": "Il referente del sindacato è dopo tre inoltri",
-      "text": "Hai un problema con un'addizionale trattenuta. Una collega aveva scritto, qualche mese fa, mesi fa: «I sindacati che ho contattato io per altre questioni non sapevano manco dell'esistenza degli rtd.» E ancora: «Un ragazzo di ADI non sapeva niente del congedo.» Tu provi lo stesso.",
+      "text": "Hai un problema con un'addizionale trattenuta. Una collega aveva scritto, qualche mese fa, mesi fa: «I sindacati che ho contattato io per altre questioni non sapevano nemmeno dell'esistenza degli RTD.» E ancora: «Un ragazzo di ADI non sapeva niente del congedo.» Tu provi lo stesso.",
       "choices": [
         {
           "label": "Scrivi a FLC-CGIL. Centralino. Centralino. Centralino.",
@@ -20608,7 +20608,7 @@
         }
       },
       "title": "Un'ordinaria ti tiene la mano per tre secondi di troppo",
-      "text": "Cocktail dopo un convegno. Un'ordinaria della tua SSD — molto influente — ti saluta e ti tiene la mano per tre, quattro secondi di troppo. Sorride. «Tu sei l'allievo di quello bravo, vero? Vieni che ti presento un paio di colleghi, ti faranno comodo.» La mano, finalmente, si stacca. Tu non sai se è successo qualcosa o se sei stupido a pensarci.",
+      "text": "Cocktail dopo un convegno. Un'ordinaria del tuo SSD — molto influente — ti saluta e ti tiene la mano per tre, quattro secondi di troppo. Sorride. «Tu sei l'allievo di quello bravo, vero? Vieni che ti presento un paio di colleghi, ti faranno comodo.» La mano, finalmente, si stacca. Tu non sai se è successo qualcosa o se sei stupido a pensarci.",
       "choices": [
         {
           "label": "Annuisci, la segui, scegli di essere prudente nei prossimi mesi.",
@@ -21004,7 +21004,7 @@
       ],
       "weight": 42,
       "title": "Il referente PON che rimbalza",
-      "text": "Hai una domanda chiara: «Posso fare didattica sul corso magistrale?» Il referente PON ti dice di chiedere al regolamento d'ateneo. Il regolamento rimanda al disciplinare DM 1062. Il disciplinare rimanda al referente. Lui ti riguarda, sorride: «Sa, le indicazioni cambiano.»",
+      "text": "Hai una domanda chiara: «Posso fare didattica sul corso magistrale?» Il referente PON ti dice di consultare il regolamento d'ateneo. Il regolamento rimanda al disciplinare DM 1062. Il disciplinare rimanda al referente. Lui ti guarda di nuovo, sorride: «Sa, le indicazioni cambiano.»",
       "requires": {
         "flags": {
           "has": [
@@ -21760,7 +21760,7 @@
       ],
       "weight": 38,
       "title": "L'amica della telematica",
-      "text": "Un'amica si è appena strutturata. Telematica, settore tuo. «Tre giorni a settimana online, due in presenza. Lo stipendio è quello di un{o|a} associato, e ti dicono cosa insegnare. Niente ricerca seria, ma niente più colloqui. Hai 41 anni, basta. Pensaci.» Lo dice senza sarcasmo. Lo dice sapendo che ti capisce.",
+      "text": "Un'amica si è appena strutturata. Telematica, settore tuo. «Tre giorni a settimana online, due in presenza. Lo stipendio è quello di un{o|a} associat{o|a}, e ti dicono cosa insegnare. Niente ricerca seria, ma niente più colloqui. Hai 41 anni, basta. Pensaci.» Lo dice senza sarcasmo. Lo dice sapendo che ti capisce.",
       "requires": {
         "flags": {
           "has": [
@@ -22013,7 +22013,7 @@
       ],
       "weight": 44,
       "title": "Lordo uguale netto",
-      "text": "Apri la lettera di incarico per la tua borsa di ricerca. «Importo lordo: 18.000 €/anno. Si precisa che la borsa non è un contratto di lavoro né subordinato né autonomo né parasubordinato; non genera contribuzione INPS; non dà luogo a IRPEF in capo al percipiente.» Lordo uguale netto. Niente NASPI dopo, niente maternità piena, niente nulla. È quello che offre il convento.",
+      "text": "Apri la lettera di incarico per la tua borsa di ricerca. «Importo lordo: 18.000 €/anno. Si precisa che la borsa non è un contratto di lavoro né subordinato né autonomo né parasubordinato; non genera contribuzione INPS; non dà luogo a IRPEF in capo al percipiente.» Lordo uguale netto. Niente NASpI dopo, niente maternità piena, niente di niente. È quello che offre il convento.",
       "requires": {
         "flags": {
           "has": [
@@ -22637,7 +22637,7 @@
       ],
       "weight": 34,
       "title": "«Sono diventato il mio capo»",
-      "text": "Tre anni e mezzo. Un{a|o} dottorand{o|a} ti consegna una bozza di articolo. Tu la apri, la leggi, e cominci a dare istruzioni con la stessa frase paterna che ti faceva impazzire da sotto. «Vedi, qui devi inquadrare il problema diversamente.» Quand{o|a} esce dalla stanza, ti guardi nello schermo. Mi rendo conto di come sono diventat{o|a} parte del sistema. E me ne spiace.",
+      "text": "Tre anni e mezzo. Un{a|o} dottorand{o|a} ti consegna una bozza di articolo. Tu la apri, la leggi, e cominci a dare istruzioni con la stessa frase paterna che ti faceva impazzire da sotto. «Vedi, qui devi inquadrare il problema diversamente.» Quand{o|a} esce dalla stanza, ti guardi nello schermo. Ti rendi conto di come sei diventat{o|a} parte del sistema. E te ne dispiace.",
       "requires": {
         "flags": {
           "has": [
@@ -22713,7 +22713,7 @@
       ],
       "weight": 42,
       "title": "La lettera collettiva",
-      "text": "Circola in rete una lettera al MUR sulla circolare di recupero maternità per gli/le RTDA. È firmata in ordine alfabetico, 247 firme finora. Ti chiede solo nome, cognome, ateneo, ssd. L'inoltrano alla CRUI, ai capigruppo parlamentari, alla stampa. Una collega ti scrive in privato: «Tu non posso permettermi di firmare. Tu sì?»",
+      "text": "Circola in rete una lettera al MUR sulla circolare di recupero maternità per gli/le RTDA. È firmata in ordine alfabetico, 247 firme finora. Ti chiede solo nome, cognome, ateneo, SSD. L'inoltrano alla CRUI, ai capigruppo parlamentari, alla stampa. Una collega ti scrive in privato: «Io non posso permettermi di firmare. Tu sì?»",
       "requires": {
         "flags": {
           "has": [
@@ -22785,7 +22785,7 @@
       ],
       "weight": 36,
       "title": "Lo sciopero del 5 dicembre",
-      "text": "FLC-CGIL convoca uno sciopero nazionale della ricerca. La proposta interna alla rete: «Sciopero di tutti i PON per un mese, bloccando la didattica. Vediamo se state bene senza di noi.» Tre colleghi te lo girano. Il tuo supervisor ti ha appena scritto: «Spero non aderirai. Abbiamo la deadline del rendiconto.» È giovedì sera.",
+      "text": "FLC-CGIL convoca uno sciopero nazionale della ricerca. La proposta interna alla rete: «Sciopero di tutti i PON per un mese, bloccando la didattica. Vediamo se ne fate a meno.» Tre colleghi te lo girano. Il tuo supervisor ti ha appena scritto: «Spero non aderirai. Abbiamo la deadline del rendiconto.» È giovedì sera.",
       "requires": {
         "flags": {
           "has": [
@@ -23067,7 +23067,7 @@
       ],
       "weight": 35,
       "title": "La voce, stamattina",
-      "text": "È mercoledì. Lezione 9-11 e 14-16. La voce è andata via stanotte — un raffreddore preso al ricevimento studenti. L'otorino pubblico è fra tre mesi. Il privato 80 euro la visita. La lezione è fra due ore.",
+      "text": "È mercoledì. Lezione 9-11 e 14-16. La voce è andata via stanotte — un raffreddore preso al ricevimento studenti. L'otorino pubblico è fra tre mesi. Il privato, 80 euro a visita. La lezione è fra due ore.",
       "choices": [
         {
           "label": "Fai lezione bisbigliando. Gli studenti dei posti dietro non sentono niente.",
@@ -23226,7 +23226,7 @@
       ],
       "weight": 33,
       "title": "Cena di dipartimento",
-      "text": "Cena di dipartimento. Tre PA, due RTDB, tu. Conto da dividere: 47 € a testa. Una PA fa la battuta: «Questo posto è carino. Ma cheap, eh.» Tu hai mangiato un primo e basta — non te ne sei accorta nessuno. Adesso devi tirare fuori i 47 euro. È il giovedì del rendiconto, sei in rosso fino al 27.",
+      "text": "Cena di dipartimento. Tre PA, due RTDB, tu. Conto da dividere: 47 € a testa. Una PA fa la battuta: «Questo posto è carino. Ma cheap, eh.» Tu hai mangiato un primo e basta — non se ne è accort{o|a} nessuno. Adesso devi tirare fuori i 47 euro. È il giovedì del rendiconto, sei in rosso fino al 27.",
       "choices": [
         {
           "label": "Paghi. Ridi. Dici: «Sì, davvero economico.»",
@@ -23472,7 +23472,7 @@
           }
         },
         {
-          "label": "Apri Linkedin. Per la prima volta in tre anni accetti l'inviti dei recruiter.",
+          "label": "Apri LinkedIn. Per la prima volta in tre anni accetti gli inviti dei recruiter.",
           "effects": {
             "stats": {
               "networking": 2,
@@ -23496,7 +23496,7 @@
       ],
       "weight": 28,
       "title": "Il tuo amico è diventato padre",
-      "text": "Il tuo migliore amico — dal liceo, poi università — è diventato padre stamattina. Te lo scrive su WhatsApp con la foto del bambino. Tu rispondi col cuore, le congratulazioni, l'augurio. Poi posi il telefono e capisci che non lo vedevi da otto mesi. Sette messaggi non risposti nelle ultime quattro settimane. La vita ti sta passando davanti senza che tu sia presente.",
+      "text": "Il tuo migliore amico — dal liceo, poi all'università — è diventato padre stamattina. Te lo scrive su WhatsApp con la foto del bambino. Tu rispondi col cuore, le congratulazioni, l'augurio. Poi posi il telefono e capisci che non lo vedevi da otto mesi. Sette messaggi non risposti nelle ultime quattro settimane. La vita ti sta passando davanti senza che tu sia presente.",
       "choices": [
         {
           "label": "Prendi il treno domani. Vai a trovarlo. Anche solo per un'ora.",
@@ -23596,7 +23596,7 @@
       ],
       "weight": 27,
       "title": "Disdici l'abbonamento alla palestra",
-      "text": "Apri l'estratto conto. RID palestra: 49,90 € al mese da 14 mesi. L'ultima volta che sei andat{o|a} è stato a marzo, due volte in una settimana. Poi mai più. Cliccki «disdici». Devi scrivere il motivo. Il menù propone: «Ho trovato altra struttura.» «Costi.» «Mancanza di tempo.» Selezioni l'ultima.",
+      "text": "Apri l'estratto conto. RID palestra: 49,90 € al mese da 14 mesi. L'ultima volta che sei andat{o|a} è stato a marzo, due volte in una settimana. Poi mai più. Clicchi «disdici». Devi scrivere il motivo. Il menù propone: «Ho trovato altra struttura.» «Costi.» «Mancanza di tempo.» Selezioni l'ultima.",
       "choices": [
         {
           "label": "Disdici. Cammineresti. Andresti a correre la mattina. (Non lo farai.)",
@@ -23623,7 +23623,7 @@
           }
         },
         {
-          "label": "Disdici e iscrivi al corso di yoga gratuito del CUS dipendenti.",
+          "label": "Disdici e ti iscrivi al corso di yoga gratuito del CUS dipendenti.",
           "effects": {
             "stats": {
               "fondi": 1,
@@ -23754,7 +23754,7 @@
       ],
       "weight": 33,
       "title": "Il brodo per il bambino",
-      "text": "22:30. Suo figlio dorme. Tuo figlio bolle sulla stufa — brodo vegetale per le pappe della settimana. Wave di messaggi sul gruppo di lavoro: il direttore ha bisogno della risposta al ricorso del prof. Tizio entro le 8 di domani. Una collega scrive: «Rispondo dopo, sto preparando le aliquote di brodo per il bambino (per restare in tema).» Sospiro collettivo.",
+      "text": "22:30. Suo figlio dorme. Tuo figlio bolle sulla stufa — brodo vegetale per le pappe della settimana. Raffica di messaggi sul gruppo di lavoro: il direttore ha bisogno della risposta al ricorso del prof. Tizio entro le 8 di domani. Una collega scrive: «Rispondo dopo, sto preparando le porzioni di brodo per il bambino (per restare in tema).» Sospiro collettivo.",
       "requires": {
         "flags": {
           "has": [
@@ -23764,7 +23764,7 @@
       },
       "choices": [
         {
-          "label": "Rispondi subito. Il brodo si abbrucchia un po' — pace.",
+          "label": "Rispondi subito. Il brodo si attacca un po' — pace.",
           "effects": {
             "stats": {
               "stamina": -2,
@@ -23891,7 +23891,7 @@
       },
       "choices": [
         {
-          "label": "Lo richiami due ore dopo. Acceti il colloquio. Per la prima volta.",
+          "label": "Lo richiami due ore dopo. Accetti il colloquio. Per la prima volta.",
           "effects": {
             "stats": {
               "networking": 3,
@@ -24349,7 +24349,7 @@
       ],
       "weight": 30,
       "title": "Articolo da sol{o|a} su arXiv",
-      "text": "Hai messo su arXiv il tuo terzo articolo da single author. Il quarto consecutivo. Il tuo supervisor te lo aveva detto: «In matematica gli articoli da soli non aiutano per l'ASN. Il MIUR pensa che il lavoro debba essere collettivo.» Ha ragione lui. È anche vero che in matematica i lavori sono effettivamente individuali. La disciplina e il sistema non parlano la stessa lingua.",
+      "text": "Hai messo su arXiv il tuo terzo articolo da single author. Il quarto consecutivo. Il tuo supervisor te lo aveva detto: «In matematica gli articoli da soli non aiutano per l'ASN. Il MUR pensa che il lavoro debba essere collettivo.» Ha ragione lui. È anche vero che in matematica i lavori sono effettivamente individuali. La disciplina e il sistema non parlano la stessa lingua.",
       "requires": {
         "flags": {
           "has": [
@@ -24476,7 +24476,7 @@
       ],
       "weight": 34,
       "title": "Mio cugino è funzionario al MUR",
-      "text": "Cena di famiglia. Tua cugina di secondo grado lavora come funzionaria all'ufficio bandi del MUR. Tra il primo e il secondo, casualmente, ti dice: «Sai che a marzo esce un PRIN piccolo, da 80k, su valutazione delle policy migratorie? Il bando è già scritto. Esce il 18.» Tu sei un'esperta di valutazione delle policy migratorie. Coincidenze.",
+      "text": "Cena di famiglia. Tua cugina di secondo grado lavora come funzionaria all'ufficio bandi del MUR. Tra il primo e il secondo, casualmente, ti dice: «Sai che a marzo esce un PRIN piccolo, da 80k, su valutazione delle policy migratorie? Il bando è già scritto. Esce il 18.» Tu sei un'esperta di valutazione delle politiche migratorie. Coincidenze.",
       "requires": {
         "flags": {
           "has": [
@@ -24904,7 +24904,7 @@
           }
         },
         {
-          "label": "Le mostri che è stato un errore grave. Le restanze del PRIN sono in gioco.",
+          "label": "Le mostri che è stato un errore grave. Le scadenze del PRIN sono in gioco.",
           "effects": {
             "stats": {
               "persuasione": 1,
@@ -24954,7 +24954,7 @@
       },
       "choices": [
         {
-          "label": "Acceti. È così che funziona la ricerca clinica.",
+          "label": "Accetti. È così che funziona la ricerca clinica.",
           "effects": {
             "stats": {
               "networking": 2,
@@ -25206,7 +25206,7 @@
       ],
       "weight": 32,
       "title": "Italiano o inglese?",
-      "text": "Articolo finito. Sessanta pagine sulla filologia romanza tardo-medievale. La rivista italiana che conta nel settore lo prende se è in italiano (è la regola, non scritta). Quella inglese — sterzata da poco verso l'open access — lo prende solo in inglese e con 1.800 € di APC. Il MIUR pesa l'articolo allo stesso modo. Le commissioni ASN no.",
+      "text": "Articolo finito. Sessanta pagine sulla filologia romanza tardo-medievale. La rivista italiana che conta nel settore lo prende se è in italiano (è la regola, non scritta). Quella inglese — virata da poco verso l'open access — lo prende solo in inglese e con 1.800 € di APC. Il MUR pesa l'articolo allo stesso modo. Le commissioni ASN no.",
       "requires": {
         "flags": {
           "has": [
@@ -25273,7 +25273,7 @@
       ],
       "weight": 30,
       "title": "Il settore in via di estinzione",
-      "text": "Riunione di sezione. Il direttore di dipartimento legge la circolare ANVUR: tre settori SSD «in via di estinzione» nel dipartimento, tra cui il tuo. Niente concorsi nuovi previsti per cinque anni. Il tuo SSD è specifico — filologia romanza con specialità tardo-medievale. In Italia ci sono 12 strutturati. Lo dice senza pathos, come una nota fiscale.",
+      "text": "Riunione di sezione. Il direttore di dipartimento legge la circolare ANVUR: tre SSD «in via di estinzione» nel dipartimento, tra cui il tuo. Niente concorsi nuovi previsti per cinque anni. Il tuo SSD è specifico — filologia romanza con specialità tardo-medievale. In Italia ci sono 12 strutturati. Lo dice senza pathos, come una nota fiscale.",
       "requires": {
         "flags": {
           "has": [
@@ -25298,7 +25298,7 @@
           }
         },
         {
-          "label": "Ampli il profilo: aggiungi un secondo SSD per non essere unico.",
+          "label": "Allarghi il profilo: aggiungi un secondo SSD per non essere unic{o|a}.",
           "effects": {
             "stats": {
               "networking": 1,
@@ -25674,7 +25674,7 @@
       ],
       "weight": 33,
       "title": "Il partner industriale del PNRR",
-      "text": "Sul tuo progetto PNRR c'è un partner industriale obbligatorio: una multinazionale del settore. Loro vogliono che tu sviluppi un modulo di codice integrato col loro proprietario. Codice closed-source. La pubblicazione dei risultati sarà subordinata a loro approvazione. Il MUR non si occupa: l'integrazione industria-università è considerata buona prassi.",
+      "text": "Sul tuo progetto PNRR c'è un partner industriale obbligatorio: una multinazionale del settore. Loro vogliono che tu sviluppi un modulo di codice integrato col loro proprietario. Codice closed-source. La pubblicazione dei risultati sarà subordinata a loro approvazione. Il MUR non se ne occupa: l'integrazione industria-università è considerata buona prassi.",
       "requires": {
         "flags": {
           "has": [
@@ -25956,7 +25956,7 @@
       ],
       "weight": 36,
       "title": "«Si sbrighi a farlo nascere»",
-      "text": "Consiglio di dipartimento. Settimo mese. Il direttore, in tono scherzoso davanti a quaranta colleghi: «Dottoressa, si sbrighi a farlo nascere quel bambino, sennò sa quante attività di recupero le tocca fare!» Risata generale. Una collega all'altro capo del tavolo guarda nel piatto. Tuo marito ti aveva detto stamattina: prenditi cura del bambino, non delle loro stronzate.",
+      "text": "Consiglio di dipartimento. Settimo mese. Il direttore, in tono scherzoso davanti a quaranta colleghi: «Dottoressa, si sbrighi a farlo nascere quel bambino, altrimenti sa quante attività di recupero le tocca fare!» Risata generale. Una collega all'altro capo del tavolo guarda nel piatto. Tuo marito ti aveva detto stamattina: prenditi cura del bambino, non delle loro stronzate.",
       "requires": {
         "flags": {
           "has": [
@@ -26347,7 +26347,7 @@
       ],
       "weight": 32,
       "title": "«Mi raccomando, fai decoro»",
-      "text": "Giovedì parti per un convegno internazionale. Mercoledì pomeriggio, in dipartimento, il direttore ti ferma sulle scale: «Mi raccomando, fai decoro. Rappresenti il dipartimento. Eviti il jeans, eh?» Sorride bonario. Stamattina hai sentito al volo lo stesso direttore parlare col tuo collega Tizio del convegno: «Tizio, mi raccomando, divertiti.»",
+      "text": "Giovedì parti per un convegno internazionale. Mercoledì pomeriggio, in dipartimento, il direttore ti ferma sulle scale: «Mi raccomando, fai decoro. Rappresenti il dipartimento. Eviti i jeans, eh?» Sorride bonario. Stamattina hai sentito al volo lo stesso direttore parlare col tuo collega Tizio del convegno: «Tizio, mi raccomando, divertiti.»",
       "requires": {
         "flags": {
           "has": [
@@ -26357,7 +26357,7 @@
       },
       "choices": [
         {
-          "label": "«Certo, direttore.» Annuisci. Indossi il jeans comunque.",
+          "label": "«Certo, direttore.» Annuisci. Indossi i jeans comunque.",
           "effects": {
             "stats": {
               "stamina": -1,
@@ -26682,7 +26682,7 @@
       ],
       "weight": 28,
       "title": "«Signorina, qui non possono»",
-      "text": "Quinto giorno nel nuovo dipartimento. Il portinaio ti ferma di nuovo. «Signorina, gli studenti devono passare dal cancello laterale.» Mostri il badge per la quarta volta. Lui ride: «Eh, ma è giovane, signorina! Si capisce.» Stamattina ha salutato il dottore Tizio chiamandolo «professore» — Tizio è anche lui RTDA, ha tre anni meno di te.",
+      "text": "Quinto giorno nel nuovo dipartimento. Il portinaio ti ferma di nuovo. «Signorina, gli studenti devono passare dal cancello laterale.» Mostri il badge per la quarta volta. Lui ride: «Eh, ma è giovane, signorina! Si capisce.» Stamattina ha salutato il dottor Tizio chiamandolo «professore» — Tizio è anche lui RTDA, ha tre anni meno di te.",
       "requires": {
         "flags": {
           "has": [
@@ -27144,7 +27144,7 @@
       ],
       "weight": 32,
       "title": "«La rivedo a cena»",
-      "text": "Hai presentato al direttore di dipartimento il tuo progetto di dottorato. Lui ti riceve nel suo studio, ti complimenta, poi: «Sa che lei mi piace molto come candidata. Le posizioni sono poche, ma per chi le merita un modo si trova. Magari ne parliamo meglio fuori dipartimento, a cena venerdì. La passo a prendere io alle 20:30.» Sorride. Non è una proposta di lavoro. È anche, però, l'unica proposta di lavoro che hai sul tavolo.",
+      "text": "Hai presentato al direttore di dipartimento il tuo progetto di dottorato. Lui ti riceve nel suo studio, ti complimenta, poi: «Sa che lei mi piace molto come candidata. Le posizioni sono poche, ma per chi se le merita un modo si trova. Magari ne parliamo meglio fuori dipartimento, a cena venerdì. La passo a prendere io alle 20:30.» Sorride. Non è una proposta di lavoro. È anche, però, l'unica proposta di lavoro che hai sul tavolo.",
       "requires": {
         "flags": {
           "has": [
@@ -27424,7 +27424,7 @@
       ],
       "weight": 28,
       "title": "Vent'anni di dottorande",
-      "text": "Stai facendo la storia del gruppo di ricerca per una candidatura. Riguardi tutti i dottorati assegnati dal direttore del dipartimento negli ultimi vent'anni. Tredici borse personali (oltre quelle ministeriali). Undici donne, due uomini. Età media all'ingresso: 24 anni. Sei delle donne lavorano ancora con lui. Tre hanno lasciato l'accademia entro tre anni dalla discussione. Due sono ordinarie altrove — le due più potenti del settore. Sono dati pubblici. Sono nel sito del MIUR. Tu li hai messi in fila per la prima volta.",
+      "text": "Stai facendo la storia del gruppo di ricerca per una candidatura. Riguardi tutti i dottorati assegnati dal direttore del dipartimento negli ultimi vent'anni. Tredici borse personali (oltre quelle ministeriali). Undici donne, due uomini. Età media all'ingresso: 24 anni. Sei delle donne lavorano ancora con lui. Tre hanno lasciato l'accademia entro tre anni dalla discussione. Due sono ordinarie altrove — le due più potenti del settore. Sono dati pubblici. Sono sul sito del MIUR. Tu li hai messi in fila per la prima volta.",
       "requires": {
         "flags": {
           "hasAny": [
@@ -27760,7 +27760,7 @@
       ],
       "weight": 26,
       "title": "La voce nei corridoi",
-      "text": "Una dottoranda al primo anno ti ferma in bagno. «Senti, ti devo dire una cosa. So che non è bello sentirla, ma me la dicono di te in continuazione. Dicono che hai preso il dottorato perché stavi col direttore. Io non lo so se è vero, e non mi interessa, ma volevo che tu lo sapessi.» Lo dice gentilmente. Sai che lei è gentile davvero. Sai anche che hai un'altra borsa da fare per l'ASN e che adesso ogni volta che presenti il tuo CV qualcuno pensa quello.",
+      "text": "Una dottoranda al primo anno ti ferma in bagno. «Senti, ti devo dire una cosa. So che non è bello sentirla, ma me la dicono di te in continuazione. Dicono che hai preso il dottorato perché stavi col direttore. Io non lo so se è vero, e non mi interessa, ma volevo che tu lo sapessi.» Lo dice gentilmente. Sai che lei è gentile davvero. Sai anche che hai un'altra borsa da fare per l'ASN e che adesso ogni volta che presenti il tuo CV qualcuno pensa a quello.",
       "requires": {
         "flags": {
           "has": [
@@ -28080,7 +28080,7 @@
       ],
       "weight": 28,
       "title": "«Mi sei sempre piaciuto, lo sai»",
-      "text": "Cocktail di benvenuto del dipartimento. Il direttore ti tira da parte sul terrazzo. «Senti, voglio che tu sappia una cosa. Mi sei sempre piaciuto. Lo sai. Non lo dico nel senso che pensi tu, eh — non subito. Dico che noi siamo pochi, qui dentro. Pochi a capirsi. Se hai bisogno di qualcosa, le mie porte sono aperte.» Sorride. Lui ha sessantadue anni, è uno dei pochi gay-out del dipartimento. È anche l'unico che decide chi diventa associato.",
+      "text": "Cocktail di benvenuto del dipartimento. Il direttore ti tira da parte sul terrazzo. «Senti, voglio che tu sappia una cosa. Mi sei sempre piaciuto. Lo sai. Non lo dico nel senso che pensi tu, eh — non subito. Dico che noi siamo pochi, qui dentro. Pochi a capirsi. Se hai bisogno di qualcosa, le mie porte sono aperte.» Sorride. Lui ha sessantadue anni, è uno dei pochi gay dichiarati del dipartimento. È anche l'unico che decide chi diventa associato.",
       "requires": {
         "flags": {
           "has": [
@@ -28091,7 +28091,7 @@
       },
       "choices": [
         {
-          "label": "«Grazie direttore. Ne sono onorato.» Cambi argomento.",
+          "label": "«Grazie, direttore. Ne sono onorato.» Cambi argomento.",
           "effects": {
             "stats": {
               "persuasione": 2,
@@ -28198,7 +28198,7 @@
           }
         },
         {
-          "label": "«Volentieri, ma porto anche Tizio. Co-autore.»",
+          "label": "«Volentieri, ma porto anche Tizio. Coautore.»",
           "effects": {
             "stats": {
               "persuasione": 2,
@@ -28426,7 +28426,7 @@
       ],
       "weight": 24,
       "title": "Il tuo compagno a Madrid",
-      "text": "Il tuo compagno fa il medico a Madrid. Avevate detto: chiudo il dottorato, vengo da te. Sono passati due anni. Stamattina lui ti chiama: «Senti, ho letto online quello che ha scritto Antonella Viola. Si dice di quelle cose anche del tuo direttore?» Tu non rispondi subito. Lui aggiunge: «Va bene. Forse non vuoi parlarne. Ma se è quello, vieni qui. Adesso. Trova un postdoc qua. Non vali quello che ti sta chiedendo.»",
+      "text": "Il tuo compagno fa il medico a Madrid. Avevate detto: chiudo il dottorato, vengo da te. Sono passati due anni. Stamattina lui ti chiama: «Senti, ho letto online quello che ha scritto Antonella Viola. Si dice di quelle cose anche del tuo direttore?» Tu non rispondi subito. Lui aggiunge: «Va bene. Forse non vuoi parlarne. Ma se è quello, vieni qui. Adesso. Trova un postdoc qua. Non meriti quello che ti sta chiedendo.»",
       "requires": {
         "flags": {
           "has": [
@@ -28766,7 +28766,7 @@
       ],
       "weight": 22,
       "title": "«Era reale?»",
-      "text": "Sei a Madrid, settimo mese di post-doc, hai chiuso col direttore due anni fa. Il tuo compagno ti chiede ad alta voce mentre apparecchiate: «Senti, vorrei capire una cosa, una volta per tutte. Quella roba col direttore. Tu l'hai voluta? Eri innamorato? O era solo... la borsa?» Tu metti giù la forchetta. Non hai mai chiarito con te stesso quella domanda. Sai cosa è successo. Non sai più cosa significava.",
+      "text": "Sei a Madrid, settimo mese di post-doc, hai chiuso col direttore due anni fa. Il tuo compagno ti chiede ad alta voce mentre apparecchiate: «Senti, vorrei capire una cosa, una volta per tutte. Quella roba col direttore. Tu l'hai voluta? Eri innamorato? O era solo... la borsa?» Tu posi la forchetta. Non hai mai chiarito con te stesso quella domanda. Sai cosa è successo. Non sai più cosa significava.",
       "requires": {
         "flags": {
           "has": [
@@ -28966,7 +28966,7 @@
       ],
       "weight": 1,
       "title": "La risposta del PI",
-      "text": "Risposta del PI alla tua proposta di pranzo in mensa, arriva alle 23:18: «Va bene, dottoressa. La aspetto in mensa mercoledì. Anche se ci penso, forse non ne abbiamo più bisogno — la pubblicazione è ferma comunque. Vediamo a fine mese se vale la pena.» Punto. Lo legge anche il tuo compagno, che era accanto a te quando è arrivata la notifica. «Hai capito vero?» dice lui. Hai capito. Lui ti sta dicendo: o c'era la cena, o niente.",
+      "text": "Risposta del PI alla tua proposta di pranzo in mensa, arriva alle 23:18: «Va bene, dottoressa. La aspetto in mensa mercoledì. Anche se, a pensarci, forse non ne abbiamo più bisogno — la pubblicazione è ferma comunque. Vediamo a fine mese se vale la pena.» Punto. Lo legge anche il tuo compagno, che era accanto a te quando è arrivata la notifica. «Hai capito vero?» dice lui. Hai capito. Lui ti sta dicendo: o c'era la cena, o niente.",
       "requires": {
         "flags": {
           "has": [
@@ -29819,276 +29819,798 @@
     {
       "id": "fu_evt_colloquio_serio",
       "phase": "any",
-      "tags": ["industria", "followup", "uscita"],
+      "tags": [
+        "industria",
+        "followup",
+        "uscita"
+      ],
       "weight": 1,
       "title": "Il colloquio, martedì alle 11",
       "text": "Sala riunioni vetrata, undicesimo piano, Milano centro. Tre persone — Head of Data Science, HR senior, un futuro collega. Una bottiglia d'acqua sul tavolo. La prima ora è tecnica: ti chiedono come gestiresti un dataset da 14 milioni di righe con feature engineering parziale. Tu rispondi bene. La seconda ora è la conversazione vera. «Sappiamo che lei è in accademia. Sappiamo che lascia qualcosa. Ci dica perché lo fa.» La domanda non ammette frasi fatte.",
-      "requires": { "flags": { "has": ["industria_offerta_accettata"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "industria_offerta_accettata"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "«Perché in accademia il mio lavoro vale meno della firma di altri.»",
-          "effects": { "stats": { "persuasione": 3, "fondi": 3, "networking": 2 }, "flags": ["industria_offerta_firmata", "career_silent_exit", "dimissionato"] }
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "fondi": 3,
+              "networking": 2
+            },
+            "flags": [
+              "industria_offerta_firmata",
+              "career_silent_exit",
+              "dimissionato"
+            ]
+          }
         },
         {
           "label": "«Perché non ho più tempo di aspettare un sistema che non cambia.»",
-          "effects": { "stats": { "persuasione": 2, "fondi": 3, "stamina": 2 }, "flags": ["industria_offerta_firmata", "career_silent_exit", "pers_uscito_industria"] }
+          "effects": {
+            "stats": {
+              "persuasione": 2,
+              "fondi": 3,
+              "stamina": 2
+            },
+            "flags": [
+              "industria_offerta_firmata",
+              "career_silent_exit",
+              "pers_uscito_industria"
+            ]
+          }
         },
         {
           "label": "«Mi scusi. Non sono pronto/a oggi. Mi prendo una settimana.»",
-          "effects": { "stats": { "stamina": -2, "intelligenza": 1 }, "flags": ["industria_offerta_rimandata"] }
+          "effects": {
+            "stats": {
+              "stamina": -2,
+              "intelligenza": 1
+            },
+            "flags": [
+              "industria_offerta_rimandata"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_recruiter_post_taglio",
       "phase": "any",
-      "tags": ["industria", "uscita", "followup"],
+      "tags": [
+        "industria",
+        "uscita",
+        "followup"
+      ],
       "weight": 1,
       "title": "Tre messaggi in ventiquattr'ore",
       "text": "Dal momento in cui hai aggiornato Linkedin, tre messaggi: una start-up di Bologna (45k + equity), una società di consulenza milanese (60k + bonus), e — sorprendentemente — un'università all'estero (tenure-track, 52k netti, ma niente PRIN). Il dipartimento ha tagliato. Tu hai tre porte aperte. Tre porte diverse.",
-      "requires": { "flags": { "has": ["job_search_attivo"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "job_search_attivo"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "Università all'estero. Stipendio modesto, ma è ancora ricerca.",
-          "effects": { "stats": { "networking": 2, "stamina": 1, "fondi": 1, "intelligenza": 2 }, "flags": ["fuggito_estero", "career_silent_exit"] }
+          "effects": {
+            "stats": {
+              "networking": 2,
+              "stamina": 1,
+              "fondi": 1,
+              "intelligenza": 2
+            },
+            "flags": [
+              "fuggito_estero",
+              "career_silent_exit"
+            ]
+          }
         },
         {
           "label": "Start-up di Bologna. Equity vale se l'azienda decolla.",
-          "effects": { "stats": { "networking": 2, "fondi": 2, "stamina": -1 }, "flags": ["startup_bologna", "career_silent_exit"] }
+          "effects": {
+            "stats": {
+              "networking": 2,
+              "fondi": 2,
+              "stamina": -1
+            },
+            "flags": [
+              "startup_bologna",
+              "career_silent_exit"
+            ]
+          }
         },
         {
           "label": "Consulenza Milano. 60k subito, niente sogni.",
-          "effects": { "stats": { "fondi": 4, "stamina": 1, "intelligenza": -1 }, "flags": ["consulenza_milano", "pers_uscito_industria"] }
+          "effects": {
+            "stats": {
+              "fondi": 4,
+              "stamina": 1,
+              "intelligenza": -1
+            },
+            "flags": [
+              "consulenza_milano",
+              "pers_uscito_industria"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_workshop_giornata",
       "phase": "any",
-      "tags": ["workshop", "followup", "networking"],
+      "tags": [
+        "workshop",
+        "followup",
+        "networking"
+      ],
       "weight": 1,
       "title": "La giornata che ti aveva fatto bene",
-      "text": "Aula di Bologna, sei panelisti, venti persone in sala. Nel pomeriggio, durante il coffee break, una professoressa dell'Università di Trento ti chiama da parte. «Senti, ho letto i tuoi ultimi due paper. Stiamo formando un piccolo consorzio EU su questo tema. Cerchiamo un membro junior. A partire da gennaio. Ti interessa?»",
-      "requires": { "flags": { "has": ["workshop_invito_accettato"] } },
+      "text": "Aula di Bologna, sei panelisti, venti persone in sala. Nel pomeriggio, durante il coffee break, una professoressa dell'Università di Trento ti chiama da parte. «Senti, ho letto i tuoi ultimi due paper. Stiamo formando un piccolo consorzio europeo su questo tema. Cerchiamo un membro junior. A partire da gennaio. Ti interessa?»",
+      "requires": {
+        "flags": {
+          "has": [
+            "workshop_invito_accettato"
+          ]
+        }
+      },
       "choices": [
         {
-          "label": "«Si, mi mandi la proposal. La leggo questa settimana.»",
-          "effects": { "stats": { "networking": 3, "intelligenza": 2, "stamina": 1 }, "flags": ["consorzio_eu_ingresso"] }
+          "label": "«Sì, mi mandi la proposta. La leggo questa settimana.»",
+          "effects": {
+            "stats": {
+              "networking": 3,
+              "intelligenza": 2,
+              "stamina": 1
+            },
+            "flags": [
+              "consorzio_eu_ingresso"
+            ]
+          }
         },
         {
-          "label": "«Mi mandi il summary. Voglio prima parlarne col mio gruppo.»",
-          "effects": { "stats": { "networking": 2, "intelligenza": 1, "burocrazia": 1 }, "flags": ["consorzio_in_valutazione"] }
+          "label": "«Mi mandi una sintesi. Voglio prima parlarne col mio gruppo.»",
+          "effects": {
+            "stats": {
+              "networking": 2,
+              "intelligenza": 1,
+              "burocrazia": 1
+            },
+            "flags": [
+              "consorzio_in_valutazione"
+            ]
+          }
         },
         {
           "label": "«Grazie. Sono al 100% sul mio progetto fino a dicembre.»",
-          "effects": { "stats": { "stamina": 1, "intelligenza": -1 }, "flags": ["consorzio_eu_rifiutato"] }
+          "effects": {
+            "stats": {
+              "stamina": 1,
+              "intelligenza": -1
+            },
+            "flags": [
+              "consorzio_eu_rifiutato"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_premio_cerimonia",
       "phase": "any",
-      "tags": ["premio", "followup", "identita"],
+      "tags": [
+        "premio",
+        "followup",
+        "identita"
+      ],
       "weight": 1,
       "title": "Pisa, sabato sera, 19:14",
       "text": "Sala storica, settanta persone in platea, due telecamere RAI. Sei sul palco. La presidente della Società ti consegna la targa di plexiglass. Adesso devi parlare per trenta minuti. Hai preparato un discorso di routine — vita, ricerca, ringraziamenti. Sul fondo della sala vedi due dottorande del tuo settore, occhi attenti. Una collega di un altro ateneo — vittima di molestie l'anno scorso — è in seconda fila.",
-      "requires": { "flags": { "has": ["premio_giovane_accettato"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "premio_giovane_accettato"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "Cambi il discorso. Parli del precariato, citi i numeri ANVUR.",
-          "effects": { "stats": { "persuasione": 3, "networking": 3, "intelligenza": 2 }, "reputation": { "peers": 3, "barone": -1, "mur": -1 }, "flags": ["premio_discorso_politico", "attivista_visibile"] }
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "networking": 3,
+              "intelligenza": 2
+            },
+            "reputation": {
+              "peers": 3,
+              "barone": -1,
+              "mur": -1
+            },
+            "flags": [
+              "premio_discorso_politico",
+              "attivista_visibile"
+            ]
+          }
         },
         {
           "label": "Discorso preparato. Ringraziamenti, vita, ricerca. Sicuro.",
-          "effects": { "stats": { "persuasione": 1, "networking": 2 }, "reputation": { "peers": 1 }, "flags": ["premio_discorso_neutro"] }
+          "effects": {
+            "stats": {
+              "persuasione": 1,
+              "networking": 2
+            },
+            "reputation": {
+              "peers": 1
+            },
+            "flags": [
+              "premio_discorso_neutro"
+            ]
+          }
         },
         {
           "label": "«Grazie. Lascio la parola a chi non riesce mai ad averla.» Inviti la collega.",
-          "effects": { "stats": { "persuasione": 3, "stamina": -1, "networking": 2 }, "reputation": { "peers": 3, "barone": -2 }, "flags": ["premio_gesto_solidarieta", "attivista_visibile"] }
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "stamina": -1,
+              "networking": 2
+            },
+            "reputation": {
+              "peers": 3,
+              "barone": -2
+            },
+            "flags": [
+              "premio_gesto_solidarieta",
+              "attivista_visibile"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_consiglio_onesto",
       "phase": "any",
-      "tags": ["mentorship", "peers", "followup"],
+      "tags": [
+        "mentorship",
+        "peers",
+        "followup"
+      ],
       "weight": 1,
       "title": "Un'ora vera con l'assegnista",
       "text": "Sala riunioni vuota, due caffè dalla macchinetta. Lui ti racconta tutto in quaranta minuti — la borsa che scade ad aprile, il PI che non risponde alle email, la fidanzata che vuole andare in Germania, il padre malato. Quando finisce: «Tu cosa avresti fatto? Veramente.»",
-      "requires": { "flags": { "has": ["pers_consigliere_giovani"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "pers_consigliere_giovani"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "«La verità: vai in Germania. Lo dico per esperienza.»",
-          "effects": { "stats": { "persuasione": 3, "intelligenza": 2 }, "reputation": { "peers": 3 }, "flags": ["consiglio_onesto_dato"] }
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "intelligenza": 2
+            },
+            "reputation": {
+              "peers": 3
+            },
+            "flags": [
+              "consiglio_onesto_dato"
+            ]
+          }
         },
         {
           "label": "«Aspetta sei mesi. Il PI può cambiare se gli porti un ERC.»",
-          "effects": { "stats": { "persuasione": 2, "intelligenza": 1 }, "reputation": { "peers": 1 }, "flags": ["consiglio_strategico_dato"] }
+          "effects": {
+            "stats": {
+              "persuasione": 2,
+              "intelligenza": 1
+            },
+            "reputation": {
+              "peers": 1
+            },
+            "flags": [
+              "consiglio_strategico_dato"
+            ]
+          }
         },
         {
           "label": "«Senti, non lo so. Quello che so io è solo il mio caso.»",
-          "effects": { "stats": { "stamina": -1, "intelligenza": 1 }, "reputation": { "peers": 2 }, "flags": ["consiglio_umile_dato"] }
+          "effects": {
+            "stats": {
+              "stamina": -1,
+              "intelligenza": 1
+            },
+            "reputation": {
+              "peers": 2
+            },
+            "flags": [
+              "consiglio_umile_dato"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_commissione_esterna",
       "phase": "any",
-      "tags": ["concorso", "followup", "etica"],
+      "tags": [
+        "concorso",
+        "followup",
+        "etica"
+      ],
       "weight": 1,
       "title": "Commissione esterna, giorno tre",
       "text": "Terzo giorno di commissione. Quattro candidati al concorso RTT. Uno è chiaramente «di casa» — il dossier plasmato sulle indicazioni del bando. Un'altra candidata è oggettivamente più solida (h-index doppio, ERC starting), ma viene da altro ateneo. Il presidente di commissione ti dice durante la pausa pranzo: «Allora, siamo d'accordo? Convergiamo sul nostro.»",
-      "requires": { "flags": { "has": ["commissione_esterna_accettata"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "commissione_esterna_accettata"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "«No. Voto la candidata esterna. Mi spiace.»",
-          "effects": { "stats": { "persuasione": 3, "intelligenza": 2, "stamina": -2 }, "reputation": { "barone": -3, "peers": 2 }, "flags": ["commissione_voto_etico"] }
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "intelligenza": 2,
+              "stamina": -2
+            },
+            "reputation": {
+              "barone": -3,
+              "peers": 2
+            },
+            "flags": [
+              "commissione_voto_etico"
+            ]
+          }
         },
         {
           "label": "«Va bene.» Voti il candidato di casa.",
-          "effects": { "stats": { "networking": 2, "intelligenza": -1 }, "reputation": { "barone": 2, "peers": -2 }, "flags": ["commissione_voto_filiera"] }
+          "effects": {
+            "stats": {
+              "networking": 2,
+              "intelligenza": -1
+            },
+            "reputation": {
+              "barone": 2,
+              "peers": -2
+            },
+            "flags": [
+              "commissione_voto_filiera"
+            ]
+          }
         },
         {
           "label": "«Mi astengo. Verbalizzo il fatto come motivazione.»",
-          "effects": { "stats": { "persuasione": 2, "burocrazia": 2, "stamina": -1 }, "reputation": { "barone": -1, "peers": 1 }, "flags": ["commissione_astensione_motivata"] }
+          "effects": {
+            "stats": {
+              "persuasione": 2,
+              "burocrazia": 2,
+              "stamina": -1
+            },
+            "reputation": {
+              "barone": -1,
+              "peers": 1
+            },
+            "flags": [
+              "commissione_astensione_motivata"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_tar_udienza",
       "phase": "any",
-      "tags": ["burocrazia", "followup", "etica"],
+      "tags": [
+        "burocrazia",
+        "followup",
+        "etica"
+      ],
       "weight": 1,
       "title": "TAR, udienza dopo otto mesi",
       "text": "Aula 3 del TAR Lazio, dieci di mattina, ottobre. Il tuo avvocato espone in venti minuti. L'avvocatura dello Stato risponde in dieci. Il giudice ascolta, prende appunti, dice: «Riservata in decisione.» Esce. Fuori dall'aula chiedi al tuo avvocato: «Cosa pensi?» Lui: «Cinquanta-cinquanta. Te lo dico onestamente. Se vinciamo, l'ateneo deve pubblicare gli atti. Se perdiamo, paghi le spese.»",
-      "requires": { "flags": { "has": ["burocr_diffida_tar"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "burocr_diffida_tar"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "Aspetti la sentenza. Lavori tre mesi in apnea.",
-          "effects": { "stats": { "stamina": -3, "intelligenza": 1, "burocrazia": 1 }, "flags": ["tar_attesa_sentenza"] }
+          "effects": {
+            "stats": {
+              "stamina": -3,
+              "intelligenza": 1,
+              "burocrazia": 1
+            },
+            "flags": [
+              "tar_attesa_sentenza"
+            ]
+          }
         },
         {
           "label": "Ritiri il ricorso prima della sentenza. Tagli le perdite.",
-          "effects": { "stats": { "stamina": 1, "fondi": -1 }, "flags": ["tar_ritiro_strategico"] }
+          "effects": {
+            "stats": {
+              "stamina": 1,
+              "fondi": -1
+            },
+            "flags": [
+              "tar_ritiro_strategico"
+            ]
+          }
         },
         {
           "label": "Scrivi alla giornalista. Il TAR diventa pubblico.",
-          "effects": { "stats": { "persuasione": 3, "networking": 2, "stamina": -2 }, "reputation": { "ateneo_hr": -3, "mur": -2 }, "flags": ["tar_inchiesta_giornalistica", "attivista_visibile"] }
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "networking": 2,
+              "stamina": -2
+            },
+            "reputation": {
+              "ateneo_hr": -3,
+              "mur": -2
+            },
+            "flags": [
+              "tar_inchiesta_giornalistica",
+              "attivista_visibile"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_applico_estero",
       "phase": "any",
-      "tags": ["estero", "uscita", "followup"],
+      "tags": [
+        "estero",
+        "uscita",
+        "followup"
+      ],
       "weight": 1,
       "title": "Quattro proposte da quattro città",
       "text": "Hai mandato il CV per il bando del tuo collega in Olanda. Risposta in dieci giorni: shortlist. Poi: chiamata video con la PI. Poi: offerta concreta in due mesi. Altre tre cose nel frattempo, perché eri attivo: Lione (postdoc 24 mesi), Zurigo (RTT-equivalent 3+3), Stoccolma (assistant professor permanente, 58k netti). Quattro PDF aperti, il/la compagn{a|o} che fa pasta in cucina e chiede dove vorresti andare.",
-      "requires": { "flags": { "has": ["applico_bando_collega"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "applico_bando_collega"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "Stoccolma. Permanente, paga meglio, lì respiri.",
-          "effects": { "stats": { "networking": 3, "fondi": 4, "stamina": 2, "intelligenza": 2 }, "flags": ["estero_stoccolma", "fuggito_estero"] }
+          "effects": {
+            "stats": {
+              "networking": 3,
+              "fondi": 4,
+              "stamina": 2,
+              "intelligenza": 2
+            },
+            "flags": [
+              "estero_stoccolma",
+              "fuggito_estero"
+            ]
+          }
         },
         {
           "label": "Olanda. Stesso campo del collega, network più stretto.",
-          "effects": { "stats": { "networking": 4, "fondi": 2, "stamina": 1 }, "flags": ["estero_olanda", "fuggito_estero"] }
+          "effects": {
+            "stats": {
+              "networking": 4,
+              "fondi": 2,
+              "stamina": 1
+            },
+            "flags": [
+              "estero_olanda",
+              "fuggito_estero"
+            ]
+          }
         },
         {
           "label": "Zurigo. Ricerca più solida, stipendio enorme, vita cara.",
-          "effects": { "stats": { "networking": 2, "fondi": 5, "stamina": 1, "intelligenza": 3 }, "flags": ["estero_zurigo", "fuggito_estero"] }
+          "effects": {
+            "stats": {
+              "networking": 2,
+              "fondi": 5,
+              "stamina": 1,
+              "intelligenza": 3
+            },
+            "flags": [
+              "estero_zurigo",
+              "fuggito_estero"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_conversazione_carta",
       "phase": "any",
-      "tags": ["vita_privata", "money", "followup"],
+      "tags": [
+        "vita_privata",
+        "money",
+        "followup"
+      ],
       "weight": 1,
       "title": "La conversazione di una vita",
       "text": "Vi sedete in cucina. Tiri fuori l'estratto conto. Lei o lui legge per due minuti in silenzio. Poi: «Quanto tempo è che dura?» Sei mesi. «E non me lo hai mai detto?» Tu spieghi. «Senti. Possiamo fare due cose. Una: prendiamo i miei soldi per coprire i tuoi prossimi sei mesi. Due: ti dimetti, ed entri in industria. Una delle due. Stasera.»",
-      "requires": { "flags": { "has": ["carta_credito_rifiutata"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "carta_credito_rifiutata"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "«Mi dimetto. Entro in industria.»",
-          "effects": { "stats": { "stamina": 2, "fondi": 3 }, "reputation": { "supervisor": -2 }, "flags": ["dimissionato", "pers_uscito_industria", "career_silent_exit"] }
+          "effects": {
+            "stats": {
+              "stamina": 2,
+              "fondi": 3
+            },
+            "reputation": {
+              "supervisor": -2
+            },
+            "flags": [
+              "dimissionato",
+              "pers_uscito_industria",
+              "career_silent_exit"
+            ]
+          }
         },
         {
           "label": "«Accetto il prestito. Sei mesi e finiamo l'ASN insieme.»",
-          "effects": { "stats": { "fondi": 2, "stamina": 1, "intelligenza": 1 }, "flags": ["partner_prestito_accettato"] }
+          "effects": {
+            "stats": {
+              "fondi": 2,
+              "stamina": 1,
+              "intelligenza": 1
+            },
+            "flags": [
+              "partner_prestito_accettato"
+            ]
+          }
         },
         {
           "label": "«Non posso accettare né l'una né l'altra. Devo pensarci da sol{o|a}.»",
-          "effects": { "stats": { "stamina": -3, "intelligenza": 1 }, "flags": ["partner_decisione_rimandata", "pers_partner_lontano"] }
+          "effects": {
+            "stats": {
+              "stamina": -3,
+              "intelligenza": 1
+            },
+            "flags": [
+              "partner_decisione_rimandata",
+              "pers_partner_lontano"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_prima_sessione_mentoring",
       "phase": "any",
-      "tags": ["mentorship", "peers", "followup"],
+      "tags": [
+        "mentorship",
+        "peers",
+        "followup"
+      ],
       "weight": 1,
       "title": "Prima sessione settimanale",
       "text": "Giovedì mattina, 10:00, sala lettura della biblioteca. Tu, il dottorando, due caffè e tre paper sul tavolo. Lui ti chiede: «Io non capisco cosa il mio PI vuole esattamente. Mi dice fai questo, fai quell'altro, ma non c'è una linea. Tu come fai?» Per la prima volta da anni qualcuno ti tratta come mentor vero, non come pari.",
-      "requires": { "flags": { "has": ["mentoring_dottorando"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "mentoring_dottorando"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "«Costruiamo insieme il tuo piano di tesi, in tre settimane.»",
-          "effects": { "stats": { "intelligenza": 3, "persuasione": 2, "stamina": -1 }, "reputation": { "peers": 3 }, "flags": ["mentor_piano_costruito"] }
+          "effects": {
+            "stats": {
+              "intelligenza": 3,
+              "persuasione": 2,
+              "stamina": -1
+            },
+            "reputation": {
+              "peers": 3
+            },
+            "flags": [
+              "mentor_piano_costruito"
+            ]
+          }
         },
         {
           "label": "«Per ora chiediti: cosa vuoi TU dal dottorato? Il PI è secondario.»",
-          "effects": { "stats": { "intelligenza": 2, "persuasione": 2 }, "reputation": { "peers": 2 }, "flags": ["mentor_domanda_centrale"] }
+          "effects": {
+            "stats": {
+              "intelligenza": 2,
+              "persuasione": 2
+            },
+            "reputation": {
+              "peers": 2
+            },
+            "flags": [
+              "mentor_domanda_centrale"
+            ]
+          }
         },
         {
           "label": "«Ti spiego come funziona la politica del gruppo. Pratico.»",
-          "effects": { "stats": { "networking": 2, "intelligenza": 1 }, "reputation": { "peers": 1 }, "flags": ["mentor_politico"] }
+          "effects": {
+            "stats": {
+              "networking": 2,
+              "intelligenza": 1
+            },
+            "reputation": {
+              "peers": 1
+            },
+            "flags": [
+              "mentor_politico"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_barone_risponde_concorso",
       "phase": "any",
-      "tags": ["concorso", "barone", "followup"],
+      "tags": [
+        "concorso",
+        "barone",
+        "followup"
+      ],
       "weight": 1,
       "title": "Il barone, faccia a faccia",
       "text": "Studio del barone, lunedì alle 16. Tu lo guardi dall'altra parte della scrivania. Lui sorride. «Vede, dottore/dottoressa. I bandi su misura non sono illegali — sono lo standard del nostro paese. Il concorso del prossimo autunno è scritto per qualcuno che si è meritato di esserlo. Lei è una persona promettente, ma ha bisogno di pazienza. Tra due anni — se rimaniamo amici — c'è un altro concorso più adatto.» Pausa. «Rimaniamo amici, vero?»",
-      "requires": { "flags": { "has": ["voci_concorso_indagate"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "voci_concorso_indagate"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "«Certo, prof. Sarò paziente.» Sorridi.",
-          "effects": { "stats": { "stamina": -1, "networking": 2 }, "reputation": { "barone": 2 }, "flags": ["barone_promessa_futuro", "cordata_barone"] }
+          "effects": {
+            "stats": {
+              "stamina": -1,
+              "networking": 2
+            },
+            "reputation": {
+              "barone": 2
+            },
+            "flags": [
+              "barone_promessa_futuro",
+              "cordata_barone"
+            ]
+          }
         },
         {
           "label": "«No, prof. Applico comunque. Vediamo cosa scrive il TAR.»",
-          "effects": { "stats": { "persuasione": 3, "stamina": -2, "burocrazia": 2 }, "reputation": { "barone": -3, "sindacato": 2 }, "flags": ["barone_sfidato_apertamente", "career_sfida_concorso_cucito"] }
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "stamina": -2,
+              "burocrazia": 2
+            },
+            "reputation": {
+              "barone": -3,
+              "sindacato": 2
+            },
+            "flags": [
+              "barone_sfidato_apertamente",
+              "career_sfida_concorso_cucito"
+            ]
+          }
         },
         {
           "label": "«Prof, perché non parla anche con il rettore? Sono curios{o|a}.»",
-          "effects": { "stats": { "persuasione": 2, "intelligenza": 2 }, "reputation": { "barone": -1 }, "flags": ["barone_escalation_minacciata"] }
+          "effects": {
+            "stats": {
+              "persuasione": 2,
+              "intelligenza": 2
+            },
+            "reputation": {
+              "barone": -1
+            },
+            "flags": [
+              "barone_escalation_minacciata"
+            ]
+          }
         }
       ]
     },
     {
       "id": "fu_evt_lettera_in_pubblico",
       "phase": "any",
-      "tags": ["collettivo", "followup", "politica"],
+      "tags": [
+        "collettivo",
+        "followup",
+        "politica"
+      ],
       "weight": 1,
       "title": "La lettera è arrivata sui giornali",
       "text": "Sei giorni dopo aver firmato la lettera ADI/ARTeD contro la riforma, il sito di un quotidiano nazionale pubblica i nomi di tutti i firmatari. 4.831 firme. Il tuo nome è lì. Il direttore di dipartimento ti scrive un'email alle 18:42, oggetto «conversazione necessaria»: «Possiamo vederci domattina alle 9? Vorrei capire cosa l'ha portata a firmare senza prima parlarne in dipartimento.» Tono cortese. Sottinteso evidente.",
-      "requires": { "flags": { "has": ["burocr_lettera_collettiva"] } },
+      "requires": {
+        "flags": {
+          "has": [
+            "burocr_lettera_collettiva"
+          ]
+        }
+      },
       "choices": [
         {
           "label": "«Certo, direttore.» Vai domani con un avvocato accanto al telefono.",
-          "effects": { "stats": { "persuasione": 2, "burocrazia": 2, "stamina": -1 }, "reputation": { "direttore_dipartimento": -2, "sindacato": 1 }, "flags": ["lettera_difesa_attiva"] }
+          "effects": {
+            "stats": {
+              "persuasione": 2,
+              "burocrazia": 2,
+              "stamina": -1
+            },
+            "reputation": {
+              "direttore_dipartimento": -2,
+              "sindacato": 1
+            },
+            "flags": [
+              "lettera_difesa_attiva"
+            ]
+          }
         },
         {
           "label": "«Direttore, ho firmato come privato cittadino. La conversazione la facciamo in consiglio.»",
-          "effects": { "stats": { "persuasione": 3, "stamina": -1 }, "reputation": { "direttore_dipartimento": -3, "peers": 2 }, "flags": ["lettera_difesa_pubblica", "attivista_visibile"] }
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "stamina": -1
+            },
+            "reputation": {
+              "direttore_dipartimento": -3,
+              "peers": 2
+            },
+            "flags": [
+              "lettera_difesa_pubblica",
+              "attivista_visibile"
+            ]
+          }
         },
         {
           "label": "«Mi scuso, direttore. È stato un errore di comunicazione.» Ritrai.",
-          "effects": { "stats": { "persuasione": -2, "stamina": -2 }, "reputation": { "peers": -3, "sindacato": -2 }, "flags": ["lettera_ritrattata", "pers_silenzio_dolore"] }
+          "effects": {
+            "stats": {
+              "persuasione": -2,
+              "stamina": -2
+            },
+            "reputation": {
+              "peers": -3,
+              "sindacato": -2
+            },
+            "flags": [
+              "lettera_ritrattata",
+              "pers_silenzio_dolore"
+            ]
+          }
         }
       ]
     }

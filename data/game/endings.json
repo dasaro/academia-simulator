@@ -1243,7 +1243,7 @@
           }
         ]
       },
-      "epilogue": "Hai vinto il concorso. Quaranta giorni dopo prendi servizio come RTT. Il barone, in conferenza di dipartimento, ti presenta come «un{o|a} dei nostri». Tu sorridi. Quella frase ti tornerà in testa per anni: «dei nostri».\n\nAnno uno. Ti senti ancora come gli altri RTDA — quelli che hanno scadenze annuali, ferie da recuperare, mutui rifiutati. Quando incontri un{o|a} di loro in mensa, ti senti in colpa per i 1.000 euro netti in più. Ti dici che farai la differenza. Promesso.\n\nAnno due. Sei nella prima commissione concorsi. Il barone ti spiega come funziona: la valutazione «qualitativa», i criteri che si possono modulare, i candidati «da privilegiare». Tu protesti debolmente. Lui sorride: «Te lo dico per il tuo bene. Sono cose che si imparano.» Voti come dice lui. Voti contro un'RTDA che ti ricordava te di tre anni prima.\n\nAnno tre. Hai pubblicato due paper. Nessuno te lo fa pesare. Hai capito che non ne devi pubblicare di più. Conta sederti in commissione, presentarti alle riunioni di dipartimento, votare il direttore giusto, scrivere lettere di presentazione a chi conta. La scienza è diventata un hobby della domenica. Te ne accorgi e ti dici: «È solo una fase.» Lo dirai per gli anni successivi.\n\nAnno quattro. Un convegno. Una dottoranda. Tieni la sua mano per tre secondi di troppo. Lei ride imbarazzata. Tu menti a te stess{o|a}: «non è successo niente.» Sai che è successo. Sai cosa hai fatto. Sei dall'altra parte, adesso. Quattro anni fa avresti scritto a una rete di colleghi precari per denunciarlo. Adesso quella rete non ti sopporta più. Tu non sopporti più te stess{o|a}, ma è una scoperta che ti permetti solo prima di addormentarti.\n\nAnno cinque. Vinci l'associatura. Mai più rendiconti. Mai più ASN. Una RTDA, in corridoio, ti dice: «Lei era divers{o|a}, una volta.» Tu rispondi educatamente. Lei se ne va. Quella sera ricordi una collega di sette anni fa che aveva scritto: «Esistono solo tre categorie: padroni, schiavi, raccomandati.» Tu sei nella prima. «Senza offesa», dirai più tardi a te stess{o|a}, «per chi è arrivato al posto giusto al momento giusto.»\n\nQuesto finale non è una caduta. È la regola del sistema. Ogni barone è stato precario. Ogni cordata è cominciata con qualcun{o|a} che ha detto sì alla prima offerta. L'accademia italiana non si autoreplica nonostante questi finali. Si autoreplica grazie a questi finali. Sei combustibile.",
+      "epilogue": "Hai vinto il concorso. Quaranta giorni dopo prendi servizio come RTT. Il barone, in conferenza di dipartimento, ti presenta come «un{o|a} dei nostri». Tu sorridi. Quella frase ti tornerà in testa per anni: «dei nostri».\n\nAnno uno. Ti senti ancora come gli altri RTDA — quelli che hanno scadenze annuali, ferie da recuperare, mutui rifiutati. Quando incontri un{o|a} di loro in mensa, ti senti in colpa per i 1.000 euro netti in più. Ti dici che farai la differenza. Promesso.\n\nAnno due. Sei nella prima commissione concorsi. Il barone ti spiega come funziona: la valutazione «qualitativa», i criteri che si possono modulare, i candidati «da privilegiare». Tu protesti debolmente. Lui sorride: «Te lo dico per il tuo bene. Sono cose che si imparano.» Voti come dice lui. Voti contro un'RTDA che ti ricordava te di tre anni prima.\n\nAnno tre. Hai pubblicato due paper. Nessuno te lo fa pesare. Hai capito che non ne devi pubblicare di più. Conta sederti in commissione, presentarti alle riunioni di dipartimento, votare il direttore giusto, scrivere lettere di presentazione a chi conta. La scienza è diventata un hobby della domenica. Te ne accorgi e ti dici: «È solo una fase.» Lo dirai per gli anni successivi.\n\nAnno quattro. Un convegno. Una dottoranda. Le tieni la mano per tre secondi di troppo. Lei ride imbarazzata. Tu menti a te stess{o|a}: «non è successo niente.» Sai che è successo. Sai cosa hai fatto. Sei dall'altra parte, adesso. Quattro anni fa avresti scritto a una rete di colleghi precari per denunciarlo. Adesso quella rete non ti sopporta più. Tu non sopporti più te stess{o|a}, ma è una scoperta che ti permetti solo prima di addormentarti.\n\nAnno cinque. Vinci l'associatura. Mai più rendiconti. Mai più ASN. Una RTDA, in corridoio, ti dice: «Lei era divers{o|a}, una volta.» Tu rispondi educatamente. Lei se ne va. Quella sera ricordi una collega di sette anni fa che aveva scritto: «Esistono solo tre categorie: padroni, schiavi, raccomandati.» Tu sei nella prima. «Senza offesa», dirai più tardi a te stess{o|a}, «per chi è arrivato al posto giusto al momento giusto.»\n\nQuesto finale non è una caduta. È la regola del sistema. Ogni barone è stato precario. Ogni cordata è cominciata con qualcun{o|a} che ha detto sì alla prima offerta. L'accademia italiana non si autoreplica nonostante questi finali. Si autoreplica grazie a questi finali. Sei combustibile.",
       "resources": [
         {
           "name": "1522 — antiviolenza nazionale",
@@ -1279,7 +1279,9 @@
       "priority": 105,
       "condition": {
         "all": [
-          { "minTurn": 30 },
+          {
+            "minTurn": 30
+          },
           {
             "flags": {
               "hasAny": [
@@ -1292,16 +1294,28 @@
           },
           {
             "flags": {
-              "has": ["rinuncia_familiare"],
-              "hasNot": ["career_strutturato_ottenuto"]
+              "has": [
+                "rinuncia_familiare"
+              ],
+              "hasNot": [
+                "career_strutturato_ottenuto"
+              ]
             }
           }
         ]
       },
-      "epilogue": "Hai resistito. Trenta mesi di rendiconti, due rinnovi, una proroga miracolosa. Sei ancora dentro. Te ne accorgi una sera di novembre, quando ti accorgi che è già novembre.\n\nApri WhatsApp e scorri. Il gruppo di amici dell'università: ultimo messaggio tuo, dieci mesi fa. Il gruppo del liceo: dodici. Tua sorella, due settimane fa, ti aveva scritto «come stai?» e tu avevi risposto «bene, tu?» — sono tre righe in tutto. Tuo padre non scrive in chat, ma c'è una foto sua dal compleanno di gennaio che non hai mai aperto.\n\nIl tuo migliore amico è diventato padre quindici mesi fa. Non hai visto il bambino. Lui non ti chiede più — la prima volta che hai detto «la prossima settimana» era subito dopo la nascita, l'ultima a Pasqua.\n\nIl/la partner che eri quando hai cominciato non c'è più. Non perché vi siete lasciati — quello è successo l'anno scorso, in modo civile, senza grandi scene. Lui/lei adesso vive in un'altra città. Vi scrivete per i compleanni dei genitori comuni.\n\nDa quanto non leggi un romanzo? Dalla recensione che hai scritto a un libro che non hai letto, due anni fa. Da quanto non vai al cinema? L'ultimo l'hai visto in aereo.\n\nGuardi lo schermo. Cinquanta articoli pubblicati. L'ASN passata. Una buona reputazione internazionale. Ed è venerdì sera. Sei in ufficio. Non c'è nessuno con cui andare a bere una birra. Non c'è nessuno che ti aspetta a casa. Hai vinto qualcosa che non ti serve più — perché non sei rimasta/o nessun{o|a} per cui valesse la pena vincerlo.\n\nQuesto finale non è una tragedia. È la cosa più comune che capita ai ricercatori italiani sopravvissuti al sistema. Non muore nessuno. Solo, una persona dopo l'altra smette di chiamare. E quando alzi la testa, la stanza è vuota da anni.",
+      "epilogue": "Hai resistito. Trenta mesi di rendiconti, due rinnovi, una proroga miracolosa. Sei ancora dentro. Te ne accorgi una sera di novembre, quando ti accorgi che è già novembre.\n\nApri WhatsApp e scorri. Il gruppo di amici dell'università: ultimo messaggio tuo, dieci mesi fa. Il gruppo del liceo: dodici. Tua sorella, due settimane fa, ti aveva scritto «come stai?» e tu avevi risposto «bene, tu?» — sono tre righe in tutto. Tuo padre non scrive in chat, ma c'è una foto sua dal compleanno di gennaio che non hai mai aperto.\n\nIl tuo migliore amico è diventato padre quindici mesi fa. Non hai visto il bambino. Lui non ti chiede più — la prima volta che hai detto «la prossima settimana» era subito dopo la nascita, l'ultima a Pasqua.\n\nIl/la partner che eri quando hai cominciato non c'è più. Non perché vi siete lasciati — quello è successo l'anno scorso, in modo civile, senza grandi scene. Lui/lei adesso vive in un'altra città. Vi scrivete per i compleanni dei genitori comuni.\n\nDa quanto non leggi un romanzo? Dalla recensione che hai scritto a un libro che non hai letto, due anni fa. Da quanto non vai al cinema? L'ultimo l'hai visto in aereo.\n\nGuardi lo schermo. Cinquanta articoli pubblicati. L'ASN passata. Una buona reputazione internazionale. Ed è venerdì sera. Sei in ufficio. Non c'è nessuno con cui andare a bere una birra. Non c'è nessuno che ti aspetta a casa. Hai vinto qualcosa che non ti serve più — perché non ti è rimast{o|a} nessun{o|a} per cui valesse la pena vincerlo.\n\nQuesto finale non è una tragedia. È la cosa più comune che capita ai ricercatori italiani sopravvissuti al sistema. Non muore nessuno. Solo, una persona dopo l'altra smette di chiamare. E quando alzi la testa, la stanza è vuota da anni.",
       "resources": [
-        { "name": "Telefono Amico Italia", "contact": "02 2327 2327", "note": "ascolto, 10-24" },
-        { "name": "Samaritans Onlus",      "contact": "06 77208977", "note": "ascolto, 13-22" }
+        {
+          "name": "Telefono Amico Italia",
+          "contact": "02 2327 2327",
+          "note": "ascolto, 10-24"
+        },
+        {
+          "name": "Samaritans Onlus",
+          "contact": "06 77208977",
+          "note": "ascolto, 13-22"
+        }
       ]
     },
     {
@@ -1311,7 +1325,9 @@
       "priority": 110,
       "condition": {
         "all": [
-          { "minTurn": 26 },
+          {
+            "minTurn": 26
+          },
           {
             "flags": {
               "hasAny": [
@@ -1324,17 +1340,36 @@
           },
           {
             "flags": {
-              "hasAny": ["pec_inviata_cofin", "overwork_pnrr", "lavoro_gratis_mese_scoperto", "natale_revisione_subito"],
-              "hasNot": ["career_strutturato_ottenuto"]
+              "hasAny": [
+                "pec_inviata_cofin",
+                "overwork_pnrr",
+                "lavoro_gratis_mese_scoperto",
+                "natale_revisione_subito"
+              ],
+              "hasNot": [
+                "career_strutturato_ottenuto"
+              ]
             }
           }
         ]
       },
-      "epilogue": "Il neurologo del pubblico, finalmente. Ti ha visitato in trentadue minuti. RMN urgente. Tu non sapevi che esistesse un urgente, sul pubblico. La parola «displasia», la parola «monitoraggio semestrale», la parola «periodo di riposo assoluto.»\n\nTu pensi: ma il corso comincia tra tre settimane.\n\nIl medico ti guarda con la pazienza di chi ha visto centinaia di te. «Si fermi adesso, o si fermerà più avanti.»\n\nPrendi il certificato. Vai in ufficio. Apri il portale SIRI per chiudere il rendiconto del bimestre — quello che dovevi mandare entro venerdì. Mentre digiti, ti rendi conto che è la prima volta che non senti l'ansia. Non perché stai bene. Perché stai peggio del rendiconto. Il corpo ha smesso di reggere. Adesso decidi tu di smettere, o decide lui.\n\nQuando passi la cartella clinica al direttore di dipartimento, lui legge in silenzio. Poi: «Mi spiace molto. Davvero. Ma vede, il PON deve essere rendicontato comunque. Vediamo se troviamo qualcun{o|a} che la sostituisca per la didattica.»\n\nEsci. Cammini fino a casa per la prima volta da due anni. Quaranta minuti. Non sapevi che la tua città fosse così grande.\n\nIl certificato copre 90 giorni. Dopo, dovrai decidere. Tornare con un corpo che ha appena scritto un cartello. Andare via, con un curriculum che dice «sopravvissuto/a all'accademia italiana, settore X.» L'industria privata ti vuole — la tua collega te lo aveva detto a Natale. L'accademia, paradossalmente, anche, perché adesso sei un «caso da valutare» e i casi sono interessanti per i CUG.\n\nMa stasera no. Stasera dormi. Per la prima volta da settimane senza alzarti alle tre.\n\nIl sistema non ti ha ucciso. Ti ha solo costretto a scegliere tra te e lui. Hai scelto te, per una notte. Domani ricominciamo a contare i giorni.",
+      "epilogue": "Il neurologo del pubblico, finalmente. Ti ha visitato in trentadue minuti. RMN urgente. Tu non sapevi che esistesse un urgente, sul pubblico. La parola «displasia», la parola «monitoraggio semestrale», la parola «periodo di riposo assoluto.»\n\nTu pensi: ma il corso comincia tra tre settimane.\n\nIl medico ti guarda con la pazienza di chi ha visto centinaia di te. «Si fermi adesso, o si fermerà più avanti.»\n\nPrendi il certificato. Vai in ufficio. Apri il portale SIRI per chiudere il rendiconto del bimestre — quello che dovevi mandare entro venerdì. Mentre digiti, ti rendi conto che è la prima volta che non senti l'ansia. Non perché stai bene. Perché stai peggio del rendiconto. Il corpo ha smesso di reggere. Adesso decidi tu di smettere, o decide lui per te.\n\nQuando passi la cartella clinica al direttore di dipartimento, lui legge in silenzio. Poi: «Mi spiace molto. Davvero. Ma vede, il PON deve essere rendicontato comunque. Vediamo se troviamo qualcun{o|a} che la sostituisca per la didattica.»\n\nEsci. Cammini fino a casa per la prima volta da due anni. Quaranta minuti. Non sapevi che la tua città fosse così grande.\n\nIl certificato copre 90 giorni. Dopo, dovrai decidere. Tornare con un corpo che ha appena alzato un cartello. Andare via, con un curriculum che dice «sopravvissuto/a all'accademia italiana, settore X.» L'industria privata ti vuole — la tua collega te lo aveva detto a Natale. L'accademia, paradossalmente, anche, perché adesso sei un «caso da valutare» e i casi sono interessanti per i CUG.\n\nMa stasera no. Stasera dormi. Per la prima volta da settimane senza alzarti alle tre.\n\nIl sistema non ti ha ucciso. Ti ha solo costretto a scegliere tra te e lui. Hai scelto te, per una notte. Domani ricominciamo a contare i giorni.",
       "resources": [
-        { "name": "Bonus psicologo INPS", "contact": "inps.it",        "note": "se attivo nell'anno fiscale" },
-        { "name": "CUG d'ateneo",         "contact": "interno ateneo", "note": "patologie da overlavoro" },
-        { "name": "Centro Antiviolenza Donna", "contact": "1522",     "note": "se la pressione si trasforma in altro" }
+        {
+          "name": "Bonus psicologo INPS",
+          "contact": "inps.it",
+          "note": "se attivo nell'anno fiscale"
+        },
+        {
+          "name": "CUG d'ateneo",
+          "contact": "interno ateneo",
+          "note": "patologie da overlavoro"
+        },
+        {
+          "name": "Centro Antiviolenza Donna",
+          "contact": "1522",
+          "note": "se la pressione si trasforma in altro"
+        }
       ]
     },
     {
@@ -1344,7 +1379,9 @@
       "priority": 100,
       "condition": {
         "all": [
-          { "minTurn": 34 },
+          {
+            "minTurn": 34
+          },
           {
             "flags": {
               "hasAny": [
@@ -1357,15 +1394,26 @@
           },
           {
             "flags": {
-              "hasNot": ["career_strutturato_ottenuto", "lucidita_su_assegno"]
+              "hasNot": [
+                "career_strutturato_ottenuto",
+                "lucidita_su_assegno"
+              ]
             }
           }
         ]
       },
       "epilogue": "Hai un'ora di buco prima del consiglio di dipartimento. Apri Google Scholar. Cerchi il tuo nome. Sessantadue articoli. Scendi alla pagina due, alla tre. Provi a ricordare di cosa parlava il numero quarantaquattro.\n\nNon te lo ricordi. Apri il PDF. Lo leggi. Riconosci il tuo stile, ma non la voce di chi l'ha scritto.\n\nVai indietro al primo. Quello del dottorato. C'era una domanda dentro che ti interessava davvero — qualcosa su come [il tuo SSD] poteva cambiare il modo in cui pensavamo a una certa cosa. Era una domanda piccola, ambiziosa, sincera. Lo rileggi e ti emozioni un po'.\n\nPoi guardi gli ultimi cinque articoli. Sono tutti su quello che il settore vuole sentire. Tutti sull'output che serviva al PRIN di turno. Tutti, in qualche modo, scritti per qualcun altr{o|a}. La domanda piccola, ambiziosa, sincera, è morta tra il numero 18 e il numero 23.\n\nIl consiglio di dipartimento è tra venti minuti. Decideranno il piano triennale di ricerca. Tu voterai a favore. Lo hai sempre fatto. Voterai a favore di una linea che è una continuazione di quello che già fa il dipartimento, perché contestarlo significa diventare invisibile. La domanda piccola non c'è dentro. Sarebbe troppo lavoro inserirla.\n\nVai al consiglio. Voti a favore. Quella sera, tornando a casa in metro, guardi il riflesso del tuo viso nel finestrino. È identico a quello dei tre PA che siedono accanto a te. Identico, davvero. Stesso sguardo. Stesso silenzio. Stessa cosa che hai imparato a chiamare prudenza.\n\nLa scienza che fai non è cattiva. È solo che potrebbe farla chiunque al posto tuo. È fungibile. Tu sei fungibile.\n\nSull'autobus pensi: «Non sono mai stat{o|a} qui.» Vuoi dire: la persona che ha cominciato il dottorato non è mai entrata in questa stanza. È rimasta nel 2012, sul treno per [città del dottorato], con i tre libri in valigia e l'idea che le idee contassero.\n\nQuella persona, in qualche modo, è morta senza che tu te ne accorgessi. È un finale silenzioso. È il più comune. È il più difficile da raccontare.",
       "resources": [
-        { "name": "Pratica meditativa o psicoterapia", "contact": "vedi rete locale", "note": "per il dolore non clinico" },
-        { "name": "ADI / ARTeD",                       "contact": "siti delle associazioni",   "note": "se vuoi riannodare il filo con la prima domanda" }
+        {
+          "name": "Pratica meditativa o psicoterapia",
+          "contact": "vedi rete locale",
+          "note": "per il dolore non clinico"
+        },
+        {
+          "name": "ADI / ARTeD",
+          "contact": "siti delle associazioni",
+          "note": "se vuoi riannodare il filo con la prima domanda"
+        }
       ]
     },
     {
@@ -1375,8 +1423,16 @@
       "priority": 108,
       "condition": {
         "all": [
-          { "minTurn": 28 },
-          { "flags": { "has": ["f_gender"] } },
+          {
+            "minTurn": 28
+          },
+          {
+            "flags": {
+              "has": [
+                "f_gender"
+              ]
+            }
+          },
           {
             "flags": {
               "hasAny": [
@@ -1389,17 +1445,35 @@
           },
           {
             "flags": {
-              "hasNot": ["career_strutturato_ottenuto"]
+              "hasNot": [
+                "career_strutturato_ottenuto"
+              ]
             }
           }
         ]
       },
       "epilogue": "Hai retto. Tre anni di contratto, una proroga, l'ASN passata al secondo tentativo. Sei ancora qui. Non sei stata licenziata, non hai denunciato nessuno, non hai cambiato dipartimento. Hai imparato qualcosa di più importante: a sorridere.\n\nA sorridere quando il direttore ti chiama «cara» davanti agli studenti. A sorridere quando il barone ti scrive alle 23:34 con l'oggetto «pensieri». A sorridere quando ti chiedono in commissione delle tue «intenzioni familiari». A sorridere quando il portinaio ti dice signorina. A sorridere quando il PI ti mette la mano sulla spalla per la quinta volta in due mesi e tu hai imparato esattamente di quanti centimetri scostarti per restare educata.\n\nNon vai più sola nello studio di tre professori. Hai un'idea di guardaroba che chiami «professionale» e che è il modo accettabile di dire «invisibile». Hai smesso di firmarti con il nome e il cognome — usi solo le iniziali, così via email non si capisce subito che sei una donna. Sei diventata bravissima a non esistere come corpo nel dipartimento. E in questo, finalmente, ti hanno smesso di guardare male.\n\nUna sera tornando a casa con il tuo compagno, lui ti dice che ridi molto meno di quando vi siete conosciuti. Tu lo guardi e non sai cosa rispondere. Forse sì. Forse sorridere e ridere sono due cose diverse, una è una funzione di sopravvivenza e l'altra è una cosa che si fa con qualcuno. Lo abbracci. Andate a dormire.\n\nDieci anni fa, al dottorato, una tua amica aveva detto a un convegno una battuta intelligente. Tutti avevano riso. Tu adesso non ricordi più la battuta. Ma ricordi com'era ridere così, in un'aula piena di colleghe e colleghi, senza dover prima calcolare se la frase potrebbe essere usata contro di te.\n\nQuesto finale non è una tragedia. È quello che il sistema considera un successo: la tua carriera è andata avanti, la tua dignità si è solo aggiustata, l'università ha mantenuto il suo equilibrio interno. Sei una statistica positiva del rapporto ANVUR sull'equilibrio di genere — 44% di RTD donne, dopotutto. Sei in quel 44%. La cifra non dice quanto sorridere ti è costato.",
       "resources": [
-        { "name": "1522 — antiviolenza nazionale", "contact": "1522",         "note": "24h, gratuito, anonimo" },
-        { "name": "CUG d'ateneo",                  "contact": "interno ateneo", "note": "anche solo per parlarne" },
-        { "name": "Differenza Donna",              "contact": "06 5500 5300",  "note": "centri antiviolenza, anche per molestie sul lavoro" },
-        { "name": "Mai più zitte / Non una di meno", "contact": "collettivi locali", "note": "se vuoi non essere sola" }
+        {
+          "name": "1522 — antiviolenza nazionale",
+          "contact": "1522",
+          "note": "24h, gratuito, anonimo"
+        },
+        {
+          "name": "CUG d'ateneo",
+          "contact": "interno ateneo",
+          "note": "anche solo per parlarne"
+        },
+        {
+          "name": "Differenza Donna",
+          "contact": "06 5500 5300",
+          "note": "centri antiviolenza, anche per molestie sul lavoro"
+        },
+        {
+          "name": "Mai più zitte / Non una di meno",
+          "contact": "collettivi locali",
+          "note": "se vuoi non essere sola"
+        }
       ]
     },
     {
@@ -1409,8 +1483,16 @@
       "priority": 112,
       "condition": {
         "all": [
-          { "minTurn": 18 },
-          { "flags": { "has": ["f_gender"] } },
+          {
+            "minTurn": 18
+          },
+          {
+            "flags": {
+              "has": [
+                "f_gender"
+              ]
+            }
+          },
           {
             "flags": {
               "hasAny": [
@@ -1422,19 +1504,45 @@
           },
           {
             "flags": {
-              "hasNot": ["career_strutturato_ottenuto"]
+              "hasNot": [
+                "career_strutturato_ottenuto"
+              ]
             }
           }
         ]
       },
       "epilogue": "Avevi detto no. A una cena. A una mano sulla spalla. A una domanda «scorretta ma necessaria» in commissione. A un caffè a Roma con un Barone che ti aveva scritto alle 23:34. Avevi detto no a quattro cose piccole — nessuna di queste, da sola, avrebbe meritato una denuncia. Quattro «no» piccoli, educati, fermi.\n\nLa risposta del sistema non è arrivata in una telefonata. È arrivata in quaranta piccole assenze.\n\nLa tua email che resta senza risposta tre settimane. Il tuo nome che non compare nella unità del PRIN al quale avevi lavorato per sei mesi. Il bando RTD-B nel tuo settore che esce con requisiti talmente specifici da escludere chiunque tranne una persona — non te. La riunione del dipartimento che si è tenuta in un giorno in cui sapevano che eri in maternità a rischio. Il convegno internazionale dove tutti gli altri del gruppo sono stati invitati e tu no, «per uno svista, scusaci». Quella «svista» che, contandole, è la sesta in due anni.\n\nSenti la voce di una collega senior, quella della macchinetta del caffè: «Te lo dico per esperienza. Lasciamo perdere.» Avresti dovuto darle ascolto. Avresti dovuto andare a cena. Una sola cena. Quanto male può fare una cena.\n\nQuando il contratto scade, non ti rinnovano. La motivazione formale è «esaurimento dei fondi sul progetto», che ufficialmente è vera — il PI ha deciso di destinare i fondi altrove. La motivazione informale, quella che tu sai e che tre colleghe sanno e che la professoressa associata che è stata «la tua referente CUG» sa, non sarà mai scritta da nessuna parte.\n\nApri il faldone che hai costruito in due anni. Email screenshottate. Una bozza di denuncia. Tre testimonianze di colleghe (di cui due ritrattate sotto pressione la settimana scorsa). Lo guardi. Il faldone è completo, ma il sistema italiano non punisce chi ha fatto quello che ti hanno fatto. Punisce chi lo nomina.\n\nDecidi cosa fare. Forse vai in industria. Forse fai causa civile all'università sapendo che durerà quattro anni e ti costerà sette mila euro di avvocato. Forse — questa è l'opzione che il sistema preferisce — scrivi un articolo accademico sulla discriminazione di genere in università. Lo pubblichi su una rivista Q1 internazionale. Diventa quello che gli inglesi chiamano «your area of expertise». Sopravviverai. Ma sarai diventata, per il resto della tua carriera, la donna che ha detto no e ne è uscita per parlarne.\n\nLa cosa peggiore: ogni nuova RTDA che entra nel dipartimento, quando si chiede se andare a quella cena, riceverà — alla macchinetta del caffè — il consiglio di una collega senior che dice: «Te lo dico per esperienza. È meglio se vai. Lasciamo perdere.»",
       "resources": [
-        { "name": "1522 — antiviolenza nazionale",    "contact": "1522",                "note": "24h, gratuito, anonimo" },
-        { "name": "Differenza Donna",                  "contact": "06 5500 5300",       "note": "centri antiviolenza" },
-        { "name": "CUG d'ateneo",                      "contact": "interno ateneo",      "note": "anche per ritorsioni post-rifiuto" },
-        { "name": "ADI / ARTeD",                        "contact": "siti associazioni",  "note": "supporto legale per ricercatrici precarie" },
-        { "name": "ANAC — whistleblowing",             "contact": "anticorruzione.it",   "note": "per bandi cuciti / concorsi pilotati" },
-        { "name": "Avvocatura femminista",              "contact": "centri antiviolenza locali", "note": "per causa civile" }
+        {
+          "name": "1522 — antiviolenza nazionale",
+          "contact": "1522",
+          "note": "24h, gratuito, anonimo"
+        },
+        {
+          "name": "Differenza Donna",
+          "contact": "06 5500 5300",
+          "note": "centri antiviolenza"
+        },
+        {
+          "name": "CUG d'ateneo",
+          "contact": "interno ateneo",
+          "note": "anche per ritorsioni post-rifiuto"
+        },
+        {
+          "name": "ADI / ARTeD",
+          "contact": "siti associazioni",
+          "note": "supporto legale per ricercatrici precarie"
+        },
+        {
+          "name": "ANAC — whistleblowing",
+          "contact": "anticorruzione.it",
+          "note": "per bandi cuciti / concorsi pilotati"
+        },
+        {
+          "name": "Avvocatura femminista",
+          "contact": "centri antiviolenza locali",
+          "note": "per causa civile"
+        }
       ]
     },
     {
@@ -1444,22 +1552,53 @@
       "priority": 115,
       "condition": {
         "all": [
-          { "minTurn": 22 },
-          { "flags": { "has": ["f_gender", "gender_dottorato_via_quidproquo"] } },
+          {
+            "minTurn": 22
+          },
           {
             "flags": {
-              "hasNot": ["career_strutturato_ottenuto"]
+              "has": [
+                "f_gender",
+                "gender_dottorato_via_quidproquo"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasNot": [
+                "career_strutturato_ottenuto"
+              ]
             }
           }
         ]
       },
       "epilogue": "Hai accettato la borsa. Sono passati cinque, sette, dieci anni. Il direttore di dipartimento è andato in pensione due anni fa con un convegno in suo onore al quale tu non sei andata. La relazione era finita molto prima — ufficialmente, perché non c'era mai stata, ma quel «ufficialmente» è una parola che hai dovuto imparare a dire senza tradire il viso.\n\nIl PhD lo hai discusso con voto pieno. Le pubblicazioni del dottorato sono buone. Sono anche scritte tutte sotto il suo nome come coautore senior. Quando ti hanno offerto l'assegno di ricerca, tre anni fa, una collega senior che non ti ama particolarmente ti ha detto a un convegno: «Ah, sei tu quella. Il dossier circolava.» Hai sorriso. Hai cambiato discorso. Hai bevuto un bicchiere di vino in meno del solito, quella sera.\n\nHai imparato a vivere con due cose contemporaneamente: la consapevolezza che senza quel sì del 2014 non saresti mai entrata, e la consapevolezza che la persona che eri prima del 2014 — quella che faceva la magistrale con la borsa di studio, che leggeva Foucault sul treno alle 7 del mattino, che voleva fare ricerca per cambiare il modo in cui si pensava il suo campo — quella persona è morta a venticinque anni in una stanza d'albergo a Cetraro, senza che nessuna l'abbia accompagnata al funerale. Compresa tu.\n\nLavori bene. Pubblichi. Il tuo gruppo internazionale ti rispetta — loro non sanno la storia, non c'è nessuna ragione per cui la dovrebbero sapere. Ai congressi all'estero ti senti più viva. In dipartimento sai esattamente quali tre colleghe parlano di te alle spalle e quali due colleghe sanno tutto e ti vogliono bene comunque. Mantieni con quelle due un'amicizia silenziosa, quasi sacra.\n\nNon ti sei sposata. Non hai avuto figli. La cosa con il direttore aveva intossicato qualcosa nel modo di stare con un uomo che non sai ancora bene cosa sia. Forse un giorno. Forse no.\n\nUna sera, in metro, hai visto una ragazza di ventitré anni col cellulare in mano e l'espressione che riconosci immediatamente — qualcuno le sta scrivendo qualcosa che non dovrebbe scrivere, e lei sta calcolando il prezzo. Per dieci secondi pensi di scenderle accanto e dirle: «Senti, te lo dico per esperienza.» Ma è una di quelle frasi che non sai mai come prendono. Lasci che scenda alla sua fermata. Ti ripeti: ognuna sa come la prende.\n\nQuesto finale non è una sconfitta totale. Sei riuscita a fare carriera. Hai una vita. Hai delle amiche. Tieni il peso. Il peso però lo tieni tu — il direttore di dipartimento è morto serenamente l'anno scorso, e il dipartimento gli ha intitolato una sala. Il sistema italiano ha protetto sé stesso. E tu hai protetto te.",
       "resources": [
-        { "name": "1522 — antiviolenza nazionale",      "contact": "1522",                          "note": "24h, gratuito, anonimo" },
-        { "name": "Differenza Donna",                    "contact": "06 5500 5300",                  "note": "centri antiviolenza" },
-        { "name": "Mai più zitte / Non una di meno",    "contact": "collettivi locali",             "note": "se vuoi parlarne con chi capisce" },
-        { "name": "CUG d'ateneo",                        "contact": "interno ateneo",                "note": "anche per casi storici, anche dopo anni" },
-        { "name": "Psicoterapia con specialista trauma", "contact": "rete locale, SSN o privato",    "note": "il peso non è ineluttabile" }
+        {
+          "name": "1522 — antiviolenza nazionale",
+          "contact": "1522",
+          "note": "24h, gratuito, anonimo"
+        },
+        {
+          "name": "Differenza Donna",
+          "contact": "06 5500 5300",
+          "note": "centri antiviolenza"
+        },
+        {
+          "name": "Mai più zitte / Non una di meno",
+          "contact": "collettivi locali",
+          "note": "se vuoi parlarne con chi capisce"
+        },
+        {
+          "name": "CUG d'ateneo",
+          "contact": "interno ateneo",
+          "note": "anche per casi storici, anche dopo anni"
+        },
+        {
+          "name": "Psicoterapia con specialista trauma",
+          "contact": "rete locale, SSN o privato",
+          "note": "il peso non è ineluttabile"
+        }
       ]
     },
     {
@@ -1469,22 +1608,54 @@
       "priority": 113,
       "condition": {
         "all": [
-          { "minTurn": 20 },
-          { "flags": { "has": ["f_gender", "gender_quidproquo_rifiutato"] } },
+          {
+            "minTurn": 20
+          },
           {
             "flags": {
-              "hasNot": ["career_strutturato_ottenuto", "gender_dottorato_via_quidproquo"]
+              "has": [
+                "f_gender",
+                "gender_quidproquo_rifiutato"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasNot": [
+                "career_strutturato_ottenuto",
+                "gender_dottorato_via_quidproquo"
+              ]
             }
           }
         ]
       },
       "epilogue": "Hai detto no a quella cena. «Direttore, ci vediamo in dipartimento alle 17, non a cena.» Poi a giugno è uscita la graduatoria e tu sei stata tredicesima su quattordici. La vincitrice era una ragazza arrivata a giugno. Le tue tre Q1 valevano meno di una scheda CV onesta ma sottile, perché c'era una variabile non scritta che faceva moltiplicare l'una e dividere l'altra.\n\nTi sei ricandidata altrove. Hai vinto, anno dopo, una borsa in un altro ateneo, in una città di settecentomila abitanti che non avevi mai visto e che è diventata casa tua. Il direttore di dipartimento di lì era un'altra persona — non un santo, ma una persona. Hai discusso il PhD con voto pieno. Sei diventata assegnista. Adesso, dieci anni dopo, sei RTD-B. L'ASN è passata al secondo giro.\n\nQuella borsa che non avevi avuto è diventata, lentamente, quello che ti definisce. Non perché ne parli — ne parli pochissimo. Perché quando una dottoranda timida ti scrive da un altro ateneo per chiederti un parere su una cosa che le è successa, tu sai esattamente cosa risponderle. E perché quando il sindacato cerca rappresentanti per il tavolo sulle molestie nelle università, hanno chiamato te. E perché quando una collega entra in dipartimento e ti dice in privato che il PI del suo gruppo le ha messo una mano sulla spalla per la quinta volta in due mesi, tu hai un foglio Excel con i nomi di otto avvocate specializzate in diritto del lavoro accademico, perché ti sei costruita una rete in dieci anni.\n\nNon hai la cattedra del direttore di dipartimento del tuo primo ateneo. Non avrai mai la sua reputazione. Non sei mai stata invitata al suo convegno-tributo. Hai un'altra cosa: ogni mattina ti svegli e sai esattamente perché sei dove sei. La risposta non comprende mai la parola «vergogna».\n\nCi sono giorni in cui pensi a quella ragazza di ventitré anni che era arrivata a giugno e che era stata quattordicesima, vincitrice. Avrà pubblicato? Avrà fatto carriera? Avrà chiuso quella relazione? Avrà pagato il prezzo che paghi tu quando dici sì, oppure il prezzo che paghi tu quando dici no? Non sai chi tra voi due ha preso la decisione migliore. Sai solo che le due decisioni non avrebbero dovuto esistere. Che il sistema italiano avrebbe dovuto offrire un terzo modo — quello in cui la tua candidatura aveva tre Q1 e basta, e bastavano.\n\nQuesto finale è la cosa più vicina a una vittoria che il gioco contempli. Hai vinto contro tutti i pronostici. E ti sei costruita un'identità intera attorno al «no» di quella sera. Non è una vittoria felice. È una vittoria solida.",
       "resources": [
-        { "name": "1522 — antiviolenza nazionale",      "contact": "1522",                          "note": "24h, gratuito, anonimo" },
-        { "name": "ANAC — whistleblowing",               "contact": "anticorruzione.it",             "note": "bandi cuciti, concorsi pilotati" },
-        { "name": "ADI / ARTeD",                          "contact": "siti associazioni",             "note": "rete di chi è passato per la stessa cosa" },
-        { "name": "Mai più zitte",                       "contact": "collettivi locali",             "note": "se vuoi che il tuo no diventi parte di qualcosa" },
-        { "name": "Avvocate del diritto del lavoro accademico", "contact": "rete locale specializzata", "note": "ricorsi TAR per bandi pilotati" }
+        {
+          "name": "1522 — antiviolenza nazionale",
+          "contact": "1522",
+          "note": "24h, gratuito, anonimo"
+        },
+        {
+          "name": "ANAC — whistleblowing",
+          "contact": "anticorruzione.it",
+          "note": "bandi cuciti, concorsi pilotati"
+        },
+        {
+          "name": "ADI / ARTeD",
+          "contact": "siti associazioni",
+          "note": "rete di chi è passato per la stessa cosa"
+        },
+        {
+          "name": "Mai più zitte",
+          "contact": "collettivi locali",
+          "note": "se vuoi che il tuo no diventi parte di qualcosa"
+        },
+        {
+          "name": "Avvocate del diritto del lavoro accademico",
+          "contact": "rete locale specializzata",
+          "note": "ricorsi TAR per bandi pilotati"
+        }
       ]
     },
     {
@@ -1494,22 +1665,54 @@
       "priority": 116,
       "condition": {
         "all": [
-          { "minTurn": 22 },
-          { "flags": { "has": ["m_gender", "orientation_lgbtq", "lgbtq_dottorato_via_quidproquo"] } },
+          {
+            "minTurn": 22
+          },
           {
             "flags": {
-              "hasNot": ["career_strutturato_ottenuto"]
+              "has": [
+                "m_gender",
+                "orientation_lgbtq",
+                "lgbtq_dottorato_via_quidproquo"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasNot": [
+                "career_strutturato_ottenuto"
+              ]
             }
           }
         ]
       },
       "epilogue": "Hai accettato la borsa. Sono passati cinque, sette, dieci anni. Il direttore di dipartimento è morto due anni fa al suo settantesimo compleanno — il dipartimento gli ha intitolato un'aula. Il convegno commemorativo è stato un'apologia. Tu non sei andato. Una ricercatrice giovane del settore ti aveva detto in privato: «Capisco se non vieni. Ti capirei comunque.»\n\nIl PhD lo hai discusso con voto pieno. Le pubblicazioni del dottorato sono buone — quattro nomi, sempre lui senior. Quando ti hanno offerto l'assegno, tre anni fa, un collega di un'altra città ti aveva guardato per qualche secondo di troppo. «Ah. Sì. Sapevo.» Cosa sapeva non te l'ha mai chiesto. Quel «sapevo» è una parola che hai imparato a leggere come una pietra silenziosa nelle conversazioni di networking.\n\nIl tuo compagno a Madrid ti ha aspettato per quattro anni, poi non ce l'ha fatta più. Si è preso un altro. Adesso vive con un dentista colombiano. Non lo dice ma è felice. Tu sei contento per lui. Senti anche l'altra cosa.\n\nIn Italia hai dovuto vivere con due silenzi sovrapposti. Il primo silenzio era quello che tieni nel settore — «la relazione col direttore non si è mai discussa, sì grazie». Il secondo silenzio era con i tuoi genitori, che non sono mai stati out al posto tuo. Tua madre ha capito tre anni fa, una sera di Natale. Non ha detto niente. Ha versato il vino. Adesso ogni Natale parla di «come sta Andrés» — il dentista colombiano, l'ex del tuo ex. Le piacevi quando eri felice e basta.\n\nPubblichi bene. Hai un gruppo internazionale che ti rispetta. Sei in lista per concorsi da associato, dovresti vincere uno tra Padova, Pisa, e Trieste nei prossimi due anni. Sai esattamente quale dipartimento è ancora aperto e quale è ancora il vecchio Italia. Sai il nome di quattro dottorandi del settore che adesso, in quel preciso momento, stanno avendo una conversazione con un loro mentor che assomiglia a quella che avevi avuto tu a Berlino.\n\nTu non hai costruito niente di pubblico contro il sistema. Hai costruito qualcosa di privato: la rete sotterranea ha sei membri in più, perché ogni tanto trovi qualcuno di nuovo e lo aggiungi. È poco. È quello che riesci a fare.\n\nQuesto finale non è una sconfitta totale. Sei riuscito a fare carriera. Sei riuscito a vivere. Hai imparato a leggere il «sapevo» negli sguardi degli altri come una valuta stabile. Quello che il sistema italiano chiama un successo. Quello che tu, ogni tanto, prima di addormentarti, chiami con un'altra parola.",
       "resources": [
-        { "name": "Arcigay nazionale",                       "contact": "arcigay.it",                "note": "supporto psicologico e legale per persone LGBTQ" },
-        { "name": "Telefono Amico Lambda",                  "contact": "030 3729978",                "note": "ascolto LGBTQ, mer/gio/dom 18-22" },
-        { "name": "Avvocate per il contrasto alle molestie", "contact": "centri antiviolenza locali", "note": "vale anche per quid pro quo gay" },
-        { "name": "Mai più zitte / Non una di meno",         "contact": "collettivi locali",          "note": "se vuoi parlarne con chi capisce" },
-        { "name": "Psicoterapia con specialista trauma+identità", "contact": "rete locale, SSN o privato", "note": "il doppio peso non è ineluttabile" }
+        {
+          "name": "Arcigay nazionale",
+          "contact": "arcigay.it",
+          "note": "supporto psicologico e legale per persone LGBTQ"
+        },
+        {
+          "name": "Telefono Amico Lambda",
+          "contact": "030 3729978",
+          "note": "ascolto LGBTQ, mer/gio/dom 18-22"
+        },
+        {
+          "name": "Avvocate per il contrasto alle molestie",
+          "contact": "centri antiviolenza locali",
+          "note": "vale anche per quid pro quo gay"
+        },
+        {
+          "name": "Mai più zitte / Non una di meno",
+          "contact": "collettivi locali",
+          "note": "se vuoi parlarne con chi capisce"
+        },
+        {
+          "name": "Psicoterapia con specialista trauma+identità",
+          "contact": "rete locale, SSN o privato",
+          "note": "il doppio peso non è ineluttabile"
+        }
       ]
     },
     {
@@ -1519,22 +1722,55 @@
       "priority": 114,
       "condition": {
         "all": [
-          { "minTurn": 20 },
-          { "flags": { "has": ["m_gender", "orientation_lgbtq", "lgbtq_padrino_rifiutato"] } },
+          {
+            "minTurn": 20
+          },
           {
             "flags": {
-              "hasNot": ["career_strutturato_ottenuto", "lgbtq_dottorato_via_quidproquo"]
+              "has": [
+                "m_gender",
+                "orientation_lgbtq",
+                "lgbtq_padrino_rifiutato"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasNot": [
+                "career_strutturato_ottenuto",
+                "lgbtq_dottorato_via_quidproquo"
+              ]
             }
           }
         ]
       },
-      "epilogue": "Hai detto no al direttore di dipartimento. «Lavoriamo bene, prof. Non ho bisogno di altro che merito.» Lui aveva sorriso. Tre mesi dopo Tizio aveva la promozione che doveva essere tua. Sei mesi dopo il tuo articolo era in fondo alla pila. Un anno dopo il contratto non è stato rinnovato — motivazione formale «esaurimento fondi», motivazione informale che il dipartimento sapeva e che la rete sotterranea ha messo nel foglio Google.\n\nHai fatto causa civile. Tre anni di processo. La rete sotterranea ha contribuito 4.200 euro all'avvocata. Hai vinto al primo grado — la sentenza ha riconosciuto la ritorsione strutturale, ha condannato l'università a 28.000 euro di risarcimento. È stato un precedente piccolo ma reale. Il direttore non è stato neanche sfiorato penalmente — il reato penale (atti sessuali senza consenso) lo avresti dovuto formalizzare con materiale che a Berlino non avevi avuto modo di raccogliere.\n\nIntanto avevi vinto un postdoc a Madrid. Il tuo compagno ti ha aperto la porta di casa, ti ha versato un bicchiere di vino, e ti ha detto: «Adesso possiamo cucinare insieme.» Sono passati otto anni. Vivete in una casa con un balcone affacciato sul Madrid Río. Hai vinto una posizione permanente al CSIC tre anni fa. Pubblichi sul tema della violenza istituzionale nelle accademie del Sud-Europa. Hai 19 paper, due monografie, un libro di public-facing scholarship che si chiama «I patrigni accademici», pubblicato da un editore femminista spagnolo. È stato tradotto in italiano da Settenove.\n\nLa rete sotterranea italiana adesso ha 34 membri. Tu ne sei una specie di reference internazionale. Ricevi una decina di email all'anno da dottorandi italiani che attraversano oggi quello che hai attraversato tu. Hai un file Excel con quattordici avvocate specializzate, otto referenti CUG affidabili, due giornaliste che pubblicano sul tema. Hai imparato a leggere le situazioni come si legge una scacchiera.\n\nSei in Spagna. L'Italia è una cosa che vai a trovare due volte all'anno, ai funerali di parenti, e per il Pride di Roma una volta a giugno. Tua madre adesso ti chiede di Andrés — il tuo Andrés, non quello dell'altro epilogo. Sono passati quasi vent'anni dalla cena con il direttore al Madrid. Quella cena non è successa. Ti sei salvato dicendo no.\n\nQuesto finale è la cosa più vicina a una vittoria che il gioco contempli, per la traccia lgbtq. Hai vinto contro un sistema che era costruito perché tu non vincessi. Hai pagato in anni, in soldi, in salute. Ne è valsa la pena. Hai costruito qualcosa che ad altre persone serve. La risposta non comprende mai la parola «vergogna».",
+      "epilogue": "Hai detto no al direttore di dipartimento. «Lavoriamo bene, prof. Non ho bisogno di altro che merito.» Lui aveva sorriso. Tre mesi dopo Tizio aveva la promozione che doveva essere tua. Sei mesi dopo il tuo articolo era in fondo alla pila. Un anno dopo il contratto non è stato rinnovato — motivazione formale «esaurimento fondi», motivazione informale che il dipartimento sapeva e che la rete sotterranea ha messo nel foglio Google.\n\nHai fatto causa civile. Tre anni di processo. La rete sotterranea ha contribuito 4.200 euro all'avvocata. Hai vinto al primo grado — la sentenza ha riconosciuto la ritorsione strutturale, ha condannato l'università a 28.000 euro di risarcimento. È stato un precedente piccolo ma reale. Il direttore non è stato neanche sfiorato penalmente — il reato (atti sessuali senza consenso) lo avresti dovuto formalizzare con materiale che a Berlino non avevi avuto modo di raccogliere.\n\nIntanto avevi vinto un postdoc a Madrid. Il tuo compagno ti ha aperto la porta di casa, ti ha versato un bicchiere di vino, e ti ha detto: «Adesso possiamo cucinare insieme.» Sono passati otto anni. Vivete in una casa con un balcone affacciato sul Madrid Río. Hai vinto una posizione permanente al CSIC tre anni fa. Pubblichi sul tema della violenza istituzionale nelle accademie del Sud-Europa. Hai 19 paper, due monografie, un libro di public-facing scholarship che si chiama «I patrigni accademici», pubblicato da un editore femminista spagnolo. È stato tradotto in italiano da Settenove.\n\nLa rete sotterranea italiana adesso ha 34 membri. Tu ne sei una specie di reference internazionale. Ricevi una decina di email all'anno da dottorandi italiani che attraversano oggi quello che hai attraversato tu. Hai un file Excel con quattordici avvocate specializzate, otto referenti CUG affidabili, due giornaliste che pubblicano sul tema. Hai imparato a leggere le situazioni come si legge una scacchiera.\n\nSei in Spagna. L'Italia è una cosa che vai a trovare due volte all'anno, ai funerali di parenti, e per il Pride di Roma una volta a giugno. Tua madre adesso ti chiede di Andrés — il tuo Andrés, non quello dell'altro epilogo. Sono passati quasi vent'anni dalla cena con il direttore al Madrid. Quella cena non è successa. Ti sei salvato dicendo no.\n\nQuesto finale è la cosa più vicina a una vittoria che il gioco contempli, per la traccia lgbtq. Hai vinto contro un sistema che era costruito perché tu non vincessi. Hai pagato in anni, in soldi, in salute. Ne è valsa la pena. Hai costruito qualcosa che ad altre persone serve. La risposta non comprende mai la parola «vergogna».",
       "resources": [
-        { "name": "Arcigay nazionale",                                 "contact": "arcigay.it",          "note": "supporto psicologico, legale, mediatico" },
-        { "name": "Settenove edizioni",                                 "contact": "settenove.it",        "note": "casa editrice femminista, pubblica anche temi LGBTQ accademia" },
-        { "name": "Rete Lenford — avvocatura LGBTI+",                  "contact": "retelenford.it",      "note": "advocacy legale specializzata" },
-        { "name": "FRA — Fundamental Rights Agency / EU LGBTI Survey",  "contact": "fra.europa.eu",       "note": "dati comparativi EU 2024" },
-        { "name": "Mai più zitte / Non una di meno",                   "contact": "collettivi locali",   "note": "il pattern è lo stesso, le persone diverse" }
+        {
+          "name": "Arcigay nazionale",
+          "contact": "arcigay.it",
+          "note": "supporto psicologico, legale, mediatico"
+        },
+        {
+          "name": "Settenove edizioni",
+          "contact": "settenove.it",
+          "note": "casa editrice femminista, pubblica anche temi LGBTQ accademia"
+        },
+        {
+          "name": "Rete Lenford — avvocatura LGBTI+",
+          "contact": "retelenford.it",
+          "note": "advocacy legale specializzata"
+        },
+        {
+          "name": "FRA — Fundamental Rights Agency / EU LGBTI Survey",
+          "contact": "fra.europa.eu",
+          "note": "dati comparativi EU 2024"
+        },
+        {
+          "name": "Mai più zitte / Non una di meno",
+          "contact": "collettivi locali",
+          "note": "il pattern è lo stesso, le persone diverse"
+        }
       ]
     }
   ]
