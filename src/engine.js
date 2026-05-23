@@ -8,6 +8,7 @@ import { findEnding } from "./endings.js";
 import { rollCheck, resolveBranch } from "./checks.js";
 import { evalCondition } from "./conditions.js";
 import { explainEnding, summarizeReasons } from "./explain.js";
+import { interpolate } from "./interpolate.js";
 
 export function createGameState(character, gender = "m", state = {}) {
   // Auto-add flags for the player's chosen "researcher state": gender,
@@ -93,9 +94,9 @@ function buildEndingEntry(ending, state) {
   return {
     kind: "ending",
     turn: state.turn,
-    title: ending.title,
-    text: ending.epilogue,
-    cause: ending.perishCause,
+    title: interpolate(ending.title, state),
+    text: interpolate(ending.epilogue, state),
+    cause: interpolate(ending.perishCause, state),
     resources: ending.resources ?? null,
     reasons,
     summary: summarizeReasons(reasons, ending),
@@ -137,19 +138,6 @@ export function startGame(state, data) {
 //
 // The {m|f} regex deliberately rejects strings containing braces so it doesn't
 // match accidentally inside other markup.
-function interpolate(s, state) {
-  if (typeof s !== "string" || !state?.character) return s;
-  const g = state.character.gender ?? "m";
-  return s
-    .replace(/\{([^{}|]*)\|([^{}|]*)(?:\|([^{}|]*))?\}/g, (_, m, f, nb) => {
-      if (g === "f") return f;
-      if (g === "nb") return nb ?? m;
-      return m;
-    })
-    .replace(/\{ssd\}/g, state.character.ssd ?? "")
-    .replace(/\{name\}/g, state.character.name ?? "");
-}
-
 // Returns true if the player meets the requirements to take this choice.
 // Used both for UI gating (disabled vs enabled buttons) and as a final
 // sanity check inside applyChoice.
@@ -259,7 +247,7 @@ export function applyChoice(state, data, choice) {
   const event = rollEvent(data.events, state);
   if (event) {
     state.firedEvents.push(event.id);
-    state.feed.push({ kind: "event", turn: state.turn, title: event.title, text: event.text });
+    state.feed.push({ kind: "event", turn: state.turn, title: interpolate(event.title, state), text: interpolate(event.text, state) });
 
     if (event.choices?.length) {
       // Interactive event — auto-effects (if any) still apply as a baseline,
@@ -305,7 +293,7 @@ export function applyEventChoice(state, data, choice) {
   state.feed.push({
     kind: "event_choice",
     turn: state.turn,
-    eventTitle: event.title,
+    eventTitle: interpolate(event.title, state),
     label: interpolate(choice.label, state),
   });
   if (reactionToShow) {
@@ -383,7 +371,7 @@ export function useItem(state, data, itemId) {
     kind: "item_used",
     turn: state.turn,
     itemId,
-    itemName: item.name,
+    itemName: interpolate(item.name, state),
   });
 
   // Resolve: optional roll, then effects + reaction.
