@@ -3928,7 +3928,8 @@
       "title": "Il pre-accordo Marie Curie",
       "text": "Hai vinto una Marie Curie con Seal of Excellence. L'ateneo aveva firmato un pre-accordo per due anni full-time. Ora, a ridosso della firma, ti riscrivono: «Il contratto RTD-A può essere solo di 3 anni e i 150.000 euro non bastano per il full-time. Ti facciamo part-time per tre anni.» Hai perso metà stipendio. Le mail al MUR rimangono senza risposta.",
       "requires": {
-        "minTurn": 1
+        "minTurn": 1,
+        "flags": { "has": ["contract_MSCA"] }
       },
       "choices": [
         {
@@ -3996,7 +3997,8 @@
       "title": "Il PI strutturato ti vuole 'a costo zero'",
       "text": "Esce un nuovo PRIN. Un collega strutturato di un altro dipartimento ti propone di entrare nella sua unità a 0,1 ore, costo zero. Il progetto è inerente al 60% al tuo PON, al 40% no. Lui guadagna un'unità ben pubblicata, tu un titolo per l'ASN ma nessun finanziamento.",
       "requires": {
-        "minTurn": 11
+        "minTurn": 11,
+        "flags": { "has": ["contract_PON"] }
       },
       "choices": [
         {
@@ -4066,7 +4068,8 @@
       "title": "Hai vinto un bando PNRR",
       "text": "Hai vinto un piccolo bando PNRR come PI. Per usufruirne dovresti dimetterti dal PON in corso e firmare un nuovo contratto, oppure tentare la via dell'«addendum» che unisce i due finanziamenti facendoti passare a tempo pieno. L'ufficio progetti non l'ha mai fatto. Il MUR non risponde.",
       "requires": {
-        "minTurn": 13
+        "minTurn": 13,
+        "flags": { "has": ["contract_PON"] }
       },
       "choices": [
         {
@@ -4368,7 +4371,8 @@
       "title": "Il terzo anno è 'cofinanziato'",
       "text": "Il PON copre due anni al 100%. Il terzo anno è cofinanziato dall'ateneo. Adesso scopri che il «cofinanziamento» significa che i fondi sono comunque vincolati e che non puoi rendicontare ore su altri progetti neanche nell'ultimo anno. È un cofinanziamento di facciata. Resterai blindato fino alla fine.",
       "requires": {
-        "minTurn": 18
+        "minTurn": 18,
+        "flags": { "has": ["contract_PON"] }
       },
       "choices": [
         {
@@ -4431,7 +4435,8 @@
       "title": "Esce il bando FIS",
       "text": "Il Fondo Italiano per la Scienza apre. Bando da PI individuale. Se vinci, ti dimetti dal PON. Però il FIS richiede almeno il 50% di ore/uomo e tu sei al 100% sul progetto attuale. Le FAQ dicono che si può candidare anche un disoccupato. Il tuo ateneo dice «no» a tutto a prescindere.",
       "requires": {
-        "minTurn": 16
+        "minTurn": 16,
+        "flags": { "has": ["contract_PON"] }
       },
       "choices": [
         {
@@ -20513,6 +20518,617 @@
           "reaction": {
             "from": "barone",
             "text": "Lui annuisce piano. «Capisco. Ti rispetto per questo.» Esce. Sai che non ti rispetta. Sai che sei uscit{o|a} da una porta che difficilmente si riaprirà."
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_pon_cofin_24a",
+      "phase": "year-2",
+      "tags": ["contract_PON", "rendicontazione"],
+      "weight": 38,
+      "title": "Il cofinanziamento «di facciata»",
+      "text": "Il PON copre due anni al 100%. L'ateneo doveva cofinanziare il terzo. Scopri leggendo il contratto sotto la lampada che il «cofinanziamento» è in realtà un vincolo: non puoi rendicontare ore su altri progetti neanche nell'ultimo anno. Sei blindat{o|a} fino alla scadenza. Lo scopri da {m|f|nb} collega che ha appena letto le sue stesse carte.",
+      "requires": {
+        "flags": { "has": ["contract_PON"] }
+      },
+      "choices": [
+        {
+          "label": "Mandi una PEC all'ufficio progetti: chiedi il regime ore aggiornato.",
+          "effects": {
+            "stats": { "burocrazia": 2, "stamina": -1 },
+            "reputation": { "ateneo_hr": -1, "peers": 1 },
+            "flags": ["pec_inviata_cofin"]
+          }
+        },
+        {
+          "label": "Ti adatti. È così, e tanto manca solo un anno.",
+          "effects": {
+            "stats": { "stamina": -2, "burocrazia": 1 },
+            "reputation": { "supervisor": 1 },
+            "flags": ["pon_blindato"]
+          }
+        },
+        {
+          "label": "Provi comunque a rendicontare ore su un piccolo bando esterno.",
+          "effects": {
+            "stats": { "intelligenza": 1, "burocrazia": -2 },
+            "reputation": { "ateneo_hr": -2, "peers": 1 },
+            "flags": ["doppio_rendiconto_rischio"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_pon_referente_rimbalzo",
+      "phase": "year-1",
+      "tags": ["contract_PON", "didattica", "bureaucracy"],
+      "weight": 42,
+      "title": "Il referente PON che rimbalza",
+      "text": "Hai una domanda chiara: «Posso fare didattica sul corso magistrale?» Il referente PON ti dice di chiedere al regolamento d'ateneo. Il regolamento rimanda al disciplinare DM 1062. Il disciplinare rimanda al referente. Lui ti riguarda, sorride: «Sa, le indicazioni cambiano.»",
+      "requires": {
+        "flags": { "has": ["contract_PON"] }
+      },
+      "choices": [
+        {
+          "label": "Insisti. Vuoi una risposta scritta su carta intestata.",
+          "effects": {
+            "stats": { "burocrazia": 2, "persuasione": 1 },
+            "reputation": { "ateneo_hr": -2 },
+            "flags": ["pretendi_risposte_scritte"]
+          }
+        },
+        {
+          "label": "Lasci stare. Fai la didattica e basta. Se ti dicono qualcosa risponderai.",
+          "effects": {
+            "stats": { "stamina": -1, "burocrazia": -1 },
+            "flags": ["didattica_irregolare"]
+          }
+        },
+        {
+          "label": "Chiedi al supervisor. Lui sa muoversi tra le regole.",
+          "effects": {
+            "stats": { "networking": 1 },
+            "reputation": { "supervisor": 1 },
+            "flags": ["protetto_dal_supervisor"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_pon_cumulo_consulenza",
+      "phase": "year-2",
+      "tags": ["contract_PON", "cumulo_incarichi"],
+      "weight": 36,
+      "title": "L'azienda partner ti propone una consulenza «altra»",
+      "text": "L'azienda partner del tuo PON ti propone una consulenza retribuita su un tema diverso dal progetto. È coerente? È doppio finanziamento? Il regolamento d'ateneo dice no a tutto a prescindere. Una collega di Firenze dice che a lei l'hanno bocciata; un'altra a Brescia dice di sì. Stesso DM 1062.",
+      "requires": {
+        "flags": { "has": ["contract_PON"] }
+      },
+      "choices": [
+        {
+          "label": "Rifiuti. Sei un{o|a} RTDA PON. Niente cumuli.",
+          "effects": {
+            "stats": { "burocrazia": 1, "fondi": -1 },
+            "reputation": { "ateneo_hr": 1, "peers": -1 },
+            "flags": ["rifiutato_cumulo"]
+          }
+        },
+        {
+          "label": "Accetti come «contributo spese» — non figurerà nel cedolino.",
+          "effects": {
+            "stats": { "fondi": 2, "burocrazia": -2 },
+            "reputation": { "ateneo_hr": -1 },
+            "flags": ["cumulo_grigio"]
+          }
+        },
+        {
+          "label": "Chiedi autorizzazione formale al rettore con preavviso 15 giorni.",
+          "effects": {
+            "stats": { "burocrazia": 2, "stamina": -1, "persuasione": 1 },
+            "reputation": { "ateneo_hr": 1 },
+            "flags": ["cumulo_autorizzato_richiesto"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_pnrr_dimissioni_restituzione",
+      "phase": "year-2",
+      "tags": ["contract_PNRR", "dimissioni"],
+      "weight": 38,
+      "title": "Le clausole nascoste del PNRR",
+      "text": "Stai considerando di lasciare. Apri il contratto per la terza volta. Art. 7 comma 4: in caso di dimissioni anticipate dovrai restituire le mensilità non rendicontate sul progetto PNRR — interi mesi netti che non rivedrai. Una clausola che sul PON non c'era. Le regole peggiorano contratto dopo contratto.",
+      "requires": {
+        "flags": { "has": ["contract_PNRR"] }
+      },
+      "choices": [
+        {
+          "label": "Chiedi un parere legale al sindacato.",
+          "effects": {
+            "stats": { "burocrazia": 1, "networking": 1 },
+            "reputation": { "sindacato": 2, "ateneo_hr": -1 },
+            "flags": ["consultato_sindacato_PNRR"]
+          }
+        },
+        {
+          "label": "Resti. Non puoi permetterti di restituire 3 mensilità.",
+          "effects": {
+            "stats": { "stamina": -2, "fondi": 1 },
+            "flags": ["resto_per_economia"]
+          }
+        },
+        {
+          "label": "Lo metti per iscritto: scrivi al direttore «non firmerò nessuna rinuncia.»",
+          "effects": {
+            "stats": { "persuasione": 1, "burocrazia": 1 },
+            "reputation": { "direttore_dipartimento": -2, "ateneo_hr": -1 },
+            "flags": ["clausola_contestata"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_pnrr_target_irrealistici",
+      "phase": "year-1",
+      "tags": ["contract_PNRR", "rendicontazione"],
+      "weight": 40,
+      "title": "I milestone PNRR sono numeri inventati",
+      "text": "Il primo report PNRR ti chiede: 4 deliverable, 2 pubblicazioni Q1, 1 brevetto opzionale, 1 evento di disseminazione. Tutto entro 9 mesi. Il documento di progetto, lo hai visto solo dopo la firma, è stato scritto in tre giorni dal supervisor su template ministeriale. I numeri sono fantascienza. Però sono vincolanti.",
+      "requires": {
+        "flags": { "has": ["contract_PNRR"] }
+      },
+      "choices": [
+        {
+          "label": "Lo dici al supervisor: «Questi numeri non si raggiungono.»",
+          "effects": {
+            "stats": { "persuasione": 1, "stamina": -1 },
+            "reputation": { "supervisor": -2 },
+            "flags": ["target_contestati"]
+          }
+        },
+        {
+          "label": "Lavori il doppio per provarci. Salti il weekend per tre mesi.",
+          "effects": {
+            "stats": { "stamina": -4, "intelligenza": 1, "burocrazia": 1 },
+            "flags": ["overwork_pnrr"]
+          }
+        },
+        {
+          "label": "Gonfi la rendicontazione: chiami deliverable cose già esistenti.",
+          "effects": {
+            "stats": { "burocrazia": 2, "intelligenza": -1 },
+            "reputation": { "mur": -1 },
+            "flags": ["rendiconto_gonfiato"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_pnrr_rete_intrusa",
+      "phase": "year-2",
+      "tags": ["contract_PNRR", "networking", "politica"],
+      "weight": 35,
+      "title": "Vuoi lasciare il POR per il PNRR",
+      "text": "Hai chiesto alla rete dei generici se potevi lasciare un POR per il tuo PNRR. Una docente associata del tuo settore — dell'ateneo dove vorresti applicare — ti fa una ramanzina sui «fondi che vanno persi». Scopri che è iscritta alla rete. Lei ti conosce di vista. Voi precari siete quattro gatti.",
+      "requires": {
+        "flags": { "has": ["contract_PNRR"] }
+      },
+      "choices": [
+        {
+          "label": "Cancelli il post e scrivi agli admin in privato.",
+          "effects": {
+            "stats": { "networking": 1, "stamina": -1 },
+            "reputation": { "peers": 1 },
+            "flags": ["segnalato_admin"]
+          }
+        },
+        {
+          "label": "Le rispondi pubblicamente con i numeri sulla restituzione mensilità.",
+          "effects": {
+            "stats": { "persuasione": 2, "burocrazia": 1 },
+            "reputation": { "barone": -1, "peers": 2 },
+            "flags": ["sfidato_strutturata"]
+          }
+        },
+        {
+          "label": "Lasci perdere. Cancelli il PNRR dalla tua lista.",
+          "effects": {
+            "stats": { "stamina": -2, "fondi": -1 },
+            "flags": ["rinunciato_per_paura"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_msca_tassazione_doppia",
+      "phase": "year-1",
+      "tags": ["contract_MSCA", "rientro"],
+      "weight": 36,
+      "title": "La doppia tassazione che nessuno ti aveva detto",
+      "text": "Hai vinto la MSCA da rientrant{o|a}. Belle slide alla cerimonia di benvenuto. Il primo cedolino ti arriva e capisci che la trattenuta è quella italiana piena: il regime impatriati è scaduto perché la firma del contratto è stata fatta a febbraio, non a gennaio. Hai perso 12.000 € di vantaggio fiscale per due giorni. L'ufficio HR: «Non è un nostro problema.»",
+      "requires": {
+        "flags": { "has": ["contract_MSCA"] }
+      },
+      "choices": [
+        {
+          "label": "Ricorso. Cerchi un commercialista esperto di rientro cervelli.",
+          "effects": {
+            "stats": { "burocrazia": 2, "fondi": -1, "stamina": -1 },
+            "reputation": { "ateneo_hr": -2 },
+            "flags": ["ricorso_impatriati"]
+          }
+        },
+        {
+          "label": "Lasci stare. Hai perso 12k ma ne hai 100k davanti.",
+          "effects": {
+            "stats": { "stamina": -1, "fondi": -2 },
+            "flags": ["accettato_torto_fiscale"]
+          }
+        },
+        {
+          "label": "Lo racconti in pubblico — un post tagliente su LinkedIn.",
+          "effects": {
+            "stats": { "persuasione": 1, "networking": 1 },
+            "reputation": { "ateneo_hr": -3, "peers": 2 },
+            "flags": ["denuncia_pubblica_msca"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_msca_seal_bando_chiuso",
+      "phase": "year-1",
+      "tags": ["contract_MSCA", "seal_of_excellence"],
+      "weight": 34,
+      "title": "Il Seal di nessuno",
+      "text": "Hai il Seal of Excellence della Commissione. Bel pezzo di carta. Sull'ultimo bando ministeriale per Seal/Marie Curie c'erano 400 RTDA disponibili, 173 domande, tutte finanziate. Quest'anno il bando è chiuso. Devi trovare da sol{o|a} un ateneo italiano che cofinanzi la tua posizione. Tre rifiuti via PEC, due «in valutazione» da mesi.",
+      "requires": {
+        "flags": { "has": ["contract_MSCA"] }
+      },
+      "choices": [
+        {
+          "label": "Continui a bussare. Quinto e sesto ateneo nella stessa settimana.",
+          "effects": {
+            "stats": { "stamina": -2, "networking": 2, "persuasione": 1 },
+            "flags": ["caccia_host_msca"]
+          }
+        },
+        {
+          "label": "Accetti l'offerta più al ribasso: 3 anni part-time invece di 2 full-time.",
+          "effects": {
+            "stats": { "fondi": -2, "stamina": -1 },
+            "reputation": { "ateneo_hr": -1 },
+            "flags": ["msca_dimezzata"]
+          }
+        },
+        {
+          "label": "Riparti per l'estero. Il Seal vale di più fuori dall'Italia.",
+          "effects": {
+            "stats": { "networking": 2, "stamina": 1 },
+            "reputation": { "supervisor": -2 },
+            "flags": ["fuga_post_seal"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_ffo_direttore_promemoria",
+      "phase": "year-1",
+      "tags": ["contract_FFO", "politica_dipartimento"],
+      "weight": 36,
+      "title": "Il direttore te lo ricorda",
+      "text": "Sei pagat{o|a} su FFO d'ateneo. Niente ministero a vincolarti, niente PRIN/PON da rendicontare. Ma il direttore di dipartimento, nei corridoi: «Eh, tu sei un{o|a} dei nostri, paghiamo noi.» Non è una minaccia. È un promemoria. Domani c'è la riunione di programmazione didattica. Indovini chi avrà il corso che nessuno vuole.",
+      "requires": {
+        "flags": { "has": ["contract_FFO"] }
+      },
+      "choices": [
+        {
+          "label": "Accetti il corso. Hai capito le regole non scritte.",
+          "effects": {
+            "stats": { "burocrazia": 1, "stamina": -2 },
+            "reputation": { "direttore_dipartimento": 2 },
+            "flags": ["corso_imposto_accettato"]
+          }
+        },
+        {
+          "label": "Rifiuti. Citi le tue 130 ore già accumulate.",
+          "effects": {
+            "stats": { "persuasione": 2, "stamina": 1 },
+            "reputation": { "direttore_dipartimento": -3, "peers": 1 },
+            "flags": ["sfidato_direttore"]
+          }
+        },
+        {
+          "label": "Proponi uno scambio: prendi il corso ma vuoi essere PI di un piccolo bando.",
+          "effects": {
+            "stats": { "persuasione": 2, "networking": 1 },
+            "reputation": { "direttore_dipartimento": 1 },
+            "flags": ["scambio_corso_pi"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_ffo_taglio_budget",
+      "phase": "year-2",
+      "tags": ["contract_FFO", "fondi"],
+      "weight": 35,
+      "title": "Il dipartimento taglia l'FFO",
+      "text": "Riunione di Consiglio. Slide del direttore: «L'FFO 2026 è ridotto del 14%. Dobbiamo razionalizzare le posizioni.» Sei una di quelle posizioni. Non c'è una scadenza, non c'è un ministero che ti tutela. C'è solo una delibera di consiglio che, prima o poi, potrebbe scegliere di non rinnovarti. Esci dalla riunione senza dire niente.",
+      "requires": {
+        "flags": { "has": ["contract_FFO"] }
+      },
+      "choices": [
+        {
+          "label": "Vai dal sindacato il giorno dopo.",
+          "effects": {
+            "stats": { "networking": 1, "burocrazia": 1 },
+            "reputation": { "sindacato": 2, "direttore_dipartimento": -1 },
+            "flags": ["consultato_sindacato_FFO"]
+          }
+        },
+        {
+          "label": "Inizi a cercare fuori. Aggiorni il CV stasera stessa.",
+          "effects": {
+            "stats": { "networking": 1, "stamina": -1 },
+            "flags": ["job_search_attivo"]
+          }
+        },
+        {
+          "label": "Fai un favore visibile al direttore — l'organizzazione di un convegno.",
+          "effects": {
+            "stats": { "stamina": -2, "networking": 2, "burocrazia": -1 },
+            "reputation": { "direttore_dipartimento": 3 },
+            "flags": ["servizio_al_direttore"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_age_under33_matrimonio",
+      "phase": "any",
+      "tags": ["age_under33", "vita_privata"],
+      "weight": 32,
+      "title": "L'invito al matrimonio",
+      "text": "Tre invitazioni a matrimoni nello stesso mese. Tutti coetanei, tutti fuori dall'accademia. Uno fa consulenza, una è notaia, un altro fa il medico ospedaliero. Tutti hanno un mutuo, due hanno già figli. Tu hai una borsa, un contratto a termine, e l'ASN da fare. La domanda non te la fanno, ma la senti negli sguardi.",
+      "requires": {
+        "flags": { "has": ["age_under33"] }
+      },
+      "choices": [
+        {
+          "label": "Ci vai. Bevi troppo. Torni a casa con un'amarezza che non passa.",
+          "effects": {
+            "stats": { "stamina": -2, "fondi": -1 },
+            "flags": ["serata_amara"]
+          }
+        },
+        {
+          "label": "Mandi un regalo, dici che hai una scadenza. Tecnicamente è vero.",
+          "effects": {
+            "stats": { "stamina": 1, "networking": -1 },
+            "flags": ["evitato_evento_sociale"]
+          }
+        },
+        {
+          "label": "Vai con il discorso pronto: «L'accademia è un investimento di lunga durata.»",
+          "effects": {
+            "stats": { "persuasione": 1, "stamina": -1 },
+            "flags": ["narrativa_lunga_durata"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_age_33to40_asn_finestra",
+      "phase": "year-2",
+      "tags": ["age_33to40", "ASN"],
+      "weight": 42,
+      "title": "La finestra si stringe",
+      "text": "Hai 36 anni. Apri il foglio Excel dove tieni le pubblicazioni. Conti gli IF, le coautorialità, le H. Per l'ASN da Associato ti mancano due Q1 e una citazione strutturale. L'ASN apre tra 14 mesi. Se la fai e passi, c'è ancora una piccola finestra per RTT/RTD-B prima dei 40. Se la salti, sei fuori dal treno degli under-40.",
+      "requires": {
+        "flags": { "has": ["age_33to40"] }
+      },
+      "choices": [
+        {
+          "label": "Sospendi tutto il resto. Pubblicazioni o niente per 12 mesi.",
+          "effects": {
+            "stats": { "stamina": -3, "intelligenza": 3, "burocrazia": -1 },
+            "reputation": { "peers": -1 },
+            "flags": ["modalita_asn_assoluta"]
+          }
+        },
+        {
+          "label": "Ti accordi con un senior per due pubblicazioni di filiera.",
+          "effects": {
+            "stats": { "networking": 2, "intelligenza": -1 },
+            "reputation": { "supervisor": 2, "peers": -1 },
+            "flags": ["filiera_asn"]
+          }
+        },
+        {
+          "label": "Lasci stare l'ASN. Decidi che lasci l'accademia entro fine contratto.",
+          "effects": {
+            "stats": { "stamina": 2, "intelligenza": -1 },
+            "flags": ["asn_abbandonata"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_age_33to40_mutuo",
+      "phase": "any",
+      "tags": ["age_33to40", "vita_privata"],
+      "weight": 35,
+      "title": "Il mutuo bocciato",
+      "text": "Il consulente della banca ti guarda le buste paga. Mutuo per la prima casa. «Lei ha 34 anni, contratto a termine, due anni di residuo. Mi spiace, non posso istruirgliela. Tornerebbe con un coobbligato a tempo indeterminato.» Esci. Tuo padre ha 71 anni. Non glielo chiederai mai.",
+      "requires": {
+        "flags": { "has": ["age_33to40"] }
+      },
+      "choices": [
+        {
+          "label": "Affitto a vita. Fai i conti su quanto buttato in 10 anni.",
+          "effects": {
+            "stats": { "stamina": -2, "fondi": -1 },
+            "flags": ["affitto_perpetuo"]
+          }
+        },
+        {
+          "label": "Chiedi al supervisor una lettera di referenze per la banca.",
+          "effects": {
+            "stats": { "burocrazia": 1, "networking": 1 },
+            "reputation": { "supervisor": 1 },
+            "flags": ["referenza_per_mutuo"]
+          }
+        },
+        {
+          "label": "Decisione: cerchi un lavoro a tempo indeterminato fuori dall'accademia.",
+          "effects": {
+            "stats": { "networking": 2, "stamina": 1 },
+            "flags": ["pivot_per_mutuo"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_age_over40_telematica",
+      "phase": "year-3",
+      "tags": ["age_over40", "uscita"],
+      "weight": 38,
+      "title": "L'amica della telematica",
+      "text": "Un'amica si è appena strutturata. Telematica, settore tuo. «Tre giorni a settimana online, due in presenza. Lo stipendio è quello di un{o|a} associato, e ti dicono cosa insegnare. Niente ricerca seria, ma niente più colloqui. Hai 41 anni, basta. Pensaci.» Lo dice senza sarcasmo. Lo dice sapendo che ti capisce.",
+      "requires": {
+        "flags": { "has": ["age_over40"] }
+      },
+      "choices": [
+        {
+          "label": "Le chiedi come ha fatto. Mandi il CV venerdì.",
+          "effects": {
+            "stats": { "networking": 2 },
+            "reputation": { "peers": -1, "supervisor": -2 },
+            "flags": ["candidatura_telematica"]
+          }
+        },
+        {
+          "label": "Rifiuti l'idea. Non è ancora finita per te.",
+          "effects": {
+            "stats": { "stamina": 1, "intelligenza": 1 },
+            "flags": ["niente_telematica"]
+          }
+        },
+        {
+          "label": "Ringrazi e tieni l'opzione viva. Salvi il contatto. Non si sa mai.",
+          "effects": {
+            "stats": { "networking": 1, "stamina": 1 },
+            "flags": ["telematica_in_riserva"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_age_over40_concorso_anziano",
+      "phase": "year-3",
+      "tags": ["age_over40", "concorso"],
+      "weight": 36,
+      "title": "Il più anziano del concorso",
+      "text": "Aula concorsi. Quattro candidati. Due hanno 30 anni, una 33, tu 43. Il presidente di commissione legge le età ad alta voce. «Bene, possiamo iniziare.» Senti gli sguardi. Uno dei giovani ti sorride con quella cortesia che è già una resa per tuo conto. Sai che la commissione preferirà sempre un{o|a} «giovane investimento» a un{o|a} «recupero da consolidare».",
+      "requires": {
+        "flags": { "has": ["age_over40"] }
+      },
+      "choices": [
+        {
+          "label": "Fai una presentazione tecnica perfetta. Ti giochi la competenza.",
+          "effects": {
+            "stats": { "intelligenza": 2, "persuasione": 1, "stamina": -1 },
+            "flags": ["presentazione_tecnica_forte"]
+          }
+        },
+        {
+          "label": "Inquadri l'esperienza come vantaggio: «Vi porto 15 anni di network internazionale.»",
+          "effects": {
+            "stats": { "persuasione": 2, "networking": 1 },
+            "flags": ["narrativa_esperienza"]
+          }
+        },
+        {
+          "label": "Ti ritiri prima della prova orale. Non vuoi sentirti dire «troppo maturo».",
+          "effects": {
+            "stats": { "stamina": -2, "persuasione": -1 },
+            "reputation": { "peers": -1 },
+            "flags": ["ritiro_pre_orale"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_age_over40_ex_compagni",
+      "phase": "any",
+      "tags": ["age_over40", "networking"],
+      "weight": 30,
+      "title": "La cena con gli ex compagni di dottorato",
+      "text": "Cena di reunion. Dieci anni dal dottorato. Sette su nove sono associati o ordinari. Una è ricercatrice EU a Heidelberg. Tu sei l'unic{o|a} RTDA della tavolata. Nessuno fa battute, ed è peggio. A fine cena uno ti prende a parte: «Senti, se vuoi vengo io con te alla prossima commissione. So come funzionano queste cose.»",
+      "requires": {
+        "flags": { "has": ["age_over40"] }
+      },
+      "choices": [
+        {
+          "label": "Accetti il suo aiuto. Lo chiamerai lunedì.",
+          "effects": {
+            "stats": { "networking": 3, "persuasione": 1 },
+            "reputation": { "peers": 2, "barone": 1 },
+            "flags": ["sponsor_ex_compagno"]
+          }
+        },
+        {
+          "label": "Ringrazi e cambi discorso. Non vuoi essere quello degli aiuti.",
+          "effects": {
+            "stats": { "stamina": 1, "networking": -1 },
+            "flags": ["rifiutato_aiuto_compagno"]
+          }
+        },
+        {
+          "label": "Ti ubriachi e gli racconti tutto: il PON, i baroni, la finestra che si chiude.",
+          "effects": {
+            "stats": { "stamina": -3, "persuasione": -1 },
+            "reputation": { "peers": 1 },
+            "flags": ["confessione_ubriaca"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "state_pon_pnrr_addendum",
+      "phase": "year-2",
+      "tags": ["contract_PON", "PNRR"],
+      "weight": 35,
+      "title": "Hai vinto un piccolo PNRR mentre sei sul PON",
+      "text": "Hai vinto un piccolo bando PNRR come PI. Per usufruirne dovresti dimetterti dal PON in corso e firmare un nuovo contratto, oppure tentare la via dell'«addendum» che unisce i due finanziamenti facendoti passare a tempo pieno sull'addendum. L'ufficio progetti non l'ha mai fatto. Il MUR non risponde da otto settimane.",
+      "requires": {
+        "flags": { "has": ["contract_PON"] }
+      },
+      "choices": [
+        {
+          "label": "Ti dimetti dal PON. Restituisci due mensilità non rendicontate.",
+          "effects": {
+            "stats": { "fondi": -3, "burocrazia": 2 },
+            "reputation": { "supervisor": -1, "ateneo_hr": -1 },
+            "flags": ["dimissioni_per_pnrr", "vinto_pi_pnrr"]
+          }
+        },
+        {
+          "label": "Provi la via dell'addendum. PEC al rettore, al MUR, al direttore.",
+          "effects": {
+            "stats": { "burocrazia": 3, "persuasione": 2, "stamina": -2 },
+            "reputation": { "ateneo_hr": -2, "mur": -1 },
+            "flags": ["tentativo_addendum"]
+          }
+        },
+        {
+          "label": "Rinunci al PNRR. Resti sul PON in scadenza.",
+          "effects": {
+            "stats": { "stamina": -1, "fondi": -1 },
+            "reputation": { "peers": -1 },
+            "flags": ["rinunciato_pnrr_pi"]
           }
         }
       ]

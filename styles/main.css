@@ -121,6 +121,7 @@ button { font-family: inherit; }
   letter-spacing: 0.08em; margin: 1.5rem 0 .35rem; }
 .char-summary h3 { margin: 0 0 .1rem; font-weight: 500; }
 .char-summary .ssd { color: var(--accent); font-family: var(--font-mono); font-size: .78rem; }
+.char-summary .char-state { color: var(--fg-dim); font-family: var(--font-mono); font-size: .75rem; margin-top: .15rem; }
 .turn-counter { color: var(--fg-dim); font-family: var(--font-mono); font-size: .85rem; margin-top: .35rem; }
 .inventory, .flags { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .2rem; }
 .inventory li, .flags li {
@@ -155,6 +156,43 @@ button { font-family: inherit; }
   flex: 1; padding: .5rem .75rem; font-size: .85rem; text-align: center;
 }
 .btn--gender::before { content: ""; }
+
+/* -----------------------------  State picker (step 2 of character select)  ---- */
+.state-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;
+  padding: 1.25rem; margin: 1.25rem 0;
+}
+.state-card h3 {
+  margin: 0 0 .85rem; font-weight: 500; font-size: 1rem; color: var(--fg);
+}
+.state-options {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: .5rem;
+}
+.state-option {
+  display: flex; flex-direction: column; align-items: flex-start; gap: .25rem;
+  text-align: left; cursor: pointer;
+  background: var(--bg-elev); border: 1px solid var(--border); border-radius: 5px;
+  padding: .75rem .85rem;
+  color: var(--fg); font-family: inherit; font-size: .9rem;
+  transition: border-color .12s ease, background .12s ease;
+}
+.state-option:hover { border-color: var(--accent); }
+.state-option.selected {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, var(--bg-elev));
+}
+.state-option strong { font-weight: 500; }
+.state-hint {
+  color: var(--fg-dim); font-style: italic; font-size: .8rem; line-height: 1.35;
+}
+.state-actions {
+  display: flex; justify-content: space-between; gap: .75rem; margin-top: 1.5rem;
+}
+@media (max-width: 800px) {
+  .state-options { grid-template-columns: 1fr; }
+  .state-card { padding: 1rem; }
+}
 
 /* -----------------------------  Dossier (right column)  -------------------- */
 .dossier {

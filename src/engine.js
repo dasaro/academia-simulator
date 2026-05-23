@@ -9,12 +9,21 @@ import { rollCheck, resolveBranch } from "./checks.js";
 import { evalCondition } from "./conditions.js";
 import { explainEnding, summarizeReasons } from "./explain.js";
 
-export function createGameState(character, gender = "m") {
-  // Auto-add a gender flag so scenarios can gate on it via `requires.flags`.
+export function createGameState(character, gender = "m", state = {}) {
+  // Auto-add flags for the player's chosen "researcher state": gender,
+  // contract type, age band. These let scenarios gate via `requires.flags`
+  // without any condition-DSL changes — they're just starting flags.
   const genderFlag = `${gender}_gender`;
-  const startingFlags = [...(character.startingFlags ?? []), genderFlag];
+  const contractType = state.contractType || character.defaultContractType || "PON";
+  const ageBand = state.ageBand || character.defaultAgeBand || "33to40";
+  const contractFlag = `contract_${contractType}`;
+  const ageFlag = `age_${ageBand}`;
+  const startingFlags = [
+    ...(character.startingFlags ?? []),
+    genderFlag, contractFlag, ageFlag,
+  ];
   return {
-    character: { ...structuredClone(character), gender },
+    character: { ...structuredClone(character), gender, contractType, ageBand },
     turn: 1,
     stats: { ...character.stats },
     reputation: { ...character.startingReputation },

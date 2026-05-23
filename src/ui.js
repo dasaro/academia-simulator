@@ -43,6 +43,20 @@ const STAT_LABELS = {
   persuasione: "Persuasione",
 };
 
+const CONTRACT_LABELS = {
+  PON:  "RTD-A PON",
+  PNRR: "RTD-A PNRR",
+  MSCA: "MSCA / Seal",
+  FFO:  "FFO d'ateneo",
+};
+const AGE_LABELS = {
+  under33: "28–32",
+  "33to40": "33–40",
+  over40:  "41+",
+};
+function contractLabel(id) { return CONTRACT_LABELS[id] || id || "RTD-A"; }
+function ageLabel(id) { return AGE_LABELS[id] || id || ""; }
+
 function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) {
@@ -77,13 +91,14 @@ export function renderContentWarning(root, onDismiss) {
 
 export function renderCharacterSelect(root, characters, onSelect) {
   root.innerHTML = "";
+  _charactersForBack = characters;
   const wrap = el("div", { className: "screen screen--select" });
 
   wrap.appendChild(el("h1", {}, "Academia Simulator"));
   wrap.appendChild(el("p", { className: "tagline" },
     "Una carriera accademica italiana. Tre anni, prorogabili. Forse."));
   wrap.appendChild(el("p", { className: "tagline" },
-    "Scegli un archetipo e un genere. (Il genere modifica gli scenari, non le statistiche.)"));
+    "Scegli archetipo, genere, tipo di contratto e fascia d'età. Ogni combinazione apre scenari diversi."));
 
   const grid = el("div", { className: "char-grid" });
   for (const c of characters) {
@@ -95,11 +110,11 @@ export function renderCharacterSelect(root, characters, onSelect) {
     const genderRow = el("div", { className: "gender-row" });
     genderRow.appendChild(el("button", {
       className: "btn btn--gender",
-      onClick: () => onSelect(c, "f"),
+      onClick: () => renderStatePicker(root, c, "f", onSelect),
     }, "Gioca come donna"));
     genderRow.appendChild(el("button", {
       className: "btn btn--gender",
-      onClick: () => onSelect(c, "m"),
+      onClick: () => renderStatePicker(root, c, "m", onSelect),
     }, "Gioca come uomo"));
     card.appendChild(genderRow);
     grid.appendChild(card);
@@ -107,6 +122,89 @@ export function renderCharacterSelect(root, characters, onSelect) {
   wrap.appendChild(grid);
   root.appendChild(wrap);
 }
+
+// Step 2: pick contract type + age band. Each choice sets starting flags
+// that the scenario pool gates on, so different state combinations surface
+// different content — the structural answer to scenarios feeling repetitive.
+const CONTRACT_TYPES = [
+  { id: "PON",  name: "RTD-A PON / DM 1062",         hint: "Il classico precariato R&I. Niente PI sul PRIN. Recupero maternità/malattia. Vincolo al progetto." },
+  { id: "PNRR", name: "RTD-A PNRR",                  hint: "Più recenti, regole peggiori sul piano contrattuale. Restituzione mensilità in caso di dimissioni." },
+  { id: "MSCA", name: "Marie Curie / Seal of Excellence", hint: "Sei rientrat{o|a} dall'estero. Chiamata diretta teoricamente possibile. Ateneo che cambia accordo all'ultimo." },
+  { id: "FFO",  name: "FFO d'ateneo",                hint: "Più rar{o|a}: contratto su fondi d'ateneo. Meno vincoli ministeriali, più dipendenza dal direttore." },
+];
+
+const AGE_BANDS = [
+  { id: "under33", name: "28–32 anni", hint: "La finestra under-40 è ancora lunga. Famiglia rimandata. Ancora pensi che il sistema sia riformabile." },
+  { id: "33to40",  name: "33–40 anni", hint: "La finestra si stringe. Family-formation pressure. Il tuo ASN deve passare entro 2-3 anni." },
+  { id: "over40",  name: "41+ anni",   hint: "Sei oltre il treno degli under-40. Telematica come opzione realistica. Ogni concorso pesa il doppio." },
+];
+
+function renderStatePicker(root, character, gender, onSelect) {
+  root.innerHTML = "";
+  const wrap = el("div", { className: "screen screen--select" });
+  wrap.appendChild(el("h1", {}, character.name));
+  wrap.appendChild(el("p", { className: "tagline" },
+    `${gender === "f" ? "Donna" : "Uomo"} · SSD ${character.ssd} · ${character.tagline}`));
+
+  const state = { contractType: character.defaultContractType || "PON",
+                  ageBand: character.defaultAgeBand || "33to40" };
+
+  const contractCard = el("div", { className: "state-card" });
+  contractCard.appendChild(el("h3", {}, "Tipo di contratto"));
+  const contractGroup = el("div", { className: "state-options" });
+  function renderContracts() {
+    contractGroup.innerHTML = "";
+    for (const c of CONTRACT_TYPES) {
+      const opt = el("button", {
+        className: `state-option${state.contractType === c.id ? " selected" : ""}`,
+        onClick: () => { state.contractType = c.id; renderContracts(); },
+      });
+      opt.appendChild(el("strong", {}, c.name));
+      opt.appendChild(el("span", { className: "state-hint" }, interpolate(c.hint, { character: { gender } })));
+      contractGroup.appendChild(opt);
+    }
+  }
+  renderContracts();
+  contractCard.appendChild(contractGroup);
+
+  const ageCard = el("div", { className: "state-card" });
+  ageCard.appendChild(el("h3", {}, "Fascia d'età"));
+  const ageGroup = el("div", { className: "state-options" });
+  function renderAges() {
+    ageGroup.innerHTML = "";
+    for (const a of AGE_BANDS) {
+      const opt = el("button", {
+        className: `state-option${state.ageBand === a.id ? " selected" : ""}`,
+        onClick: () => { state.ageBand = a.id; renderAges(); },
+      });
+      opt.appendChild(el("strong", {}, a.name));
+      opt.appendChild(el("span", { className: "state-hint" }, a.hint));
+      ageGroup.appendChild(opt);
+    }
+  }
+  renderAges();
+  ageCard.appendChild(ageGroup);
+
+  wrap.appendChild(contractCard);
+  wrap.appendChild(ageCard);
+
+  const actions = el("div", { className: "state-actions" });
+  actions.appendChild(el("button", {
+    className: "btn btn--ghost",
+    onClick: () => { if (_charactersForBack) renderCharacterSelect(root, _charactersForBack, onSelect); },
+  }, "← Indietro"));
+  actions.appendChild(el("button", {
+    className: "btn btn--gender",
+    onClick: () => onSelect(character, gender, state),
+  }, "Inizia"));
+  wrap.appendChild(actions);
+
+  root.appendChild(wrap);
+}
+
+// Cache the character list at character-select time so the state picker's
+// "← Indietro" button can re-render the same list without main.js wiring.
+let _charactersForBack = null;
 
 function renderStatBars(stats) {
   const wrap = el("div", { className: "stat-bars" });
@@ -178,6 +276,7 @@ export function renderGame(root, state, factions, items, handlers) {
   sidebar.appendChild(el("div", { className: "char-summary" },
     el("h3", {}, state.character.name),
     el("div", { className: "ssd" }, state.character.ssd),
+    el("div", { className: "char-state" }, contractLabel(state.character.contractType) + " · " + ageLabel(state.character.ageBand)),
     el("div", { className: "turn-counter" }, `Mese ${state.turn}  ·  Anno ${Math.ceil(state.turn / 12)}`),
   ));
   sidebar.appendChild(el("h4", {}, "Stats"));

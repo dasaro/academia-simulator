@@ -69,8 +69,8 @@ function showCharacterSelect() {
   renderCharacterSelect(root, DATA.characters, onCharacterChosen);
 }
 
-function onCharacterChosen(character, gender) {
-  state = createGameState(character, gender);
+function onCharacterChosen(character, gender, stateOpts) {
+  state = createGameState(character, gender, stateOpts);
   startGame(state, DATA);
   saveState(state);
   render();
