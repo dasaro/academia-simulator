@@ -17,6 +17,11 @@ const { browserSessionStorage } = await import(`./storage.js${QS}`);
 setStorageAdapter(browserSessionStorage());
 const { renderCharacterSelect, renderGame, renderContentWarning } =
   await import(`./ui.js${QS}`);
+// Tenta di caricare le annotation. Se il file non c'è (produzione su
+// GitHub Pages — annotations.json è gitignored), fallisce silenziosamente
+// e l'UI non mostra il badge ℹ.
+const { loadAnnotations } = await import(`./annotations.js${QS}`);
+await loadAnnotations();
 
 const CW_KEY = "academiasim.cw_acknowledged.v1";
 

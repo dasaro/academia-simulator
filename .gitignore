@@ -17,3 +17,9 @@ data/participants.json
 data/keywords.json
 data/topics.json
 /tmp_chat/
+
+# Anchor/annotation file — collegamenti tra scenari e fonti (chat + cronaca
+# pubblica). Visibili in locale come popup ℹ accanto ai titoli, MAI online.
+# Contengono frasi parafrasate della chat che, anche se anonimizzate,
+# potrebbero essere riconoscibili da chi era nel gruppo originale.
+data/annotations.json

@@ -721,3 +721,111 @@ button { font-family: inherit; }
   }
 }
 
+
+/* =============================================================
+   Anchor / annotations (visibili solo in locale).
+   In produzione data/annotations.json è gitignored → niente badge.
+   ============================================================= */
+.anchor-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: rgba(220, 178, 122, 0.15);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.85rem; font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-left: .5rem;
+  transition: background .12s ease, transform .12s ease;
+  vertical-align: middle;
+}
+.anchor-badge:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: scale(1.12);
+}
+
+.anchor-panel {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.anchor-panel__card {
+  background: var(--bg-elev);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  max-width: 720px; width: 100%;
+  max-height: 86vh; overflow-y: auto;
+  padding: 1.5rem;
+  box-shadow: 0 12px 60px rgba(0,0,0,0.6);
+}
+.anchor-panel__header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .65rem; margin-bottom: 1rem;
+}
+.anchor-panel__header h3 {
+  margin: 0; color: var(--accent);
+  font-weight: 500; font-size: 1.05rem;
+}
+.anchor-panel__header code {
+  font-family: var(--font-mono); font-size: .85rem;
+  color: var(--fg-dim);
+  background: transparent;
+  padding: 0;
+}
+.anchor-panel__close {
+  background: transparent; border: none;
+  color: var(--fg-dim); font-size: 1.4rem; line-height: 1;
+  cursor: pointer; padding: 0 .35rem;
+}
+.anchor-panel__close:hover { color: var(--fg); }
+.anchor-panel__notes {
+  color: var(--fg-dim); font-style: italic;
+  margin: 0 0 1rem; font-size: .92rem;
+}
+.anchor-panel__list {
+  display: flex; flex-direction: column; gap: .85rem;
+}
+.anchor-item {
+  background: var(--bg-card);
+  border-left: 3px solid var(--accent-cool);
+  border-radius: 4px;
+  padding: .75rem 1rem;
+}
+.anchor-item--chat       { border-left-color: #95c563; }
+.anchor-item--esterno    { border-left-color: var(--accent-cool); }
+.anchor-item--user_personal { border-left-color: var(--accent-warm); }
+.anchor-item__tag {
+  display: inline-block;
+  font-family: var(--font-mono); font-size: .72rem;
+  letter-spacing: .04em; text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: .25rem;
+}
+.anchor-item__ref {
+  font-weight: 500; color: var(--fg);
+  margin-bottom: .25rem; font-size: .92rem;
+}
+.anchor-item__quote {
+  margin: .25rem 0 0;
+  color: var(--fg-dim);
+  font-style: italic;
+  font-size: .9rem;
+  line-height: 1.5;
+  border-left: 2px solid var(--border);
+  padding-left: .65rem;
+}
+.anchor-panel__footer {
+  margin-top: 1.25rem;
+  padding-top: .65rem;
+  border-top: 1px dashed var(--border);
+  color: var(--fg-muted);
+  font-size: .78rem; font-style: italic;
+  text-align: center;
+}

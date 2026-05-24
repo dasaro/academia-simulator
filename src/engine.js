@@ -100,6 +100,7 @@ function buildEndingEntry(ending, state) {
   return {
     kind: "ending",
     turn: state.turn,
+    id: ending.id,
     title: interpolate(ending.title, state),
     text: interpolate(ending.epilogue, state),
     cause: interpolate(ending.perishCause, state),
@@ -269,7 +270,7 @@ export function applyChoice(state, data, choice) {
   const event = rollEvent(data.events, state);
   if (event) {
     state.firedEvents.push(event.id);
-    state.feed.push({ kind: "event", turn: state.turn, title: interpolate(event.title, state), text: interpolate(event.text, state) });
+    state.feed.push({ kind: "event", turn: state.turn, id: event.id, title: interpolate(event.title, state), text: interpolate(event.text, state) });
 
     if (event.choices?.length) {
       // Interactive event — auto-effects (if any) still apply as a baseline,
@@ -373,6 +374,7 @@ function advanceToNextScenario(state, data) {
       state.feed.push({
         kind: "scenario",
         turn: state.turn,
+        id: next.id,
         title: interpolate(next.title, state),
         text: interpolate(next.text, state),
       });

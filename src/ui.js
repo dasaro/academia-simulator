@@ -8,6 +8,7 @@ import {
   derivePlayerMood, reactionMood,
   SKIN_TONES, HAIR_COLORS, SHIRT_COLORS, HAIR_STYLE_LABELS,
 } from "./avatar.js";
+import { getAnnotation, hasAnnotations } from "./annotations.js";
 
 // Drawer state — driven by a single `body[data-drawer]` attribute that the
 // CSS responds to via `body[data-drawer="sidebar"] .sidebar { transform: 0 }`.
@@ -26,6 +27,86 @@ function toggleDrawer(name) {
 // Reset to 0 when the feed shrinks (new game) or character changes.
 let _lastFeedLength = 0;
 let _lastCharacterId = null;
+
+// Badge ℹ accanto al titolo: cliccato apre un popup con le anchor.
+// Visibile solo se data/annotations.json esiste (locale, gitignored).
+// Su GitHub Pages annotations.json non esiste → nessun badge.
+function renderAnchorBadge(kind, id) {
+  if (!hasAnnotations()) return null;
+  const ann = getAnnotation(kind, id);
+  if (!ann) return null;
+  const btn = document.createElement("button");
+  btn.className = "anchor-badge";
+  btn.type = "button";
+  btn.title = "Anchor (visibile solo in locale)";
+  btn.textContent = "ℹ";
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    showAnchorPanel(id, ann);
+  });
+  return btn;
+}
+
+function showAnchorPanel(id, ann) {
+  // Rimuovi pannello esistente, se c'è
+  document.querySelectorAll(".anchor-panel").forEach(p => p.remove());
+  const panel = document.createElement("div");
+  panel.className = "anchor-panel";
+  panel.innerHTML = "";
+  const close = () => panel.remove();
+  panel.addEventListener("click", (e) => { if (e.target === panel) close(); });
+
+  const card = document.createElement("div");
+  card.className = "anchor-panel__card";
+
+  const header = document.createElement("header");
+  header.className = "anchor-panel__header";
+  header.innerHTML = `<h3>🔖 Anchor — <code>${id}</code></h3>
+    <button class="anchor-panel__close" type="button" aria-label="Chiudi">✕</button>`;
+  header.querySelector(".anchor-panel__close").addEventListener("click", close);
+  card.appendChild(header);
+
+  if (ann.notes) {
+    const notes = document.createElement("p");
+    notes.className = "anchor-panel__notes";
+    notes.textContent = ann.notes;
+    card.appendChild(notes);
+  }
+
+  if (Array.isArray(ann.anchors)) {
+    const list = document.createElement("div");
+    list.className = "anchor-panel__list";
+    for (const a of ann.anchors) {
+      const item = document.createElement("div");
+      item.className = `anchor-item anchor-item--${a.source}`;
+      const tag = document.createElement("span");
+      tag.className = "anchor-item__tag";
+      tag.textContent = a.source === "chat" ? "📞 chat"
+                      : a.source === "esterno" ? "🌐 esterno"
+                      : a.source === "user_personal" ? "👤 personale"
+                      : a.source;
+      const ref = document.createElement("div");
+      ref.className = "anchor-item__ref";
+      ref.textContent = a.ref;
+      const quote = document.createElement("blockquote");
+      quote.className = "anchor-item__quote";
+      quote.textContent = a.quote || "";
+      item.appendChild(tag);
+      item.appendChild(ref);
+      if (a.quote) item.appendChild(quote);
+      list.appendChild(item);
+    }
+    card.appendChild(list);
+  }
+
+  const footer = document.createElement("footer");
+  footer.className = "anchor-panel__footer";
+  footer.textContent = "Questo pannello è visibile solo in locale (data/annotations.json è gitignored).";
+  card.appendChild(footer);
+
+  panel.appendChild(card);
+  document.body.appendChild(panel);
+}
 
 const STAT_LABELS = {
   intelligenza: "Intelligenza",
@@ -743,10 +824,15 @@ function renderChoice(c, state, handlers) {
 
 function renderFeedEntry(entry) {
   if (entry.kind === "scenario") {
-    return el("article", { className: "feed-entry feed-entry--scenario" },
-      el("header", {}, el("span", { className: "month" }, `M${entry.turn}`), el("h3", {}, entry.title)),
-      el("p", {}, entry.text),
-    );
+    const article = el("article", { className: "feed-entry feed-entry--scenario" });
+    const header = el("header", {},
+      el("span", { className: "month" }, `M${entry.turn}`),
+      el("h3", {}, entry.title));
+    const badge = renderAnchorBadge("scenarios", entry.id);
+    if (badge) header.appendChild(badge);
+    article.appendChild(header);
+    article.appendChild(el("p", {}, entry.text));
+    return article;
   }
   if (entry.kind === "choice") {
     return el("article", { className: "feed-entry feed-entry--choice" },
@@ -763,10 +849,15 @@ function renderFeedEntry(entry) {
     );
   }
   if (entry.kind === "event") {
-    return el("article", { className: "feed-entry feed-entry--event" },
-      el("header", {}, el("span", { className: "month" }, `M${entry.turn}`), el("h4", {}, `Evento: ${entry.title}`)),
-      el("p", {}, entry.text),
-    );
+    const article = el("article", { className: "feed-entry feed-entry--event" });
+    const header = el("header", {},
+      el("span", { className: "month" }, `M${entry.turn}`),
+      el("h4", {}, `Evento: ${entry.title}`));
+    const badge = renderAnchorBadge("events", entry.id);
+    if (badge) header.appendChild(badge);
+    article.appendChild(header);
+    article.appendChild(el("p", {}, entry.text));
+    return article;
   }
   if (entry.kind === "roll") {
     const stat = STAT_DISPLAY[entry.stat] ?? entry.stat;
@@ -846,10 +937,14 @@ function renderFeedEntry(entry) {
     );
   }
   if (entry.kind === "ending") {
-    const wrap = el("article", { className: "feed-entry feed-entry--ending" },
-      el("header", {}, el("h2", {}, entry.title), el("div", { className: "perish-cause" }, entry.cause)),
-      el("p", {}, entry.text),
-    );
+    const wrap = el("article", { className: "feed-entry feed-entry--ending" });
+    const header = el("header", {},
+      el("h2", {}, entry.title),
+      el("div", { className: "perish-cause" }, entry.cause));
+    const badge = renderAnchorBadge("endings", entry.id);
+    if (badge) header.appendChild(badge);
+    wrap.appendChild(header);
+    wrap.appendChild(el("p", {}, entry.text));
 
     // "Cosa ti ha portato qui" — the post-mortem.
     if (Array.isArray(entry.reasons) && entry.reasons.length > 0) {
