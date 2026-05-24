@@ -20,7 +20,12 @@ const { renderCharacterSelect, renderGame, renderContentWarning } =
 // Tenta di caricare le annotation. Se il file non c'è (produzione su
 // GitHub Pages — annotations.json è gitignored), fallisce silenziosamente
 // e l'UI non mostra il badge ℹ.
-const { loadAnnotations } = await import(`./annotations.js${QS}`);
+//
+// NB: import SENZA query string, in modo che sia la stessa istanza-modulo
+// che ui.js usa via import statico. Se usiamo `?v=X` qui ma ui.js usa
+// l'URL plain, browser tratta i due come moduli diversi (singleton-per-URL),
+// e il `_annotations` settato qui non è visibile da ui.js → niente badge.
+const { loadAnnotations } = await import(`./annotations.js`);
 await loadAnnotations();
 
 const CW_KEY = "academiasim.cw_acknowledged.v1";
