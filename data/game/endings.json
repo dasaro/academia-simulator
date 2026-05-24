@@ -1772,6 +1772,68 @@
           "note": "il pattern è lo stesso, le persone diverse"
         }
       ]
+    },
+    {
+      "id": "mobbing_riconosciuto",
+      "title": "Mobbing riconosciuto",
+      "perishCause": "Sentenza vinta. Tu, fuori.",
+      "priority": 117,
+      "condition": {
+        "all": [
+          { "minTurn": 30 },
+          { "flags": { "has": ["mob_strategia_completa"] } },
+          { "flags": { "hasNot": ["career_strutturato_ottenuto"] } }
+        ]
+      },
+      "epilogue": "Quarantadue mesi. Tre anni e mezzo dall'ingresso in causa, due gradi di giudizio, ventidue udienze, una CTU medico-legale che ha occupato sette mesi, una sentenza di primo grado favorevole, un appello dell'ateneo, una sentenza di secondo grado che conferma. Il giudice del lavoro della tua corte ha scritto a verbale: «risulta accertata la condotta vessatoria sistematica del datore di lavoro, in violazione dell'art. 2087 c.c., con conseguente costrittività organizzativa di cui all'elenco INAIL.»\n\nRisarcimento: 67.400 euro. Spese legali rifuse: 14.200 euro. Riconoscimento INAIL come malattia professionale: ottenuto sei mesi prima della sentenza, ICD-10 F43.2, indennità mensile di 612 euro per i ventiquattro mesi successivi al congedo. La sentenza non riapre il tuo contratto — il tuo RTD-A è scaduto a metà processo. Non sei più ricercatrice/ricercatore universitario.\n\nIl direttore del dipartimento non è stato neanche sfiorato: la condanna è stata dell'ateneo come persona giuridica. Lui adesso è prorettore alla terza missione. Una targa nella sala consiglio cita la sua carriera. Nessun procedimento disciplinare. Niente. La sentenza non è stata mediatizzata — l'ufficio stampa dell'ateneo ha gestito.\n\nIntanto tu hai lavorato. Due anni di assegno di ricerca in un altro ateneo, ottenuto grazie a una collega che aveva firmato la lettera collettiva con te. Poi un postdoc internazionale di tre anni. Adesso sei rientrato/a come associato/a in una telematica del nord — uno stipendio decente, una vita sostenibile, una distanza salutare dall'accademia tradizionale. Il libro che hai scritto sulla tua vicenda — «Il dipartimento contro di me» — l'ha pubblicato Settenove. Trecento copie. Tre presentazioni. Tu sapevi che sarebbe stato così.\n\nDi tanto in tanto ricevi mail da dottorande/i di altri atenei che hanno trovato il tuo nome sui motori di ricerca. Le risposte sono diventate il tuo secondo mestiere. Una di loro, l'anno scorso, ha vinto causa nel suo ateneo citando esplicitamente la tua sentenza come precedente.\n\nQuesto finale è una vittoria. È anche, esattamente, la vittoria che il sistema italiano produce per chi denuncia: legale ma non sostantiva, riconosciuta ma non riparatrice, individuale e mai sistemica. Tu sei salv{o|a}. L'istituzione che ti ha mobbizzat{o|a} sta esattamente dov'era prima. Il direttore non chiederà mai scusa. Quel «mai» è la lunghezza esatta della tua libertà.\n\nLa sentenza che hai vinto, Cass. Civ. sez. lav. n. 17698/2014 nelle sue evoluzioni successive, è il quadro giuridico che ti ha permesso di esistere come caso giudiziario. È una buona sentenza. È anche, da sola, la prova che il sistema italiano ha già le leggi che servono. Quello che manca è chi le applichi.",
+      "resources": [
+        { "name": "FLC-CGIL Università — sportello mobbing",  "contact": "flcgil.it/universita",        "note": "supporto sindacale e legale" },
+        { "name": "INAIL — denuncia malattia professionale",  "contact": "inail.it",                    "note": "costrittività organizzativa, ICD-10 F43.2" },
+        { "name": "Cass. Civ. Sez. Lav. n. 17698/2014",       "contact": "cortedicassazione.it",        "note": "sentenza di riferimento sul mobbing" },
+        { "name": "Avvocate del diritto del lavoro accademico", "contact": "rete locale specializzata",  "note": "art. 2087 c.c. — causa civile" },
+        { "name": "Settenove edizioni",                        "contact": "settenove.it",                "note": "editrice di testi su violenza istituzionale" },
+        { "name": "Rete dei mobbizzati universitari",          "contact": "gruppi locali / FLC",         "note": "supporto e visibilità" }
+      ]
+    },
+    {
+      "id": "rimasto_ma_non_piu_qui",
+      "title": "Sei rimast{o|a}, ma non sei più qui",
+      "perishCause": "Sopravvivenza formale, presenza decorativa",
+      "priority": 109,
+      "condition": {
+        "all": [
+          { "minTurn": 26 },
+          {
+            "flags": {
+              "hasAny": [
+                "mob_dossier_attivo",
+                "mob_carico_accettato",
+                "mob_minaccia_subita",
+                "mob_voce_ignorata"
+              ]
+            }
+          },
+          {
+            "flags": {
+              "hasNot": [
+                "career_strutturato_ottenuto",
+                "mob_strategia_completa",
+                "mob_inail_avviato",
+                "dimissionato",
+                "fuggito_estero"
+              ]
+            }
+          }
+        ]
+      },
+      "epilogue": "Non hai denunciato. Non sei andato all'INAIL. Non hai chiamato l'avvocato del lavoro. Hai documentato — il foglio Google con ottantadue righe esiste ancora — ma il dossier è in una cartella che non apri da diciotto mesi. Hai resistito. Hai aspettato la fine del contratto, la proroga di due anni, la seconda proroga di sei mesi.\n\nSei ancora qui. Sei nel dipartimento. Hai un badge, un'email istituzionale, uno stipendio. Sei stat{o|a} demansionat{o|a}, escluso/a dalle mailing list strategiche, tolto/a dai PRIN, esiliat{o|a} da un laboratorio all'altro. Vai in ufficio, fai le tue lezioni — quelle che ti hanno lasciato, i corsi che nessuno voleva — e la sera vai a casa. Tutto formalmente regolare. Tutto sostantivamente assente.\n\nLavori su «cose tue», come diceva un collega di sette anni fa. Hai costruito una linea di ricerca personale, fuori dai gruppi del dipartimento — su un argomento che nessuno del settore considera prioritario, ma che a te interessa davvero. Quattro pubblicazioni in tre anni, di buona qualità, su riviste medie. Nessuno te le commenta. Nessuno te le cita in dipartimento. Le citano alcune persone in altri paesi.\n\nNon sei amic{o|a} con nessuno dei sedici colleghi che siedono in sala riunioni quando passi nel corridoio. Loro non ti odiano. Non ti hanno mai odiato. Hanno solo deciso, anni fa, che tu eri un'altra cosa. Una presenza che si tollera. Un nome che non si include più. Una persona che si è scelt{o|a} l'invisibilità — perché, formalmente, è quello che è successo: non ti hai mai chiesto attenzione formale, non hai mai protestato in consiglio, non hai mai mosso quello che andava mosso. Tu sai che la cosa è andata diversamente. Loro hanno la loro narrazione.\n\nUna sera, in autobus, una dottoranda del dipartimento ti riconosce e ti saluta. «Lei è X, vero? La cito in tesi.» Sorridi. Per quei dieci secondi sei una persona, in un autobus, che qualcuno conosce per il lavoro che ha fatto. È il momento più caldo della tua settimana. Lo prolunghi quanto puoi.\n\nQuesto finale non è una sconfitta, tecnicamente. Sei rimast{o|a} in accademia. Hai un contratto. Pubblichi. Una versione di te ha vinto. Ma se ti guardi nello specchio del bagno al lavoro, prima di andare in aula, non riconosci la persona che eri sei anni fa. Quella persona credeva che il sistema fosse imperfetto ma riformabile, che parlare servisse, che i colleghi fossero alleati naturali. Adesso sai che è più complicato. Sopravvivi. La parola «sopravvivi» è esatta — non «vivi». La differenza tra le due parole è il prezzo che hai pagato per restare.",
+      "resources": [
+        { "name": "FLC-CGIL Università — sportello mobbing", "contact": "flcgil.it/universita",       "note": "anche tardi, anche per consigli generici" },
+        { "name": "Psicoterapia",                            "contact": "rete locale, SSN o privato", "note": "il marginalizzato cronico ha quadri clinici specifici" },
+        { "name": "Rete dei mobbizzati universitari",        "contact": "gruppi locali / FLC",        "note": "non sei sol{o|a}" },
+        { "name": "Telefono Amico Italia",                   "contact": "02 2327 2327",               "note": "ascolto, 10-24" },
+        { "name": "Mobilità interuniversitaria",             "contact": "siti atenei",                "note": "talvolta uscire è meglio che restare" }
+      ]
     }
   ]
 }

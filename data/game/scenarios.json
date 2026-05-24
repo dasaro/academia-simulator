@@ -30613,6 +30613,755 @@
           }
         }
       ]
+    },
+    {
+      "id": "mob_demansionamento_corsi",
+      "phase": "year-2",
+      "tags": [
+        "mobbing",
+        "demansionamento",
+        "supervisor"
+      ],
+      "weight": 32,
+      "title": "Ti tolgono il corso",
+      "text": "Riunione di programmazione didattica. Il direttore legge la lista dei corsi del prossimo anno. Quando arriva al tuo, lo legge a voce alta accanto a un altro nome: «Analisi I — affidato al/la dott. Tizio.» Tu apri gli appunti: l'anno scorso quel corso era tuo. La settimana prima il/la tu{o|a} PI ti aveva detto in privato che «volevano dargli/le più visibilità». In tre mesi ti hanno tolto tre cose. Una collega della rete ti scrive: «È un anno e mezzo che ti dà il tormento. È demansionamento.» Il termine ti suona giuridico, lontano. Però è esattamente quello.",
+      "requires": {
+        "flags": {
+          "has": [
+            "is_rtda"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "Tieni il verbale. Inizi a documentare ogni decisione per iscritto.",
+          "effects": {
+            "stats": {
+              "burocrazia": 3,
+              "intelligenza": 1,
+              "stamina": -2
+            },
+            "reputation": {
+              "supervisor": -1,
+              "direttore_dipartimento": -1
+            },
+            "flags": [
+              "mob_dossier_attivo",
+              "gender_documenta_micro_aggressione"
+            ]
+          }
+        },
+        {
+          "label": "Vai dal PI, in privato. «Cosa sta succedendo, davvero?»",
+          "effects": {
+            "stats": {
+              "persuasione": 2,
+              "stamina": -2
+            },
+            "reputation": {
+              "supervisor": -2
+            },
+            "flags": [
+              "mob_confronto_pi"
+            ]
+          }
+        },
+        {
+          "label": "Niente. Il prossimo bando esce a maggio. Ti concentri su quello.",
+          "effects": {
+            "stats": {
+              "stamina": -1,
+              "intelligenza": 1
+            },
+            "flags": [
+              "gender_silenzio_subito"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mob_lab_revocato",
+      "phase": "year-2",
+      "tags": [
+        "mobbing",
+        "demansionamento",
+        "lab"
+      ],
+      "weight": 30,
+      "title": "L'accesso al laboratorio",
+      "text": "Mercoledì mattina passi il badge alla porta del laboratorio principale. Il lettore lampeggia rosso. Riprovi. Rosso. Provi col badge di servizio. Niente. Una collega esce, ti vede: «Ah, non sai? Hanno revocato gli accessi a tre persone. Te, P. e M. Adesso si entra solo col badge del responsabile.» Una mail di servizio glielo aveva comunicato la settimana scorsa. A te non è arrivata in CC. È la quarta volta in due mesi che impari le cose così.",
+      "requires": {
+        "flags": {
+          "has": [
+            "is_rtda"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "PEC al direttore. Chiedi formalmente le motivazioni.",
+          "effects": {
+            "stats": {
+              "burocrazia": 3,
+              "persuasione": 1,
+              "stamina": -1
+            },
+            "reputation": {
+              "direttore_dipartimento": -2
+            },
+            "flags": [
+              "mob_pec_inviata",
+              "mob_dossier_attivo"
+            ]
+          }
+        },
+        {
+          "label": "Chiedi al responsabile di accompagnarti ogni volta che entri.",
+          "effects": {
+            "stats": {
+              "stamina": -3,
+              "persuasione": -1
+            },
+            "reputation": {
+              "supervisor": 1,
+              "peers": -1
+            },
+            "flags": [
+              "mob_dipendenza_pi",
+              "gender_silenzio_subito"
+            ]
+          }
+        },
+        {
+          "label": "Scrivi a P. e M. — siete in tre, fate fronte comune.",
+          "effects": {
+            "stats": {
+              "networking": 2,
+              "persuasione": 1
+            },
+            "reputation": {
+              "peers": 2
+            },
+            "flags": [
+              "mob_collettivo_tre"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mob_paper_diffida",
+      "phase": "year-2",
+      "tags": [
+        "mobbing",
+        "boicottaggio",
+        "publications"
+      ],
+      "weight": 28,
+      "title": "«Ti diffido dal pubblicare»",
+      "text": "Apri la mail. Subject: «Diffida formale». Da un'ex collega del laboratorio. Tre paragrafi, formali. Nel secondo, in grassetto: «**Ti diffido dal pubblicare il preprint del dataset X su biorxiv senza il mio consenso scritto.»** Quel preprint è il tuo. Tu sei autrice/autore principale. Il dataset è venuto dal tuo lavoro di sei mesi. Lei è entrata come quarta autrice e ha contribuito a metà di una figura. La frase «ti diffido dal pubblicare» in grassetto in una mail ti lascia basit{o|a}. Quattro ore dopo riprendi a respirare.",
+      "requires": {
+        "flags": {
+          "has": [
+            "is_rtda"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "Rispondi formalmente, citi i contributi documentati, metti il direttore in CC.",
+          "effects": {
+            "stats": {
+              "burocrazia": 3,
+              "persuasione": 3,
+              "stamina": -2,
+              "intelligenza": 2
+            },
+            "reputation": {
+              "direttore_dipartimento": -1,
+              "peers": 2
+            },
+            "flags": [
+              "mob_diffida_respinta",
+              "mob_dossier_attivo"
+            ]
+          }
+        },
+        {
+          "label": "Pubblichi il preprint subito, oggi pomeriggio. Quattro ore, decidi.",
+          "effects": {
+            "stats": {
+              "persuasione": 2,
+              "intelligenza": 2,
+              "stamina": -1
+            },
+            "reputation": {
+              "peers": 2,
+              "supervisor": -1
+            },
+            "flags": [
+              "mob_preprint_pubblicato",
+              "mob_priorita_difesa"
+            ]
+          }
+        },
+        {
+          "label": "Vai alla commissione etica del dipartimento. Lo formalizzi come abuso.",
+          "effects": {
+            "stats": {
+              "burocrazia": 3,
+              "stamina": -2
+            },
+            "reputation": {
+              "direttore_dipartimento": -1,
+              "ateneo_hr": 1
+            },
+            "flags": [
+              "mob_commissione_etica_attivata"
+            ]
+          },
+          "forceNext": "mob_avvocato_consulta"
+        }
+      ]
+    },
+    {
+      "id": "mob_email_cc_negata",
+      "phase": "year-2",
+      "tags": [
+        "mobbing",
+        "esclusione"
+      ],
+      "weight": 26,
+      "title": "L'hai saputo da una collega",
+      "text": "Caffè alla macchinetta. Una collega: «Allora, hai sentito? Hanno deciso le coperture didattiche del prossimo semestre.» Tu non hai sentito niente. La riunione si è tenuta giovedì scorso. Tu non eri in CC nella convocazione. Quando lo dici, lei abbassa la voce: «Senti, lo dico solo a te. Ho visto la mailing list di programmazione. Hanno tolto tre nomi. Tu, P., M. Da settembre.» È la seconda volta che lo scopri così.",
+      "requires": {
+        "flags": {
+          "has": [
+            "is_rtda"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "Mandi PEC: «Chiedo di essere rimesso/a nelle mailing list di servizio.»",
+          "effects": {
+            "stats": {
+              "burocrazia": 3,
+              "persuasione": 2,
+              "stamina": -1
+            },
+            "reputation": {
+              "direttore_dipartimento": -2,
+              "ateneo_hr": -1
+            },
+            "flags": [
+              "mob_pec_mailing",
+              "mob_dossier_attivo"
+            ]
+          }
+        },
+        {
+          "label": "Vai dal direttore. Confronto diretto, faccia a faccia.",
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "stamina": -2
+            },
+            "reputation": {
+              "direttore_dipartimento": -3
+            },
+            "flags": [
+              "mob_confronto_direttore"
+            ]
+          }
+        },
+        {
+          "label": "Tieni la postura. Apri un Google Sheet: «Mailing list a cui sono stat{o|a} tolt{o|a}.»",
+          "effects": {
+            "stats": {
+              "intelligenza": 2,
+              "burocrazia": 2
+            },
+            "flags": [
+              "mob_dossier_attivo",
+              "gender_dossier_collettivo"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mob_carico_didattico_punitivo",
+      "phase": "year-2",
+      "tags": [
+        "mobbing",
+        "sovraccarico",
+        "didattica"
+      ],
+      "weight": 28,
+      "title": "Tutti i corsi che nessuno voleva",
+      "text": "Esce il piano didattico definitivo. Tu hai cinque insegnamenti: chimica analitica per CTF (che gli analitici «non volevano più fare»), un laboratorio per Scienze biologiche (60 ore, sostituzione causa congedo), didattica integrativa estiva, un corso per Scienze della Formazione (sede staccata, due ore di treno) e un seminario su un tema fuori dal tuo SSD. Totale: 380 ore. Il regolamento di RTDA dice «8-32 ore frontali, fino a 60». Il tuo collega Tizio, RTDA come te ma cordatista del direttore, ha un solo corso da 32 ore.",
+      "requires": {
+        "flags": {
+          "has": [
+            "is_rtda"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "Rifiuti la sede staccata. PEC al direttore.",
+          "effects": {
+            "stats": {
+              "burocrazia": 2,
+              "persuasione": 2,
+              "stamina": -1
+            },
+            "reputation": {
+              "direttore_dipartimento": -2
+            },
+            "flags": [
+              "mob_rifiuto_sede_staccata",
+              "mob_dossier_attivo"
+            ]
+          }
+        },
+        {
+          "label": "Accetti tutto. Vai. Il carico ti fa esplodere a fine anno.",
+          "effects": {
+            "stats": {
+              "stamina": -4,
+              "burocrazia": 1,
+              "intelligenza": -2
+            },
+            "reputation": {
+              "direttore_dipartimento": 1
+            },
+            "flags": [
+              "mob_carico_accettato",
+              "burnout_prone"
+            ]
+          }
+        },
+        {
+          "label": "Scrivi al sindacato col piano completo + carichi di Tizio per confronto.",
+          "effects": {
+            "stats": {
+              "burocrazia": 2,
+              "persuasione": 1,
+              "networking": 1
+            },
+            "reputation": {
+              "sindacato": 3,
+              "direttore_dipartimento": -1
+            },
+            "flags": [
+              "mob_sindacato_attivato"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mob_voci_corridoio",
+      "phase": "year-3",
+      "tags": [
+        "mobbing",
+        "reputazione"
+      ],
+      "weight": 24,
+      "title": "«Sapevamo che era inaffidabile»",
+      "text": "Cena di lavoro fuori sede. Un collega di un altro ateneo, vino alla quarta, ti dice in confidenza: «Senti, te lo dico in privato. Il tuo direttore al convegno di Roma di settembre, davanti a sei persone tra cui due della tua commissione ASN, ha detto: 'sapevamo che era inaffidabile, fa pena la gestione del PRIN.' L'ho sentito io. Ho fatto finta di niente perché ero sotto bando con loro. Volevo solo che lo sapessi.» Il PRIN che gestisci ha rendiconto in regola, ha generato quattro pubblicazioni Q1, è in linea con i milestone. La frase non è descrittiva. È una manovra.",
+      "requires": {
+        "flags": {
+          "has": [
+            "is_rtda"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "Lo metti per iscritto: data, luogo, testimone. Conservi.",
+          "effects": {
+            "stats": {
+              "intelligenza": 2,
+              "burocrazia": 2
+            },
+            "reputation": {
+              "peers": 1
+            },
+            "flags": [
+              "mob_voce_documentata",
+              "mob_dossier_attivo"
+            ]
+          }
+        },
+        {
+          "label": "Scrivi al direttore: «Voglio chiarire una frase che è stata riferita.»",
+          "effects": {
+            "stats": {
+              "persuasione": 2,
+              "stamina": -1
+            },
+            "reputation": {
+              "direttore_dipartimento": -3
+            },
+            "flags": [
+              "mob_confronto_diretto_voce"
+            ]
+          }
+        },
+        {
+          "label": "Niente. Le voci muoiono se non le nutri. Lavori al prossimo paper.",
+          "effects": {
+            "stats": {
+              "intelligenza": 2,
+              "stamina": -2
+            },
+            "flags": [
+              "mob_voce_ignorata",
+              "gender_silenzio_subito"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mob_ricatto_rinnovo",
+      "phase": "year-2",
+      "tags": [
+        "mobbing",
+        "minaccia",
+        "rinnovo"
+      ],
+      "weight": 30,
+      "title": "Ogni due settimane, lo stesso",
+      "text": "Stai in corridoio col PI per discutere di un esperimento. Lui chiude la conversazione, come ha fatto le ultime sei volte, con la stessa frase: «Te lo dico per il tuo bene. Tu hai un contratto in scadenza. Le proroghe non sono scontate. Cerchiamo di non creare attriti, eh? In dipartimento si nota.» È la settima volta in tre mesi. Lui usa quella frase quando hai detto «no» a una sua richiesta nei tre giorni precedenti. Non lo sa, ma tu hai cominciato a contarle.",
+      "requires": {
+        "flags": {
+          "has": [
+            "is_rtda"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "Mantieni il sorriso. Ti chiudi in bagno e respiri tre minuti.",
+          "effects": {
+            "stats": {
+              "stamina": -2,
+              "intelligenza": 1
+            },
+            "flags": [
+              "mob_minaccia_subita",
+              "gender_silenzio_subito"
+            ]
+          }
+        },
+        {
+          "label": "«Prof, il rinnovo dipende dai criteri, non dalla mia accondiscendenza.»",
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "stamina": -1
+            },
+            "reputation": {
+              "supervisor": -3
+            },
+            "flags": [
+              "mob_no_pubblico",
+              "gender_no_pubblico"
+            ]
+          }
+        },
+        {
+          "label": "Registri l'audio. Il tuo telefono in tasca, mic alta.",
+          "effects": {
+            "stats": {
+              "burocrazia": 3,
+              "intelligenza": 2
+            },
+            "reputation": {
+              "supervisor": -1
+            },
+            "flags": [
+              "mob_audio_registrato",
+              "mob_dossier_attivo"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mob_cdd_accusa_pubblica",
+      "phase": "year-2",
+      "tags": [
+        "mobbing",
+        "isolamento",
+        "consiglio_dipartimento"
+      ],
+      "weight": 26,
+      "title": "Verbale del consiglio",
+      "text": "Mercoledì, consiglio di dipartimento, quarantadue persone. Punto 7: «valutazione attività ricercatori a tempo determinato». Il direttore parla per quindici minuti. Quando arriva al tuo nome: «La dott.ssa/Il dott. X mostra una produttività in calo rispetto agli obiettivi del PRIN. Stiamo riflettendo sull'opportunità del rinnovo.» Niente cifre, niente milestone, niente dati. Solo una frase, davanti a tutti. Tu chiedi la parola. Lui ti dà la parola dopo aver chiuso il punto. Il verbale, lo scoprirai tre settimane dopo, riporta esattamente quella frase. La tua replica no.",
+      "requires": {
+        "flags": {
+          "has": [
+            "is_rtda"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "Mandi correzione formale al verbale. Ne fai una battaglia procedurale.",
+          "effects": {
+            "stats": {
+              "burocrazia": 3,
+              "persuasione": 2,
+              "stamina": -2
+            },
+            "reputation": {
+              "direttore_dipartimento": -3,
+              "ateneo_hr": -1
+            },
+            "flags": [
+              "mob_verbale_contestato",
+              "mob_dossier_attivo"
+            ]
+          },
+          "forceNext": "mob_avvocato_consulta"
+        },
+        {
+          "label": "Mail a tutti i 42 colleghi: «Allego le mie metriche, decidete voi.»",
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "networking": 2,
+              "stamina": -2
+            },
+            "reputation": {
+              "direttore_dipartimento": -3,
+              "peers": 2
+            },
+            "flags": [
+              "mob_difesa_pubblica"
+            ]
+          }
+        },
+        {
+          "label": "Niente. Il verbale è quello. Cominci a guardare bandi fuori.",
+          "effects": {
+            "stats": {
+              "stamina": -2,
+              "networking": 1
+            },
+            "flags": [
+              "mob_uscita_inizia",
+              "pers_silenzio_dolore"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mob_avvocato_consulta",
+      "phase": "any",
+      "tags": [
+        "mobbing",
+        "denuncia",
+        "burocrazia"
+      ],
+      "weight": 24,
+      "title": "Dall'avvocato del lavoro, venerdì alle 17",
+      "text": "Studio in centro città, tre fascicoli sul tavolo, due tue tisane. L'avvocato del lavoro — specializzata in pubblico impiego — ha letto in trenta minuti il tuo dossier. Poi: «Senti. La fattispecie è chiara. Demansionamento progressivo, esclusione dalle mailing list, accusa pubblica in CdD senza contraddittorio, minaccia ricorrente di non rinnovo. È un caso di mobbing — anzi, di costrittività organizzativa, come la classifica l'INAIL. L'art. 2087 del codice civile obbliga il datore di lavoro a tutelare la tua integrità psicofisica. Hanno violato l'obbligo. Tre opzioni: causa civile per risarcimento, denuncia INAIL come malattia professionale, dimissioni per giusta causa. Possiamo fare anche tutte e tre, in sequenza.»",
+      "requires": {
+        "flags": {
+          "has": [
+            "mob_dossier_attivo"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "«Tutte e tre. Cominciamo dall'INAIL.»",
+          "effects": {
+            "stats": {
+              "burocrazia": 3,
+              "persuasione": 2,
+              "stamina": -2,
+              "fondi": -2
+            },
+            "reputation": {
+              "supervisor": -3,
+              "direttore_dipartimento": -3,
+              "sindacato": 3
+            },
+            "flags": [
+              "mob_strategia_completa",
+              "mob_inail_avviato",
+              "burocr_diffida_tar"
+            ]
+          },
+          "forceNext": "mob_inail_malattia_professionale"
+        },
+        {
+          "label": "«Solo causa civile. Per ora resto in dipartimento.»",
+          "effects": {
+            "stats": {
+              "burocrazia": 3,
+              "stamina": -2,
+              "fondi": -2
+            },
+            "reputation": {
+              "supervisor": -2,
+              "sindacato": 2
+            },
+            "flags": [
+              "mob_causa_civile_avviata"
+            ]
+          }
+        },
+        {
+          "label": "«Le scrivo lunedì. Mi serve pensarci.»",
+          "effects": {
+            "stats": {
+              "stamina": -2,
+              "intelligenza": 1
+            },
+            "flags": [
+              "mob_decisione_rimandata"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mob_inail_malattia_professionale",
+      "phase": "any",
+      "tags": [
+        "mobbing",
+        "INAIL",
+        "denuncia"
+      ],
+      "weight": 22,
+      "title": "Pratica INAIL aperta",
+      "text": "Modulo INAIL 4.bis: «Denuncia di malattia professionale da costrittività organizzativa.» Lo compili insieme all'avvocata. Codice ICD-10: F43.2 (disturbo dell'adattamento, reazione mista ansiosa e depressiva). Allegato A: tre referti del medico curante, una relazione dello psicoterapeuta che ti segue da otto mesi, certificato della consulenza al CSM. Allegato B: il tuo dossier — 47 pagine di mail screenshottate, verbali CdD, mailing list a cui sei stat{o|a} esclus{o|a}, minacce documentate. Il fascicolo va a un medico INAIL specializzato in malattie professionali. Tempi: nove-quattordici mesi.",
+      "requires": {
+        "flags": {
+          "has": [
+            "mob_inail_avviato"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "Aspetti l'esito. Continui a lavorare, documenti tutto.",
+          "effects": {
+            "stats": {
+              "burocrazia": 3,
+              "stamina": -1,
+              "intelligenza": 1
+            },
+            "flags": [
+              "mob_inail_in_corso"
+            ]
+          },
+          "forceNext": "mob_perizia_medico_legale"
+        },
+        {
+          "label": "Cambi dipartimento intanto. Chiedi mobilità interna per altri motivi.",
+          "effects": {
+            "stats": {
+              "networking": 2,
+              "stamina": 1
+            },
+            "reputation": {
+              "supervisor": -1
+            },
+            "flags": [
+              "mob_mobilita_interna"
+            ]
+          }
+        },
+        {
+          "label": "Mediatizzi: contatti una giornalista che segue casi accademici.",
+          "effects": {
+            "stats": {
+              "persuasione": 3,
+              "networking": 2,
+              "stamina": -2
+            },
+            "reputation": {
+              "direttore_dipartimento": -3,
+              "barone": -2,
+              "mur": -1
+            },
+            "flags": [
+              "mob_inchiesta_giornalistica",
+              "attivista_visibile"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mob_perizia_medico_legale",
+      "phase": "any",
+      "tags": [
+        "mobbing",
+        "perizia",
+        "salute"
+      ],
+      "weight": 22,
+      "title": "Perizia medico-legale",
+      "text": "Studio del consulente medico-legale che ti ha indicato l'avvocata. Quattro ore di colloquio. Ti somministra una scala di Hamilton per l'ansia, una scala di Beck per la depressione, una scala di Holmes-Rahe per gli eventi stressanti. Punteggi: alti tutti e tre. Diagnosi clinica: «Disturbo dell'adattamento cronico, reazione mista ansiosa-depressiva, in conseguenza diretta dell'esposizione lavorativa documentata.» La relazione di trenta pagine collega causalmente cinque eventi specifici (demansionamento corsi, esclusione mailing, accusa CdD, minacce rinnovo, diffida pubblicazione) al quadro clinico. Lui ti consegna una copia: «La porti dall'avvocata. È molto solida.»",
+      "requires": {
+        "flags": {
+          "hasAny": [
+            "mob_inail_avviato"
+          ]
+        }
+      },
+      "choices": [
+        {
+          "label": "Ringrazi. Senti contemporaneamente sollievo e sgomento.",
+          "effects": {
+            "stats": {
+              "stamina": 1,
+              "intelligenza": 2,
+              "burocrazia": 2
+            },
+            "flags": [
+              "mob_perizia_ricevuta",
+              "pers_in_terapia"
+            ]
+          }
+        },
+        {
+          "label": "Gli chiedi: «Questo è un caso forte?» Lui annuisce. Sì.",
+          "effects": {
+            "stats": {
+              "persuasione": 1,
+              "stamina": 2
+            },
+            "flags": [
+              "mob_perizia_solida"
+            ]
+          }
+        },
+        {
+          "label": "Esci dallo studio. Cammini per due ore prima di tornare a casa.",
+          "effects": {
+            "stats": {
+              "stamina": -1,
+              "intelligenza": 1
+            },
+            "flags": [
+              "mob_camminata_riflessiva"
+            ]
+          }
+        }
+      ]
     }
   ]
 }

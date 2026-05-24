@@ -8,7 +8,7 @@
 //     the data are picked up while online.
 //   - Everything else → network with passive cache fill.
 
-const CACHE_VERSION = "academiasim-v9.14-italian";
+const CACHE_VERSION = "academiasim-v9.15-mobbing";
 const APP_SHELL = [
   "./",
   "./index.html",
