@@ -227,6 +227,37 @@ button { font-family: inherit; }
 }
 .counter-value { color: var(--fg); font-family: var(--font-mono); }
 
+/* -----------------------------  Flag tags (relevant only)  ----------------- */
+/* I tag mostrati nel dossier sono solo quelli mappati in FLAG_DISPLAY (ui.js).
+ * Raggruppati per categoria, ognuno con un colore semantico e tooltip (hint
+ * gameplay) sull'attributo title. I flag tecnici (state-derived) e quelli
+ * non mappati vengono nascosti per non distrarre il giocatore. */
+.flag-tags { display: flex; flex-direction: column; gap: .85rem; margin-top: .25rem; }
+.flag-cat { display: flex; flex-direction: column; gap: .35rem; }
+.flag-cat-label {
+  color: var(--fg-dim); font-size: .68rem;
+  text-transform: uppercase; letter-spacing: 0.07em;
+  font-weight: 500;
+}
+.flag-cat-row { display: flex; flex-wrap: wrap; gap: .3rem; }
+.flag-tag {
+  display: inline-block; padding: .2rem .55rem; border-radius: 4px;
+  font-size: .76rem; line-height: 1.3;
+  border: 1px solid var(--border); background: var(--bg-card); color: var(--fg);
+  cursor: help; /* tooltip via title= */
+}
+.flag-tag:hover { filter: brightness(1.15); }
+/* Categorie — colori semantici (riusano la palette del gioco) */
+.flag-tag--procedure   { color: #c2a85b; border-color: #c2a85b55; background: #2a2418; }
+.flag-tag--conseguenze { color: var(--accent-warm); border-color: #c2545044; background: #2a1818; }
+.flag-tag--salute      { color: #d18ec2; border-color: #d18ec244; background: #2a1d27; }
+.flag-tag--gender      { color: #b594c5; border-color: #b594c544; background: #221c2a; }
+.flag-tag--politica    { color: var(--accent-cool); border-color: #6593b244; background: #18222a; }
+.flag-tag--carriera    { color: #95c563; border-color: #95c56344; background: #1a2418; }
+.flag-tag--famiglia    { color: #c5b594; border-color: #c5b59444; background: #26221a; }
+.flag-tag--rete        { color: #94c5c2; border-color: #94c5c244; background: #1a2627; }
+.flag-tag--tratto      { color: var(--fg-dim); border-color: var(--border); background: var(--bg-card); }
+
 /* -----------------------------  Delta chips  -------------------------------- */
 .feed-entry--delta {
   display: flex; flex-wrap: wrap; gap: .35rem;

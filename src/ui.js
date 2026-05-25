@@ -143,6 +143,127 @@ const MOOD_LABEL = {
   stressed: "sotto pressione",
   crisis:   "crisi",
 };
+
+// FLAG_DISPLAY — solo i flag in questa mappa appaiono nel dossier.
+// Ogni voce: { label, cat, hint }
+//   label: stringa user-facing (con interpolazione {o|a} per gender)
+//   cat:   categoria visuale (tratto/politica/salute/procedure/conseguenze/famiglia/carriera/rete)
+//   hint:  spiegazione hover sull'effetto gameplay
+// Tutti i flag tecnici (gender, contract, age, stance, orientation, is_rtda...)
+// e tutti i flag NON mappati vengono nascosti.
+const FLAG_DISPLAY = {
+  // ── Tratti del personaggio (innati) ─────────────────────────────────
+  "burnout_prone":         { label: "Incline al burnout",   cat: "tratto",     hint: "La stamina scende più rapidamente quando il sistema preme." },
+  "lone_wolf":             { label: "Solitari{o|a}",         cat: "tratto",     hint: "Pubblichi spesso da sol{o|a}. Networking debole, lavoro denso." },
+  "cordata_friendly":      { label: "Predisposto al gruppo", cat: "tratto",     hint: "Hai network naturale. Sblocchi più scelte 'di cordata'." },
+  "wetlab_chained":        { label: "Vincolat{o|a} al lab",  cat: "tratto",     hint: "Il laboratorio detta i tempi: poca libertà oraria, dipendenza dai materiali." },
+  "mediane_in_pericolo":   { label: "Mediane a rischio",     cat: "tratto",     hint: "Settore non-bibliometrico: ASN incerta, monografia obbligata." },
+  "industria_offre_sempre":{ label: "Industria ti corteggia",cat: "tratto",     hint: "Recruiter ti scrivono spesso. La porta verso il privato è sempre aperta." },
+  "genitore":              { label: "Genitore",              cat: "tratto",     hint: "Hai un* figli* piccol*. Sblocca scenari nido/maternità/conciliazione." },
+  "nido_in_lista_attesa":  { label: "In lista d'attesa nido",cat: "tratto",     hint: "Il nido universitario non esiste o non basta. Costo babysitter alle spalle." },
+
+  // ── Posizione politica ──────────────────────────────────────────────
+  "cordata_barone":            { label: "Cordata del Barone",        cat: "politica", hint: "Sei nel giro. Alcuni concorsi ti si aprono. Costo: l'autonomia." },
+  "sfida_barone":              { label: "Hai sfidato il Barone",     cat: "politica", hint: "Hai detto no a una mossa di filiera. Conseguenze a medio termine." },
+  "career_nemico_locale":      { label: "Nemic{o|a} del Barone",     cat: "politica", hint: "Sei nella lista. Concorsi locali bloccati. Solidarietà peer aumentata." },
+  "attivista_visibile":        { label: "Attivista riconosciut{o|a}",cat: "politica", hint: "Firmi lettere, parli in consiglio. Sblocca rete sindacale. Il direttore ti tiene d'occhio." },
+  "stance_resistant":          { label: "Militante",                 cat: "politica", hint: "Lo schieramento corrente. Sblocca scenari di organizzazione collettiva." },
+  "stance_withdrawn":          { label: "Disimpegnat{o|a}",          cat: "politica", hint: "Lo schieramento corrente. Sblocca scenari del 'mi faccio i cazzi miei'." },
+  "lucidita_compliant_diventato":{ label: "Hai visto il sistema",    cat: "politica", hint: "Hai capito di essere diventato 'il tuo capo'. Stance può cambiare." },
+  "career_sfida_concorso_cucito":{ label: "Hai sfidato un bando cucito", cat: "politica", hint: "Hai applicato a un concorso scritto per altri. Effetti su barone." },
+
+  // ── Salute (mente / corpo) ──────────────────────────────────────────
+  "pers_silenzio_dolore":    { label: "Silenzio doloroso",        cat: "salute",  hint: "Cose subite e mai dette. Pesa sulla stamina. Sblocca scenari di terapia." },
+  "pers_in_terapia":         { label: "In psicoterapia",          cat: "salute",  hint: "Bonus stamina passiva. Sblocca scelte di cura quando arrivano." },
+  "pers_burnout_clinico":    { label: "Burnout clinico",          cat: "salute",  hint: "Diagnosi formale. Mood permanente 'tired'. Apre ending dedicate." },
+  "pers_emicrania_cronica":  { label: "Emicrania cronica",        cat: "salute",  hint: "Cicli neurologici. Costo finanziario (visite private)." },
+  "pers_gravidanza_rischio": { label: "Gravidanza a rischio",     cat: "salute",  hint: "Sospensione/INPS. Maternità da 'recuperare' al rientro." },
+  "complesso_inferiorita":   { label: "Complesso d'inferiorità",  cat: "salute",  hint: "Scholar refresh compulsivo. Erosione interna." },
+
+  // ── Procedure aperte (concrete, hanno effetti) ──────────────────────
+  "cug_segnalazione_aperta":   { label: "Segnalazione CUG aperta",  cat: "procedure", hint: "Pratica formale di molestie / discriminazione. Tempi 3-6 mesi." },
+  "burocr_diffida_tar":        { label: "Diffida al TAR depositata",cat: "procedure", hint: "Ricorso giurisdizionale in corso. Sblocca esito udienza." },
+  "burocr_sindacato_attivato": { label: "Sindacato attivato",       cat: "procedure", hint: "FLC-CGIL/USB hanno il dossier. Possibile lettera collettiva." },
+  "burocr_lettera_collettiva": { label: "Firmata lettera collettiva",cat: "procedure", hint: "Il tuo nome è nella lista pubblica al MUR. Il direttore lo sa." },
+  "burocr_avvocato_privato":   { label: "Avvocato del lavoro",      cat: "procedure", hint: "Hai consultato un* avvocat*. Costo: 200-500€ a consulto." },
+  "mob_dossier_attivo":        { label: "Dossier mobbing aperto",   cat: "procedure", hint: "Stai documentando demansionamento. Sblocca avvocato → INAIL → perizia." },
+  "mob_inail_avviato":         { label: "Pratica INAIL aperta",     cat: "procedure", hint: "Denuncia malattia professionale (costrittività organizzativa)." },
+  "mob_strategia_completa":    { label: "Strategia legale completa",cat: "procedure", hint: "Causa civile + INAIL + dimissioni per giusta causa." },
+  "fund_causa_ateneo":         { label: "Causa contro l'ateneo",    cat: "procedure", hint: "Vertenza civile in corso. Durata 3-4 anni." },
+  "burocr_pec_accesso_atti":   { label: "Accesso atti richiesto",   cat: "procedure", hint: "PEC formale. Silenzio-rifiuto dopo 30 giorni → TAR." },
+  "pec_aperta":                { label: "PEC aperta",               cat: "procedure", hint: "Comunicazione formale in attesa di risposta." },
+  "vertenza_potenziale":       { label: "Vertenza in valutazione",  cat: "procedure", hint: "Stai pensando di formalizzare. Costi e benefici da soppesare." },
+  "gender_documenta_micro_aggressione": { label: "Stai documentando",cat: "procedure", hint: "Screenshot, email, verbali. Materiale per CUG o causa futura." },
+  "gender_denuncia_formalizzata":{ label: "Denuncia formalizzata",  cat: "procedure", hint: "Hai aperto la pratica. Punto di non ritorno." },
+  "gender_dossier_collettivo":  { label: "Dossier collettivo",      cat: "procedure", hint: "Altre colleghe stanno raccogliendo prove insieme a te." },
+
+  // ── Conseguenze (irreversibili o quasi) ─────────────────────────────
+  "career_silent_exit":        { label: "Uscita silenziosa",        cat: "conseguenze", hint: "Hai deciso di non rinnovare. Cerchi altro fuori." },
+  "fuggito_estero":            { label: "Sei fuggit{o|a} all'estero",cat: "conseguenze", hint: "Postdoc / RTT in altro paese. Salv{o|a} ma fuori dall'Italia." },
+  "dimissionato":              { label: "Dimissioni firmate",       cat: "conseguenze", hint: "Hai chiuso il contratto. Possibile restituzione mensilità." },
+  "pers_dimissionato":         { label: "Dimissioni firmate",       cat: "conseguenze", hint: "Hai chiuso il contratto." },
+  "pers_uscito_industria":     { label: "Uscito{o|a} in industria", cat: "conseguenze", hint: "Lavori nel privato. Stipendio doppio, ricerca finita." },
+  "pers_naspi":                { label: "In NASpI",                 cat: "conseguenze", hint: "18 mesi di disoccupazione indennizzata. Cerchi il prossimo passo." },
+  "career_strutturato_ottenuto":{ label: "Strutturat{o|a}!",        cat: "conseguenze", hint: "Hai vinto RTT/associato. Mai più rendiconti — ma a che prezzo?" },
+  "career_bocciato_asn":       { label: "ASN bocciata",             cat: "conseguenze", hint: "Devi aspettare 12 mesi. Cool-down obbligatorio." },
+  "rinuncia_familiare":        { label: "Rinunce familiari",        cat: "conseguenze", hint: "Figli rimandati, partner lontano. Costi invisibili." },
+  "lavoro_in_maternita":       { label: "Lavorato in maternità",    cat: "conseguenze", hint: "Hai fatto attività durante il congedo. Recupero parziale." },
+
+  // ── Famiglia / vita privata ─────────────────────────────────────────
+  "pers_partner_lontano":      { label: "Partner lontano",          cat: "famiglia", hint: "Distanza geografica imposta dall'accademia." },
+  "pers_paternita_saltata":    { label: "Paternità saltata",        cat: "famiglia", hint: "10 giorni di paternità rinunciati per lavoro." },
+  "pers_caregiver":            { label: "Caregiver familiare",      cat: "famiglia", hint: "Assistenza a un* parente. Legge 104 in tasca, costo emotivo alto." },
+  "pers_silenzio_famiglia":    { label: "Silenzio in famiglia",     cat: "famiglia", hint: "Hai smesso di raccontare il lavoro a casa." },
+
+  // ── Gender (asimmetria documentata) ─────────────────────────────────
+  "gender_silenzio_subito":    { label: "Hai ingoiato (gender)",    cat: "gender", hint: "Auto-censura ricorrente. Accumula: sblocca ending erosione." },
+  "gender_no_pubblico":        { label: "Hai detto NO in pubblico", cat: "gender", hint: "Resistenza visibile. Crea costi e alleanze." },
+  "gender_rete_protezione":    { label: "Rete di protezione",       cat: "gender", hint: "Colleghe che si avvertono. Riduce isolamento." },
+  "gender_corpo_oggetto":      { label: "Corpo come oggetto",       cat: "gender", hint: "Hai sentito sguardi/commenti che pesano. Cumulativo." },
+  "gender_etichettata_complicata":{ label: "Etichettata 'complicata'", cat: "gender", hint: "Sei nota per pretendere rispetto. Costa." },
+  "gender_pungente_pubblica":  { label: "Risposta pungente in pubblico",cat: "gender", hint: "Hai rotto il decoro. Reputazione doppia: ammirazione + sospetto." },
+  "gender_auto_esclusa":       { label: "Auto-esclusione",          cat: "gender", hint: "Hai rinunciato a un concorso/bando per il pattern. Costo invisibile." },
+  "gender_vita_ristretta":     { label: "Vita ristretta",           cat: "gender", hint: "Stanze, missioni, eventi che eviti. Strategia di sopravvivenza." },
+  "gender_no_punita":          { label: "Il 'no' è stato punito",   cat: "gender", hint: "Ritorsione strutturale dopo un rifiuto. Sblocca cluster legale." },
+  "gender_quidproquo_offerto": { label: "Quid pro quo proposto",    cat: "gender", hint: "Ti è stato offerto qualcosa in cambio di disponibilità." },
+  "gender_quidproquo_accettato":{ label: "Quid pro quo accettato",  cat: "gender", hint: "Hai detto sì. Sblocca arco 'dottorato che pesa'." },
+  "gender_quidproquo_rifiutato":{ label: "Quid pro quo rifiutato",  cat: "gender", hint: "Hai detto no. Sblocca arco 'dottorato che non ho avuto'." },
+  "gender_quidproquo_documentato":{ label: "Quid pro quo documentato",cat: "gender", hint: "Hai prove scritte. Materiale per causa." },
+  "gender_relazione_direttore":{ label: "Relazione col direttore",  cat: "gender", hint: "Sei in una dinamica asimmetrica. Cambia molti scenari." },
+  "gender_dottorato_via_quidproquo":{ label: "Dottorato via QPQ",   cat: "gender", hint: "Sei entrat{a|o} via relazione. Le voci dei corridoi sanno." },
+
+  // ── LGBTQ ───────────────────────────────────────────────────────────
+  "lgbtq_padrino_offerto":     { label: "Padrino offerto",          cat: "gender", hint: "Il mentor anziano ti ha proposto protezione." },
+  "lgbtq_padrino_accettato":   { label: "Padrino accettato",        cat: "gender", hint: "Sei nella cordata del 'padrino' gay del settore." },
+  "lgbtq_padrino_rifiutato":   { label: "Padrino rifiutato",        cat: "gender", hint: "Hai declinato. Aspetta la freddezza istituzionale." },
+  "lgbtq_no_pubblico":         { label: "Hai detto NO (lgbtq)",     cat: "gender", hint: "Resistenza visibile in contesto lgbtq accademico." },
+  "lgbtq_rete_attivata":       { label: "Rete sotterranea attiva",  cat: "gender", hint: "Sei nella chat dei colleghi LGBTQ del settore. Sapere condiviso." },
+
+  // ── Carriera (pubblicazioni, concorsi) ──────────────────────────────
+  "progetto_fantasma":         { label: "Progetto fantasma",        cat: "carriera", hint: "Il PI usa il tuo contratto per altro. Niente PRIN reale." },
+  "non_ho_capito_niente":      { label: "Confusione iniziale",      cat: "carriera", hint: "Hai accettato senza capire. Bias di obbedienza nel primo anno." },
+  "career_sfruttamento_cronico":{ label: "Sfruttamento cronico",    cat: "carriera", hint: "Carichi a costo zero accumulati. Stanchezza permanente." },
+  "career_rassegnato_sistema": { label: "Rassegnat{o|a} al sistema",cat: "carriera", hint: "Hai smesso di alzare la mano. Stamina stabile, dignità in calo." },
+  "career_attesa_obbediente":  { label: "Attesa obbediente",        cat: "carriera", hint: "Aspetti la promessa del rinnovo. Senza garanzie." },
+  "career_pubblicazione_mdpi": { label: "Pubblicazione MDPI",       cat: "carriera", hint: "Quote ASN con rischio reputazionale." },
+  "career_favore_politico":    { label: "Favore politico ottenuto", cat: "carriera", hint: "Hai chiesto qualcosa a chi è nel giro. Debito di gratitudine." },
+  "career_attivismo_pubblico": { label: "Attivismo pubblico",       cat: "carriera", hint: "Visibile sulla stampa di settore. Polarizza." },
+
+  // ── Procedure passive / minori ──────────────────────────────────────
+  "rendiconto_in_ritardo":     { label: "Rendiconto in ritardo",    cat: "procedure", hint: "Scadenza SIRI mancata. Lettera dall'ufficio in arrivo." },
+  "burocr_scadenza_persa":     { label: "Scadenza persa",           cat: "procedure", hint: "Materiale non consegnato in tempo. Possibile sanzione." },
+  "passivo":                   { label: "Hai lasciato correre",     cat: "carriera", hint: "Pattern di non-azione. Conseguenze invisibili ma accumulate." },
+
+  // ── Rete e relazioni ────────────────────────────────────────────────
+  "pers_ho_aiutato_collega":   { label: "Hai aiutato un* collega",  cat: "rete", hint: "Bonus reputazione peer. Possibile favore di ritorno." },
+  "grp_coordinamento_attivo":  { label: "Coordinamento attivo",     cat: "rete", hint: "Ti scrivi con altri precari. Informazione circolante." },
+  "grp_lettera_firmata":       { label: "Hai firmato la lettera",   cat: "rete", hint: "Sei pubblicamente parte della rete RTDA." },
+  "pers_piano_b_attivo":       { label: "Piano B attivo",           cat: "rete", hint: "Stai cercando alternative concrete (scuola, industria, estero)." },
+  "career_cerca_lavoro_attiva":{ label: "Job search attiva",        cat: "rete", hint: "CV aggiornato, LinkedIn acceso. Sblocca recruiter scenarios." },
+
+  // ── Daily / abitudini ───────────────────────────────────────────────
+  "daily_confine_difeso":      { label: "Confine difeso",           cat: "salute", hint: "Hai protetto un weekend o una serata. +stamina." },
+};
 function contractLabel(id) { return CONTRACT_LABELS[id] || id || "RTD-A"; }
 function ageLabel(id) { return AGE_LABELS[id] || id || ""; }
 function stanceLabel(id, gender) {
@@ -686,14 +807,51 @@ function renderDossier(state) {
       "Nessun evento di rilievo ancora. Ogni decisione importante apparirà qui."));
   }
 
-  // Active tags (non-milestone flags, compact)
+  // Active tags — solo i flag mappati in FLAG_DISPLAY (rilevanti al gameplay),
+  // raggruppati per categoria, con label leggibile e tooltip esplicativo.
   const milestoneFlagSet = new Set(state.milestones.map((m) => m.flag));
-  const otherFlags = state.flags.filter((f) => !milestoneFlagSet.has(f));
-  if (otherFlags.length > 0) {
-    dossier.appendChild(el("h4", {}, "Tag attivi"));
-    const list = el("ul", { className: "flags" });
-    for (const f of otherFlags) list.appendChild(el("li", {}, formatItemName(f)));
-    dossier.appendChild(list);
+  const relevantFlags = state.flags
+    .filter((f) => !milestoneFlagSet.has(f))
+    .filter((f) => FLAG_DISPLAY[f]);
+  if (relevantFlags.length > 0) {
+    const byCat = {};
+    for (const f of relevantFlags) {
+      const meta = FLAG_DISPLAY[f];
+      (byCat[meta.cat] ??= []).push({ flag: f, meta });
+    }
+    dossier.appendChild(el("h4", {}, "Cosa pesa adesso"));
+    const tagsWrap = el("div", { className: "flag-tags" });
+    // Ordine categorie: dalle più "concrete/azione" alle più "tratto"
+    const catOrder = [
+      ["procedure",   "Procedure aperte"],
+      ["conseguenze", "Conseguenze"],
+      ["salute",      "Salute"],
+      ["gender",      "Asimmetrie di genere"],
+      ["politica",    "Posizione politica"],
+      ["carriera",    "Carriera"],
+      ["famiglia",    "Vita privata"],
+      ["rete",        "Rete & alleanze"],
+      ["tratto",      "Tratti"],
+    ];
+    for (const [catId, catLabel] of catOrder) {
+      const entries = byCat[catId];
+      if (!entries?.length) continue;
+      const section = el("div", { className: "flag-cat" });
+      section.appendChild(el("div", { className: "flag-cat-label" }, catLabel));
+      const row = el("div", { className: "flag-cat-row" });
+      for (const { flag, meta } of entries) {
+        const label = interpolate(meta.label, state);
+        const hint = interpolate(meta.hint, state);
+        row.appendChild(el("span", {
+          className: `flag-tag flag-tag--${catId}`,
+          title: hint,
+          "data-flag": flag,
+        }, label));
+      }
+      section.appendChild(row);
+      tagsWrap.appendChild(section);
+    }
+    dossier.appendChild(tagsWrap);
   }
 
   // Counters: pubblicazioni, concorsi visti, etc. — derive from state
